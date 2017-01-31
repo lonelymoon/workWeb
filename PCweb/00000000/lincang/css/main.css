@@ -1,0 +1,325 @@
+#header{
+	height: 774px;
+	background: url("../images/background/lcbg_01.jpg") no-repeat center bottom;
+}
+
+#content{
+	height: auto;
+}
+
+.total-introduction{
+	height: 726px;
+	background: url("../images/background/lcbg_02.jpg") no-repeat center;
+}
+
+.intro{
+	width: 1137px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.intro-text{
+	width: 387px;
+	margin-left: 654.5px;
+	padding-top: 24px;
+}
+
+.text-title{
+	margin-bottom: 34px;
+}
+
+.text-content{
+	font-size: 16px;
+	letter-spacing: 4px;
+	font-family: "SimHei","STHeiti","黑体";
+}
+
+.movie-look-ahead{
+	margin-top:-1px;
+	height: 760px;
+	background: url("../images/background/lcbg_03.jpg") no-repeat center;
+}
+
+.lmovie-box{
+	width: 1137px;
+	height: auto;
+	padding-top: 14px;
+	margin: 0 auto;
+}
+
+.ltitle{
+	margin-left: 88.5px;
+	margin-bottom: 40px;
+}
+
+.lmovie{
+	margin-left: 113.5px;
+	height: auto;
+}
+
+.lmovie-left,.lmovie-right{
+	width: 425px;
+	height: auto;
+	float: left;
+}
+
+.lmovie-left{
+	margin-right: 60px;
+}
+
+.lmovie-title{
+	font-size: 15px;
+	color: #8c660a;
+	font-family: "SimHei","STHeiti","黑体";
+}
+
+.lmovie-movie{
+	margin-top: 38px;
+}
+
+.great-movie{
+	background: url("../images/background/lcbg_04.jpg") no-repeat center;
+	height: 1052px;
+	position: relative;
+}
+
+.great-movie>div{
+	position: absolute;
+	top: -180px;
+	left: 50%;
+	margin-left: -568.5px;
+	+margin-left: -670px;
+}
+
+.gmovie-box{
+	width: 1137px;
+	height: auto;
+	margin: 0 auto;
+}
+
+
+.gmovie-title{
+	height: auto;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.gmovie-content{
+	width: 939px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.gmovie-content-box{
+	width: 292px;
+	height: auto;
+	float: left;
+	text-align: center;
+	margin-bottom: 48px;
+}
+
+.gmovie-content-box:nth-child(3n+2){
+	margin: 0px 30px;
+}
+
+.gcenter{
+	margin: 0px 30px;
+}
+
+.gmovie-content-box img{
+	margin-bottom: 12px;
+}
+
+.gmovie-content-box span{
+	font-size: 15px;
+	color: #8c660a;
+	font-family: "SimHei","STHeiti","黑体";
+}
+
+.beautiful-lincang{
+	width: 1137px;
+	height: auto;
+	margin:0 auto;
+	padding-top: 22px;
+}
+
+.btop{
+	width: 939px;
+	margin: 0 auto;
+}
+
+.bleft-content{
+	width: 430px;
+	text-align: center;
+	height: auto;
+	float: left;
+	margin-top: 37px;
+}
+
+.btitle{
+	margin-left: 38px;
+	margin-bottom: 16px;
+}
+
+.bright-list{
+	width: 448px;
+	height:auto;
+	margin-left: 60px;
+	display: inline-block;
+}
+
+.view{
+	width: 224px;
+	height: 295px;
+	float: left;
+	text-align: center;
+}
+
+.view:hover{
+	cursor: pointer;
+}
+
+.view1,.view2{
+	background: url("../images/jingdian1.jpg") no-repeat; 
+}
+
+.view2{
+	background-position: -224px 0px;
+}
+
+.view>em{
+	display: block;
+	margin-top: 275px;
+}
+
+.bfooter{
+	width: 939px;
+	margin: 0 auto;
+	padding-top: 34px;
+}
+
+.view3,.view4,.view5{
+	width: 221px;
+	height: 273px;
+	background: url("../images/jingdian2.jpg") no-repeat; 
+}
+
+.view4{
+	background-position: -221px 0px;
+}
+
+.view5{
+	background-position: -442px 0px;
+}
+
+.bcontent{
+	font-size: 15px;
+	font-family: "SimHei","STHeiti","黑体";
+	text-align: left;
+}
+
+.bcontent>em{
+	font-size: 18px;
+	display: block;
+	margin-bottom: 20px;
+}
+
+
+.tourism{
+	background: url("../images/background/lcbg_05.jpg") no-repeat center;
+	height: 1152px;
+}
+
+.tourism-box{
+	width: 1011px;
+	margin: 0 auto;
+	height: auto;
+	padding-top: 55px;
+}
+
+.t-title{
+	width: 939px;
+	margin: 0 auto;
+	margin-bottom: 32px;
+}
+
+.t-content{
+	height: auto;
+}
+
+.t-content-box{
+	width: 252px;
+	height: 322px;
+	background: url("../images/card.png") no-repeat;
+	margin-right: 1px;
+	margin-right: 0px\0;
+	+margin-right: -1px;
+	float: left;
+	color: #000;
+	font-family: "SimHei","STHeiti","黑体";
+}
+
+.t-content-box:hover{
+	color: #d36013;
+}
+
+.t-content-box:last-child{
+	margin-right: 0px;
+}
+
+.clear{
+	clear: left;
+}
+
+.t-content-img{
+	width: 236px;
+	height: auto;
+	margin: 0px auto;
+	padding-top: 8px;
+}
+
+.t-content-title{
+	width: 236px;
+	padding: 6px 0px;
+	margin: 0 auto;
+	font-size: 15px;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.t-content-intro{
+	width: 236px;
+	padding: 6px 0px;
+	font-size: 14px;
+	margin: 0 auto;
+	color: #4c4c4c;
+}
+
+.t-content-fn{
+	width: 236px;
+	margin: 0 auto;
+	padding-top: 10px;
+	color: #d36013;
+}
+
+.price{
+	font-size: 16px;
+}
+
+.price>em{
+	font-size: 22px;
+}
+
+.booking{
+	float: right;
+	padding-right: 4px;
+}
+
+#myfooter{
+	height: 119px;
+	text-align: center;
+	padding: 54.5px 0px;
+}
+
+#myfooter>a:first-child{
+	margin-right: 84px;
+}

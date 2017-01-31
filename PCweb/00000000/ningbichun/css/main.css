@@ -1,0 +1,174 @@
+#nHeader{
+	background: url("../images/background/bg_01.jpg") no-repeat center;
+	height: 836px;
+}
+
+#nContent{
+	height: auto;
+}
+
+.nb-news-box{
+	background: url("../images/background/bg_02.jpg") no-repeat center;
+	height: 729px;
+}
+
+.nb-news-content{
+	width: 680px;
+	font-size: 18px;
+	font-weight: 800;
+	font-family: "SimHei";
+	color: #000;
+	margin: 0 auto;
+	padding-top: 144px;
+}
+
+.nb-news-list{
+	width: 50%;
+	padding: 5px 0px;
+	float: left;
+}
+
+.nb-video{
+	width: 570px;
+	height: 349px;
+	margin:0 auto;
+	margin-top: 88px;
+	+margin-top: 94px;
+	padding-right: 8px;
+}
+
+.nb-yc-box{
+	height: auto;
+}
+
+.yc-bg1{
+	background: url("../images/background/bg_03.jpg") no-repeat center;
+	height: 1015px;
+}
+
+.yc-bg2{
+	background: url("../images/background/bg_04.jpg") no-repeat center;
+	height: 955px;
+}
+
+.nb-product-box{
+	background: url("../images/background/bg_05.jpg") no-repeat center;
+	height: 790px;
+	position: relative;
+}
+
+.nb-product-nav{
+	width: 558px;
+	margin: 0 auto;
+	padding-top: 49px;
+}
+
+.nb-product-nav>li{
+	float: left;
+}
+
+.nb-product-nav>li:hover{
+	cursor: pointer;
+}
+
+.nb-product-nav>li.se{
+	margin: 0px 42px;
+}
+
+.nb-product-content{
+	width: 558px;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+
+.mb-product-list{
+	float: left;
+	width: 264px;
+	height: auto;
+}
+
+.mb-product-list:hover{
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.fst,.thr{
+	margin-right: 30px;
+	margin-left: -120px;
+}
+
+.nm-product-intro{
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	font-family: "SimHei","STHeiti";
+	line-height: 20px;
+	margin:14px 0 5px 0;
+}
+
+.price-box{
+	font-size: 16px;
+	font-weight: bolder;
+	font-family: "SimHei","STHeiti";
+}
+
+.price{
+	color: #e83623;
+	float: left;
+	padding-top: 2px;
+	padding-left: 10px;
+}
+
+.price>em{
+	font-size: 24px;
+	color: #e83623;
+	font-style: normal;
+}
+
+.booking{
+	float: right;
+}
+
+.nb-food-box{
+	background: url("../images/background/bg_06.jpg") no-repeat center;
+	height: 788px;
+}
+
+.nb-food-content{
+	width: 697px;
+	height: 375px;
+	padding-top: 130px;
+	margin: 0 auto;
+}
+
+.nb-food-content>img{
+	padding-left: 200px;
+}
+
+.nb-food-nav{
+	width: 999px;
+	margin: 0 auto;
+	margin-top: 65px;
+}
+
+.nb-food-nav>li{
+	float: left;
+	margin-right: 13px;
+}
+
+.nb-food-nav>li:hover{
+	cursor: pointer;
+}
+
+.nb-food-nav>li.last{
+	margin-right: 0px;
+}
+
+.clear{
+	display: block;
+	clear: both;
+}
+
+.hidden{
+	display: none;
+}

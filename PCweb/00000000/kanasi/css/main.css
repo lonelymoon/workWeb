@@ -1,0 +1,206 @@
+#kHeader{
+	height: 889px;
+	background: url("../images/background/bg1.jpg") no-repeat center;
+	position: relative;
+}
+
+#kContent{
+	height: auto;
+}
+
+.kVideo{
+	height: 639px;
+	background: url("../images/background/bg2.jpg") no-repeat center;
+}
+
+.kVideo-box{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.kVideo-box embed{
+	margin-top: 83px;
+	margin-left: 73px;
+}
+
+.kProduct{
+	height: 1085px;
+	background: url("../images/background/bg3.jpg") no-repeat center;
+}
+
+.kProduct-box{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.kProduct-nav{
+	margin-left: 343px;
+	padding-top: 80px;
+}
+
+.kProduct-nav>li{
+	float: left;
+}
+
+.kProduct-content{
+	margin-top: 42px;
+}
+
+.p-above{
+	width: 719px;
+	height: 640px;
+	position: relative;
+	margin-left: 281px;
+}
+
+.ab-img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 0;
+}
+
+.p-below{
+	width: 719px;
+	height: auto;
+	margin-left: 281px;
+}
+
+.p-below img{
+	margin-left: 22px;
+}
+
+.p-text{
+	position: relative;
+	z-index: 10;
+}
+
+.p-text-ab{
+	height: 300px;
+	padding-left: 410px;
+	padding-right: 18px;
+	padding-top: 76px;
+}
+
+.p-below .p-text-ab{
+	height: auto;
+	padding-left: 346px;
+	padding-right: 70px;
+	padding-top: 76px;
+}
+
+.p-below>a>img{
+	float: left;
+}
+
+.p-text-bl{
+	height: auto;
+	padding-left: 60px;
+	padding-top: 56px;
+	width: 289px;
+}
+
+.p-title{
+	font-size: 20px;
+	font-weight: 800;
+	font-family: "SimHei";
+	line-height: 26px;
+	margin-bottom: 8px;
+}
+
+.p-intro{
+	font-size: 15px;
+	font-family: "SimHei";
+	line-height: 20px;
+	margin-bottom: 24px;
+}
+
+.price{
+	font-size: 32px;
+	font-weight: 800;
+	font-family: "SimHei";
+	color: #f22f30;
+	float: left;
+}
+
+.booking{
+	float: right;
+}
+
+.kView{
+	height: 742px;
+	background: url("../images/background/bg4.jpg") no-repeat center;
+}
+
+.kView-box{
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+}
+
+.more{
+	position: absolute;
+	right: 8px;
+	bottom: 14px;
+}
+
+.kView-nav{
+	padding-top: 86px;
+	margin-left: 148px;
+}
+
+.kView-nav>li{
+	float: left;
+	margin-right: 108px;
+}
+
+.kView-content{
+	margin-top: 76px;
+}
+
+.kCulture{
+	height: 1299px;
+	background: url("../images/background/bg5.jpg") no-repeat center;
+}
+
+.kCulture-box{
+	width: 1000px;
+	position: relative;
+	height: auto;
+	margin: 0 auto;
+}
+
+.sMore{
+	position: absolute;
+	left: 118px;
+	top:610px;
+}
+
+.clear{
+	clear: both;
+}
+
+.hidden{
+	display: none;
+}
+
+.mr128{
+	margin-right: 128px;
+}
+
+.mr70{
+	margin-right: 70px;
+}
+
+.mr73{
+	margin-right: 73px;
+}
+
+
+a:hover{
+	text-decoration: none;
+	cursor: pointer;
+}

@@ -1,0 +1,192 @@
+#xHeader{
+	background: url("../images/background/bg1.jpg") no-repeat center;
+	height: 819px;
+}
+
+.play{
+	background: url("../images/background/bg2.jpg") no-repeat center;
+	height: 860px;
+}
+
+.play-box{
+	width: 1000px;
+	margin: 0 auto;
+	height: auto;
+	position: relative;
+	padding-top: 262px;
+	padding-left: 24px;
+}
+
+.play-nav{
+	height: auto;
+	padding-left: 335px;
+}
+
+.play-nav>div{
+	float: left;
+	margin-right: 48px;
+}
+
+.play-nav>div:hover{
+	cursor: pointer;
+}
+
+.play-nav>.clear{
+	float: none;
+}
+
+.play-content{
+	height: auto;
+	position: relative;
+}
+
+.four-co{
+	margin-top: 18px;
+	+margin-top: -262px;
+}
+
+.play-list-box,.play-list-box2{
+	width: 325px;
+	float: left;
+	background: url("../images/cpbg.png") no-repeat center top;
+	text-align: center;
+	padding-top: 20px;
+	height: 409px;
+	margin-right: 12px;
+}
+
+.play-list-box2{
+	padding-top: 16px;
+	width: 470px;
+	height: 285px;
+	background: url("../images/cpbg2.png") no-repeat center top;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.play-title,.play-title2{
+	font-size: 16px;
+	font-weight: 700;
+	width: 291px;
+	margin: 0 auto;
+	margin-top: 6px;
+	margin-bottom: 10px;
+	line-height: 22px;
+	text-align: left;
+}
+
+.play-title2{
+	width: 360px;
+	margin-left: 14px;
+	margin-bottom: 3px;
+}
+
+.play-booking,.play-booking2{
+	position: relative;
+	width: 291px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.play-booking2{
+	width: 442px;
+}
+
+.price{
+	color: #ff8a00;
+	font-size: 24px;
+	font-weight: 700;
+	text-align: left;
+}
+
+.play-booking2 .price{
+	font-size: 24px;
+}
+
+.booking{
+	position: absolute;
+	right: 0px;
+	bottom: -16px;
+}
+
+.play-booking2 .booking{
+	right: 0px;
+	bottom: 1px;
+}
+
+.view{
+	background: url("../images/background/bg3.jpg") no-repeat center;
+	height: 911px;
+}
+
+.view-box{
+	width: 1012px;
+	margin: 0 auto;
+	padding-top: 267px;
+}
+
+.view-nav{
+	height: auto;
+	margin-left: 136px;
+}
+
+.view-nav>div{
+	float: left;
+}
+
+.view-nav>div:hover{
+	cursor: pointer;
+}
+
+.view-nav .clear{
+	float: none;
+}
+
+.view-content{
+	width: 1012px;
+	height: 518px;
+}
+
+.view-list{
+	margin-top: 40px;
+}
+
+.food{
+	background: url("../images/background/bg4.jpg") no-repeat center;
+	height: 1372px;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+.clear{
+	clear: both;
+}
+
+.hidden{
+	display: none;
+}
+
+.last{
+	margin-right: 0px;
+}
+
+.margin52{
+	margin-right: 52px;
+	margin-top: -9px;
+}
+
+.margin50{
+	margin-right: 50px;
+}
+
+.margin48{
+	margin-right: 48px;
+	margin-top: -3px;
+}
+
+.margin42{
+	margin-right: 42px;
+	margin-top: 4px;
+}

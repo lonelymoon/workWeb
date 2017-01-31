@@ -1,0 +1,252 @@
+#nHeader{
+	background: url("../images/background/bg1.jpg") no-repeat center;
+	height: 836px;
+}
+
+#nContent{
+	height: auto;
+}
+
+.nb-news-box{
+	background: url("../images/background/bg2.jpg") no-repeat center;
+	height: 729px;
+}
+
+.nb-news-content{
+	width: 680px;
+	font-size: 18px;
+	font-weight: 800;
+	font-family: "SimHei";
+	color: #000;
+	margin: 0 auto;
+	padding-top: 144px;
+}
+
+.nb-news-list{
+	width: 50%;
+	padding: 5px 0px;
+	float: left;
+}
+
+.nb-video{
+	width: 570px;
+	height: 349px;
+	margin:0 auto;
+	margin-top: 88px;
+	+margin-top: 94px;
+	padding-right: 8px;
+}
+
+.nb-yc-box{
+	height: auto;
+}
+
+.yc-bg1{
+	background: url("../images/background/bg3.jpg") no-repeat center;
+	height: 1103px;
+	position: relative;
+}
+
+.yc-bg2{
+	background: url("../images/background/bg4.jpg") no-repeat center;
+	height: 927px;
+	position: relative;
+}
+
+.link-box{
+	position: relative;
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.extre-link,.extre-link-2{
+	position: absolute;
+	width: 360px;
+	height: 360px;
+	border-radius: 50%;
+	border: none;
+}
+
+.extre-link:hover,.extre-link-2:hover{
+	cursor: pointer;
+}
+
+.extre-link{
+	right: 83px;
+	top : 157px;
+}
+
+.extre-link-2{
+	left: 66px;
+    bottom: 29px;
+}
+
+.yc-bg2 .extre-link-2{
+	left: 0px;
+	bottom: 178px;
+}
+
+.nb-product-box{
+	background: url("../images/background/bg2.jpg") no-repeat center;
+	height: 790px;
+	position: relative;
+}
+
+.nb-product-nav{
+	width: 618px;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+
+.nb-product-nav>li{
+	float: left;
+}
+
+.nb-product-nav>li:hover{
+	cursor: pointer;
+}
+
+.nb-product-nav>li.se{
+	margin: 0px 42px;
+}
+
+.nb-product-content{
+	width: 558px;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+
+.mb-product-list{
+	float: left;
+	width: 264px;
+	height: auto;
+}
+
+.mb-product-list:hover{
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.fst,.thr{
+	margin-right: 74px;
+	margin-left: -148px;
+}
+
+.nm-product-intro{
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	font-family: "SimHei","STHeiti";
+	line-height: 20px;
+	margin:14px 0 5px 0;
+}
+
+.price-box{
+	font-size: 16px;
+	font-weight: bolder;
+	font-family: "SimHei","STHeiti";
+}
+
+.price{
+	color: #f07609;
+	float: left;
+	padding-top: 2px;
+	padding-left: 10px;
+}
+
+.price>em{
+	font-size: 24px;
+	color: #f07609;
+	font-style: normal;
+}
+
+.booking{
+	float: right;
+}
+
+.nb-food-box{
+	background: url("../images/background/bg5.jpg") no-repeat center;
+	height: 689px;
+}
+
+.nb-food-content{
+	width: 697px;
+	height: 375px;
+	padding-top: 130px;
+	margin: 0 auto;
+}
+
+.nb-food-content>img{
+	padding-left: 200px;
+}
+
+.nb-food-nav{
+	width: 999px;
+	margin: 0 auto;
+	margin-top: 65px;
+}
+
+.nb-food-nav>li{
+	float: left;
+	margin-right: 13px;
+}
+
+.nb-food-nav>li:hover{
+	cursor: pointer;
+}
+
+.nb-food-nav>li.last{
+	margin-right: 0px;
+}
+
+.nb-guide-box{
+	background: url("../images/background/bg6.jpg") no-repeat center;
+	height: 554px;
+}
+
+.nb-guide-content{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 150px;
+}
+
+.nb-guide-content .mb-product-list{
+	margin-right: 20px;
+}
+
+.nb-media-box{
+	background: url("../images/background/bg8.jpg") no-repeat center;
+	height: 773px;
+}
+
+.nb-media-content{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 92px;
+}
+
+.nb-media-content>div{
+	float: left;
+}
+
+.media-video{
+	margin-left: 48px;
+}
+
+.media-weibo{
+	margin-top: -7px;
+    margin-left: 23px;
+    background: #fff;
+    max-height: 364px;
+    overflow: hidden;
+}
+
+.clear{
+	display: block;
+	clear: both;
+}
+
+.hidden{
+	display: none;
+}

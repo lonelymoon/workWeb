@@ -1,0 +1,149 @@
+.container{
+	max-width: 1920px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.hTop{
+	background: url("../images/bg/bg1.jpg") no-repeat center;
+	height: 800px;
+}
+
+.impression{
+	background: url("../images/bg/bg2.jpg") no-repeat center;
+	height: 920px;
+}
+
+.impression-box{
+	width: 1040px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.impression img{
+	position: absolute;
+	top : 690px;
+	right: 44px;
+}
+
+.introduction{
+	background: url("../images/bg/bg3.jpg") no-repeat center;
+	height: 1072px;
+}
+
+.culture{
+	background: url("../images/bg/bg4.jpg") no-repeat center;
+	height: 1998px;
+}
+
+#content{
+	background: url("../images/bg/bg5.jpg") no-repeat center;
+	height: 1494px;
+}
+
+.content-box{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 140px;
+	height: auto;
+}
+
+.content-nav{
+	position: absolute;
+	right: 39px;
+	top: 64px;
+}
+
+.content-nav>li{
+	float: left;
+	width: 210px;
+}
+
+.align-right{
+	margin-top: 42px;
+	float: right;
+}
+
+.align-left{
+	padding-left: 150px;
+}
+
+.content-list .list-box{
+	float: left;
+	height: auto;
+	text-align: center;
+}
+
+.align-left .list-box{
+	margin-top: 20px;
+	width: 378px;
+}
+
+.align-right .list-box{
+	width: 353px;
+}
+
+.list-title{
+	text-align: left;
+	width: 300px;
+	margin:0 auto;
+	font-size: 14pt;
+	color: #5e4b01;
+	font-family: "KaiTi","Arial","Microsoft YaHei","黑体","宋体";
+	font-weight: bolder;
+}
+
+.single .list-title{
+	font-size: 14pt;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.price-box{
+	text-align: left;
+	position: relative;
+	margin-top: 10px;
+}
+
+.price{
+	font-size: 28px;
+	color: #ff6c00;
+	font-weight: 800;
+}
+
+.align-right .price{
+	margin-left: 24px;
+}
+
+.align-left .price{
+	margin-left: 38px;
+}
+
+.booking{
+	position: absolute;
+	right: 24px;
+	top: 0px;
+}
+
+.spec{
+	position: absolute;
+	bottom: -346px;
+	+bottom: -364px;
+	left: 80px;
+}
+
+.logo{
+	position: absolute;
+	bottom: -294px;
+	+bottom: -312px;
+	right: 200px;
+}
+
+.clear{
+	clear: both;
+}
+
+.hidden{
+	display: none;
+}

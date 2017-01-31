@@ -1,0 +1,150 @@
+﻿@charset "utf-8";
+/* CSS sxf 2013 */
+*{margin:0;padding:0;list-style-type:none;}
+body{ font-family:"Microsoft YaHei",Verdana, Arial, Helvetica, sans-serif; color:#2577e3; font-size:14px;}
+a,img{border:0;}
+a { text-decoration:none}
+a:hover{ text-decoration:none;}
+a:focus{ outline:none}
+a i{ display:none; cursor:pointer; }
+.fl{ float:left;*display:inline}
+.fr{ float:right;*display:inline}
+img{display:block}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.cb { clear:both;}
+.corg { color:#e8683b;}
+.cblu { color:#00aeff;}
+.pr{ position:relative} 
+.pa{ position:absolute}
+.cg { color:#8dc014;}
+.ovh{ overflow:hidden;*zoom:1}
+.tac{ text-align:center}
+.tar{ text-align:right}
+.mt10{ margin-top:10px}
+.mt20{ margin-top:20px}
+.mt30{ margin-top:30px}
+.mt40{ margin-top:40px}
+.mt50{ margin-top:50px}
+.tac{ text-align: center;}
+.tac img{ display: block; margin: auto}
+
+
+.wp{width:1000px; margin:auto;font-size: 14px }
+.aheader{ height: 526px; background: url(../images/aheader.jpg) no-repeat top center;}
+.bheader{ height: 526px; background: url(../images/bheader.jpg) no-repeat top center;}
+ 
+.amain{ height: 1401px; background: url(../images/a_main01.jpg) no-repeat top center;}
+.amain .about{ padding-top: 730px; overflow: hidden;}
+.amain .about .video{ float: right; margin-left: 45px; height: 300px; width: 450px;}
+.amain .about p{ padding-top: 20px;line-height: 26px; color: #222}
+.amain .btn-more{ width: 90px; height: 24px; display: block;position: absolute; top:495px; left:480px;}
+.shopping{ height: 314px; background: url(../images/bg_shopping.jpg) no-repeat; margin-top: 20px;}
+.shopping .hd{ padding: 0 15px; line-height: 42px; text-align: center; color: #fff; font-weight: bold; font-size: 18px}
+.shopping .hd a{ float: right; font-weight: bold; font-size: 14px; color: #fff}
+
+.mlist{ height:1500px; background: url(../images/a_main02.jpg) no-repeat top center; padding-top: 220px;}
+.mhot{ height: 972px; background: url(../images/a_main03.jpg) no-repeat top center;}
+.mbottom{ text-align: center; padding: 10px 0}
+.mbottom a{ width: 373px; margin: auto; display: block;}
+.nav{height: 140px; background: url(../images/bg_nav.jpg) no-repeat top center; text-align: center;}
+.nav a{ background-image: url(../images/nav.png); background-repeat: no-repeat; display: inline-block; width: 218px; height: 76px; margin: 35px 50px 0 }
+.nav a.n1{ background-position: 0 0;}
+.nav a.n1.on{ background-position: 0 -90px;}
+.nav a.n2{ background-position:right 0;}
+.nav a.n2.on{ background-position:right -90px;}
+
+.mlist .btn-more{ width: 90px; height: 24px; display: block;position: absolute; top:-45px; right:0px; font-size: 16px; color: #d41e4b}
+.m-pro ul{ margin-left: -10px;*zoom:1;}
+.m-pro li{ float: left; width: 230px; background-color: #fff; padding: 6px; margin-left: 10px; margin-bottom: 10px;}
+.m-pro li .img{ position: relative; height: 150px;}
+.m-pro li .img .layer{position: absolute;width:100%; height: 40px; background:rgba(0,0,0,0.8) none repeat scroll 0 0 !important;filter:Alpha(opacity=80); background:#000; text-align: center; color: #fff ; left:0; bottom:0;}
+.m-pro li .img .layer span{ padding: 0 10px; overflow: hidden;*zoom;1;  margin: 0;line-height: 40px; display: block; height: 40px }
+.m-pro li a{ color: #d41e4b}
+.m-pro li a h4{font-weight: normal; font-size: 12px;margin: 0; padding:6px; color: #000; height: 40px;line-height: 18px;}
+.m-pro .price{ text-align: center; font-size: 24px; padding-bottom: 10px; line-height: 30px}
+.btn-rd{ background-color: #d41e4b; color: #fff; height: 40px; line-height: 40px; text-align: center; font-size: 18px}
+.m-pro li a:hover .btn-rd{ background-color: #b40e37;}
+.pro-hot{ width:400px; padding: 650px 0 0 600px}
+.pro-hot .hd{}
+.pro-hot .hd h5{ color: #363636; font-size: 22px}
+.pro-hot .hd h4{ color: #d41e4b; font-size: 28px;}
+.pro-hot .hd h3{ color: #000; font-size: 24px}
+.pro-hot .hd p{ color: #363636; font-size: 18px; padding-top:10px;}
+
+.pro-hot .bd{ color: #d41e4b; padding-top: 30px;}
+.pro-hot .bd a{ color: #fff; font-size: 22px; background-color: #d41e4b; height: 50px; line-height: 50px; width: 240px; float: right; text-align: center; margin-top: -10px;*zoom:1;}
+.pro-hot .bd a:hover{ background-color: #b40e37;}
+.bmain{ height: 889px; background: url(../images/b_main01.jpg) no-repeat top center;}
+.bmain .hd a{ position: absolute; width: 102px; height: 102px; display: block;}
+.bmain .hd a.m1{ top:45px; left:70px;}
+.bmain .hd a.m2{ top:255px; left:336px;}
+.bmain .hd a.m3{ top:68px; left:546px;}
+.bmain .hd a.m4{ top:145px; left:806px;}
+.cy-item { overflow: hidden;*zoom:1; height: 500px; margin-top: 330px; padding-left: 480px; }
+.cy-item .tit{ font-size: 24px; text-align: right;}
+.cy-item .tit strong{ font-size: 32px}
+.cy-item p{ padding-top: 20px; line-height: 24px; padding-bottom: 20px; color: #222}
+.cy-item .more{ font-weight: bold; color: #ff0000}
+.media{ width: 360px; height: 232px; float: right;}
+.cy01{ background: url(../images/img_city01.png) no-repeat left bottom;}
+.cy02{ background: url(../images/img_city02.png) no-repeat left bottom;}
+.cy03{ background: url(../images/img_city03.png) no-repeat left bottom;}
+.cy04{ background: url(../images/img_city04.png) no-repeat left bottom;}
+.cy01 .tit{ color: #8fc31f}
+.cy02 .tit{ color: #00a0e9}
+.cy03 .tit{ color: #ff9f19}
+.cy04 .tit{ color: #920783}
+.m-pro{ height: 1215px;}
+.nicescroll-rails{ border-right:solid 1px #F84F63;}
+.nicescroll-rails div{ margin-right:-3px;*zoom:1; cursor: pointer;}
+
+
+.sidebar-ewm{ position:fixed; width: 129px; height: 222px; background: url(../images/ewm.png) no-repeat; top:200px; left:10px;}
+.sidebar-ewm a{ width: 24px; height: 24px; float: right;}
+
+
+
+/* 分享到 二维码 */
+.cf a{background:url(http://pages.ctrip.com/commerce/promote/201307/vacation/fxd/spirite_temp.png) no-repeat;}
+.sider_bar a {background:url(http://pages.ctrip.com/commerce/promote/201307/vacation/fxd/share_spirite.png) no-repeat;}
+
+/*== 分享到 ==*/
+.htlShare{ z-index:999999; position:fixed; bottom:5px; right:0; width:160px; _position:absolute; _top:expression(documentElement.scrollTop+400); overflow:visible}
+#rlist1{ width:46px; float:right; margin-bottom:45px; z-index:101}
+#rlist5{ width:160px; z-index:999999; clear:both; overflow:hidden; position:relative; right:-125px}
+.cf li{ height:46px; width:46px; margin-bottom:5px; position:relative;}
+.cf li:hover{ background:#ffae01}
+.cf a{ display:block; height:46px;  text-indent:-99em; overflow:hidden}
+.share .share_a{ background-position:0 -128px}
+.share .share_a:hover,.share .cur{ background-position:-105px -128px}
+.top .top_a{ background-position:-53px -128px}
+.top .top_a:hover{ background-position:-158px -128px}
+.share_lis{ position:absolute; top:0; right:44px; background:#ffae01; height:30px; width:112px; padding:8px 0 8px 3px;}
+.share_lis a{ float:left; display:inline; height:30px; width:30px; margin-left:5px}
+.share_lis .a0{ background-position:0 -88px}
+.share_lis .a1{ background-position:-40px -88px}
+.share_lis .a2{ background-position:-80px -88px}
+.share_lis .a3{ background-position:-120px -88px}
+.share_lis .a4{ background-position:-160px -88px}
+#ewm { width:160px; position: fixed; right:0; bottom:10px;}
+
+/* demo */
+#demo{height:424px;margin:20px auto;overflow:hidden; border:solid 3px #ccc;}
+#demo li{float:left;position:relative;width:145px;height:100%;overflow:hidden;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;cursor:pointer; margin:0 0 0 2px}
+#demo li .txt{position:absolute;width:100%;height:80px;background:#000;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:0.5;bottom:0;left:0;display:none;color:#fff; font-size:14px}
+#demo li .txt p{ line-height:24px; font-weight:bold}
+#demo li .txt p.p1{padding:20px 20px 0 280px; }
+#demo li .txt p.p2{padding:20px 20px 0 260px; }
+#demo li .txt p.p3{padding:20px 20px 0 220px; }
+#demo li:first-child{width:704px;filter:alpha(opacity=100);-moz-opacity:1;opacity:1; margin:0}
+#demo li:first-child div{display:block;}
+
+/*== 二维码 ==*/
+#w2wm{ padding-top:4px; width:36px; height:100px; text-align:center; cursor:pointer; overflow:hidden; border-top-left-radius:4px; border-bottom-left-radius:4px; background:#009eda}
+#w2wm p{ padding:6px 11px 0 11px; width:14px; height:75px; font-size:12px; line-height:16px; color:#fff; border-top-left-radius:4px}
+#w2wm .pointr{ display:block; width:36px; height:19px; background:url(http://pages.ctrip.com/commerce/promote/han/images/shareArr4.gif) 4px -19px no-repeat}
+#w2wm .pointl{ display:block; width:36px; height:19px; background:url(http://pages.ctrip.com/commerce/promote/han/images/shareArr4.gif) -23px -19px no-repeat}
+.ewm{ background:#fff; padding:10px; width:100px; border:3px solid #009eda; border-right:none; text-align:center}
+.ewm img{ width:100px; height:178px}	
+
+
