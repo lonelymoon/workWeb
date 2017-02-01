@@ -1,0 +1,202 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>2016国际海岛旅游博览会</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/H5base.css">
+<link rel="stylesheet" type="text/css" href="css/enroll.css">
+<link rel="stylesheet" type="text/css" href="../css/other.css">
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="js/H5common.js"></script>
+</head>
+<body>
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+<img src="images/logoshare.png" width='700'>
+</div>
+<!--复用导航-->
+<header>
+	<div class="logo">
+		<a href="index.html" data-key="link" data-val="link">
+			<img src="images/logo.png" />
+		</a>
+	</div>
+	<div class="language cn-text hide">
+		<span class="cn">
+			<a href="enroll.html" data-key="language" data-val="cn">
+				<img src="images/cn_2.jpg" />
+			</a>
+		</span>
+		<span class="en">
+			<a href="enroll.html" data-key="language" data-val="en">
+				<img src="images/en_1.jpg" />
+			</a>
+		</span>
+	</div>
+	<div class="language en-text hide">
+		<span class="cn">
+			<a href="enroll.html" data-key="language" data-val="cn">
+				<img src="images/cn_1.jpg" />
+			</a>
+		</span>
+		<span class="en">
+			<a href="enroll.html" data-key="language" data-val="en">
+				<img src="images/en_2.jpg" />
+			</a>
+		</span>
+	</div>
+</header>
+	
+<section id="content">
+
+	<div class="content-box">
+		
+		<div class="content">
+		
+			<div class="zs-content-title">
+				<div class="cn-title">
+					在线报名
+				</div>
+				<div class="en-title">
+					Registration
+				</div>
+			</div>
+
+			<div class="zs-content-visitors">
+				<div class="zs-visitors-item visitor-selected" data-id="1">
+					<span class="cn-text hide">参展商</span>
+					<span class="en-text hide">Exhibitors</span>
+				</div>
+				<div class="zs-visitors-item" data-id="2">
+					<span class="cn-text hide">专业买家</span>
+					<span class="en-text hide">Pro. Buyer</span>
+				</div>
+				<div class="zs-visitors-item" data-id="3">
+					<span class="cn-text hide">观众</span>
+					<span class="en-text hide">Audience</span>
+				</div>
+				<div class="zs-visitors-item last-item" data-id="4">
+					<span class="cn-text hide">媒体</span>
+					<span class="en-text hide">Media</span>
+				</div>
+			</div>
+
+			<div class="zs-content-form">
+
+				<div class="zs-form-item first-form-item company-name">
+					<div class="zs-form-label">
+						<span class="cn-text hide">单位全称 <em class="redColor">*</em></span>
+						<span class="en-text hide">Company<em class="redColor">*</em></span>
+					</div>
+					<div class="zs-form-input">
+						<input type="text" id="companyName"/>
+					</div>
+				</div>
+
+				<div class="zs-form-item contact-person">
+					<div class="zs-form-label">
+						<span class="cn-text hide">联系人 <em class="redColor">*</em></span>
+						<span class="en-text hide">Name<em class="redColor">*</em></span>
+					</div>
+					<div class="zs-form-input">
+						<input type="text" id="contactPerson"/>
+					</div>
+				</div>
+
+				<div class="zs-form-item first-form-item fax">
+					<div class="zs-form-label">
+						<span class="cn-text hide">传真</span>
+						<span class="en-text hide">Fax</span>					
+					</div>
+					<div class="zs-form-input">
+						<input type="text" id="Fax"/>
+					</div>
+				</div>
+
+				<div class="zs-form-item phone">
+					<div class="zs-form-label">
+						<span class="cn-text hide">手机 <em class="redColor">*</em></span>
+						<span class="en-text hide">Mobile<em class="redColor">*</em></span>		
+					</div>
+					<div class="zs-form-input">
+						<input type="text" id="phone"/>
+					</div>
+				</div>
+
+				<div class="zs-form-item first-form-item email">
+					<div class="zs-form-label">
+						<span class="cn-text hide">电子邮箱 <em class="redColor">*</em></span>
+						<span class="en-text hide">Email <em class="redColor">*</em></span>		
+					</div>
+					<div class="zs-form-input">
+						<input type="text" id="email"/>
+					</div>
+				</div>
+
+				<div class="zs-form-item category">
+					<div class="zs-form-label">
+						<span class="cn-text hide">类别</span>
+						<span class="en-text hide">Category</span>	
+					</div>
+					<div class="zs-form-input">
+						<div class="select-category">
+							<div class="select-val">
+								<span class="cn-text hide">国内旅游城市</span>
+								<span class="en-text hide">Domestic Tourism City</span>
+							</div>
+						</div>
+						<ul class="select-options">
+							<li data-flag="1">
+								<span class="cn-text hide">国内旅游城市</span>
+								<span class="en-text hide">Domestic Tourism City</span>
+							</li>
+							<li data-flag="2">
+								<span class="cn-text hide">国际旅游城市</span>
+								<span class="en-text hide">International Tourism City</span>
+							</li>
+							<li data-flag="3">
+								<span class="cn-text hide">旅游企业</span>
+								<span class="en-text hide">Tourism Enterprises</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="zs-form-item company-address">
+					<div class="zs-form-label">
+						<span class="cn-text hide">单位地址</span>
+						<span class="en-text hide">Company Address</span>	
+					</div>
+					<div class="zs-form-input">
+						<input type="text" id="companyAddress" />
+					</div>
+				</div>
+
+
+				<div class="zs-form-sub">
+					<button id="sub">确认并提交 Submit</button>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>
+
+<!--复用页脚-->
+<footer>
+	<div class="footer">
+		<div>主办单位：浙江省旅游局、舟山市人民政府</div>
+		<div>承办单位：普陀区人民政府、舟山市旅游委员会</div>
+		<div class="last-fo">协办单位：携程旅行网</div>
+	</div>
+</footer>
+
+<script type="text/javascript" src="js/enroll.js"></script>
+<script type="text/javascript" src="../js/enroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+#content{
+	max-width: 15rem;
+	margin: 0 auto;
+	height: auto;
+	background: url("../images/productsShowPage/background_02.jpg") no-repeat;
+	background-size: cover;
+}
+
+.p-nav{
+	padding-top: 7.8rem;
+	padding-bottom: 0.8rem;
+	position: relative;
+	height: auto;
+}
+
+.p-nav:after{
+	display: block;
+	content: "";
+	float: none;
+	clear: both;
+}
+
+.p-nav li{
+	float: left;
+	margin-right: 0.6rem;
+	max-width: 3.6rem;
+}
+
+.p-nav li:hover{
+	cursor: pointer;
+}
+
+.first-li{
+	margin-left: 1.52rem;
+}
+
+.pros-item{
+	max-width: 15rem;
+	position: relative;
+	-webkit-backface-visibility: hidden; 
+	backface-visibility: hidden; 
+	-webkit-perspective: 1000; 
+	perspective: 1000;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.price-box{
+	position: absolute;
+	height: 2rem;
+	bottom: 0.68rem;
+	left: 0.9rem;
+}
+
+.price-box>div{
+	height: 1rem;
+	line-height: 1rem;
+	color: #fff;
+	font-weight: 800;
+}
+
+.text{
+	font-size: 0.56rem;
+}
+
+.price{
+	font-size: 0.68rem;
+}
+
+.pros-item img,.p-nav li img,.bottom img{
+	max-width: 100%;
+	width: 100%;
+}
+
+.bottom{
+	margin-top: 1.4rem;
+	max-width: 15rem;
+}
+
+.bottom img{
+	display: block;
+}

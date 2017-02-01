@@ -1,0 +1,84 @@
+html{
+	font-size: 50px;
+}
+
+header{
+	max-width: 15rem;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	height: 2.28rem;
+	background: #0267db;
+}
+
+.logo{
+	max-width: 7.36rem;
+	padding-left: 0.64rem;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.logo img{
+	position: absolute;
+	max-width: 7.36rem;
+	width: 100%;
+	display: block;
+	z-index: 1001;
+	top: 0.5rem;
+}
+
+.language{
+	position: absolute;
+	right: 0.56rem;
+	top: 50%;
+	margin-top: -0.44rem;
+	height: 0.88rem;
+}
+
+.cn{
+	margin-right: 0.2rem;
+}
+
+.language img{
+	max-width: 1.2rem;
+}
+
+/*footer*/
+footer{
+	max-width: 15rem;
+	margin: 0 auto;
+	margin-top: 2.36rem;
+	height: 4.38rem;
+	padding-top:1.42rem;
+	background: #0158bd;
+	padding-bottom: 2rem;
+}
+
+.footer{
+	padding: 0rem 0.8rem;
+}
+
+.footer>div{
+	font-size: 0.56rem;
+	color: #fff;
+	margin-bottom: 0.4rem;
+}
+
+/*floating*/
+.floating{
+	max-width: 15rem;
+	position: fixed;
+	bottom: 0rem;
+	left: 50%;
+	margin-left: -7.5rem;
+	z-index: 9999;
+}
+
+.floating img{
+	width: 100%;
+	max-width: 15rem;
+	display: block;
+	position: relative;
+	z-index: 9999;
+}

@@ -1,0 +1,130 @@
+#content{
+	max-width: 15rem;
+	margin: 0 auto;
+	margin-top: 3rem;
+	padding: 0rem 0.52rem;
+}
+
+.content{
+	border-top: 1px solid #d2d2d2;
+	position: relative;
+}
+
+.content2{
+	position: relative;
+	max-width: 15rem;
+	margin: 0 auto;
+	padding-bottom: 2rem;
+	z-index:10;
+}
+
+.zs-content-title{
+	position: absolute;
+	left: 0rem;
+	top: -1.6rem;
+}
+
+.zs-content-title:after{
+	display: block;
+	content: "";
+	float: none;
+	clear: both;
+}
+
+.en-title{
+	font-size: 0.64rem;
+	color: #b2b2b2;
+	float: left;
+}
+
+.cn-title{
+	font-size: 0.64rem;
+	color: #1b1b1b;
+	float: left;
+	margin-right: 0.6rem;
+	border-bottom: 0.12rem solid #f13935;
+	padding-bottom: 0.66rem;
+}
+
+.slider-nav{
+	margin-top: 1.12rem;
+}
+
+.slider-li img{
+	display: block;
+	max-width: 6.88rem;
+}
+
+.slider-li:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.first-li{
+	margin-bottom: 0.24rem;
+}
+
+.slider-box{
+	margin-top: 1.44rem;
+	height: auto;
+	position: relative;
+	z-index: 10;
+}
+
+.rank-item{
+	position: relative;
+	z-index: 10;
+}
+
+.item-title{
+	margin-bottom: 1.2rem;
+}
+
+.item-title img{
+	max-width: 15rem;
+}
+
+.swiper-container{
+	max-height: 15.12rem;
+	height: 100%;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+}
+
+.swiper-wrapper{
+	position: relative;
+	z-index: 10;
+}
+
+.swiper-slide{
+	position: relative;
+	z-index: 10;
+}
+
+.swiper-container li{
+	display: block;
+	height: 2.14rem;
+	border-top: 1px solid #d2d2d2;
+	padding: 0rem 1.28rem;
+	line-height: 2.14rem;
+	font-size: 0.56rem;
+	font-family: "Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
+	position: relative;
+	z-index: 10;
+}
+
+.swiper-container,.swiper-container li{
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.swiper-slide li img{
+	max-width: 0.72rem;
+	vertical-align: middle;
+	margin-right: 1.08rem;
+	margin-bottom: 0.08rem;
+}
+
+footer{
+	margin-top: 0rem;
+}

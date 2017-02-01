@@ -1,0 +1,220 @@
+.zs-contentBox{
+	width: 942px;
+	margin: 0 auto;
+	height: auto;
+	position: relative;
+	margin-top: 180px;
+	border-top: 1px solid #cdc9c0;
+}
+
+.zs-content-title{
+	position: absolute;
+	left: 0px;
+	top:-68px;
+	+top:-68px;
+	top:-69px\9;
+	display: block;
+}
+
+.cn-title{
+	float: left;
+	border-bottom: 6px solid #f13935;
+	padding-bottom: 26px;
+	font-size: 28px;
+	color: #1a1a1a;
+	margin-right: 30px;
+}
+
+.en-title{
+	float: left;
+	font-size: 26px;
+	color: #b2b2b2;
+	padding-bottom: 34px;
+}
+
+.zs-content-title:after{
+	display: block;
+	content: "";
+	float: none;
+	clear: both;
+}
+
+.zs-content-visitors{
+	padding-top: 84px;
+	zoom:1;
+}
+
+.zs-visitors-item{
+	float: left;
+	margin-right: 42px;
+}
+
+.zs-visitors-item:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.last-item{
+	margin-right: 0px;
+}
+
+.zs-content-visitors:after{
+	display: block;
+	content: "";
+	float: none;
+	clear: both;
+}
+
+.zs-content-form{
+	margin-top: 100px;
+}
+
+.zs-row{
+	height: auto;
+	margin-bottom: 70px;
+	zoom:1;
+}
+
+.zs-row:after{
+	display: block;
+	content: "";
+	float: none;
+	clear: both;
+}
+
+.zs-form-item{
+	float: left;
+	width: 454px;
+	height: auto;
+	zoom:1;
+}
+
+.company-address{
+	width: 100%;
+}
+
+.first-form-item{
+	margin-right: 34px;
+}
+
+.zs-form-item:after{
+	display: block;
+	content: "";
+	float: none;
+	clear: both;
+}
+
+.zs-form-label,.zs-form-input{
+	float: left;
+	position: relative;
+}
+
+.zs-form-label{
+	position: relative;
+	font-size: 18px;
+	color: #1a1a1a;
+	width: 154px;
+}
+
+.en-label{
+	font-size: 14px;
+	padding-top: 6px;
+}
+
+.zs-form-input>input{
+	width: 280px;
+	height: 38px;
+	line-height: 38px;
+	padding-left: 18px;
+	border-radius: 5px;
+	color: #1a1a1a;
+	font-size: 16px;
+	border:1px solid #cccccc;
+	outline: none;
+}
+
+.zs-form-input>input:focus{
+	border:1px solid #309efb;
+}
+
+.category{
+	position: relative;
+	z-index:1000;
+}
+
+.select-category{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	display: block;
+	padding-right: 10px;
+	width: 288px;
+	height: 38px;
+	border: 1px solid #cccccc;
+	line-height: 38px;
+	text-align: center;
+	background: #fff;
+}
+
+.select-val{
+	position: relative;
+	height: 100%;
+	background: url("../images/enrollPage/arrow.png") no-repeat center right;
+}
+
+.select-category:hover{
+	cursor: pointer;
+	background: #309efb;
+}
+
+.select-options{
+	position: absolute;
+	z-index: 1001;
+	top: 40px;
+	width: 298px;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	display: none;
+}
+
+.select-options>li{
+	display: block;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	border-bottom: 1px dashed #cccccc;
+	background: #fff;
+}
+
+.select-options>li:hover{
+	background: #309efb;
+}
+
+#companyAddress{
+	width: 767px;
+}
+
+.zs-form-sub{
+	padding-top: 20px;
+	text-align: center;
+}
+
+#sub{
+	width: 292px;
+	height: 46px;
+	font-size: 18px;
+	outline: none;
+	border: none;
+	background: #0456db;
+	color: #fff;
+}
+
+#sub:hover{
+	cursor: pointer;
+}
+
+#sub:active{
+	box-shadow: 0px 0px 20px rgba(255,255,255,0.5) inset; 
+	opacity: 0.8;
+}

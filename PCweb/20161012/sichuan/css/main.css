@@ -1,0 +1,206 @@
+.header{
+	height: 717px;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.slider{
+	height: 717px;
+}
+
+.slider1{
+	background: url("../images/tt_01_01.jpg") no-repeat top center;
+}
+
+.slider2{
+	background: url("../images/tt_02_01.jpg") no-repeat top center;
+}
+
+.slider3{
+	background: url("../images/tt_03_01.jpg") no-repeat top center;
+}
+
+.content{
+	height: 6697px;
+	max-width: 1920px;
+	margin: 0 auto;
+	background: url("../images/bg_01_02.jpg") no-repeat top center;
+	position: relative;
+}
+
+.jd-box{
+	height: auto;
+	position: relative;
+}
+
+.jd{
+	text-align: center;
+	height: auto;
+	margin-top: 6px;
+}
+
+.js img{
+	display: block;
+}
+
+.daocheng{
+	margin-top: 0px;
+	padding-top: 480px;
+}
+
+.products-box{
+	height: auto;
+	margin-top: 460px;
+}
+
+.products{
+	height: auto;
+	position: relative;
+}
+
+.products-nav{
+	position: absolute;
+	max-width: 1000px;
+	height: 88px;
+	left: 50%;
+	margin-left: -500px;
+	top: 5px;
+	z-index: 10;
+}
+
+.nav-list{
+	float: left;
+	width: 241.5px;
+	height: 100%;
+	position: relative;
+	z-index:0;
+}
+
+.nav-list:hover{
+	cursor: pointer;
+}
+
+.choose{
+	width: 275.5px;
+	z-index: 2;
+}
+
+.products-list{
+	position: relative;
+	height: auto;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.products-item{
+	position: relative;
+	height: 605px;
+	z-index: 1;
+}
+
+.pros-link-item{
+	padding-top: 193px;
+}
+
+.pros-link-item a:hover{
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.link-item{
+	float: left;
+	width: 234px;
+	height: 366px;
+	margin-left: 7px;
+	position: relative;
+}
+
+.first-item{
+	margin-left: 23px;
+}
+
+.pl1{
+	background: url("../images/gty_01.png") no-repeat top center;
+}
+
+.pl2{
+	background: url("../images/zyx_02.png") no-repeat top center;
+}
+
+.pl3{
+	background: url("../images/ddwl_03.png") no-repeat top center;
+}
+
+.pl4{
+	background: url("../images/zjy_04.png") no-repeat top center;
+}
+
+.price-box{
+	position: absolute;
+	left: 7px;
+	bottom: 26px;
+	color: #ff831e;
+	font-size: 24px;
+}
+
+.price-box em{
+	font-style: normal;
+	font-size: 20px;
+}
+
+.slider-box{
+	max-width: 957px;
+	margin: 0 auto;
+	margin-top: 300px;
+	height: auto;
+}
+
+.swiper-slide img{
+	max-width: 957px;
+	display: block;
+}
+
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #555;
+  margin: 0 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+
+.special{
+	height: auto;
+	max-width: 1000px;
+	margin: 0 auto;
+	margin-top: 446px;
+}
+
+.special img{
+	display: block;
+}
+
+#base_ft p{
+	font-family: Arial, verdana 
+}
+
+.footer-logo{
+	margin: 0 auto;
+	margin-top: 239px;
+	height: 120px;
+	max-width: 1920px;
+	background: url("../images/bg_logo.jpg") no-repeat top center;
+}

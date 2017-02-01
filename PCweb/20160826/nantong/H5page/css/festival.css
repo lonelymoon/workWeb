@@ -1,0 +1,23 @@
+#content{
+	max-width: 15rem;
+	width: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+.part,.bottom{
+	max-width: 15rem;
+	width: 100%;
+}
+
+.part img{
+	max-width: 100%;
+	width: 100%;
+	display: block;
+}
+
+.bottom img{
+	max-width: 100%;
+	width: 100%;
+	display: block;
+}

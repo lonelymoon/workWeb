@@ -1,0 +1,49 @@
+#content{
+	max-width: 15rem;
+	margin: 0 auto;
+	position: relative;
+	
+}
+
+.swiper-slide img{
+	max-width: 15rem;
+	width: 100%;
+}
+
+.introduction img{
+	max-width: 15rem;
+	width: 100%;
+}
+
+.information img{
+	max-width: 15rem;
+	width: 100%;
+}
+
+.msg img{
+	max-width: 15rem;
+	width: 100%;
+}
+
+.linkPage{
+	position: relative;
+	height: 12.64rem;
+	margin: 1.2rem 0rem;
+}
+
+.lpage{
+	width: 100%;
+	height: 4.21rem;
+	position: relative;
+	z-index: 9999;
+}
+
+.linkImg{
+	max-width: 15rem;
+	width: 100%;
+	position: absolute;
+	display: block;
+	top: 0rem;
+	left: 0rem;
+	z-index: 0;
+}
