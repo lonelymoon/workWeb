@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+<title>欢迎来到宁波</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style type="text/css">
+html,body{
+	height: 100%;
+}
+
+#content{
+	background: url("images/bg0.jpg") no-repeat;
+	background-size: 100% 100%;
+	height: 100%;
+	position: relative;
+}
+
+.button{
+	position: absolute;
+	background: url("images/button.png") no-repeat;
+	background-size: cover;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -65px;
+	-webkit-animation: bt 1.8s linear infinite;
+	animation: bt 1.8s linear infinite;
+}
+
+@-webkit-keyframes bt{
+	0%{
+		width: 130px;
+		height: 57px;
+	}
+
+	50%{
+		width: 143px;
+		height: 62.7px;
+	}
+
+	100%{
+		width: 130px;
+		height: 57px;
+	}
+}
+
+
+@keyframes bt{
+	0%{
+		width: 130px;
+		height: 57px;
+	}
+
+	50%{
+		width: 143px;
+		height: 62.7px;
+	}
+
+	100%{
+		width: 130px;
+		height: 57px;
+	}
+}
+
+</style>
+</head>
+<body>
+<section id="content">
+	<a href="main.html">
+		<div class="button"></div>
+	</a>
+</section>
+</body>
+</html>

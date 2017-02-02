@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+<title>感想您参与本次活动</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body ontouchmove="event.preventDefault()">
+<section id="content">
+	<!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slider1">
+                <div class="thanks-box">
+                    <div class="user-name">Hi，张雯</div>
+                    <div class="user-box">
+                        <img src="images/images/1.jpg">
+                    </div>
+                    <div class="thanks-content fade1">
+                        <h2>感谢您参与</h2>
+                        <img src="images/images/title.png">
+                    </div>
+                    <div class="address utb2">
+                        <h3>外滩源壹号</h3>
+                        <h4>(中山东一路33号，近南苏州路)</h4>
+                    </div>
+                </div>
+                <div class="arrow"></div>
+            </div>
+            <div class="swiper-slide slider2">
+                <div class="enroll-box">
+                    <div class="enroll-title">
+                        参与活动报名人数
+                    </div>
+                    <div class="enroll-number">
+                        <img src="images/images/46.png">
+                    </div>
+                </div>
+                <div class="arrow"></div>
+            </div>
+            <div class="swiper-slide slider3">
+                <div class="rank-box">
+                    <div class="rank-title">
+                        活动人气排行榜
+                    </div>
+                    <div class="count">
+                        扫码互访情况统计
+                    </div>
+                    <div class="rank-content-box">
+                        <div class="rank-content">
+
+                            <div class="rank-list-box rank1">
+                                <div class="rank-index">1</div>
+                                <div class="rank-user-img">
+                                    <img src="images/images/1.jpg" class="user-img">
+                                    <img src="images/images/crown_gold.png" class="crown">
+                                </div>
+                                <div class="rank-user-name">
+                                    Annie lu
+                                </div>
+                                <div class="followers-number">23</div>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="rank-list-box rank2">
+                                <div class="rank-index">2</div>
+                                <div class="rank-user-img">
+                                    <img src="images/images/1.jpg" class="user-img">
+                                    <img src="images/images/crown_gold.png" class="crown">
+                                </div>
+                                <div class="rank-user-name">
+                                    Annie lu
+                                </div>
+                                <div class="followers-number">23</div>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="rank-list-box rank3">
+                                <div class="rank-index">3</div>
+                                <div class="rank-user-img">
+                                    <img src="images/images/1.jpg" class="user-img">
+                                    <img src="images/images/crown_copper.png" class="crown">
+                                </div>
+                                <div class="rank-user-name">
+                                    Annie lu
+                                </div>
+                                <div class="followers-number">23</div>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="rank-list-box rank4">
+                                <div class="rank-index">4</div>
+                                <div class="rank-user-img">
+                                    <img src="images/images/1.jpg" class="user-img">
+                                </div>
+                                <div class="rank-user-name">
+                                    Annie lu
+                                </div>
+                                <div class="followers-number">23</div>
+                                <div class="clear"></div>
+                            </div>
+
+                            <div class="rank-list-box rank5">
+                                <div class="rank-index">5</div>
+                                <div class="rank-user-img">
+                                    <img src="images/images/1.jpg" class="user-img">
+                                </div>
+                                <div class="rank-user-name">
+                                    Annie lu
+                                </div>
+                                <div class="followers-number">23</div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow"></div>
+            </div>
+            <div class="swiper-slide slider4">
+                 <div class="arrow"></div>
+            </div>
+            <div class="swiper-slide slider5">
+                 <div class="arrow"></div>
+            </div>
+            <div class="swiper-slide slider6">
+                 <div class="arrow"></div>
+            </div>
+            <div class="swiper-slide slider7">
+                 <div class="arrow"></div>
+            </div>
+            <div class="swiper-slide slider8">
+                 <div class="arrow"></div>
+            </div>
+            <div class="swiper-slide slider9">
+                 <div class="arrow"></div>
+            </div>
+            <div class="swiper-slide slider10">
+                <div class="final-thanks-box">
+                    <div class="final-title">再次感谢您参与</div>
+                    <div class="final-thanks-content">
+                        <img src="images/images/title.png">
+                    </div>
+                    <div class="final-logo">
+                        <div class="tencent-logo">
+                            <img src="images/images/tencent.png">
+                        </div>
+                        <div class="kimberly-logo">
+                            <img src="images/images/kimberly.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow"></div>
+            </div>
+        </div>
+    </div>
+
+<script src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    onSlideChangeEnd: function(swiper){
+        switch(swiper.activeIndex){
+            case 1:
+            $('.enroll-title').addClass('utb');
+            $('.enroll-number').addClass('fade1');
+            break;
+            case 2:
+            for(var i = 1;i<6;i++)
+            {
+                $('.rank'+i).addClass('fade'+i);
+            }
+            $('.crown').addClass('fly');
+            break;
+            case 9:
+            $('.final-thanks-content').addClass('fade1');
+            $('.final-logo').addClass('fade2');
+            break;
+        }
+    } 
+});
+</script>
+</section>
+</body>
+</html>

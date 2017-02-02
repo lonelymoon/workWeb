@@ -1,0 +1,87 @@
+header,#content{
+	max-width: 750px;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+header{
+	position: relative;
+}
+
+.slide{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.slider1{
+	background: url("../images/banner1.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+
+.slider2{
+	background: url("../images/banner2.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+
+.slider3{
+	background: url("../images/banner3.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+
+.slider4{
+	background: url("../images/banner4.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+
+.nav>a{
+	float: left;
+}
+
+#travel{
+	position: relative;
+	background: url("../images/bg1.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+
+
+.travel-nav>li{
+	font-size: 1.8em;
+	color: #dc3615;
+	text-align: center;
+	float: left;
+	display: block;
+	padding-bottom: 4px;
+}
+
+.travel-nav>li:hover{
+	cursor: pointer;
+}
+
+.travel-list{
+	float: left;
+}
+
+#view-point{
+	background: url("../images/bg2.jpg") no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.more{
+	position: absolute;
+}
+
+#food{
+	background: url("../images/bg3.jpg") no-repeat;
+	background-size: 100% 100%;
+}
+
+.choose{
+	border-bottom: 2px solid #dc3615;
+}
+
+.clear{
+	clear: both;
+}
