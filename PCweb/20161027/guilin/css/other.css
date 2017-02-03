@@ -1,0 +1,64 @@
+.hide{
+	display: none;
+}
+
+.redBorder{
+	border: 1px solid red !important;
+}
+
+.redColor{
+	color: red !important;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.clear{
+	float: none!important;
+	clear: both;
+}
+
+.noLineHeight{
+	line-height: 0.8rem !important;
+}
+
+.noLineHeight2{
+	line-height: 0.6rem !important;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+.ml14{
+	margin-left: 14px;
+}
+
+.mr14{
+	margin-right: 14px;
+}
+
+.regBg{
+	background: #f13935;
+}
+
+.yellowBg{
+	background: #fc7921;
+}
+
+.yellow2Bg{
+	background: #fcd021;
+}
+
+.po1{
+	bottom: 24px;
+	left: 24px;
+}
+
+.po2{
+	bottom: 24px;
+	right: 24px;
+}

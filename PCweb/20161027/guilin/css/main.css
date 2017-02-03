@@ -1,0 +1,273 @@
+#cui_nav{
+	height: 40px;
+}
+
+.gl-header{
+	max-width: 1920px;
+	margin: 0 auto;
+	height: 978px;
+	text-align: center;
+	/* background: url("../images/tt.jpg") no-repeat top center; */
+}
+
+.gl-content{
+	max-width: 1920px;
+	margin: 0 auto;
+	height: auto;
+	position: relative;
+}
+
+.gl-shiji{
+	background: url("../images/bg1.jpg") no-repeat top center;
+	height: 2167px;
+	position: relative;
+}
+
+.shiji-part1{
+	width: 713px;
+	margin: 0 auto;
+	padding-top: 665px;
+	position: relative;
+}
+
+.kuaizi{
+	position: absolute;
+	left: 50%;
+	width: 112px;
+	height: 107px;
+	margin-left: 7px;
+	top: 505px;
+}
+
+.shiji-part2 .kuaizi{
+	top: 128px;
+	z-index: 9999;
+}
+
+.shiji-part2{
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	height: 795px;
+}
+
+.sp-title{
+	font-size: 38px;
+	color: #fff;
+	font-family: "FangSong_GB2312","STSong","SimSun";
+	position: absolute;
+	left: 50%;
+	width: 130px;
+	height: 100px;
+	margin-left: -66px;
+	top: 84px;
+}
+
+.slider-box{
+	width: 1080px;
+	margin: 0 auto;
+	padding-top: 216px;
+	height: auto;
+	position: relative;
+}
+
+.swiper-container{
+	width: 514px;
+	margin: 0 auto;
+	height: auto;
+}
+
+.text-title{
+	font-size: 24px;
+	color: #ffffff;
+	font-weight: 800;
+	font-family: "FangSong_GB2312","STSong","SimSun";
+}
+
+.text-title img{
+	vertical-align: middle;
+}
+
+.text-content{
+	font-size: 16px;
+	font-family: "FangSong_GB2312","SimSun";
+	color: #ffffff;
+	line-height: 23px;
+}
+
+.text-content em{
+	font-family: "FangSong_GB2312","SimSun";
+	font-weight: 800;
+	font-style: normal;
+}
+
+.bt{
+	position: absolute;
+	top: 230px;
+}
+
+.bt:hover{
+	cursor: pointer;
+}
+
+.left-bt{
+	left: 30px;
+}
+
+.right-bt{
+	right: 30px;
+}
+
+.shiji-introduce{
+	font-size: 24px;
+	color: #ffffff;
+	font-weight: 800;
+	margin-top: 18px;
+}
+
+.gl-meishi{
+	background: url("../images/bj2.jpg") no-repeat top center;
+	height: 2662px;
+}
+
+.gl-canting{
+	background: url("../images/bj3.jpg") no-repeat top center;
+	height: 2001px;
+}
+
+.gl-tuijian{
+	background: url("../images/bg4.jpg") no-repeat top center;
+	height: 2054px;
+	position: relative;
+}
+
+.tuijian-box{
+	position: relative;
+	width: 1008px;
+	margin: 0 auto;
+	padding-top: 380px;
+	height: 1160px;
+}
+
+.tuijian{
+	position: absolute;
+	width: 336px;
+	height: 342px;
+}
+
+.tuijian-1,.tuijian-4{
+	left: 175px;
+}
+
+.tuijian-1,.tuijian-2{
+	top: 447px;
+}
+
+.tuijian-2,.tuijian-5{
+	right: 165px;
+}
+
+.tuijian-3{
+	left: 339px;
+	top: 642px;
+}
+
+.tuijian-4,.tuijian-5{
+	bottom: 350px;
+}
+
+.link-text{
+	position: absolute;
+	z-index: 9999;
+	width: 300px;
+	padding-top: 130px;
+	text-align: center;
+	font-size: 14px;
+	color : #fff;
+	left: 15px;
+	top: 18px;
+	text-decoration: underline;
+	word-break:break-all;
+	word-wrap: break-word;
+}
+
+.link-box{
+	position: absolute;
+	bottom: 27px;
+	width: 580px;
+	left: 50%;
+	margin-left: -320px;
+	height: 100px;
+}
+
+.link-box a:hover{
+	cursor: pointer;
+}
+
+.logo-link{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 0px;
+	left: 10px;
+}
+
+.logo-link-2{
+	left: 205px;
+	width: 209px;
+}
+
+.logo-link-3{
+	left: 478px;
+	width: 100px;
+}
+
+.swiper-slide a:hover{
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.ct-box{
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+.ct-box a:hover{
+	cursor: pointer;
+}
+
+.ct-link{
+	position: absolute;
+	width: 500px;
+}
+
+.ct-link-1{
+	top: 608px;
+	height: 660px;
+}
+
+.ct-link-2{
+	top: 608px;
+	right: 0px;
+	height: 660px;
+}
+
+.ct-link-3{
+	bottom: 103px;
+	height: 602px;
+}
+
+.ct-link-4{
+	right: 0px;
+	bottom: 103px;
+	height: 602px;
+}
+
+.msg-note{
+	font-size: 16px;
+	right: -160px;
+	bottom: 10px;
+	position: absolute;
+}

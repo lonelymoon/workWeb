@@ -1,0 +1,232 @@
+html,body{
+	width: 100%;
+	height: auto;
+	overflow-x: hidden;
+}
+
+.hz-header{
+	max-width: 1920px;
+	margin: 0 auto;
+	position: relative;
+	height: auto;
+	margin-top: -10px;
+}
+
+.hz-header>img{
+	max-width: 1920px;
+	display: block;
+}
+
+.hz-content{
+	position: relative;
+	height: auto;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.hz-jd{
+	position: relative;
+	height: 2000px;
+	background: url("../images/bg_01.jpg") no-repeat top center;
+	z-index: 2;
+}
+
+.hz-pro-logo{
+	max-width: 1000px;
+	margin: 0 auto;
+	height: auto;
+	padding-top: 245px;
+	text-align: center;
+	padding-right: 320px;
+}
+
+.logo-2{
+	padding-top: 620px;
+	padding-right: 0px;
+	padding-left: 30px;
+}
+
+.logo-3{
+	padding-top: 20px;
+	padding-right: 0px;
+	padding-left: 366px;
+}
+
+.logo-4{
+	padding-top: 380px;
+	padding-right: 197px;
+	padding-left: 0px;
+}
+
+.logo-5{
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	position: absolute;
+	left: 50%;
+	margin-left: -500px;
+	top : -370px;
+	width: 1000px;
+}
+
+.hz-pro-box{
+	max-width: 1000px;
+	margin: 0 auto;
+	height: auto;
+	position: relative;
+	margin-top: 45px;
+	z-index: 2;
+}
+
+.pro-box-2{
+	margin-top: 0px;
+	padding-top: 278px;
+}
+
+.pro-box-3{
+	position: absolute;
+    left: 50%;
+    margin-left: -546px;
+    top: 501px;
+}
+
+.pro-box-4{
+	margin-top: 0px;
+	padding-top: 0px;
+}
+
+.pro-box-5{
+	margin-top: 0px;
+	padding-top: 300px;
+}
+
+.pro-item{
+	position: relative;
+	height: auto;
+	width: 246px;
+	margin-right: 5px;
+}
+
+.last-item{
+	margin-right: 0px;
+}
+
+.pro-item>a>img{
+	display: block;
+}
+
+.layer-box{
+	position: absolute;
+	width: 246px;
+	height: 450px;
+	background: rgba(0,0,0,0.7);
+	+background: #000000;
+	+filter: alpha(opacity=70);
+	left: 0px;
+	top: 0px;
+}
+
+.pro-box-2 .layer-box{
+	height: 400px;
+}
+
+.pro-box-3 .layer-box{
+	height: 400px;
+}
+
+.pro-box-4 .layer-box{
+	height: 400px;
+}
+
+.pro-box-5 .layer-box{
+	height: 450px;
+    left: 20px;
+    top: 29px;
+    position: absolute;
+    width: 226px;
+}
+
+.se-layer{
+	top: 152px;
+}
+
+.fo-layer{
+	top: 151px;
+}
+
+.intro-text{
+	position: absolute;
+	width: 216px;
+	text-align: center;
+	padding: 0px 15px;
+	color: #fff;
+	top: 135px;
+	font-size: 20px;
+}
+
+.pro-box-5 .intro-text{
+	width: 196px;
+}
+
+.price-box{
+	position: absolute;
+	bottom: 60px;
+	height: auto;
+	width: 100%;
+	z-index: 2;
+	text-align: center;
+	font-weight: 800;
+}
+
+.price{
+	font-size: 20px;
+	margin-bottom: 20px;
+	color: #fff
+}
+
+.booking{
+	font-size: 20px;
+	color: #c40023;
+}
+
+a:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.bg-set-1,.bg-set-2{
+	position: absolute;
+	width: 100%;
+	height: 1000px;
+	z-index: 1;
+	bottom: 0px;
+	background: url("../images/bg_02.jpg") no-repeat top center;
+}
+
+.hz-fy{
+	position: relative;
+	height: 1000px;
+	background: url("../images/bg_03.jpg") no-repeat top center;
+}
+
+.hz-ca{
+	position: relative;
+	height: 2000px;
+	background: url("../images/bg_04.jpg") no-repeat top center;
+}
+
+.bg-set-2{
+	background: url("../images/bg_05.jpg") no-repeat top center;
+}
+
+.hz-tl{
+	position: relative;
+	height: 1000px;
+	background: url("../images/bg_06.jpg") no-repeat top center;
+}
+
+.hz-la{
+	position: relative;
+	height: 1157px;
+	background: url("../images/bg_07.jpg") no-repeat top center;
+}
