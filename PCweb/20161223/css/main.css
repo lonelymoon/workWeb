@@ -1,0 +1,576 @@
+#h-header{
+	max-width: 1920px;
+	margin: 0 auto;
+	height: 1068px;
+	position: relative;
+	background: url("../images/bj.jpg") no-repeat top center;
+	margin-top: -10px;
+}
+
+#content{
+	max-width: 1920px;
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+}
+
+.driving{
+	position: relative;
+	height: 1539px;
+	background: url("../images/bj2.jpg") no-repeat top center;
+}
+
+.dri-container{
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 270px;
+	height: auto;
+	+height: 507px;
+	position: relative;
+	zoom:1;
+}
+
+.dri-left-point{
+	width: 500px;
+	height: 350px;
+	float: left;
+	position: relative;
+}
+
+.point-item{
+	position: absolute;
+	width: 22px;
+	height: 22px;
+}
+
+.choose{
+	border-radius: 50%;
+	animation: shadow 1.4s linear infinite;
+}
+
+.point-item:hover{
+	cursor: pointer;
+}
+
+.p-item-1{
+	top: 35px;
+	right: 145px;
+}
+
+.p-item-2{
+	right: 141px;
+	bottom: 81px;
+}
+
+.p-item-3{
+	right: 125px;
+	bottom: -6px;
+}
+
+.p-item-4{
+	left: 265px;
+	bottom: 35px;
+}
+
+.p-item-5{
+	left: 219px;
+	bottom: 83px;
+}
+
+.dri-right-content{
+	float: right;
+	position: relative;
+	height: auto;
+	margin-right: -30px;
+}
+
+.dr-item-img{
+	position: relative;
+	height: auto;
+}
+
+.dri-products{
+	position: relative;
+	height: auto;
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 150px;
+}
+
+.slide-box{
+	width: 877px;
+	height: 389px;
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.sc-1 .swiper-wrapper,.sc-1 .swiper-slide{
+	max-height: 389px;
+	height: 389px;
+}
+
+.dri-price{
+	width: 226px;
+	height: 73px;
+	position: relative;
+	float: right;
+	background: url("../images/jg.png") no-repeat top center;
+	font-size: 24px;
+	color: #fff;
+	margin-right: 40px;
+	line-height: 73px;
+}
+
+.dri-price a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.dri-price a:hover{
+	text-decoration: none;
+}
+
+/********************************/
+
+.hotel{
+	position: relative;
+	height: 1094px;
+	background: url("../images/bj3.jpg") no-repeat top center;
+}
+
+.hot-content{
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	padding-top: 270px;
+	position: relative;
+}
+
+.hot-nav{
+	position: relative;
+	height: auto;
+	width: 876px;
+	margin: 0 auto;
+}
+
+.nav-list{
+	position: relative;
+	float: left;
+	width: 168px;
+	height: 111px;
+	margin-right: 186px;
+	background: url("../images/n1.png") no-repeat top center;
+	font-family: "SimSong","宋体";
+	font-size: 48px;
+	color: #fff;
+	text-align: center;
+	line-height: 111px;
+}
+
+.nav-list:hover{
+	cursor: pointer;
+}
+
+.nav-list-3{
+	margin-right: 0px;
+}
+
+.hChoose{
+	background: url("../images/n2.png") no-repeat top center;
+}
+
+.hot-item-box{
+	margin-top: 40px;
+	position: relative;
+	height: auto;
+}
+
+.hot-items{
+	position: relative;
+	height: auto;
+}
+
+.his-1{
+	width: 860px;
+	margin: 0 auto;
+}
+
+.hot-item{
+	float: left;
+	margin-right: 100px;
+}
+
+.hot-item:hover{
+	cursor: pointer;
+}
+
+.last-item{
+	margin-right: 0px;
+}
+
+.his-2{
+	width: 1044px;
+	margin: 0 auto;
+}
+
+.hot-item2{
+	float: left;
+	width: 174px;
+	height: 49px;
+	line-height: 44px;
+	color: #fff;
+	font-size: 25px;
+	font-family: "SimSong","宋体";
+	background: url("../images/n21.png") no-repeat top center;
+	text-indent: 20px;
+}
+
+.hot-item2:hover{
+	cursor: pointer;
+}
+
+.hit2,.hit5{
+	text-indent: 5px;
+}
+
+.hiChoose2{
+	background: url("../images/n22.png") no-repeat top center;
+}
+
+.hic-item-box{
+	position: relative;
+	height: auto;
+}
+
+.p2{
+	margin-top: 40px;
+}
+
+.hic-item-price{
+	position: absolute;
+	right: 7px;
+	bottom: 66px;
+	color: #fff;
+	font-size: 25px;
+	padding-right: 6px;
+}
+
+.hic-box2{
+	bottom: 90px;
+	right: -12px;
+}
+
+/***********************************/
+.foods{
+	position: relative;
+	height: 1022px;
+	background: url("../images/bj4.jpg") no-repeat top center;
+}
+
+.foods-box{
+	position: relative;
+	height: auto;
+	padding-top: 470px;
+}
+
+.foods-nav{
+	width: 880px;
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+}
+
+.fn-list{
+	float: left;
+	width: 152px;
+	height: 49px;
+	line-height: 33px;
+	text-align: center;
+	color: #fff;
+	font-size: 20px;
+	background: url("../images/bt2.png") no-repeat top center;
+	margin-right: 30px;
+}
+
+.fn-list:hover{
+	cursor: pointer;
+}
+
+.last-fn-list{
+	margin-right: 0px;
+}
+
+.fChoose{
+	background: url("../images/bt1.png") no-repeat top center;
+}
+
+.foods-content{
+	width: 842px;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 40px;
+	position: relative;
+}
+
+.foods-content img{
+	display: block;
+}
+
+.foods-item{
+	position: relative;
+}
+
+.hu{
+	position: absolute;
+	left: -53px;
+	bottom: -61px;
+}
+
+/***************************/
+.gifts{
+	position: relative;
+	height: 1084px;
+	background: url("../images/bj5.jpg") no-repeat top center;
+}
+
+.gifts-box{
+	position: relative;
+	height: auto;
+	padding-top: 420px;
+}
+
+.gifts-nav{
+	width: 920px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.gifts-list{
+	float: left;
+	width: 270px;
+	height: 62px;
+	color: #000;
+	font-size: 26px;
+	text-align: center;
+	line-height: 53px;
+	background: url("../images/bt22.png") no-repeat top center;
+	margin-right: 55px;
+}
+
+.gfl-last{
+	margin-right: 0px;
+}
+
+.gifts-list:hover{
+	cursor: pointer;
+}
+
+.gChoose{
+	color: #fff;
+	background: url("../images/bt21.png") no-repeat top center;
+}
+
+.gifts-content{
+	width: 947px;
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+	margin-top: 58px;
+}
+
+.gifts-item{
+	position: relative;
+	height: auto;
+	margin-left: -18px;
+}
+
+.gifts-item:hover{
+	cursor: pointer;
+}
+
+.gf-price{
+	position: absolute;
+	font-size: 32px;
+	color: #fff;
+}
+
+.gf-price1{
+	right: 250px;
+	bottom: 26px;
+}
+
+.gf-price2{
+	left: 75px;
+	bottom: 26px;
+}
+
+/****************************/
+.products{
+	position: relative;
+	height: 1644px;
+	background: url("../images/bj6.jpg") no-repeat top center;
+}
+
+.products-box{
+	position: relative;
+	height: auto;
+	padding-top: 100px;
+}
+
+.products-nav{
+	width: 1000px;
+	position: relative;
+	height: auto;
+	margin: 0 auto;
+}
+
+.products-list{
+	text-align: right;
+	color: #fff;
+	height: 104px;
+	font-size: 42px;
+	background: url("../images/bt31.png") no-repeat top right;
+	margin-bottom: 15px;
+	line-height: 104px;
+}
+
+.products-list:hover{
+	cursor: pointer;
+}
+
+.pChoose{
+	background: url("../images/bt32.png") no-repeat top right;
+}
+
+.products-list span{
+	margin-right: 245px;
+}
+
+.products-list .last-span{
+	margin-right: 200px;
+}
+
+.products-content{
+	width: 960px;
+	margin: 0 auto;
+	margin-top: 100px;
+	position: relative;
+}
+
+.products-row{
+	position: relative;
+	height: 406px;
+}
+
+.arrow-left{
+	position: absolute;
+	left: -160px;
+	top: 50%;
+	margin-top: -140px;
+}
+
+.arrow-right{
+	position: absolute;
+	right: -150px;
+	top: 50%;
+	margin-top: -140px;
+}
+
+.arrow-left:hover,.arrow-right:hover{
+	cursor: pointer !important;
+}
+
+.sc-2 .swiper-slide,.sc-2 .swiper-wrapper{
+	max-height: 406px;
+	position: relative;
+	height: 406px;
+}
+
+.sc-4 .swiper-slide,.sc-4 .swiper-wrapper{
+	position: relative;
+	max-height: 406px;
+	height: 406px;
+}
+
+.sc-3 .swiper-slide,.sc-3 .swiper-wrapper{
+	position: relative;
+	max-height: 430px;
+	height: 430px;
+}
+
+.pro-price{
+	position: absolute;
+	left: 0px;
+	bottom: 14px;
+	color: #fff;
+	font-size: 20px;
+	width: 127px;
+	text-align: center;
+}
+
+.sc-4 .pro-price{
+	left: 0px;
+	font-size: 18px;
+	bottom: 17px;
+	width: 100px;
+}
+
+.h-footer{
+	position: relative;
+	height: auto;
+}
+
+.link-logo{
+	position: absolute;
+	left: 50%;
+	bottom: 31px;
+	width: 200px;
+	height: 80px;
+	margin-left: -253px;
+}
+
+/*swiper*/
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #555;
+  margin: 0 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #fff;
+}
+
+/*other*/
+.hide{
+	display: none!important;
+}
+
+.clear{
+	clear: both;
+	display: block;
+	position: relative;
+	float: none;
+}
+
+@keyframes shadow{
+	0%{
+		box-shadow: 0px 0px 1px 5px rgba(102,204,255,1);
+	}
+
+	50%{
+		box-shadow: 0px 0px 30px 5px rgba(102,204,255,1);
+	}
+}
