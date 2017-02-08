@@ -1,0 +1,225 @@
+
+.s-header{
+	position: relative;
+	height: 1098px;
+	max-width: 1920px;
+	margin: 0 auto;
+	margin-top: -10px;
+	background: url("../images/bj1.jpg") no-repeat top center;
+}
+
+.s-content{
+	position: relative;
+	max-width: 1920px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.s-introduce{
+	position: relative;
+	height: 1446px;
+	background: url("../images/bj2.jpg") no-repeat top center;
+}
+
+.s-intro-box{
+	position: relative;
+	height: auto;
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 214px;
+}
+
+.intro-nav{
+	position: relative;
+	height: auto;
+	+height: 91px;
+}
+
+.intro-list-1{
+	float: left;
+	width: 195px;
+	height: 91px;
+	margin-right: 6px;
+	padding-bottom: 14px;
+}
+
+.intro-list-1:hover{
+	cursor: pointer;
+}
+
+.s-intro-content{
+	padding-top: 37px;
+	height: auto;
+	position: relative;
+}
+
+.row{
+	position: relative;
+	height: auto;
+}
+
+.intro-list-2{
+	float: left;
+	position: relative;
+	width: 186px;
+	height: 46px;
+	margin-right: 60px;
+}
+
+.intro-list-2:hover{
+	cursor: pointer;
+}
+
+.intro-content-box{
+	position: relative;
+	height: auto;
+	margin-top: 51px;
+}
+
+.intro-item{
+	position: relative;
+	height: auto;
+}
+
+.intro-price-box{
+	position: absolute;
+    right: 207px;
+    top: 416px;
+    font-size: 20px;
+    color: #fff;
+}
+
+/****************************************/
+
+.s-products{
+	position: relative;
+	height: 1076px;
+	background: url("../images/bj3.jpg") no-repeat top center;
+}
+
+.products-box{
+	position: relative;
+	height: auto;
+	width: 1000px;
+	padding-top: 134px;
+	margin: 0 auto;
+}
+
+.p-row{
+	position: relative;
+	height: 177px;
+	margin-bottom: 37.5px;
+}
+
+.products-item{
+	position: absolute;
+	height: 177px;
+	z-index: 10;
+	width: 301px;
+	top: 4px;
+	left: 231px;
+}
+
+.p-item-2{
+	left: 447px;
+	width: 337px;
+	z-index: 11;
+}
+
+.p-item-3{
+	left: 703px;
+	width: 296px;
+	z-index: 12;
+}
+
+.products-price-box{
+	position: absolute;
+    bottom: 47px;
+    left: 50%;
+    margin-left: -80px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.p-item-2 .products-price-box{
+	margin-left: -56px;
+}
+
+.p-item-3 .products-price-box{
+	margin-left: -21px;
+}
+
+.products-item a{
+	display: none;
+}
+
+.products-item:hover a{
+	cursor: pointer;
+	display: block;
+}
+
+/**********************************************/
+
+.s-playing-1{
+	position: relative;
+	height: 1085px;
+	background: url("../images/bj4.jpg") no-repeat top center;
+}
+
+.s-playing-2{
+	position: relative;
+	height: 534px;
+	background: url("../images/bj5.jpg") no-repeat top center;
+}
+
+.playing-box{
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	padding-top: 292px;
+}
+
+.playing-item{
+	position: relative;
+    height: 249px;
+    margin-bottom: 20px;
+}
+
+.s-footer{
+	position: relative;
+	height: 761px;
+	max-width: 1920px;
+	margin: 0 auto;
+	background: url("../images/bj6.jpg") no-repeat top center;
+}
+
+.logo-link{
+	position: absolute;
+	width: 200px;
+	height: 100px;
+	bottom: 100px;
+    left: 50%;
+    margin-left: -200px;
+}
+
+/****/
+.first-list{
+	margin-left: 38px;
+	+padding-left: 38px;
+	+margin-left: 0px;
+}
+
+.last-list{
+	margin-right: 0px;
+}
+
+.hide{
+	display: none!important;
+}
+
+.clear{
+	clear: both;
+	float: none!important;
+	position: relative;
+	display: block;
+}
