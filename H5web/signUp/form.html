@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width = device-width,initial-scale=1.0,user-scalable = no">
+<title>报名信息填写</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body>
+<div class="page">
+	<div class="content-box">
+		<div class="input-box name">
+			<label for="u-name">姓名：</label>
+			<input type="text" id="u-name" data-set="name" placeholder="姓名"/><em class="icon-status">*</em>
+		</div>
+		<div class="input-box mobile">
+			<label for="u-mobile">手机：</label>
+			<input type="text" id="u-mobile" data-set="mobile" placeholder="手机"/><em class="icon-status">*</em>
+		</div>
+		<div class="input-box mail">
+			<label for="u-mail">邮箱：</label>
+			<input type="mail" name="u-mail" id="u-mail" data-set="mail" placeholder="邮箱"/><em class="icon-status">*</em>
+		</div>
+		<div class="input-box company">
+			<label for="u-company">公司：</label>
+			<input type="text" id="u-company" data-set="company" placeholder="公司"/><em class="icon-status">*</em>
+		</div>
+		<div class="input-box job">
+			<label for="u-job">职位：</label>
+			<input type="text" id="u-job" data-set="job" placeholder="职位"/><em class="icon-status">*</em>
+		</div>
+		<div class="input-box sub">
+			<button id="sub">提交</button>
+		</div>
+	</div>
+</div>	
+</body>
+<script type="text/javascript">
+var un = document.getElementById("u-name"),
+	um = document.getElementById("u-mobile"),
+	uma = document.getElementById("u-mail"),
+	uc = document.getElementById("u-company"),
+	uj = document.getElementById("u-job"),
+	sub = document.getElementById("sub");
+
+
+un.value = "";
+um.value = "";
+uma.value = "";
+uc.value = "";
+uj.value = "";
+
+var formCheck = function() {
+	this.element = [];
+
+	this.addEle = function(ele,fn){
+		for(var i = 0,j = this.element.length;i < j; i++)
+		{
+			if(this.element[i] === ele)
+			return;
+		}
+		if(!!fn)
+		ele["check"+ele.getAttribute("data-set")] = fn;
+		this.element.push(ele);
+	};
+
+	this.__init();
+
+};
+
+formCheck.prototype = {
+	constructor : formCheck,
+
+
+	__init : function(){
+	},
+
+	__check : function(){
+		var that = this;
+
+		for(var i = 0,j = this.element.length; i < j; i++)
+		{
+			this.element[i].addEventListener("change",checkAll,false); 
+		}
+
+		function checkAll(e){
+			var e = e || event,
+				target = e.srcElement? e.srcElement : e.target;
+
+			if(target["check"+target.getAttribute("data-set")]!="skip"){
+				checkNull(target);
+				checkRegExp(target);
+			}
+		}
+
+		function checkNull(tar){
+			var val = tar.value.replace(/[ ]/g,""),
+				val = val.replace(/[\r\n]/g,"");
+
+			if(val == "" && tar.getAttribute("data-set") != "mail"){
+				that.__setErrorMsg(tar);
+			} else {
+				that.__setOkMsg(tar);
+			}
+		}
+
+		function checkRegExp(tar){
+			var val = tar.value;
+			if(!!tar["check"+tar.getAttribute("data-set")]){
+				if(!tar["check"+tar.getAttribute("data-set")](val)){
+					that.__setErrorMsg(tar);		
+				}else{
+					that.__setOkMsg(tar);
+				}
+			}
+		}
+
+		var ev = "ontouchstart" in document? "touchend" : "click";
+		sub.addEventListener(ev,function(){this.subData();}.bind(this),false);
+	},
+
+	subData : function(){
+		var canSub = true,
+			temp = {},
+			ele = this.element;
+		for(var i = 0, j = ele.length; i < j; i++){
+			temp[ele[i].getAttribute("data-set")] = ele[i].value;
+			
+			if(this.element[i].getAttribute("data-set") == "mail")
+			this.element[i].canSub = true;
+
+			if(!this.element[i].canSub){
+				canSub = false;
+			}
+			alert(this.element[i].canSub);
+		}
+
+		if(canSub){
+			console.log(temp);
+			alert("d");
+			//$.ajax({
+
+			//});
+		} else {
+			alert("您输入的信息格式有误，请检查");
+		}
+	},
+
+	__setErrorMsg : function(tar){
+		tar.style.color = "red";
+		tar.canSub = false;
+	},
+
+	__setOkMsg : function(tar){
+		tar.style.color = "white";
+		tar.canSub = true;
+	}
+}
+
+
+//正则
+function checkMobile(val){
+	return /^1\d{10}$/.test(val);
+}
+
+function checkMail(val){
+	return /^(\w-*\.*)+@(\w-?)+(\.\w{2,})+$/.test(val);
+}
+
+
+var test = new formCheck();
+test.addEle(un);
+test.addEle(um,checkMobile);
+test.addEle(uma);
+test.addEle(uc);
+test.addEle(uj);
+test.__check();
+</script>
+</html>

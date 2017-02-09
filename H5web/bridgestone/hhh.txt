@@ -1,0 +1,55 @@
+<div class="topic" id="t1">
+				<div class="topic_header">
+					<a href="#" class="u_photo"><img src="img/logo.jpg" class="user_photo"></a>
+					<div class="user_msg">
+						<h2 class="user_name">孤月</h1>
+						<div class="topic_time">2015-3-17 12:14</div>
+					</div>
+				</div>
+				<div class="topic_content">
+					<p>最近又看了一遍clannad，出人意料的可以平静的接受其中的起伏了。</p>
+				</div>
+				<div class="topic_footer">
+					<span class="topic_comment"><img src="img/comment.png"><span>0</span></span>
+					<span class="topic_like"><img src="img/like.png"><span>1</span></span>
+				</div>
+				<div class="topic_reply">
+					<p>
+						<div class="user_header_small"><img src="img/logo.jpg"></div>
+						<span class="user_name_small">孤月 :</span>
+						我了个天了个我了个天了个我了个天了个我
+					</p>
+				</div>
+			</div>
+			<div class="topic" id="t2">
+				<div class="topic_header">
+					<a href="#" class="u_photo"><img src="img/logo.jpg" class="user_photo"></a>
+					<div class="user_msg">
+						<h2 class="user_name">孤月</h1>
+						<div class="topic_time">2015-3-17 12:14</div>
+					</div>
+				</div>
+				<div class="topic_content">
+					<p>最近又看了一遍clannad，出人意料的可以平静的接受其中的起伏了。</p>
+				</div>
+				<div class="topic_footer">
+					<span class="topic_comment"><img src="img/comment.png"><span>0</span></span>
+					<span class="topic_like"><img src="img/like.png"><span>1</span></span>
+				</div>
+			</div>
+			<div class="topic" id="t3">
+				<div class="topic_header">
+					<a href="#" class="u_photo"><img src="img/logo.jpg" class="user_photo"></a>
+					<div class="user_msg">
+						<h2 class="user_name">孤月</h1>
+						<div class="topic_time">2015-3-17 12:14</div>
+					</div>
+				</div>
+				<div class="topic_content">
+					<p>最近又看了一遍clannad，出人意料的可以平静的接受其中的起伏了。</p>
+				</div>
+				<div class="topic_footer">
+					<span class="topic_comment"><img src="img/comment.png"><span>0</span></span>
+					<span class="topic_like"><img src="img/like.png"><span>1</span></span>
+				</div>
+			</div>

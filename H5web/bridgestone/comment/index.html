@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>发表话题</title>
+<link rel="stylesheet" href="css/comm.css">
+<link rel="stylesheet" href="css/swiper.css">
+<script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.js"></script>
+</head>
+<body>
+ <header>
+ 	<div id="sub">发送</div>
+ </header>
+ <section id="content">
+ 	<div class="content_box">
+ 		<textarea id="input_content" placeholder="说两句吧.." require></textarea>
+ 		<div id="img_box"></div>
+ 	</div>
+ 	<!--start-->
+ 	<div class="function_area">
+ 		<span class="emotion">
+ 			<img src="img/bq.png" />
+ 		</span>
+ 		<label for="upload" id="lb_upload" class="pic_choose">
+ 			<img src="img/tp.png" />
+ 		</label>
+ 		<input type="file" style="display:none;" id="upload">
+ 	</div>
+ 	<div class="rl_exp" id="rl_bq" style="display:none;">
+		<ul class="rl_exp_tab clearfix">
+			<li><a href="javascript:void(0);" class="selected">默认</a></li>
+			<li><a href="javascript:void(0);">拜年</a></li>
+			<li><a href="javascript:void(0);">浪小花</a></li>
+			<li><a href="javascript:void(0);">暴走漫画</a></li>
+		</ul>
+		<div class="rl_exp_main clearfix rl_selected"></div>
+		<div class="rl_exp_main clearfix" style="display:none;"></div>
+		<div class="rl_exp_main clearfix" style="display:none;"></div>
+		<div class="rl_exp_main clearfix" style="display:none;"></div>
+		<a href="javascript:void(0);" class="close">×</a>
+	</div>
+	<!--end-->
+ </section>
+ <footer>
+ 	<div id="footer">
+		<span class="refresh">&lt;</span>
+	</div>
+ </footer>
+ <script type="text/javascript" src="js/swiper.min.js"></script>
+ <script type="text/javascript">
+ jQuery(function($){
+ 	var $ev = "ontouchstart" in document?"tap":"click";
+ 	var $h = $('#content').height()-$('.content_box').outerHeight()-$('.function_area').outerHeight();
+ 	$('#rl_bq').css('height',$h);
+
+ 	$('.refresh').on($ev,function(){
+		window.location.href = '../';
+	});
+ });
+ </script>
+ <script type="text/javascript" src="js/rl_exp.js"></script>
+ <script type="text/javascript" src="js/update.js"></script>
+</body>
+</html>

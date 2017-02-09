@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
+<script src="https://webresource.c-ctrip.com/code/lizard/2.1/web/lizard.seed.js"></script>
+<script src="js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="js/head.js"></script>
+<title>大好昆山&nbsp;大美昆曲</title>
+</head>
+<body>
+<div class="body">
+    <div class="top">
+        <img src="img/top.jpg">
+        <a class="go" href="index1.html"></a>
+    </div>
+    
+</div>
+
+<div id="ios" style="display:block;bottom:0px">该活动苹果不是赞助商，并且苹果也不会以任何形式参与其中！</div>
+<script>
+		$(function() {
+		var _from = encodeURIComponent('http://pages.ctrip.com/commerce/promote/201605/destination/ksh5/index.html');
+
+		//new code added
+        var $ev = "ontouchstart" in document?"touchend":"click";
+
+		var $nFlag = true;
+        $('a').on('touchstart',function(e){
+            $nFlag = true;
+        });
+
+        $('a').on('touchmove',function(e){
+            $nFlag = false;
+        });
+
+        //new code end
+
+		 $('a').on($ev,function(e) {
+			e.preventDefault();
+            
+            if(!$nFlag)
+            return;
+        
+			if ($(this).hasClass("noctrip")) {
+					 var realurl=$(this).attr("href");
+					if (Lizard.isInCtripApp) { //判断在携程APP内
+						//在携程APP内使用携程APP内的方法打开页面,才可返回.
+						CtripUtil.app_open_url(realurl, 2, '产品详情', 'tour_detail', true);
+					}else {//H5或者PConline
+						if ($(this).attr('href').indexOf('?') > -1) {
+							Lizard.jump(realurl + '&from=' + _from);
+						} else {
+							Lizard.jump(realurl + '?from=' + _from);
+						}
+					}
+			} else {
+				window.location.href = $(this).attr("href");
+			}
+		})
+		})
+		//显示苹果免责申明
+			var ua = navigator.userAgent.toLowerCase() || '',
+				isIOS = /(ios|iphone|ipad|ipod)/.test(ua);
+			if (isIOS) {
+				document.getElementById('ios').style.display = 'block'
+			}
+			isAPP = /ctripwireless/.test(ua);
+		</script>
+<script type='text/javascript' src='https://webresource.c-ctrip.com/code/cquery/LABjs/LAB.js'></script>
+<script type='text/javascript' src='https://pages.ctrip.com/commerce/PubResource/jq/ga.js' charset='utf-8'></script>
+<input type='hidden' id='page_id' value='10320607594'/>
+</body>
+</html>
