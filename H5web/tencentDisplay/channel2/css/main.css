@@ -1,0 +1,14 @@
+.page{
+	max-width: 750px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.page img{
+	width: 100%;
+	display: block;
+}

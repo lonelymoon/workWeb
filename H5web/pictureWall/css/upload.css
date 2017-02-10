@@ -1,0 +1,182 @@
+html,body{
+	height: 100%;
+	font-size: 50px;
+}
+
+.page{
+	position: relative;
+	max-width: 750px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+}
+
+
+header{
+	flex: 196;
+	padding-top: 3.16rem;
+	font-size: 0.64rem;
+	color: #333;
+	text-align: center;
+}
+
+#content{
+	flex:904;
+	padding-top: 1.88rem;
+}
+
+.content{
+	margin: 0 auto;
+	max-width: 10.6rem;
+	height: 10.6rem;
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: url("../images/uploadPage/frame.png") no-repeat center;
+	background-size: contain;
+}
+
+.img-box{
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+}
+
+.selectImg{
+	font-size: 0.64rem;
+	padding:0.4rem 1.2rem;
+	color: #fff;
+	background:#2499D4;
+	border-radius: 0.2rem;
+	outline: none;
+	box-shadow: 1px 1px 3px #222;
+}
+
+.img-show{
+	max-width: 9.76rem;
+	max-height: 9.76rem;
+}
+
+footer{
+	flex: 106;
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	background: rgba(26,26,26,0.9);
+}
+
+.introduce,.upload-box{
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	font-size: 0.64rem;
+	align-items:center;
+}
+
+.introduce{
+	flex:11;
+}
+
+.upload-box{
+	flex:4;
+	background: rgba(245,167,14,0.9);
+}
+
+.icon-img-box{
+	max-width: 0.88rem;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+}
+
+.icon-img{
+	max-width: 0.88rem;
+}
+
+.text-bt{
+	color: #fff;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	margin-left: 0.4rem;
+}
+
+.comment-add{
+	position: absolute;
+	left: 0rem;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	display: none;
+}
+
+.comment-add-box{
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	max-height: 9.68rem;
+	height: 100%;
+	background: #fff;
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+}
+
+.comment-fn-box{
+	flex: 105;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	font-size: 0.6rem;
+}
+
+.exit{
+	flex: 120;
+	color: #909090;
+}
+
+.comfirm{
+	flex: 120;
+	color: #f6b026;
+}
+
+.comment-title{
+	flex: 510;
+	font-size: 0.64rem;
+	color: #333333;
+}
+
+.comment-text-box{
+	flex: 379;
+	padding: 0 0.6rem;
+}
+
+.comment-text-box-inner{
+	padding:0 0.2rem;
+}
+
+#comment-text{
+	display: block;
+	height: 6.68rem;
+	width: 100%;
+	overflow: auto;
+	background: #eeeeee;
+	font-size: 0.56rem;
+	outline: none;
+	padding: 0.2rem 0rem;
+	color: #333;
+	text-indent : 0.5rem;
+	line-height: 0.8rem;
+}
+
+.display{
+	display: none;
+}

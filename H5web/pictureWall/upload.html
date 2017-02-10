@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable = no">
+<title>乐扶照片墙</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/upload.css">
+</head>
+<body>
+<section class="page uploadPage">
+	<header>
+		请点击选择按钮选择图片或进行拍照
+	</header>
+	<section id = "content">
+		<div class="content">
+			<div class="img-box">
+				<label class="selectImg" for="file">选择</label>
+				<img src="" class="img-show" style="display:none;"/>
+			</div>
+		</div>
+		<input type="file" style="display:none;" id="file" />
+	</section>
+	<footer>
+		<div class="introduce">
+			<div class="icon-img-box">
+				<img src="images/uploadPage/comment.png" class="comment-img icon-img"/>
+				<img src="images/uploadPage/comment2.png" class="comment-img icon-img display"/>
+			</div>
+			<div class="text-bt">添加介绍</div>
+		</div>
+		<div class="upload-box">
+			<div class="icon-img-box">
+				<img src="images/uploadPage/upload.png" class="upload-img icon-img"/>
+			</div>
+			<div class="text-bt upload">上传</div>
+		</div>
+	</footer>
+
+	<section class="comment-add">
+		<div class="comment-add-box">
+			<div class="comment-fn-box">
+				<div class="exit">取消</div>
+				<div class="comment-title">添加介绍</div>
+				<div class="comfirm">确认</div>
+			</div>
+			<div class="comment-text-box">
+				<div class="comment-text-box-inner">
+					<textarea id="comment-text" placeholder="请在此输入评论"></textarea>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+
+<script type="text/javascript" src="js/cssReset.js"></script>
+<script type="text/javascript" src="js/upload.js"></script>
+</body>
+</html>

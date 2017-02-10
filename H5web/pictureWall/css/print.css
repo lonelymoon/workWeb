@@ -1,0 +1,174 @@
+html,body{
+	font-size: 50px;
+}
+
+.page{
+	max-width: 15rem;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+
+header{
+	padding: 0.64rem 0 0.8rem 0;
+}
+
+.user-head{
+	margin: 0 auto;
+	max-width: 2.68rem;
+}
+
+.user-head img{
+	max-width: 2.68rem;
+	border-radius: 50%;
+}
+
+.user-name{
+	font-size: 0.56rem;
+	text-align: center;
+	font-weight: 800;
+	color: #333;
+	margin-top: 0.48rem;
+}
+
+.user-msg{
+	font-size: 0.52rem;
+	text-align: center;
+	color: #333;
+	margin-top: 0.64rem;
+}
+
+.row{
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 0.08rem;
+}
+
+.pic-center{
+	margin: 0 0.08rem;
+}
+
+.pic-items{
+	flex:1;
+	background-size: cover !important;
+	position: relative;
+}
+
+.icon-box{
+	position: relative;
+}
+
+.like{
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	color: #fff;
+	font-size: 0.48rem;
+	font-weight: 800;
+	padding-top: 0.2rem;
+	padding-left: 0.2rem;
+}
+
+.likeImage{
+	max-width: 0.72rem;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+}
+
+.likeImage img{
+	max-width: 0.72rem;
+}
+
+.likeNum{
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	padding-left: 0.2rem;
+}
+
+.rank{
+	position: absolute;
+	right: 0.2rem;
+	top: 0.14rem;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.rank-icon img{
+	max-width: 0.8rem;
+	margin-left: 0.2rem;
+	display: block;
+}
+
+.getThis{
+	position: absolute;
+	right: 0.2rem;
+	bottom: 0.1rem;
+	max-width: 1.08rem;
+	display: none;
+}
+
+.getThis img{
+	max-width: 1.08rem;
+	display: block;
+}
+
+.fixed{
+	height: 2.12rem;
+}
+
+footer{
+	position: fixed;
+	width: 100%;
+	bottom: 0rem;
+	left: 0rem;
+	height: 2.12rem;
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	background: rgba(26,26,26,0.9);
+}
+
+.choose{
+	flex:11;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+
+.print{
+	flex:4;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: center;
+	background: rgba(245,167,14,0.9);
+	height: 100%;
+	align-items:center;
+}
+
+.icon-img-box{
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	margin-right: 0.3rem;
+}
+
+.text-bt{
+	color: #ffffff;
+	font-size: 0.64rem;
+}
+
+.icon-img{
+	max-width: 0.88rem;
+}
+
+.owner-comment{
+	background: #f1f1f1;
+}
+
+.display{
+	display: none;
+}

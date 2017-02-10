@@ -1,0 +1,81 @@
+html,body{
+	font-size: 50px;
+	height: 100%;
+	width: 100%;
+	font-family: "SimHei";
+}
+
+.page{
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction : column;
+	background: #cfe;
+	overflow: hidden;
+}
+
+
+header{
+	flex : 400;
+	display: -webkit-flex;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+}
+
+.inner-img{
+	max-width: 100%;
+	width: 100%;
+}
+
+.know-more{
+	position: absolute;
+	right: 0.5rem;
+	bottom: 0.16rem;
+	max-width: 14.93%;
+}
+
+#content{
+	flex : 807;
+	background: url("../images/homepage/wall_bg.jpg") no-repeat;
+	background-size: cover;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction : column;
+}
+
+.content-box{
+	margin-top: 5.8rem;
+}
+
+footer{
+	flex : 127;
+	background: rgba(51,51,51,0.9);
+	display: -webkit-flex;
+	display: flex;
+	align-items : center;
+}
+
+.print,.upload{
+	flex : 1;
+	font-size: 0.64rem;
+	display: -webkit-flex;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.print{
+	border-right: 1px solid #fff;
+}
+
+.icon-img{
+	max-width: 0.88rem;
+	margin-right: 0.6rem;
+}
+
+.text-bt{
+	color: #fff;
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<title>ctirp摇一摇</title>
+</head>
+<body>
+<section id="homepage">
+	<img src="images/home.jpg" class="img">
+</section>
+<div class="layer">
+	<div class="loading">
+		<div class="img-show"></div>
+		<div class="img-animation"></div>
+	</div>
+</div>
+<script type="text/javascript">
+var shake=4000,   
+   last_update=0,   
+   count=0,
+   flag = false,
+   result,
+   i=1,
+   x=y=z=last_x=last_y=last_z=0,
+   au = document.createElement("audio"),
+   lay = document.querySelector(".layer");
+
+    au.src = "5012.mp3";
+    lay.addEventListener("touchstart",function(e){
+	e = e || window.event;
+	e.preventDefault();
+	e.stopPropagation();
+},false);
+
+if(window.DeviceMotionEvent){  
+   	window.addEventListener("devicemotion",deviceMotionHandler,false); 
+}else{  
+	alert("本设备不支持devicemotion事件");  
+}  
+
+function deviceMotionHandler(eventData){  
+    var acceleration = eventData.accelerationIncludingGravity,  
+        currTime=new Date().valueOf(),  
+        diffTime=currTime-last_update;
+
+	if(diffTime>50 && !flag){ 
+	   last_update=currTime;  
+	   x=acceleration.x;  
+	   y=acceleration.y;  
+	   z=acceleration.z;  
+	   var speed=Math.abs(x+y+z-last_x-last_y-last_z)/diffTime*10000  
+	   if(speed>shake){
+	   		lay.style.display = "block";
+	   		au.play();
+	   		flag = true;
+	   		count = (Math.random()*10000) >> 0;
+	   		if(count-4000<0)
+	   		result = 2;
+	   		else if(count-6000<0)
+	   		result = 3;
+	   		else
+	   		result = 1;
+
+	       	setInterval(function(){
+	       		if(i >= 3)
+	       		window.location.href = "result"+result+".html";
+	       		else{
+	       			i++;
+	       		}
+	       	},1000);
+	   }  
+	   last_x = x;  
+	   last_y = y;  
+	   last_z = z;  
+	}  
+}  
+</script>
+</body>
+</html>

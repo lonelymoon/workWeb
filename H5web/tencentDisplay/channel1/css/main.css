@@ -1,0 +1,55 @@
+html,body{
+	width: 100%;
+	height: 100%;
+}
+
+.page{
+	max-width: 750px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.page img{
+	max-width: 100%;
+	height: 100%;
+}
+
+.ani{
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+.start-point,.end-point{
+	position: absolute;
+	background: url("../images/dot.png") no-repeat;
+	background-size: cover;
+	max-width: 57px;
+	max-height: 57px;
+	width: 100%;
+	height: 100%;
+}
+
+.end-point{
+	background: url("../images/dot2.png") no-repeat;
+	background-size : cover;
+	display: none;
+}
+
+.way{
+	position: absolute;
+	overflow: hidden;
+}
+
+.way img{
+	max-width: 100%;
+}
+
+.way-box{
+	position: absolute;
+}

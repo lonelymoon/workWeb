@@ -1,0 +1,122 @@
+html,body{
+	font-size: 50px;
+}
+
+.page{
+	max-width: 750px;
+	width: 100%;
+	height: auto;
+	margin:0 auto;
+}
+
+#content{
+	height: auto;
+}
+
+.content{
+	height: auto;
+	position: relative;
+}
+
+.wall-items{
+	position: relative;
+	font-size: 0.56rem;
+}
+
+.wall-title{
+	padding: 0.64rem 0rem;
+}
+
+.wall-title>em{
+	font-weight: bolder;
+	color: #f8b430;
+}
+
+.wall-icon{
+	color: #ffac60;
+	
+}
+
+.month-cn{
+	color: #595959;
+}
+
+.wall-pic-lists{
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+}
+
+.row{
+	flex:1;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: space-between;
+}
+
+.first-row{
+	margin-bottom: 0.08rem;
+}
+
+.pic-items{
+	flex:1;
+	background-size: cover !important;
+}
+
+.icon-box{
+	position: relative;
+}
+
+.like{
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	color: #fff;
+	font-size: 0.48rem;
+	font-weight: 800;
+	padding-top: 0.2rem;
+	padding-left: 0.2rem;
+}
+
+.likeImage{
+	max-width: 0.72rem;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+}
+
+.likeImage img{
+	max-width: 0.72rem;
+}
+
+.likeNum{
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	padding-left: 0.2rem;
+}
+
+.rank{
+	position: absolute;
+	right: 0.2rem;
+	top: 0.14rem;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.rank-icon img{
+	max-width: 0.8rem;
+	margin-left: 0.2rem;
+}
+
+.pic-center{
+	margin: 0 0.08rem;
+}
+
+.pic-items:hover{
+	cursor: pointer;
+}
+
+.display{
+	display: none;
+}
