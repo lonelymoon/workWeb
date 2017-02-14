@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>山水崇左·岩画花山</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+ var jq=$.noConflict();
+</script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script src="http://webresource.c-ctrip.com/code/lizard/2.1/web/lizard.seed.js"></script>
+<script type="text/javascript" src="js/head.js"></script>
+</head>
+<body>
+
+<header id="h-header">
+	<img src="images/page1/tt.jpg">
+</header>
+<section id="content">
+	<img src="images/page1/1.jpg">
+	<div class="video">
+		<iframe src='http://player.youku.com/embed/XMTcyNTI0NjE5Mg==' frameborder=0 'allowfullscreen' style='width:100%;height:100%;'></iframe>
+	</div>
+	<a href="index2.html">
+		<div class="link-set"></div>
+	</a>
+</section>
+<div id="ios" class="apple">
+	该活动苹果不是赞助商，并且苹果也不会以任何形式参与其中！
+</div>
+<input type='hidden' id='page_id' value='10320656141'/>
+<script type='text/javascript' src='http://webresource.c-ctrip.com/code/cquery/LABjs/LAB.js'></script>
+<script>
+jQuery(function($) {
+var locaHref = window.location.href,
+  _from = encodeURIComponent(locaHref);
+  $('#content a').click(function(e) {
+    e.preventDefault();
+    if ($(this).hasClass("noctrip")) {
+         var realurl=$(this).attr("href");
+        if (Lizard.isInCtripApp) { //判断在携程APP内
+          //在携程APP内使用携程APP内的方法打开页面,才可返回.
+          CtripUtil.app_open_url(realurl, 2, '产品详情', 'tour_detail',true);
+        }else {//H5或者PConline
+          if ($(this).attr('href').indexOf('?') > -1) {
+            Lizard.jump ?
+            Lizard.jump(realurl + '&from=' + _from) : 
+            window.location.href = realurl + '&from=' + _from;
+          } else {
+            Lizard.jump ?
+            Lizard.jump(realurl + '?from=' + _from) :
+            window.location.href = realurl + '?from=' + _from;
+          }
+        }
+    } else {
+      window.location.href = $(this).attr("href");
+    }
+  });
+});
+
+var ua = navigator.userAgent.toLowerCase() || '',
+	isIOS = /(ios|iphone|ipad|ipod)/.test(ua);
+if (isIOS) {
+	document.getElementById('ios').style.display = 'block';
+}
+isAPP = /ctripwireless/.test(ua);
+
+</script>
+<script>
+    var locaHref = window.location.href,
+    	locaPath = locaHref.substring(0,locaHref.lastIndexOf("/")+1),
+    	CtripGS = {};
+    CtripGS.shareCommon = function(JSONString) {
+        if (Internal.isNotEmptyString(JSONString)) {
+            jsonObj = JSON.parse(JSONString);
+            jsonObj.service = "Destination";
+            jsonObj.action = "shareCommon";
+            paramString = JSON.stringify(jsonObj);
+            if (Internal.isIOS || Internal.isOldVersion) {
+                url = Internal.makeURLWithParam(paramString);
+                Internal.loadURL(url);
+            }
+            else if (Internal.isAndroid) {
+                window.CtripGS_a.shareCommon(paramString);
+            }
+        }
+    };
+    var app = {
+        callback: function(json_obj) {
+          var tagname = json_obj.tagname;
+          if (tagname == 'web_view_finished_load') { 
+              var nav_bar_config_json = {
+                  "center": [{"tagname":"title","value": "山水崇左·岩画花山"}],
+                  "right": [{"tagname": "share", "value": "分享"}]
+              };
+              var json_str = JSON.stringify(nav_bar_config_json);
+              CtripUtil.app_refresh_nav_bar(json_str);
+
+          } else if (tagname == 'share') {
+
+            var param = {
+                sharetag: '山水崇左·岩画花山',
+                shareUrl: locaHref,
+                weixinContent: "山水崇左·岩画花山",
+                weiboContent:"山水崇左·岩画花山",
+                title: "山水崇左·岩画花山",
+                picUrl: locaPath + "images/h.jpg"
+            };
+            CtripGS.shareCommon(JSON.stringify(param));
+          }
+        }
+    };
+</script>
+<script type="text/javascript" src="js/H5common.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

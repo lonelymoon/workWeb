@@ -253,6 +253,16 @@
 	margin-right: 0px;
 }
 
+.products-text{
+	position: absolute;
+	font-size: 22px;
+	font-family: "楷体";
+	top: 280px;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+}
+
 .price-box{
 	position: absolute;
     width: 140px;
