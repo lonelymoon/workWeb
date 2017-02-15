@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>旅游基金限时抢购</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="http://webresource.c-ctrip.com/code/cquery/LABjs/LAB.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://webresource.c-ctrip.com/code/cquery/cQuery_110421.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://webresource.c-ctrip.com/ResVacationOnline/R8/js/vacation/lib/jquery-1.10.2.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="http://webresource.c-ctrip.com/ResVacationOnline/R8/js/vacation/lib/vacation_global.min.js" charset="utf-8"></script>
+</head>
+<body>
+<section id="content">
+	<img src="images/BG_1.png">
+	<div class="content-box">
+		<div class="content-column">
+			<canvas id="canvas"></canvas>
+			<div class="alter-box hide" data-status="oh-year">
+				<div class="alter-hongbao">
+					<img src="images/HB_1.png" class="hide hb" data-type="46032">
+					<img src="images/HB_2.png" class="hide hb" data-type="46033">
+					<img src="images/HB_3.png" class="hide hb" data-type="46036">
+				</div>
+				<div class="alter-btn">
+					<img src="images/AN_3.png" data-status="done" class="hide hbDone">
+					<div class="btn-box couponsend hide" id="coupon_box_1" data-type="46032">
+						<a class="couponlink"></a>
+					</div>
+					<div class="btn-box couponsend hide" id="coupon_box_2" data-type="46033">
+						<a class="couponlink"></a>
+					</div>
+					<div class="btn-box couponsend hide" id="coupon_box_3" data-type="46036">
+						<a class="couponlink"></a>
+					</div>
+				</div>
+			</div>
+			<div class="alter-box hide" data-status="oh-no">
+				<div class="alter-btn no-win">
+					<img src="images/AN_1.png">
+				</div>
+			</div>
+			<div class="layer hide"></div>
+		</div>
+	</div>
+</section>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+seajs.use("http://pages.ctrip.com/commerce/promote/201602/destination/fz/js/coupon_act.js", function (coupon){ 
+    GV.app.coupon.couponConfig = [
+    	{ 
+    		couponCode: "46032", 
+    		pageid: "coupon_box_1", 
+    		startDate: "2017/02/01 00:00:00", 
+    		endDate: "2017/06/30 23:59:59"
+    	},
+    	{ 
+    		couponCode: "46033", 
+    		pageid: "coupon_box_2", 
+    		startDate: "2017/02/01 00:00:00", 
+    		endDate: "2017/06/30 23:59:59"
+    	},
+    	{ 
+    		couponCode: "46036", 
+    		pageid: "coupon_box_3", 
+    		startDate: "2017/02/01 00:00:00", 
+    		endDate: "2017/06/30 23:59:59"
+    	}
+   ];
+   GV.app.coupon.jsonURL="http://vacations.ctrip.com/Package-Booking-Promotion/Handler/CouponCollect.ashx";
+   coupon.initCoupon();
+});
+</script>
+</body>
+</html>
