@@ -17,6 +17,12 @@
 	<div class="content-box">
 		<div class="content-column">
 			<canvas id="canvas"></canvas>
+			<div class="coupon-status"></div>
+			<div class="alter-box hide" data-status="done">
+				<div class="hasDone hide">
+					您已经参与过了，请到携程APP个人中心查看奖券
+				</div>
+			</div>
 			<div class="alter-box hide" data-status="oh-year">
 				<div class="alter-hongbao">
 					<img src="images/HB_1.png" class="hide hb" data-type="46032">
@@ -27,12 +33,15 @@
 					<img src="images/AN_3.png" data-status="done" class="hide hbDone">
 					<div class="btn-box couponsend hide" id="coupon_box_1" data-type="46032">
 						<a class="couponlink"></a>
+						<div class="couponinfo t100"></div>
 					</div>
 					<div class="btn-box couponsend hide" id="coupon_box_2" data-type="46033">
 						<a class="couponlink"></a>
+						<div class="couponinfo t200"></div>
 					</div>
 					<div class="btn-box couponsend hide" id="coupon_box_3" data-type="46036">
 						<a class="couponlink"></a>
+						<div class="couponinfo t1000"></div>
 					</div>
 				</div>
 			</div>
@@ -45,8 +54,10 @@
 		</div>
 	</div>
 </section>
-<script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript">
+jQuery(function($){
+//H5:http://pages.ctrip.com/commerce/promote/commonresources/js/coupon_2017216.js
+//PC:http://pages.ctrip.com/commerce/promote/201602/destination/fz/js/coupon_act.js
 seajs.use("http://pages.ctrip.com/commerce/promote/201602/destination/fz/js/coupon_act.js", function (coupon){ 
     GV.app.coupon.couponConfig = [
     	{ 
@@ -71,6 +82,9 @@ seajs.use("http://pages.ctrip.com/commerce/promote/201602/destination/fz/js/coup
    GV.app.coupon.jsonURL="http://vacations.ctrip.com/Package-Booking-Promotion/Handler/CouponCollect.ashx";
    coupon.initCoupon();
 });
+
+});
 </script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

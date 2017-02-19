@@ -22,6 +22,23 @@
 #canvas{
 	display: block;
 	margin: 0 auto;
+	position: relative;
+	z-index: 10;
+}
+
+.coupon-status{
+	width: 5.417rem;
+    height: 2.791rem;
+    position: absolute;
+    top: 3.86rem;
+    left: 50%;
+    margin-left: -2.7085rem;
+    z-index: 1;
+    font-size: 0.75rem;
+	color:rgba(0,0,0,0.8);
+	text-align: center;
+	line-height: 2.791rem;
+	background:#FF3641;
 }
 
 .alter-box{
@@ -42,12 +59,27 @@
 	background-size: cover;
 }
 
+.alter-box[data-status="done"]{
+	background: url("../images/done.png") no-repeat center;
+	background-size: cover;
+}
+
+.hasDone{
+	position: relative;
+    padding: 0rem 0.2rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    font-size: 0.35rem;
+    color: rgba(0,0,0,0.8);
+}
+
 .alter-hongbao{
 	position: relative;
 	padding-top: 1rem;
 	height: auto;
 	max-width: 1.975rem;
 	margin: 0 auto;
+	padding-right: 0.15rem;
 }
 
 .alter-btn{
@@ -64,7 +96,7 @@
 	margin: 0rem;
 	bottom: 0.5rem;
 	left: 50%;
-	margin-right: -1rem;
+	margin-left: -1rem;
 }
 
 .btn-box{
@@ -99,9 +131,17 @@
     color: #fcc676;
 }
 
+.couponinfo{
+	display: none;
+}
+
 img{
 	max-width: 100%;
 	display: block;
+}
+
+.opa0{
+	opacity: 0;
 }
 
 .hide{
