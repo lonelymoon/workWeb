@@ -1,0 +1,430 @@
+#header{
+	position: relative;
+	max-width: 6.25rem;
+	margin:0 auto;
+	height: auto;
+	padding: 0rem 0.25rem;
+	border-top: 0.1rem solid #78DCD9;
+	margin-bottom: 0.42rem;
+}
+
+.logo{
+	max-width: 2.392rem;
+	height: auto;
+	padding: 0.3rem 0rem;
+}
+
+img{
+	max-width: 100%;
+	display: block;
+}
+
+#content{
+	position: relative;
+	height: auto;
+	max-width: 6.25rem;
+	margin: 0 auto;
+}
+
+.columnn-item{
+	position: relative;
+	height: auto;
+	padding: 0rem 0.25rem;
+	margin-bottom: 0.75rem;
+}
+
+.column-title{
+	position: relative;
+	height: auto;
+}
+
+.column-title:after{
+	height: 100%;
+	position: absolute;
+	width: 0.1rem;
+	background: #78DCD9;
+	content: "";
+	top: -0.04rem;
+	right: 0rem;
+}
+
+.column-cn-title{
+	opacity: 0.8;
+	font-family: 'PingFangSC-Regular','Microsoft Yahei';
+	font-size: 0.3rem;
+	color: #000000;
+	letter-spacing: 0;
+}
+
+.column-en-title{
+	opacity: 0.8;
+	font-family: 'PingFangSC-Regular','Microsoft Yahei';
+	font-size: 0.167rem;
+	color: #000000;
+	letter-spacing: 0;
+	margin-top: 0.02rem;
+}
+
+.column-content{
+	position: relative;
+	height: auto;
+	margin-top: 0.43rem;
+}
+
+.intro{
+	position: relative;
+	height: auto;
+	padding-top: 3.58rem;
+	padding-bottom: 0.3rem;
+	background: #78DCD9;
+}
+
+.intro-content{
+	position: relative;
+	padding-left: 0.28rem;
+}
+
+.intro>img{
+	max-width: 5.475rem;
+	width: 100%;
+	position: absolute;
+	top: -0.26rem;
+	left: -0.28rem;
+}
+
+.intro-text{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-family: '.PingFangSC-Regular','Microsoft Yahei';
+	font-size: 0.2rem;
+	color: #000000;
+	letter-spacing: 1px;
+	line-height: 0.4rem;
+	padding: 0rem 0.13rem;
+}
+
+.intro-list-box{
+	position: relative;
+	height: auto;
+}
+
+.intro-list{
+	display: inline-block;
+	position: relative;
+	width: 50%;
+	max-width: 2.833rem;
+	height: auto;
+}
+
+.l-title{
+	position: relative;
+	margin-top: 0.08rem;
+	margin-bottom: 0.21rem;
+	opacity: 0.8;
+	font-family: "PingFangSC-Medium","Microsoft Yahei";
+	font-size: 0.2rem;
+	color: rgba(0,0,0,0.80);
+	letter-spacing: 0;
+}
+
+.i-last-list{
+	margin-bottom: 0rem;
+}
+
+.media-box{
+	position: relative;
+	height: auto;
+}
+
+.media-list{
+	position: relative;
+	height: 3.13rem;
+	width: 4.39rem;
+	background: rgba(0,0,0,0.70);
+	margin-bottom: 0.18rem;
+}
+
+.media-title{
+	position: relative;
+	height: auto;
+	width: 2.7rem;
+	padding-left: 0.17rem;
+	color: #78DCD9;
+}
+
+.media-cn-title{
+	position: relative;
+	height: auto;
+	font-family: 'PingFangSC-Regular','Microsoft Yahei';
+	font-size: 0.25rem;
+	letter-spacing: 0;
+	padding-top: 0.19rem;
+}
+
+.media-en-title{
+	position: relative;
+	height: auto;
+	font-family: 'PingFangSC-Regular','Microsoft Yahei';
+	font-size: 0.18rem;
+	letter-spacing: 0;
+	line-height: 0.2rem;
+	margin-top: 0.03rem;
+}
+
+.media-img{
+	position: absolute;
+	max-width: 2.7rem;
+	width: 100%;
+	top: 0.22rem;
+	right: -1.35rem;
+}
+
+.swiper-container{
+	overflow: hidden;
+}
+
+.sc-1 .swiper-slide{
+	width: 11.51rem;
+}
+
+.service-list-box{
+	position: relative;
+	height: auto;
+	width: 11.51rem;
+}
+
+.service-list-box:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.service-list{
+	float: left;
+	position: relative;
+	width: 2.75rem;
+	height: auto;
+	margin-right: 0.17rem;
+}
+
+.service-list:last-child{
+	margin-right: 0rem;
+}
+
+.client-content,.example-content{
+	position: relative;
+	height: auto;
+}
+
+.sc-2 .swiper-slide,.client-list-box{
+	position: relative;
+	height: auto;
+	width: 7.472rem;
+}
+
+.client-list-box:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.client-list{
+	float: left;
+	position: relative;
+	width: 1.73rem;
+	height: auto;
+	margin-right: 0.18rem;
+}
+
+.client-list:last-child{
+	margin-right: 0rem;
+}
+
+.sc-3 .swiper-slide,.example-list-box{
+	position: relative;
+	height: auto;
+	width: 16.9rem;
+}
+
+.example-list-box:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.example-list{
+	float: left;
+	position: relative;
+	width: 2.67rem;
+	height: auto;
+	margin-right: 0.17rem;
+}
+
+.example-list:last-child{
+	margin-right: 0rem;
+}
+
+.sc-4 .swiper-slide,.join-list-box{
+	position: relative;
+	height: auto;
+	width: 14rem;
+}
+
+.join-list-box:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.join-list{
+	float: left;
+	position: relative;
+	width: 3.33rem;
+	height: auto;
+	margin-right: 0.17rem;
+}
+
+.join-list:last-child{
+	margin-right: 0rem;
+}
+
+.contact-box{
+	position: relative;
+	height: auto;
+	background: #78DCD9;
+}
+
+.contact-text{
+	position: relative;
+	padding: 0.25rem;
+	opacity: 0.8;
+	font-family: 'PingFangSC-Regular','Microsoft Yahei';
+	font-size: 0.18rem;
+	color: #000000;
+	letter-spacing: 1px;
+	line-height: 0.26rem;
+}
+
+.contact-msg{
+	position: relative;
+	padding-left: 0.25rem;
+	height: auto;
+	font-family: 'PingFangSC-Regular','Microsoft Yahei';
+	font-size: 0.18rem;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 0.25rem;
+}
+
+.contact-form{
+	margin-top: 0.16rem;
+	padding-left: 0.25rem;
+	position: relative;
+	height: auto;
+}
+
+.inp{
+	width: 5.25rem;
+	height: 0.58rem;
+	border: 3px solid rgba(0,0,0,0.80);
+	font-family: "PingFangSC-Regular","Microsoft Yahei";
+	font-size: 0.2rem;
+	color: #686C79;
+	letter-spacing: 0;
+	-webkit-text-indent: 0.18rem;
+	text-indent: 0.18rem;
+	margin-bottom: 0.17rem;
+}
+
+#input-msg{
+	position: relative;
+	height: 1.84rem;
+	width: 5.25rem;
+	border: 3px solid rgba(0,0,0,0.80);
+	font-family: "PingFangSC-Regular","Microsoft Yahei";
+	font-size: 0.2rem;
+	color: #686C79;
+	letter-spacing: 0;
+	-webkit-text-indent: 0.18rem;
+	text-indent: 0.18rem;
+	margin-bottom: 0.17rem;
+	padding-top: 0.1rem;
+	-webkit-appearance: none;
+	-moz-appearance:none;
+	appearance:none;
+}
+
+.arrow{
+	position: absolute;
+	height: auto;
+	width: 1.917rem;
+	height: 0.25rem;
+	left: 50%;
+	margin-left: -0.9535rem;
+	bottom: -0.25rem;
+}
+
+.contact-box{
+	position: relative;
+	box-shadow: 0rem 0.5rem 1rem rgba(0,0,0,0.7);
+	z-index: 1;
+}
+
+.map{
+	position: relative;
+	height: auto;
+	max-width: 5.75rem;
+	height: auto;
+	margin-top: -6rem;
+	z-index: 0;
+}
+
+.footer-msg{
+	position: relative;
+	min-height: 3rem;
+	height: auto;
+	background: #10141A;
+	padding: 0 0.25rem;
+}
+
+.company-name{
+	position: relative;
+	padding-top: 0.25rem;
+	font-family: "PingFangSC-Medium","Microsoft Yahei";
+	font-size: 0.18rem;
+	color: #FFFFFF;
+	letter-spacing: 0;
+}
+
+.footer-address{
+	margin-top: 0.25rem;
+	font-family: "PingFangSC-Medium","Microsoft Yahei";
+	font-size: 0.18rem;
+	color: #696D7A;
+	letter-spacing: 0;
+	line-height: 0.3rem;
+	padding-bottom: 0.3rem;
+	border-bottom: 0.03rem solid #FFFFFF;
+}
+
+.footer-logo{
+	position: relative;
+	height: auto;
+	padding: 0.25rem 0;
+}
+.logo_sub {
+    position: absolute;
+    width: 1.458rem;
+    height: 0.317rem;
+    padding: 0 0.15rem;
+    line-height: 0.3rem;
+    text-align: center;
+    background: #D8D8D8;
+    font-family: 'PingFangSC-Regular','Microsoft Yahei';
+    font-size: 0.16rem;
+    color: #000000;
+    letter-spacing: 0;
+    right: 0.25rem;
+    top: 1rem;
+}

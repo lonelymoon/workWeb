@@ -97,4 +97,12 @@ $('.close').on('click',function(e){
 	$('.ex').removeClass('ex-show');
 });
 
+$('.join-btn').on('click',function(e){
+	$.scrollTo("#contact",1000);
+});
+
+$('.form-btn').on('click',function(e){
+	alert("信息提交成功！");
+});
+
 });

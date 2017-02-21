@@ -534,6 +534,18 @@
 	height: auto;
 }
 
+.jobs-btn{
+	position: absolute;
+    width: 180px;
+    height: 52px;
+    bottom: 138px;
+    left: 110px;
+}
+
+.join-btn:hover{
+	cursor: pointer;
+}
+
 .contact-us{
 	max-width: 1920px;
 	margin: 0 auto;
@@ -642,6 +654,10 @@
 	font-size: 24px;
 }
 
+.form-btn:hover{
+	cursor: pointer;
+}
+
 .btn-arrow{
 	position: absolute;
 	width: 230px;
@@ -747,16 +763,17 @@
 .example{
 	position: relative;
 	width: 1200px;
+	margin: 0 auto;
 	height: auto;
 }
 
 .ex{
 	position: absolute;
-	width: 800px;
-	height: 400px;
+	width: 1000px;
+	height: 500px;
 	top: 100px;
 	left: 50%;
-	margin-left: -330px;
+	margin-left: -500px;
 	overflow: auto;
 	display: none;
 }
