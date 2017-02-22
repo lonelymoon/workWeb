@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>视频演示</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style type="text/css">
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+
+#container{
+	position: relative;
+	height: 100%;
+	max-width: 6.25rem;
+	margin: 0 auto;
+}
+.page{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	background: #000;
+	-webkit-transition:-webkit-transform 0.3s ease;
+	transition:transform 0.3s ease;
+}
+
+.page-left{
+	-webkit-transform: translate3d(-100%,0,0);
+	transform: translate3d(-100%,0,0);
+}
+
+.page2{
+	z-index: 19;
+}
+.page3{
+	z-index: 18;
+}
+img{
+	max-width: 100%;
+	display: block;
+}
+.link-set{
+	position: absolute;
+	z-index: 2;
+}
+.ls1{
+	width: 4rem;
+    height: 0.7rem;
+    top: 8.76rem;
+    left: 50%;
+    margin-left: -2rem;
+}
+.ls2{
+	width: 1rem;
+    height: 1rem;
+    top: 6.32rem;
+    right: 1.9rem;
+}
+.ls3{
+	width: 100%;
+    height: 1.03rem;
+    top: 0.97rem;
+    left: 0rem;
+}
+
+#video{
+	position: absolute;
+	z-index: 1;
+}
+</style>
+<script type="text/javascript" src="js/iphone-inline-video.min.js"></script>
+</head>
+<body>
+
+<section id="container">
+	<div class="page page1">
+		<img src="1.png">
+		<div class="link-set ls1"></div>
+	</div>
+	<div class="page page2">
+		<img src="2.png">
+		<div class="link-set ls2"></div>
+	</div>
+	<div class="page page3">
+		<img src="3.png">
+		<div class="link-set ls3"></div>
+	</div>
+	<video src="1.mp4" preload="auto" id="video" playsinline></video>
+</section>
+
+
+<script type="text/javascript">
+(function(window,document,undefined){
+
+var video = document.querySelector("#video"),
+	tw,th,
+	u = navigator.userAgent,
+	isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1,
+	isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+	requestAnimation = requestAnimationFrame || webkitRequestAnimationFrame,
+	down = "ontouchstart" in document ? "touchstart" : "click";
+
+video.oncanplay = function(e){	
+	if(isAndroid){
+		videoPlay(e);
+	}
+};
+
+video.onloadedmetadata = function(e){
+	if(isiOS){
+		videoPlay(e);
+	}
+};
+
+document.querySelector(".ls1").addEventListener(down,function(e){
+	document.querySelector('.page1').className += " page-left";
+});
+
+document.querySelector(".ls2").addEventListener(down,function(e){
+	document.querySelector('.page2').className += " page-left";
+});
+
+document.querySelector(".ls3").addEventListener(down,function(e){
+	setTimeout(function(){
+		document.querySelector('.page3').className += " page-left";
+	},600);
+	setTimeout(function(){
+		video.style.display = "block";
+	},500);
+	video.style.display = "none";
+	video.play();
+});
+
+function videoPlay(e){
+
+	var w = window.screen.width,
+		h = window.screen.height;
+
+	video.style.cssText = "width: "+w+"px; height:"+h+"px;";
+};
+
+})(window,document);
+</script>
+</body>
+</html>
