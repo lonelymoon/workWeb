@@ -428,3 +428,35 @@ img{
     right: 0.25rem;
     top: 1rem;
 }
+
+.layer{
+	position: fixed;
+	background: rgba(0,0,0,0.7);
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	overflow: auto;
+}
+
+.layer-list{
+	position: relative;
+	max-width: 6.25rem;
+	height: auto;
+	margin: 0 auto;
+}
+
+.close{
+	position: absolute;
+	height: auto;
+	width: 0.4rem;
+	right: 0.4rem;
+	top: 0.4rem;
+	color: #fff;
+	z-index: 10;
+}
+
+.hide{
+	display: none!important;
+}

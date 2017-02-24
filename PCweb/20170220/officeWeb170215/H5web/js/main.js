@@ -18,4 +18,15 @@ var sc1 = new Swiper('.sc-1',{
 	freeMode: true
 });
 
+$('.al-list').on("click",function(e){
+	var $id = $(this).attr("data-id");
+	$('.layer').removeClass("hide");
+	$('.layer-list[data-id="'+$id+'"]').removeClass("hide");
+});
+
+$('.close').on("click",function(e){
+	$('.layer').addClass("hide");
+	$('.layer-list').addClass("hide");
+});
+
 });
