@@ -3,16 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-<title>山水崇左·岩画花山</title>
+<title>从心发现，自驾崇左</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript">
- var jq=$.noConflict();
-</script>
-<script type="text/javascript" src="js/swiper.min.js"></script>
-<script src="http://webresource.c-ctrip.com/code/lizard/2.1/web/lizard.seed.js"></script>
+<script src="https://webresource.c-ctrip.com/code/lizard/2.1/web/lizard.seed.js"></script>
 <script type="text/javascript" src="js/head.js"></script>
 </head>
 <body>
@@ -32,10 +26,8 @@
 <div id="ios" class="apple">
 	该活动苹果不是赞助商，并且苹果也不会以任何形式参与其中！
 </div>
-<input type='hidden' id='page_id' value='10320656141'/>
-<script type='text/javascript' src='http://webresource.c-ctrip.com/code/cquery/LABjs/LAB.js'></script>
 <script>
-jQuery(function($) {
+$(function() {
 var locaHref = window.location.href,
   _from = encodeURIComponent(locaHref);
   $('#content a').click(function(e) {
@@ -68,54 +60,58 @@ if (isIOS) {
 	document.getElementById('ios').style.display = 'block';
 }
 isAPP = /ctripwireless/.test(ua);
-
 </script>
+
 <script>
-    var locaHref = window.location.href,
-    	locaPath = locaHref.substring(0,locaHref.lastIndexOf("/")+1),
-    	CtripGS = {};
-    CtripGS.shareCommon = function(JSONString) {
-        if (Internal.isNotEmptyString(JSONString)) {
-            jsonObj = JSON.parse(JSONString);
-            jsonObj.service = "Destination";
-            jsonObj.action = "shareCommon";
-            paramString = JSON.stringify(jsonObj);
-            if (Internal.isIOS || Internal.isOldVersion) {
-                url = Internal.makeURLWithParam(paramString);
-                Internal.loadURL(url);
-            }
-            else if (Internal.isAndroid) {
-                window.CtripGS_a.shareCommon(paramString);
-            }
-        }
-    };
-    var app = {
-        callback: function(json_obj) {
-          var tagname = json_obj.tagname;
-          if (tagname == 'web_view_finished_load') { 
-              var nav_bar_config_json = {
-                  "center": [{"tagname":"title","value": "山水崇左·岩画花山"}],
-                  "right": [{"tagname": "share", "value": "分享"}]
-              };
-              var json_str = JSON.stringify(nav_bar_config_json);
-              CtripUtil.app_refresh_nav_bar(json_str);
+Lizard.viewReady(function () {
+  var CtripGS = {},
+      nlocaHref = window.location.href,
+      locaPath = nlocaHref.substring(0,nlocaHref.lastIndexOf("/")+1);
 
-          } else if (tagname == 'share') {
+  CtripGS.shareCommon = function (JSONString) {
+    if (Internal.isNotEmptyString(JSONString)) {
+      jsonObj = JSON.parse(JSONString);
+      jsonObj.service = "Destination";
+      jsonObj.action = "shareCommon";
+      paramString = JSON.stringify(jsonObj);
+      if (Internal.isIOS || Internal.isOldVersion) {
+        url = Internal.makeURLWithParam(paramString);
+        Internal.loadURL(url);
+      }
+      else if (Internal.isAndroid) {
+        window.CtripGS_a.shareCommon(paramString);
+      }
+    }
+  };
+  var nav_bar_config_json = {
+    "center": [{"tagname": "title", "value": "从心发现，自驾崇左"}],
+    "right": [{"tagname": "share", "value": "分享"}]
+  };
+  var json_str = JSON.stringify(nav_bar_config_json);
+  CtripBar.app_refresh_nav_bar(json_str);
 
-            var param = {
-                sharetag: '山水崇左·岩画花山',
-                shareUrl: locaHref,
-                weixinContent: "山水崇左·岩画花山",
-                weiboContent:"山水崇左·岩画花山",
-                title: "山水崇左·岩画花山",
-                picUrl: locaPath + "images/h.jpg"
-            };
-            CtripGS.shareCommon(JSON.stringify(param));
-          }
-        }
-    };
+  window.app = {
+    callback: function (json_obj) {
+      
+      var tagname = json_obj.tagname;
+      if (tagname == 'share') {
+
+        var param = {
+          sharetag: '从心发现，自驾崇左',
+          shareUrl: nlocaHref,
+          weixinContent: "从心发现，自驾崇左",
+          weiboContent: "从心发现，自驾崇左",
+          title: "从心发现，自驾崇左",
+          picUrl: locaPath + "images/h.jpg"
+        };
+        CtripGS.shareCommon(JSON.stringify(param));
+      }
+    }
+  };
+
+});
 </script>
-<script type="text/javascript" src="js/H5common.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script type='text/javascript' src='https://webresource.c-ctrip.com/code/cquery/LABjs/LAB.js'></script>
+<input type='hidden' id='page_id' value='10320656141'/>
 </body>
 </html>

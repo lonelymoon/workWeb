@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-<title>山水崇左·岩画花山</title>
+<title>从心发现，自驾崇左</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
@@ -12,7 +12,7 @@
  var jq=$.noConflict();
 </script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
-<script src="http://webresource.c-ctrip.com/code/lizard/2.1/web/lizard.seed.js"></script>
+<script src="https://webresource.c-ctrip.com/code/lizard/2.1/web/lizard.seed.js"></script>
 <script type="text/javascript" src="js/head.js"></script>
 <script src="https://m.ctrip.com/webapp/destmarketing/Queryprice.ashx?verb=2&issetprice=yes&ChannelId=3&products=['G-81637','G-81634','G-22146','B-3241618-2-2','B-4080-2-2','B-79878-2-2','A-1641493-2-2','A-6692248-2-2','A-1749832-2-2']&sourceurl="></script>
 </head>
@@ -264,7 +264,7 @@
 											德天漫心度假酒店1晚+德天大瀑布门票，景区周边4钻酒店，看亚洲第一跨国瀑布，感受《花千骨》仙境！
 										</div>
 										<div class="price-box">
-											<span id="G_81637"></span>/起
+											￥<span id="G_81637"></span>/起
 										</div>
 									</div>
 								</a>
@@ -277,7 +277,7 @@
 											大新明仕艺术酒店1晚+德天大瀑布门票+免费游览明仕田园【感受壮族图腾文化】【春节热卖】
 										</div>
 										<div class="price-box">
-											<span id="G_81634"></span>/起
+											￥<span id="G_81634"></span>/起
 										</div>
 									</div>
 								</a>
@@ -290,7 +290,7 @@
 											南宁+德天瀑布3天2夜 双人价！南宁市区1天+德天瀑布1天+南宁升五星，必游线路【春节热卖】
 										</div>
 										<div class="price-box">
-											<span id="G_22146"></span>/起
+											￥<span id="G_22146"></span>/起
 										</div>
 									</div>
 								</a>
@@ -309,7 +309,7 @@
 											南宁+德天瀑布+北海+涠洲岛3-15日自由行·花千骨·小骨和尊上的仙侣奇缘
 										</div>
 										<div class="price-box">
-											<span id="B_3241618_2"></span>/起
+											￥<span id="B_3241618_2"></span>/起
 										</div>
 									</div>
 								</a>
@@ -322,7 +322,7 @@
 											大新德天老木棉花乡别墅酒店1晚+德天大瀑布门票，世外桃源隐逸度假【春节热卖】
 										</div>
 										<div class="price-box">
-											<span id="B_4080_2"></span>/起
+											￥<span id="B_4080_2"></span>/起
 										</div>
 									</div>
 								</a>
@@ -335,7 +335,7 @@
 											南宁+巴马2-15日自由行·长寿村探寻养生秘诀
 										</div>
 										<div class="price-box">
-											<span id="B_79878_2"></span>/起
+											￥<span id="B_79878_2"></span>/起
 										</div>
 									</div>
 								</a>
@@ -354,7 +354,7 @@
 											广西南宁+通灵峡谷+德天瀑布+涠洲岛+北海6日跟团游(4钻)·自营纯玩 海鲜餐 儿童0地接 减1000...
 										</div>
 										<div class="price-box">
-											<span id="A_1641493_2"></span>/起
+											￥<span id="A_1641493_2"></span>/起
 										</div>
 									</div>
 								</a>
@@ -367,7 +367,7 @@
 											广西南宁+德天瀑布+北海+涠洲岛6日5晚跟团游(5钻)·南进北出 老木棉+三晚富丽华海景房...
 										</div>
 										<div class="price-box">
-											<span id="A_6692248_2"></span>/起
+											￥<span id="A_6692248_2"></span>/起
 										</div>
 									</div>
 								</a>
@@ -380,7 +380,7 @@
 											广西南宁+通灵峡谷+德天瀑布+涠洲岛+北海6日跟团游(4钻)·自营 海鲜餐+涠洲岛 全包价...
 										</div>
 										<div class="price-box">
-											<span id="A_1749832_2"></span>/起
+											￥<span id="A_1749832_2"></span>/起
 										</div>
 									</div>
 								</a>
@@ -421,10 +421,8 @@
 <div id="ios" class="apple">
 	该活动苹果不是赞助商，并且苹果也不会以任何形式参与其中！
 </div>
-<input type='hidden' id='page_id' value='10320656141'/>
-<script type='text/javascript' src='http://webresource.c-ctrip.com/code/cquery/LABjs/LAB.js'></script>
 <script>
-jQuery(function($) {
+$(function() {
 var locaHref = window.location.href,
 	_from = encodeURIComponent(locaHref);
 	$('#content a').click(function(e) {
@@ -460,52 +458,57 @@ isAPP = /ctripwireless/.test(ua);
 
 </script>
 <script>
-    var locaHref = window.location.href,
-    	locaPath = locaHref.substring(0,locaHref.lastIndexOf("/")+1),
-    	CtripGS = {};
+Lizard.viewReady(function () {
+  var CtripGS = {},
+      nlocaHref = window.location.href,
+      locaPath = nlocaHref.substring(0,nlocaHref.lastIndexOf("/")+1);
 
-    CtripGS.shareCommon = function(JSONString) {
-        if (Internal.isNotEmptyString(JSONString)) {
-            jsonObj = JSON.parse(JSONString);
-            jsonObj.service = "Destination";
-            jsonObj.action = "shareCommon";
-            paramString = JSON.stringify(jsonObj);
-            if (Internal.isIOS || Internal.isOldVersion) {
-                url = Internal.makeURLWithParam(paramString);
-                Internal.loadURL(url);
-            }
-            else if (Internal.isAndroid) {
-                window.CtripGS_a.shareCommon(paramString);
-            }
-        }
-    };
-    var app = {
-        callback: function(json_obj) {
-          var tagname = json_obj.tagname;
-          if (tagname == 'web_view_finished_load') { 
-              var nav_bar_config_json = {
-                  "center": [{"tagname":"title","value": "山水崇左·岩画花山"}],
-                  "right": [{"tagname": "share", "value": "分享"}]
-              };
-              var json_str = JSON.stringify(nav_bar_config_json);
-              CtripUtil.app_refresh_nav_bar(json_str);
+  CtripGS.shareCommon = function (JSONString) {
+    if (Internal.isNotEmptyString(JSONString)) {
+      jsonObj = JSON.parse(JSONString);
+      jsonObj.service = "Destination";
+      jsonObj.action = "shareCommon";
+      paramString = JSON.stringify(jsonObj);
+      if (Internal.isIOS || Internal.isOldVersion) {
+        url = Internal.makeURLWithParam(paramString);
+        Internal.loadURL(url);
+      }
+      else if (Internal.isAndroid) {
+        window.CtripGS_a.shareCommon(paramString);
+      }
+    }
+  };
+  var nav_bar_config_json = {
+    "center": [{"tagname": "title", "value": "从心发现，自驾崇左"}],
+    "right": [{"tagname": "share", "value": "分享"}]
+  };
+  var json_str = JSON.stringify(nav_bar_config_json);
+  CtripBar.app_refresh_nav_bar(json_str);
 
-          } else if (tagname == 'share') {
+  window.app = {
+    callback: function (json_obj) {
+      
+      var tagname = json_obj.tagname;
+      if (tagname == 'share') {
 
-            var param = {
-                sharetag: '山水崇左·岩画花山',
-                shareUrl: locaHref,
-                weixinContent: "山水崇左·岩画花山",
-                weiboContent:"山水崇左·岩画花山",
-                title: "山水崇左·岩画花山",
-                picUrl: locaPath + "images/h.jpg"
-            };
-            CtripGS.shareCommon(JSON.stringify(param));
-          }
-        }
-    };
+        var param = {
+          sharetag: '从心发现，自驾崇左',
+          shareUrl: nlocaHref,
+          weixinContent: "从心发现，自驾崇左",
+          weiboContent: "从心发现，自驾崇左",
+          title: "从心发现，自驾崇左",
+          picUrl: locaPath + "images/h.jpg"
+        };
+        CtripGS.shareCommon(JSON.stringify(param));
+      }
+    }
+  };
+
+});
 </script>
 <script type="text/javascript" src="js/H5common.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
+<script type='text/javascript' src='https://webresource.c-ctrip.com/code/cquery/LABjs/LAB.js'></script>
+<input type='hidden' id='page_id' value='10320656141'/>
 </body>
 </html>
