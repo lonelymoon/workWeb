@@ -1,0 +1,364 @@
+body{
+	background: #f3f3f3;
+}
+
+header{
+	height: 214px;
+	position: relative;
+	display: table;
+	background: url("../img/userCenter/profile_bg.png") no-repeat center;
+	background-size: cover;
+	width: 100%;
+}
+
+.user-head-box{
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 30px;
+	position: relative;
+}
+
+#user-head{
+	max-width: 108px;
+	max-height: 108px;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 4px solid rgba(255,255,255,0.25);
+	vertical-align: middle;
+}
+
+.user-msg{
+	display: inline-block;
+	line-height: 42px;
+	position: absolute;
+	left: 184px;
+	top: 68px;
+}
+
+#user-name{
+	font-size: 30px;
+	font-weight: bolder;
+	color: #fff;
+}
+
+.group{
+	font-size: 24px;
+	color: #fff;
+}
+
+#content{
+	margin-top:30px;
+	position: relative;
+	margin-bottom: 80px;
+}
+
+.options-box{
+	height: 90px;
+	padding: 0px 32px 0px 42px;
+	background: #fff;
+	line-height: 90px;
+	font-size: 30px;
+	color: #333;
+	box-shadow:0px -1px 0px #ccc;
+	position: relative;
+}
+
+.icon-box,.gt-icon{
+	padding: 1px 16px;
+}
+
+.opt-name{
+	margin-left: 28px;
+}
+
+.opt-name>b{
+	color: #fc6023;
+}
+
+.options-box>div{
+	position: absolute;
+	right: 32px;
+	top: 50%;
+	width: 32px;
+	height: 32px;
+	margin-top: -16px;
+	line-height: 32px;
+}
+
+.gt-icon{
+	background: url("../img/right_arrow.svg") no-repeat center;
+	background-size: cover;
+}
+
+.box-below{
+	margin-top: 30px;
+}
+
+#cart-icon{
+	background: url("../img/userCenter/trolly.svg") no-repeat center;
+	background-size: contain;
+}
+
+#cur-icon{
+	background: url("../img/userCenter/current_order.svg") no-repeat center;
+	background-size: contain;
+}
+
+#his-icon{
+	background: url("../img/userCenter/history_order.svg") no-repeat center;
+	background-size: contain;
+}
+
+#addr-icon{
+	background: url("../img/userCenter/address.svg") no-repeat center;
+	background-size: contain;
+}
+
+#stor-icon{
+	background: url("../img/userCenter/stores.svg") no-repeat center;
+	background-size: contain;
+}
+
+footer{
+	position: relative;
+	width: 100%;
+	height: 80px;
+	display: table;
+	text-align: center;
+}
+
+address{
+	display: table-cell;
+	width: 100%;
+	vertical-align: middle;
+	font-size: 24px;
+	color: #999; 
+	line-height: 38px;
+}
+
+.tel{
+	padding: 1px 12px;
+	background: url("../img/userCenter/phone.svg") no-repeat center;
+	background-size: cover;
+}
+
+address>a{
+	text-decoration: none;
+	color: #999;
+}
+
+
+/*480*/
+@media screen and (max-width: 480px){
+	header{
+		height: 160.5px;
+	}
+
+	.user-head-box{
+		padding-left: 22.5px;
+	}
+
+	#user-head{
+		max-width: 81px;
+		max-height: 81px;
+		border: 3px solid rgba(255,255,255,0.25);
+	}
+
+	.user-msg{
+		line-height: 31.5px;
+		left: 138px;
+		top: 51px;
+	}
+
+	#user-name{
+		font-size: 22.5px;
+	}
+
+	.group{
+		font-size: 18px;
+	}
+
+	#content{
+		margin-top:22.5px;
+		margin-bottom: 60px;
+	}
+
+	.options-box{
+		height: 67.5px;
+		padding: 0px 24px 0px 31.5px;
+		line-height: 67.5px;
+		font-size: 22.5px;
+	}
+
+	.icon-box,.gt-icon{
+		padding: 1px 12px;
+	}
+
+	.options-box>div{
+		right: 24px;
+		width: 24px;
+		height: 24px;
+		margin-top: -12px;
+		line-height: 24px;
+	}
+
+	.opt-name{
+		margin-left: 21px;
+	}
+
+	.box-below{
+		margin-top: 22.5px;
+	}
+
+	address{
+		font-size: 18px;
+	}
+
+	.tel{
+		padding: 1px 9px;
+	}
+}
+
+/*360*/
+@media screen and (max-width: 360px){
+	header{
+		height: 120.375px;
+	}
+
+	.user-head-box{
+		padding-left: 16.875px;
+	}
+
+	#user-head{
+		max-width: 60.75px;
+		max-height: 60.75px;
+		border: 2.25px solid rgba(255,255,255,0.25);
+	}
+
+	.user-msg{
+		line-height: 23.625px;
+		left: 103.5px;
+		top: 38.25px;
+	}
+
+	#user-name{
+		font-size: 16.875px;
+	}
+
+	.group{
+		font-size: 13.5px;
+	}
+
+	#content{
+		margin-top:16.875px;
+		margin-bottom: 45px;
+	}
+
+	.options-box{
+		height: 50.625px;
+		padding: 0px 18px 0px 23.625px;
+		line-height: 50.625px;
+		font-size: 16.875px;
+	}
+
+	.icon-box,.gt-icon{
+		padding: 1px 9px;
+	}
+
+	.options-box>div{
+		right: 18px;
+		width: 18px;
+		height: 18px;
+		margin-top: -9px;
+		line-height: 18px;
+	}
+
+	.opt-name{
+		margin-left: 15.75px;
+	}
+
+	.box-below{
+		margin-top: 16.875px;
+	}
+
+	address{
+		font-size: 13.5px;
+	}
+
+	.tel{
+		padding: 1px 6.75px;
+	}
+}
+
+
+/*320*/
+@media screen and (max-width: 320px){
+	header{
+		height: 107px;
+	}
+
+	.user-head-box{
+		padding-left: 15px;
+	}
+
+	#user-head{
+		max-width: 54px;
+		max-height: 54px;
+		border: 2px solid rgba(255,255,255,0.25);
+	}
+
+	.user-msg{
+		line-height: 21px;
+		left: 92px;
+		top: 34px;
+	}
+
+	#user-name{
+		font-size: 15px;
+	}
+
+	.group{
+		font-size: 12px;
+	}
+
+	#content{
+		margin-top:15px;
+		margin-bottom: 40px;
+	}
+
+	.options-box{
+		height: 45px;
+		padding: 0px 16px 0px 21px;
+		line-height: 45px;
+		font-size: 15px;
+	}
+
+	.icon-box,.gt-icon{
+		padding: 1px 8px;
+	}
+
+	.options-box>div{
+		right: 16px;
+		width: 16px;
+		height: 16px;
+		margin-top: -8px;
+		line-height: 16px;
+	}
+
+	.opt-name{
+		margin-left: 14px;
+	}
+
+	.box-below{
+		margin-top: 15px;
+	}
+
+	address{
+		font-size: 12px;
+	}
+
+	.tel{
+		padding: 1px 6px;
+	}
+}

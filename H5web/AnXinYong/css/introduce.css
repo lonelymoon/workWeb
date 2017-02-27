@@ -1,0 +1,500 @@
+header{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+header>img{
+	max-width: 100%;
+	width: 100%;
+	max-height: 600px;
+}
+
+#content{
+	position: relative;
+	padding-left: 24px;
+}
+
+.msg-box{
+	position: relative;
+	padding: 30px 0px 44px 0px;
+}
+
+.food-msg{
+	padding: 6px 0px;
+	width: 100%;
+}
+
+.above-msg h1{
+	font-size: 40px;
+	color: #333;
+}
+
+.information{
+	font-size: 24px;
+	margin-top: 20px;
+}
+
+.tag>span{
+	font-size: 22px;
+	color: #fff;
+	border-radius: 6px;
+	background: #8dd33a;
+	padding: 5px 18px;
+	margin-right:6px;
+}
+
+.food-price{
+	position: absolute;
+	right: 28px;
+	top: 34px;
+	color: #fc6023;
+	font-size: 60px;
+}
+
+.food-price>span{
+	font-size: 46px;
+}
+
+.below-msg{
+	margin-top: 20px;
+	font-size: 26px;
+	color: #333;
+}
+
+
+.msg-box-con{
+	position: relative;
+	padding-right: 24px;
+	font-size: 28px;
+	color: #333;
+	padding: 50px 0px 62px 0px;
+	border-top: 1px solid #e0e0e0;
+}
+
+.msg-box-con>.title{
+	font-size: 26px;
+	color: #999;
+	background: #fff;
+	position: absolute;
+	padding-right: 32px;
+	top: -16px;
+}
+
+.con{
+	line-height: 40px;
+	padding-right: 1em;
+}
+
+.order{
+	padding-right: 26px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.step-con{
+	padding-bottom: 44px;
+	padding-right: 1em;
+}
+
+.step-con>p{
+	margin: 0px;
+	padding: 0px;
+}
+
+.media-box{
+	margin-top: 30px;
+	max-width: 100%;
+	height: auto;
+}
+
+.media-box>img{
+	display: inline-block;
+	width:33%;
+	max-width: 33%;
+	margin-right:.5%;
+}
+
+.media-box>img:last-child{
+	margin-right: 0px;
+}
+
+.media-box>video{
+	max-width: 100%;
+	width: 100%;
+}
+
+footer{
+	height: 88px;
+	line-height: 88px;
+	width: 100%;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+}
+
+.cart-box{
+	height: 100%;
+	position: relative;
+	padding-left: 70.625%;
+}
+
+#add_to_cart{
+	position: absolute;
+	left: 0px;
+	width: 70.625%;
+	height: 100%;
+	text-align: center;
+	background: #fdf4ea;
+	color:#fc6023;
+	font-size: 28px;
+}
+
+#buy{
+	height: 100%;
+	background: #fc6023;
+	color: #fff;
+	font-size: 28px;
+	text-align: center;
+}
+
+#buy>span{
+	position: relative;
+	padding-right: 40px;
+	background: url("../img/cart.svg") no-repeat center right;
+	background-size: 40px 40px;
+}
+
+.goods-num{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	border-radius:50%;
+	background: #fff;
+	text-align: center;
+	line-height: 24px;
+	color: #fc6023;
+	font-size: 16px;
+	font-weight: bolder;
+	right: -8px;
+	top: -8px;
+}
+
+/*480*/
+@media screen and (max-width:480px){
+	header>img{
+		max-height: 450px;
+	}
+
+	#content{
+		padding-left: 18px;
+	}
+
+	.msg-box{
+		padding: 22.5px 0px 33px 0px;
+	}
+
+	.food-msg{
+		padding: 4.5px 0px;
+	}
+
+	.above-msg h1{
+		font-size: 30px;
+	}
+
+	.information{
+		font-size: 18px;
+		margin-top: 15px;
+	}
+
+	.tag>span{
+		font-size: 16.5px;
+		border-radius: 4.5px;
+		padding: 3.75px 13.5px;
+		margin-right:4.5px;
+	}
+
+	.food-price{
+		right: 21px;
+		top: 25.5px;
+		font-size: 45px;
+	}
+
+	.food-price>span{
+		font-size: 34.5px;
+	}
+
+	.below-msg{
+		margin-top: 15px;
+		font-size: 19.5px;
+	}
+
+
+	.msg-box-con{
+		padding-right: 18px;
+		font-size: 21px;
+		padding: 37.5px 0px 46.5px 0px;
+	}
+
+	.msg-box-con>.title{
+		font-size: 19.5px;
+		padding-right: 24px;
+		top: -12px;
+	}
+
+	.con{
+		line-height: 30px;
+	}
+
+	.order{
+		padding-right: 19.5px;
+	}
+
+	.step-con{
+		padding-bottom: 33px;
+	}
+
+	.media-box{
+		margin-top: 22.5px;
+	}
+
+	footer{
+		height: 66px;
+		line-height: 66px;
+	}
+
+	#add_to_cart{
+		font-size: 21px;
+	}
+
+	#buy{
+		font-size: 21px;
+	}
+
+	#buy>span{
+		padding-right: 30px;
+		background-size: 30px 30px;
+	}
+
+	.goods-num{
+		width: 18px;
+		height: 18px;
+		line-height: 18px;
+		font-size: 12px;
+		right: -6px;
+		top: -6px;
+	}
+}
+
+/*360*/
+@media screen and (max-width:360px){
+	header>img{
+		max-height: 337.5px;
+	}
+
+	#content{
+		padding-left: 13.5px;
+	}
+
+	.msg-box{
+		padding: 16.875px 0px 24.75px 0px;
+	}
+
+	.food-msg{
+		padding: 3.375px 0px;
+	}
+
+	.above-msg h1{
+		font-size: 22.5px;
+	}
+
+	.information{
+		font-size: 13.5px;
+		margin-top: 11.25px;
+	}
+
+	.tag>span{
+		font-size: 12.375px;
+		border-radius: 3.375px;
+		padding: 2.8125px 10.125px;
+		margin-right:3.375px;
+	}
+
+	.food-price{
+		right: 15.75px;
+		top: 19.125px;
+		font-size: 33.75px;
+	}
+
+	.food-price>span{
+		font-size: 25.875px;
+	}
+
+	.below-msg{
+		margin-top: 11.25px;
+		font-size: 14.625px;
+	}
+
+
+	.msg-box-con{
+		padding-right: 13.5px;
+		font-size: 15.75px;
+		padding: 28.125px 0px 34.875px 0px;
+	}
+
+	.msg-box-con>.title{
+		font-size: 14.625px;
+		padding-right: 18px;
+		top: -9px;
+	}
+
+	.con{
+		line-height: 22.5px;
+	}
+
+	.order{
+		padding-right: 14.625px;
+	}
+
+	.step-con{
+		padding-bottom: 24.75px;
+	}
+
+	.media-box{
+		margin-top: 16.875px;
+	}
+
+	footer{
+		height: 49.5px;
+		line-height: 49.5px;
+	}
+
+	#add_to_cart{
+		font-size: 15.75px;
+	}
+
+	#buy{
+		font-size: 15.75px;
+	}
+
+	#buy>span{
+		padding-right: 22.5px;
+		background-size: 22.5px 22.5px;
+	}
+
+	.goods-num{
+		width: 13.5px;
+		height: 13.5px;
+		line-height: 13.5px;
+		font-size: 9px;
+		right: -4.5px;
+		top: -4.5px;
+	}
+}
+
+
+/*320*/
+@media screen and (max-width:320px){
+	header>img{
+		max-height: 300px;
+	}
+
+	#content{
+		padding-left: 12px;
+	}
+
+	.msg-box{
+		padding: 15px 0px 22px 0px;
+	}
+
+	.food-msg{
+		padding: 3px 0px;
+	}
+
+	.above-msg h1{
+		font-size: 20px;
+	}
+
+	.information{
+		font-size: 12px;
+		margin-top: 10px;
+	}
+
+	.tag>span{
+		font-size: 11px;
+		border-radius: 3px;
+		padding: 2.5px 9px;
+		margin-right:3px;
+	}
+
+	.food-price{
+		right: 14px;
+		top: 17px;
+		font-size: 30px;
+	}
+
+	.food-price>span{
+		font-size: 23px;
+	}
+
+	.below-msg{
+		margin-top: 10px;
+		font-size: 13px;
+	}
+
+
+	.msg-box-con{
+		padding-right: 12px;
+		font-size: 14px;
+		padding: 25px 0px 31px 0px;
+	}
+
+	.msg-box-con>.title{
+		font-size: 13px;
+		padding-right: 16px;
+		top: -8px;
+	}
+
+	.con{
+		line-height: 20px;
+	}
+
+	.order{
+		padding-right: 13px;
+	}
+
+	.step-con{
+		padding-bottom: 22px;
+	}
+
+	.media-box{
+		margin-top: 15px;
+	}
+
+	footer{
+		height: 44px;
+		line-height: 44px;
+	}
+
+	#add_to_cart{
+		font-size: 14px;
+	}
+
+	#buy{
+		font-size: 14px;
+	}
+
+	#buy>span{
+		padding-right: 20px;
+		background-size: 20px 20px;
+	}
+
+	.goods-num{
+		width: 12px;
+		height: 12px;
+		line-height: 12px;
+		font-size: 8px;
+		right: -4px;
+		top: -4px;
+	}
+}

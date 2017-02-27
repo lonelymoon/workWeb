@@ -69,7 +69,7 @@
     padding: 0rem 0.2rem;
     padding-top: 1.5rem;
     text-align: center;
-    font-size: 0.35rem;
+    font-size: 0.3rem;
     color: rgba(0,0,0,0.8);
 }
 
@@ -88,6 +88,10 @@
 	max-width: 2rem;
 	margin: 0 auto;
 	margin-top: 0.45rem;
+}
+
+.I-know{
+	margin-top: 1.36rem;
 }
 
 .no-win{
@@ -123,6 +127,17 @@
 	height: 100%;
 	background: rgba(0,0,0,0.7);
 	z-index:10;
+}
+
+.close{
+	position: absolute;
+	top: 0.3rem;
+	right: 0.3rem;
+	color: #fff;
+}
+
+.close img{
+	max-width: 0.4rem;
 }
 
 .floatboxes .yzBg2 p{

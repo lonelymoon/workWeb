@@ -1,0 +1,260 @@
+body{
+	background: #f3f3f3;
+}
+header{
+	height:auto;
+	padding:18px 120px 18px 20px;
+	background: rgba(252,96,35,1);
+	position: relative;
+}
+
+.search-box{
+	padding:12px 20px;
+	border-radius: 30px;
+	background: #fff;
+	position: relative;
+}
+
+.search-box>label{
+	display: inline-block;
+	vertical-align: middle;
+	width: 36px;
+	height: 36px;
+}
+
+#search{
+	position: absolute;
+	top: 12px;
+	bottom: 12px;
+	left: 76px;
+	right: 20px;
+	border: none;
+	outline: none;
+	font-size: 28px;
+	color: #999;
+}
+
+#search-start{
+	position: absolute;
+	right: 40px;
+	top: 50%;
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	margin-top: -18px;
+	border: none;
+	outline: none;
+	background: url("../img/search_white.svg") no-repeat center;
+	background-size: cover;
+}
+
+
+#content{
+	position: relative;
+	padding: 0px 30px;
+}
+
+#content h1{
+	font-size: 22px;
+	color: #8e8e8e;
+	margin-bottom: 16px;
+}
+
+.history-search{
+	margin-top: 26px;
+}
+
+.hot-search{
+	margin-top: 36px;
+}
+
+.tag{
+	font-size: 24px;
+	color: #333;
+	background: #fff;
+	border-radius: 4px;
+	margin-right: 14px;
+	padding: 6px 28px;
+	margin-bottom: 14px;
+	display: inline-block;
+}
+
+
+
+/*480*/
+@media screen and (max-width: 480px){
+	header{
+		padding:13.5px 90px 13.5px 15px;
+	}
+
+	.search-box{
+		padding:9px 15px;
+		border-radius: 22.5px;
+	}
+
+	.search-box>label{
+		width: 27px;
+		height: 27px;
+	}
+
+	#search{
+		top: 9px;
+		bottom: 9px;
+		left: 57px;
+		right: 15px;
+		font-size: 21px;
+	}
+
+	#search-start{
+		right: 30px;
+		width: 27px;
+		height: 27px;
+		line-height: 27px;
+		margin-top: -13.5px;
+	}
+
+
+	#content{
+		padding: 0px 22.5px;
+	}
+
+	#content h1{
+		font-size: 16.5px;
+		margin-bottom: 12px;
+	}
+
+	.history-search{
+		margin-top: 19.5px;
+	}
+
+	.hot-search{
+		margin-top: 27px;
+	}
+
+	.tag{
+		font-size: 18px;
+		border-radius: 3px;
+		margin-right: 10.5px;
+		padding: 4.5px 21px;
+		margin-bottom: 10.5px;
+	}
+}
+
+/*360*/
+@media screen and (max-width: 360px){
+	header{
+		padding:10.125px 67.5px 10.125px 11.25px;
+	}
+
+	.search-box{
+		padding:6.75px 11.25px;
+		border-radius: 16.875px;
+	}
+
+	.search-box>label{
+		width: 20.25px;
+		height: 20.25px;
+	}
+
+	#search{
+		top: 6.75px;
+		bottom: 6.75px;
+		left: 42.75px;
+		right: 11.25px;
+		font-size: 15.75px;
+	}
+
+	#search-start{
+		right: 22.5px;
+		width: 20.25px;
+		height: 20.25px;
+		line-height: 20.25px;
+		margin-top: -10.125px;
+	}
+
+
+	#content{
+		padding: 0px 16.875px;
+	}
+
+	#content h1{
+		font-size: 12.375px;
+		margin-bottom: 9px;
+	}
+
+	.history-search{
+		margin-top: 14.625px;
+	}
+
+	.hot-search{
+		margin-top: 20.25px;
+	}
+
+	.tag{
+		font-size: 13.5px;
+		border-radius: 2.25px;
+		margin-right: 7.875px;
+		padding: 3.375px 15.75px;
+		margin-bottom: 7.875px;
+	}
+}
+
+
+/*320*/
+@media screen and (max-width: 320px){
+	header{
+		padding:9px 60px 9px 10px;
+	}
+
+	.search-box{
+		padding:6px 10px;
+		border-radius: 15px;
+	}
+
+	.search-box>label{
+		width: 18px;
+		height: 18px;
+	}
+
+	#search{
+		top: 6px;
+		bottom: 6px;
+		left: 38px;
+		right: 10px;
+		font-size: 14px;
+	}
+
+	#search-start{
+		right: 20px;
+		width: 18px;
+		height: 18px;
+		line-height: 18px;
+		margin-top: -9px;
+	}
+
+
+	#content{
+		padding: 0px 15px;
+	}
+
+	#content h1{
+		font-size: 11px;
+		margin-bottom: 8px;
+	}
+
+	.history-search{
+		margin-top: 13px;
+	}
+
+	.hot-search{
+		margin-top: 18px;
+	}
+
+	.tag{
+		font-size: 12px;
+		border-radius: 2px;
+		margin-right: 7px;
+		padding: 3px 14px;
+		margin-bottom: 7px;
+	}
+}

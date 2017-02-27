@@ -1,0 +1,124 @@
+body{
+	background: #f3f3f3;
+}
+
+#content{
+	margin-bottom: 160px;
+}
+
+.input-box{
+	height: 90px;
+	padding: 0px 30px;
+	line-height: 90px;
+	position: relative;
+	font-size: 28px;
+	color: #333;
+	background: #fff;
+	margin-top: 64px;
+	box-shadow: 0px 1px 0px #e0e0e0,0px -1px 0px #e0e0e0;
+}
+
+.input-box>label{
+	position: absolute;
+	top: -76px;
+	font-size: 24px;
+	color: #a6a6a6;
+}
+
+.input-box>input{
+	border: none;
+	outline: none;
+	width: 100%;
+}
+
+footer{
+	position: fixed;
+	height: 88px;
+	width: 100%;
+	text-align: center;
+	line-height: 88px;
+	color: #fff;
+	background: #fc6023;
+	font-size: 30px;
+	bottom: 0px;
+}
+
+
+/*480*/
+@media screen and (max-width:480px){
+	#content{
+		margin-bottom: 120px;
+	}
+
+	.input-box{
+		height: 67.5px;
+		padding: 0px 22.5px;
+		line-height: 67.5px;
+		font-size: 21px;
+		margin-top: 48px;
+	}
+
+	.input-box>label{
+		top: -57px;
+		font-size: 18px;
+	}
+
+	footer{
+		height: 66px;
+		line-height: 66px;
+		font-size: 22.5px;
+	}
+}
+
+/*360*/
+@media screen and (max-width:360px){
+	#content{
+		margin-bottom: 90px;
+	}
+
+	.input-box{
+		height: 50.625px;
+		padding: 0px 16.875px;
+		line-height: 50.625px;
+		font-size: 15.75px;
+		margin-top: 36px;
+	}
+
+	.input-box>label{
+		top: -42.75px;
+		font-size: 13.5px;
+	}
+
+	footer{
+		height: 49.5px;
+		line-height: 49.5px;
+		font-size: 16.875px;
+	}
+}
+
+
+/*320*/
+@media screen and (max-width:320px){
+	#content{
+		margin-bottom: 80px;
+	}
+
+	.input-box{
+		height: 45px;
+		padding: 0px 15px;
+		line-height: 45px;
+		font-size: 14px;
+		margin-top: 32px;
+	}
+
+	.input-box>label{
+		top: -38px;
+		font-size: 12px;
+	}
+
+	footer{
+		height: 44px;
+		line-height: 44px;
+		font-size: 15px;
+	}
+}

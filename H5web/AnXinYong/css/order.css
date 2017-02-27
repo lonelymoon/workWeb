@@ -1,0 +1,415 @@
+body{
+	background: #f3f3f3;
+}
+
+.order-box{
+	margin-top: 30px;
+	box-shadow: 0px 1px 0px #e0e0e0,0px -1px 0px #e0e0e0;
+	background: #fff;
+	position: relative;
+}
+
+.order-head{
+	display: table;
+	width: 100%;
+	position: relative;
+	height: 100px;
+}
+
+.order-head>div{
+	display: table-cell;
+	vertical-align: middle;
+	padding:0px 0px 0px 20px;
+}
+
+.msg-above,.msg-below{
+	font-size: 24px;
+	color: #333;
+}
+
+.order-status-needpay,.order-status-success{
+	float: right;
+	color: #61ca0c;
+	font-size: 26px;
+	margin-right: 20px;
+}
+
+.order-status-success{
+	color: #fc6023;
+}
+
+.msg-below{
+	margin-top: 10px;
+}
+
+.order-msg{
+	padding-left: 20px;
+}
+
+.order-msg-box{
+	padding:28.5px 0px;
+	box-shadow: 0px -1px 0px #e0e0e0;
+	display: table;
+	width: 100%;
+}
+
+.img-box{
+	display: table-cell;
+	vertical-align: middle;
+	position: relative;
+}
+
+.img-box>img{
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.goods-msg-box{
+	position: absolute;
+	left: 130px;
+	top: 8px;
+	right: 20px;
+	bottom: 20px;
+}
+
+.goods-msg-above{
+	font-size: 30px;
+	color: #333;
+	position: relative;
+}
+
+.price{
+	float: right;
+	font-size: 28px;
+	color: #a6a6a6;
+}
+
+.goods-msg-below{
+	margin-top: 20px;
+	font-size: 22px;
+	color: #999;
+	text-align: right;
+}
+
+.order-count{
+	height: 68px;
+	font-size: 26px;
+	color: #333;
+	line-height: 68px;
+	box-shadow: 0px -1px 0px #e0e0e0,0px 1px 0px #e0e0e0;
+}
+
+.pay{
+	float: right;
+	color: #999;
+	margin-right: 20px;
+}
+
+.pay b{
+	color: #333;
+}
+
+.pay em{
+	font-size: 30px;
+}
+
+.order-bottom{
+	height: 96px;
+	padding-left: 20px;
+	text-align: right;
+	position: relative;
+}
+
+.order-bottom>div{
+	height: auto;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	margin-top: -32px;
+}
+
+.cancel,.comment{
+	height: 64px;
+	width: 120px;
+	background: none;
+	border: 1px solid #a6a6a6;
+	color: #a6a6a6;
+	outline: none;
+	font-size: 26px;
+	border-radius: 10px;
+	font-weight: bolder;
+}
+
+.comment{
+	border: 1px solid #fc6023;
+	color: #fc6023;
+	margin-left: 10px;
+}
+
+/*480*/
+@media screen and (max-width: 480px){
+	.order-box{
+		margin-top: 22.5px;
+	}
+
+	.order-head>div{
+		padding:0px 0px 0px 15px;
+	}
+
+	.msg-above,.msg-below{
+		font-size: 18px;
+	}
+
+	.order-status-needpay,.order-status-success{
+		font-size: 19.5px;
+		margin-right: 15px;
+	}
+
+	.msg-below{
+		margin-top: 7.5px;
+	}
+
+	.order-msg{
+		padding-left: 15px;
+	}
+
+	.order-msg-box{
+		padding:21.375px 0px;
+	}
+
+	.img-box>img{
+		max-width: 75px;
+		max-height: 75px;
+	}
+
+	.goods-msg-box{
+		left: 97.5px;
+		top: 6px;
+		right: 15px;
+		bottom: 15px;
+	}
+
+	.goods-msg-above{
+		font-size: 22.5px;
+	}
+
+	.price{
+		font-size: 21px;
+	}
+
+	.goods-msg-below{
+		margin-top: 15px;
+		font-size: 16.5px;
+	}
+
+	.order-count{
+		height: 51px;
+		font-size: 19.5px;
+		line-height: 51px;
+	}
+
+	.pay{
+		margin-right: 15px;
+	}
+
+	.pay em{
+		font-size: 22.5px;
+	}
+
+	.order-bottom{
+		height: 72px;
+		line-height: 72px;
+		padding-left: 15px;
+	}
+
+	.order-bottom>div{
+		right: 15px;
+		margin-top: -24px;
+	}
+
+	.cancel,.comment{
+		height: 48px;
+		width: 90px;
+		font-size: 19.5px;
+		border-radius: 7.5px;
+	}
+}
+
+/*360*/
+@media screen and (max-width: 360px){
+	.order-box{
+		margin-top: 16.875
+	}
+
+	.order-head>div{
+		padding:0px 0px 0px 11.25
+	}
+
+	.msg-above,.msg-below{
+		font-size: 13.5px;
+	}
+
+	.order-status-needpay,.order-status-success{
+		font-size: 14.625px;
+		margin-right: 11.25px;
+	}
+
+	.msg-below{
+		margin-top: 5.625px;
+	}
+
+	.order-msg{
+		padding-left: 11.25px;
+	}
+
+	.order-msg-box{
+		padding:16.03125px 0px;
+	}
+
+	.img-box>img{
+		max-width: 56.25px;
+		max-height: 56.25px;
+	}
+
+	.goods-msg-box{
+		left: 73.125px;
+		top: 4.5px;
+		right: 11.25px;
+		bottom: 11.25px;
+	}
+
+	.goods-msg-above{
+		font-size: 16.875px;
+	}
+
+	.price{
+		font-size: 15.75px;
+	}
+
+	.goods-msg-below{
+		margin-top: 11.25px;
+		font-size: 12.375px;
+	}
+
+	.order-count{
+		height: 38.25px;
+		font-size: 14.625px;
+		line-height: 38.25px;
+	}
+
+	.pay{
+		margin-right: 11.25px;
+	}
+
+	.pay em{
+		font-size: 16.875px;
+	}
+
+	.order-bottom{
+		height: 54px;
+		line-height: 54px;
+		padding-left: 11.25px;
+	}
+
+	.order-bottom>div{
+		right: 11.25px;
+		margin-top: -27px;
+	}
+
+	.cancel,.comment{
+		height: 36px;
+		width: 67.5px;
+		font-size: 14.625px;
+		border-radius: 5.625px;
+	}
+}
+
+
+/*320*/
+@media screen and (max-width: 320px){
+	.order-box{
+		margin-top: 15px;
+	}
+
+	.order-head>div{
+		padding:0px 0px 0px 10px;
+	}
+
+	.msg-above,.msg-below{
+		font-size: 12px;
+	}
+
+	.order-status-needpay,.order-status-success{
+		font-size: 13px;
+		margin-right: 10px;
+	}
+
+	.msg-below{
+		margin-top: 5px;
+	}
+
+	.order-msg{
+		padding-left: 10px;
+	}
+
+	.order-msg-box{
+		padding:14.25px 0px;
+	}
+
+	.img-box>img{
+		max-width: 50px;
+		max-height: 50px;
+	}
+
+	.goods-msg-box{
+		left: 65px;
+		top: 4px;
+		right: 10px;
+		bottom: 10px;
+	}
+
+	.goods-msg-above{
+		font-size: 15px;
+	}
+
+	.price{
+		font-size: 14px;
+	}
+
+	.goods-msg-below{
+		margin-top: 10px;
+		font-size: 11px;
+	}
+
+	.order-count{
+		height: 34px;
+		font-size: 13px;
+		line-height: 34px;
+	}
+
+	.pay{
+		margin-right: 10px;
+	}
+
+	.pay em{
+		font-size: 15px;
+	}
+
+	.order-bottom{
+		height: 48px;
+		line-height: 48px;
+		padding-left: 10px;
+	}
+
+	.order-bottom>div{
+		right: 10px;
+		margin-top: -24px;
+	}
+
+	.cancel,.comment{
+		height: 32px;
+		width: 60px;
+		font-size: 13px;
+		border-radius: 5px;
+	}
+}

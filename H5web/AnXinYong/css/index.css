@@ -1,0 +1,377 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background: #f3f3f3;
+}
+header{
+	position: relative;
+	text-align: center;
+}
+
+.search-icon{
+	width: 42px;
+	height: 42px;
+	background: url("../img/search_white.svg") no-repeat center;
+	background-size: cover;
+	opacity: 0.2;
+	position: absolute;
+	right: 20px;
+	top: 24px;
+	z-index: 10;
+}
+
+.swiper-container{
+	max-height: 244px;
+	height: 100%;
+	width: 100%;
+}
+
+.swiper-slide{
+	background: #6cf;
+}
+
+
+nav{
+	padding:2px 0px;
+	overflow: hidden;
+}
+
+nav .swiper-slide{
+	background: none;
+	height: 100%;
+	width: 25%;
+	max-height: 158px;
+	text-align: center;
+}
+
+nav .swiper-slide img{
+	max-width:158px;
+	max-height: 158px;
+	width: 100%; 
+	height: 100%;
+}
+
+.food-show{
+	height: 100%;
+}
+
+#content{
+	height: auto;
+}
+
+.column{
+	height: 170px;
+	padding: 0px 20px 0px 28px;
+	background: #fff;
+	border-top: 1px solid #d9dcdc;
+	border-bottom: 2px solid #d9dcdc;
+	position: relative;
+}
+
+.first{
+	padding-left: 50%;
+	height: auto;
+	position: relative;
+}
+
+.first .column{
+	border-top: none;
+	padding: 0px;
+}
+
+.half-width{
+	width: 50%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	padding: 0px;
+}
+
+.intro{
+	float: left;
+	height: 100%;
+	display: table;
+}
+
+.half-width>.intro{
+	padding-left: 28px;
+}
+
+#baby-sitte{
+	padding: 0px 20px 0px 28px;
+	border-left: 2px solid #d9dcdc;
+}
+
+.intro-box{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.title{
+	font-size: 34px;
+	margin-bottom: 16px;
+	color: #fc6023;
+	font-weight: bolder;
+}
+
+.con{
+	font-size: 24px;
+	color: #fc6023;
+}
+
+.img-box{
+	position: absolute;
+	max-width: 116px;
+	max-height: 116px;
+	right: 20px;
+	top:50%;
+	margin-top: -58px;
+}
+
+.img-box img{
+	max-width: 116px;
+	max-height:116px;
+}
+
+#washing-clothes .title,#washing-clothes .con{
+	color: #36c71a;
+}
+
+#baby-sitte .title,#baby-sitte .con{
+	color: #fab91c;
+}
+
+
+footer{
+	/*margin-top: 32px;*/
+}
+
+footer .title,footer .con{
+	color: #1197f4;
+}
+
+#washing-food .img-box{
+	max-width: 142px;
+	max-height: 142px;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	margin-top: -71px;
+	display: table;
+}
+
+#washing-food .img-box>span{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*480*/
+@media screen and (max-width: 480px){
+
+	.search-icon{
+		width: 31.5px;
+		height: 31.5px;
+		right: 15px;
+		top: 18px;
+	}
+
+	.swiper-container{
+		max-height: 183px;
+	}
+
+	nav{
+		padding:1.5px 0px;
+	}
+
+	nav .swiper-slide{
+		max-height: 118.5px;
+	}
+
+	nav .swiper-slide img{
+		max-width:118.5px;
+		max-height: 118.5px;
+	}
+
+	.column{
+		height: 127.5px;
+		padding: 0px 15px 0px 21px;
+	}
+
+	.half-width>.intro{
+		padding-left: 21px;
+	}
+
+	.title{
+		font-size: 25.5px;
+		margin-bottom: 12px;
+	}
+
+	.con{
+		font-size: 18px;
+	}
+
+	.img-box{
+		max-width: 87px;
+		max-height: 87px;
+		right: 15px;
+		margin-top: -43.5px;
+	}
+
+
+	.img-box img{
+		max-width: 100%;
+	}
+
+
+	footer{
+		/*margin-top: 24px;*/
+	}
+	
+	#washing-food .img-box{
+		max-width: 136.5px;
+		max-height: 136.5px;
+		margin-top: -68.25px;
+	}
+
+	#baby-sitte{
+		padding: 0px 15px 0px 21px;
+	}
+
+
+}
+
+/*360*/
+@media screen and (max-width: 360px){
+
+	.search-icon{
+		width: 23.625px;
+		height: 23.625px;
+		right: 11.25px;
+		top: 13.5px;
+	}
+
+	.swiper-container{
+		max-height: 137.25px;
+	}
+
+	nav{
+		padding:1.125px 0px;
+	}
+
+	nav .swiper-slide{
+		max-height: 88.865px;
+	}
+
+	nav .swiper-slide img{
+		max-width:88.875px;
+		max-height: 88.875px;
+	}
+
+	.column{
+		height: 95.625px;
+		padding: 0px 11.25px 0px 15.75px;
+	}
+
+	.half-width>.intro{
+		padding-left: 15.75px;
+	}
+
+	.title{
+		margin-bottom: 9px;
+		font-size: 19.125px;
+	}
+
+	.con{
+		font-size: 13.5px;
+	}
+
+	.img-box{
+		max-width: 65.25px;
+		max-height: 65.25px;
+		right: 11.25px;
+		margin-top: -32.625px;
+	}
+
+	footer{
+		/*margin-top: 18px;*/
+	}
+
+	#washing-food .img-box{
+		max-width: 79.875px;
+		max-height: 79.875px;
+		margin-top: -39.9375px;
+	}
+
+	#baby-sitte{
+		padding: 0px 11.25px 0px 15.75px;
+	}
+}
+
+/*320*/
+@media screen and (max-width: 320px){
+
+	.search-icon{
+		width: 21px;
+		height: 21px;
+		right: 10px;
+		top: 12px;
+	}
+
+	.swiper-container{
+		max-height: 122px;
+	}
+
+	nav{
+		padding:1px 0px;
+	}
+
+	nav .swiper-slide{
+		max-height: 79px;
+	}
+
+	nav .swiper-slide img{
+		max-width:79px;
+		max-height: 79px;
+	}
+
+	.column{
+		height: 85px;
+		padding: 0px 10px 0px 14px;
+	}
+
+	.half-width>.intro{
+		padding-left: 14px;
+	}
+
+	.title{
+		margin-bottom: 8px;
+		font-size: 17px;
+	}
+
+	.con{
+		font-size: 12px;
+	}
+
+	.img-box{
+		max-width: 58px;
+		max-height: 58px;
+		right: 10px;
+		margin-top: -29px;
+	}
+
+	footer{
+		/*margin-top: 16px;*/
+	}
+
+	#washing-food .img-box{
+		max-width: 71px;
+		max-height: 71px;
+		margin-top: -35.5px;
+	}
+
+	#baby-sitte{
+		padding: 0px 10px 0px 14px;
+	}
+
+}

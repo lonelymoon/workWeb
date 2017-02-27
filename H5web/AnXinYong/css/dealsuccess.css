@@ -1,0 +1,560 @@
+body{
+	background: #f3f3f3;
+}
+
+header{
+	height: 170px;
+	font-size: 26px;
+}
+
+.deal-status{
+	background: #999;
+	height: 60px;
+	padding: 0px 24px;
+	line-height: 60px;
+	color: #fff;
+}
+
+.deal-msg{
+	height: 110px;
+	color: #999;
+	display: table;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0px 1px 0px #e0e0e0;
+}
+
+.deal-msg>div{
+	display: table-cell;
+	padding: 0px 24px;
+	vertical-align: middle;
+}
+
+.deal-number{
+	margin-top: 12px;
+}
+
+.msg-box{
+	display: table;
+	width: 100%;
+	height: 184px;
+	box-shadow: 0px -1px 0px #e0e0e0;
+	background: #fff;
+}
+
+.msg-box>div{
+	display: table-cell;
+	padding: 0px 24px;
+	vertical-align: middle;
+	color: #333;
+}
+
+.user-msg{
+	font-size: 28px;
+}
+
+.address-msg{
+	font-size: 26px;
+	margin-top: 20px;
+}
+
+.send-time{
+	height: 90px;
+	line-height: 90px;
+	font-size: 28px;
+	color: #333;
+	padding: 0px 24px;
+	background: #fff;
+	box-shadow: 0px 1px 0px #e0e0e0,0px -1px 0px #e0e0e0;
+}
+
+.send-store{
+	background: #fff;
+	box-shadow: 0px 1px 0px #e0e0e0,0px -1px 0px #e0e0e0;
+	display: table;
+	width: 100%;
+	height: 140px;
+	color: #333;
+	font-size: 28px;
+}
+
+.send-store>div{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0px 24px;
+}
+
+.worker-name{
+	margin-top: 16px;
+}
+
+.order-status{
+	margin: 30px 0px;
+	background: #fff;
+	box-shadow: 0px -1px 0px #e0e0e0;
+	display: table;
+	width: 100%;
+	height: 140px;
+}
+
+.order-status>div{
+	display: table-cell;
+	vertical-align: middle;
+	padding: 0px 24px;
+	font-size: 28px;
+	color: #333;
+}
+
+.status-msg{
+	margin-top: 14px;
+}
+
+.order-msg-box{
+	padding:28.5px 0px;
+	box-shadow: 0px -1px 0px #e0e0e0;
+	display: table;
+	width: 100%;
+	background: #fff;
+}
+
+.img-box{
+	display: table-cell;
+	vertical-align: middle;
+	position: relative;
+	padding: 0px 24px;
+}
+
+.img-box>img{
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.goods-msg-box{
+	position: absolute;
+	left: 130px;
+	top: 8px;
+	right: 20px;
+	bottom: 20px;
+}
+
+.goods-msg-above{
+	font-size: 30px;
+	color: #333;
+	position: relative;
+}
+
+.price{
+	float: right;
+	font-size: 28px;
+	color: #a6a6a6;
+}
+
+.goods-msg-below{
+	margin-top: 20px;
+	font-size: 22px;
+	color: #999;
+	text-align: right;
+}
+
+.belong{
+	float: left;
+}
+
+.price-box{
+	font-size: 24px;
+	height: 68px;
+	line-height: 68px;
+	color: #333;
+	text-align: right;
+	box-shadow: 0px -1px 0px #e0e0e0;
+	background: #fff;
+	margin-bottom: 20px;
+}
+
+.pay{
+	margin: 0px 24px;
+	color: #999;
+}
+
+.pay em{
+	color: #333;
+	font-size: 26px;
+}
+
+
+/*480*/
+@media screen and (max-width:480px){
+	header{
+		height: 127.5px;
+		font-size: 19.5px;
+	}
+
+	.deal-status{
+		height: 45px;
+		padding: 0px 18px;
+		line-height: 45px;
+	}
+
+	.deal-msg{
+		height: 82.5px;
+	}
+
+	.deal-msg>div{
+		padding: 0px 18px;
+	}
+
+	.deal-number{
+		margin-top: 9px;
+	}
+
+	.msg-box{
+		height: 138px;
+	}
+
+	.msg-box>div{
+		padding: 0px 18px;
+	}
+
+	.user-msg{
+		font-size: 21px;
+	}
+
+	.address-msg{
+		font-size: 19.5px;
+		margin-top: 15px;
+	}
+
+	.send-time{
+		height: 67.5px;
+		line-height: 67.5px;
+		font-size: 21px;
+		padding: 0px 21px;
+	}
+
+	.send-store{
+		height: 105px;
+		font-size: 21px;
+	}
+
+	.send-store>div{
+		padding: 0px 18px;
+	}
+
+	.worker-name{
+		margin-top: 12px;
+	}
+
+	.order-status{
+		margin: 22.5px 0px;
+		height: 105px;
+	}
+
+	.order-status>div{
+		padding: 0px 18px;
+		font-size: 21px;
+	}
+
+	.status-msg{
+		margin-top: 10.5px;
+	}
+
+	.order-msg-box{
+		padding:21.375px 0px;
+	}
+
+	.img-box{
+		padding: 0px 18px;
+	}
+
+	.img-box>img{
+		max-width: 75px;
+		max-height: 75px;
+	}
+
+	.goods-msg-box{
+		left: 97.5px;
+		top: 6px;
+		right: 15px;
+		bottom: 15px;
+	}
+
+	.goods-msg-above{
+		font-size: 22.5px;
+	}
+
+	.price{
+		font-size: 21px;
+	}
+
+	.goods-msg-below{
+		margin-top: 15px;
+		font-size: 16.5px;
+	}
+
+	.price-box{
+		font-size: 18px;
+		height: 51px;
+		line-height: 51px;
+		margin-bottom: 15px;
+	}
+
+	.pay{
+		margin: 0px 18px;
+	}
+
+	.pay em{
+		font-size: 19.5px;
+	}
+}
+
+
+/*360*/
+@media screen and (max-width:360px){
+	header{
+		height: 95.625px;
+		font-size: 14.625px;
+	}
+
+	.deal-status{
+		height: 33.75px;
+		padding: 0px 13.5px;
+		line-height: 33.75px;
+	}
+
+	.deal-msg{
+		height: 61.875px;
+	}
+
+	.deal-msg>div{
+		padding: 0px 13.5px;
+	}
+
+	.deal-number{
+		margin-top: 6.75px;
+	}
+
+	.msg-box{
+		height: 103.5px;
+	}
+
+	.msg-box>div{
+		padding: 0px 13.5px;
+	}
+
+	.user-msg{
+		font-size: 15.75px;
+	}
+
+	.address-msg{
+		font-size: 14.625px;
+		margin-top: 11.25px;
+	}
+
+	.send-time{
+		height: 50.625px;
+		line-height: 50.625px;
+		font-size: 15.75px;
+		padding: 0px 15.75px;
+	}
+
+	.send-store{
+		height: 78.75px;
+		font-size: 15.75px;
+	}
+
+	.send-store>div{
+		padding: 0px 13.5px;
+	}
+
+	.worker-name{
+		margin-top: 9px;
+	}
+
+	.order-status{
+		margin: 16.875px 0px;
+		height: 78.75px;
+	}
+
+	.order-status>div{
+		padding: 0px 13.5px;
+		font-size: 15.75px;
+	}
+
+	.status-msg{
+		margin-top: 7.875px;
+	}
+
+	.order-msg-box{
+		padding:16.03125px 0px;
+	}
+
+	.img-box{
+		padding: 0px 13.5px;
+	}
+
+	.img-box>img{
+		max-width: 56.25px;
+		max-height: 56.25px;
+	}
+
+	.goods-msg-box{
+		left: 73.125px;
+		top: 4.5px;
+		right: 11.25px;
+		bottom: 11.25px;
+	}
+
+	.goods-msg-above{
+		font-size: 16.875px;
+	}
+
+	.price{
+		font-size: 15.75px;
+	}
+
+	.goods-msg-below{
+		margin-top: 11.25px;
+		font-size: 12.375px;
+	}
+
+	.price-box{
+		font-size: 13.5px;
+		height: 38.25px;
+		line-height: 38.25px;
+		margin-bottom: 11.25px;
+	}
+
+	.pay{
+		margin: 0px 13.5px;
+	}
+
+	.pay em{
+		font-size: 14.625px;
+	}
+}
+
+
+/*320*/
+@media screen and (max-width:320px){
+	header{
+		height: 85px;
+		font-size: 13px;
+	}
+
+	.deal-status{
+		height: 30px;
+		padding: 0px 12px;
+		line-height: 30px;
+	}
+
+	.deal-msg{
+		height: 55px;
+	}
+
+	.deal-msg>div{
+		padding: 0px 12px;
+	}
+
+	.deal-number{
+		margin-top: 6px;
+	}
+
+	.msg-box{
+		height: 92px;
+	}
+
+	.msg-box>div{
+		padding: 0px 12px;
+	}
+
+	.user-msg{
+		font-size: 14px;
+	}
+
+	.address-msg{
+		font-size: 13px;
+		margin-top: 10px;
+	}
+
+	.send-time{
+		height: 45px;
+		line-height: 45px;
+		font-size: 14px;
+		padding: 0px 14px;
+	}
+
+	.send-store{
+		height: 70px;
+		font-size: 14px;
+	}
+
+	.send-store>div{
+		padding: 0px 12px;
+	}
+
+	.worker-name{
+		margin-top: 8px;
+	}
+
+	.order-status{
+		margin: 15px 0px;
+		height: 70px;
+	}
+
+	.order-status>div{
+		padding: 0px 12px;
+		font-size: 14px;
+	}
+
+	.status-msg{
+		margin-top: 7px;
+	}
+
+	.order-msg-box{
+		padding:14.25px 0px;
+	}
+
+	.img-box{
+		padding: 0px 12px;
+	}
+	
+	.img-box>img{
+		max-width: 50px;
+		max-height: 50px;
+	}
+
+	.goods-msg-box{
+		left: 65px;
+		top: 4px;
+		right: 10px;
+		bottom: 10px;
+	}
+
+	.goods-msg-above{
+		font-size: 15px;
+	}
+
+	.price{
+		font-size: 14px;
+	}
+
+	.goods-msg-below{
+		margin-top: 10px;
+		font-size: 11px;
+	}
+
+	.price-box{
+		font-size: 12px;
+		height: 34px;
+		line-height: 34px;
+		margin-bottom: 10px;
+	}
+
+	.pay{
+		margin: 0px 12px;
+	}
+
+	.pay em{
+		font-size: 13px;
+	}
+}

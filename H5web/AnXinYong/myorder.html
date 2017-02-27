@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>我的订单</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/myorder.css">
+<link rel="stylesheet" type="text/css" href="css/back.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body>
+<header>
+<div class="back-fn">
+	<a href=""><span class="back-bt"></span></a>
+	<span class="title-bk">安心用</span>
+</div>
+	<a href="address.html">
+	<div class="msg-box">
+		<h2>配送地址</h2>
+		<div class="user-msg">
+			<span class="user-name">张小兰</span>
+			<span class="mobile">13918674453</span>
+		</div>
+		<div class="address-msg">
+			上海市，徐汇区，长桥街道龙漕路835号某某小区10号202室
+		</div>
+		<span class="arrow-box"><img src="img/right_arrow.svg"></span>
+	</div>
+	</a>
+
+	<div class="msg-box">
+		<h2>配送时间</h2>
+		<div class="time-msg">
+			<select id="time-select">
+				<option seleced="selected">6月5号 9:00-13:00</option>
+				<option>6月5号 13:00-17:00</option>
+				<option>6月5号 17:00-21:00</option>
+			</select>
+			<span class="lay"></span>
+		</div>
+		<span class="arrow-box"><img src="img/right_arrow.svg"></span>
+	</div>
+</header>
+<section id="content">
+	<div class="msg-box content-msg">
+		<h2>购买清单</h2>
+		<div>
+			<div class="goods-msg">
+				<div><img src="img/1.png"></div>
+				<div class="goods-msg-box">
+					<span class="goods-name">奶油炖菜</span>
+					<span class="goods-price">￥ 28</span>
+				</div>
+			</div>
+			<div class="num-change">
+				<span class="sub">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>
+		</div>
+		<div>
+			<div class="goods-msg">
+				<div><img src="img/1.png"></div>
+				<div class="goods-msg-box">
+					<span class="goods-name">酸辣土豆丝</span>
+					<span class="goods-price">￥ 28</span>
+				</div>
+			</div>
+			<div class="num-change">
+				<span class="sub">-</span>
+				<span class="num">1</span>
+				<span class="add">+</span>
+			</div>
+		</div>
+		<div class="count">
+			<span class="goods-num">共2件商品</span>
+			<span class="price">合计：<b>￥ <em>68</em></b></span>
+		</div>
+	</div>
+</section>
+<footer>
+	<div>
+		<div class="total-price">合计：<b>￥ <em>68</em></b></div>
+		<a href="dealsuccess.html"><button id="submit">确认</button></a>
+	</div>
+</footer>
+<script type="text/javascript" src="js/order.js"></script>
+</body>
+</html>

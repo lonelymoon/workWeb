@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1.0">
+<title>安心用</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/swiper.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/swiper.js"></script>
+</head>
+<body>
+<header>
+	<a href="search.html"><div class="search-icon"></div></a>
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide"><img src="img/homepage/banner1.png"></div>
+	        <div class="swiper-slide"><img src="img/homepage/banner2.png"></div>
+	        <div class="swiper-slide"><img src="img/homepage/banner3.png"></div>
+	    </div>
+	    <!-- 如果需要分页器 -->
+	    <div class="swiper-pagination"></div>
+	</div>
+	<nav>
+		<div class="food-show">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide"><img src="img/homepage/1.jpg" alt="保姆"></div>
+		        <div class="swiper-slide"><img src="img/homepage/2.jpg" alt="保姆"></div>
+		        <div class="swiper-slide"><img src="img/homepage/3.jpg" alt="保姆"></div>
+		        <div class="swiper-slide"><img src="img/homepage/4.jpg" alt="保姆"></div>
+		        <div class="swiper-slide"><img src="img/homepage/5.jpg" alt="保姆"></div>
+		        <div class="swiper-slide"><img src="img/homepage/6.jpg" alt="保姆"></div>
+		        <div class="swiper-slide"><img src="img/homepage/1.jpg" alt="保姆"></div>
+			</div>
+		</div>
+	</nav>
+</header>
+<section id="content">
+	<a href="foodlist.html">
+		<div id="washing-food" class="column">
+			<div class="intro">
+				<div class="intro-box">
+					<div class="title">安心菜品</div>
+					<div class="con">新鲜净菜，帮你安心送到家</div>
+				</div>	
+			</div>
+			<div class="img-box">
+				<span><img src="img/homepage/7.png" alt="安心菜品"></span>
+			</div>
+		</div>
+	</a>
+	<section class="first">
+		<a href="foodlist.html">
+			<div id="washing-clothes" class="column half-width">
+
+				<div class="intro">
+					<div class="intro-box">
+						<div class="title">菜市场</div>
+						<div class="con">安心到家</div>
+					</div>	
+				</div>
+				<div class="img-box">
+					<span><img src="img/1.png" alt="菜市场"></span>
+				</div>
+			</div>
+		</a>
+		<div id="baby-sitte" class="column">
+			<div class="intro">
+				<div class="intro-box">
+					<div class="title">家政服务</div>
+					<div class="con">即将推出</div>
+				</div>	
+			</div>
+			<div class="img-box">
+				<span><img src="img/3.png" alt="保姆"></span>
+			</div>
+		</div>
+	</section>
+</section>
+<footer class="column">
+	<a href="userCenter.html">
+	<div class="intro">
+		<div class="intro-box">
+			<div class="title">订单中心</div>
+			<div class="con">我的订单、网点查询、客服电话</div>
+		</div>	
+	</div>
+	<div class="img-box">
+		<span><img src="img/4.png" alt="保姆"></span>
+	</div>
+	</a>
+</footer>
+<script type="text/javascript">
+var mySwiper = new Swiper ('.swiper-container', {
+	direction: 'horizontal',
+	loop: true,
+
+	// 如果需要分页器
+	pagination: '.swiper-pagination'
+}); 
+var swiper = new Swiper('.food-show', {
+	loop:true,
+    slidesPerView: 4
+});
+
+</script>
+</body>
+</html>

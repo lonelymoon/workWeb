@@ -1,0 +1,61 @@
+.back-fn{
+	height: 88px;
+	text-align: center;
+	position: relative;
+	line-height: 88px;
+	font-size: 34px;
+	background: #fc6023;
+	color: #fff;
+}
+
+.back-bt{
+	background: url("../img/back_arrow.svg") no-repeat center;
+	padding: 30px 30px;
+	background-size: cover;
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	margin-top: -30px;
+}
+
+@media screen and (max-width:480px){
+	.back-fn{
+		height: 66px;
+		line-height: 66px;
+		font-size: 25.5px;
+	}
+
+	.back-bt{
+		padding: 22.5px 22.5px;
+		left: 12px;
+		margin-top: -22.5px;
+	}
+}
+
+@media screen and (max-width:360px){
+	.back-fn{
+		height: 49.5px;
+		line-height: 49.5px;
+		font-size: 19.125px;
+	}
+
+	.back-bt{
+		padding: 16.875px 16.875px;
+		left: 9px;
+		margin-top: -16.875px;
+	}
+}
+
+@media screen and (max-width:320px){
+	.back-fn{
+		height: 44px;
+		line-height: 44px;
+		font-size: 17px;
+	}
+
+	.back-bt{
+		padding: 15px 15px;
+		left: 8px;
+		margin-top: -15px;
+	}
+}

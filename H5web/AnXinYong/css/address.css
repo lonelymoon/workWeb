@@ -1,0 +1,210 @@
+body{
+	background: #f3f3f3;
+}
+
+#content{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	position: relative;
+	background: #fff;
+	box-shadow: 0px 1px 0px #e0e0e0;
+}
+
+.address-box,.add-new-address{
+	height: 184px;
+	max-height: 184px;
+	width: 100%;
+	display: table;
+	box-shadow:0px -1px 0px #e0e0e0;
+}
+
+.checked,.msg-box{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.msg-box{
+	padding-right: 56px;
+}
+
+.checked{
+	padding-right: 26px;
+	padding-left: 26px;
+}
+
+.user-msg{
+	margin-top: 32px;
+	font-size: 28px;
+	font-weight: bolder;
+	color: #333;
+}
+
+.user-name{
+	margin-right: 42px;
+}
+
+.address-msg{
+	margin-top: 28px;
+	font-size: 26px;
+	color: #333;
+	margin-bottom: 24px;
+}
+
+footer{
+	width: 100%;
+	height: auto;
+}
+
+.add-new-address{
+	padding: 0px;
+	text-align: center;
+	font-size: 34px;
+	color: #999;
+	display: block;
+	background: #fff;
+	line-height: 184px;
+}
+
+.add-new-address>span{
+	margin-right: 45px;
+}
+
+
+/*480*/
+@media screen and (max-width: 480px){
+	#content{
+		margin-top: 22.5px;
+		margin-bottom: 22.5px;
+	}
+
+	.address-box,.add-new-address{
+		height: 138px;
+		max-height: 138px;
+	}
+
+	.msg-box{
+		padding-right: 42px;
+	}
+
+	.checked{
+		padding-right: 19.5px;
+		padding-left: 19.5px;
+	}
+
+	.user-msg{
+		margin-top: 24px;
+		font-size: 21px;
+	}
+
+	.user-name{
+		margin-right: 31.5px;
+	}
+
+	.address-msg{
+		margin-top: 21px;
+		font-size: 19.5px;
+		margin-bottom: 18px;
+	}
+
+	.add-new-address{
+		font-size: 25.5px;
+		line-height: 138px;
+	}
+
+	.add-new-address>span{
+		margin-right: 33.75px;
+	}
+}
+
+/*360*/
+@media screen and (max-width: 360px){
+	#content{
+		margin-top: 16.875px;
+		margin-bottom: 6.875px;
+	}
+
+	.address-box,.add-new-address{
+		height: 103.5px;
+		max-height: 103.5px;
+	}
+
+	.msg-box{
+		padding-right: 31.5px;
+	}
+
+	.checked{
+		padding-right: 14.625px;
+		padding-left: 14.625px;
+	}
+
+	.user-msg{
+		margin-top: 18px;
+		font-size: 15.75px;
+	}
+
+	.user-name{
+		margin-right: 23.625px;
+	}
+
+	.address-msg{
+		margin-top: 15.75px;
+		font-size: 14.625px;
+		margin-bottom: 13.5px;
+	}
+
+	.add-new-address{
+		font-size: 19.125px;
+		line-height: 103.5px;
+	}
+
+	.add-new-address>span{
+		margin-right: 25.3125px;
+	}
+}
+
+
+/*320*/
+@media screen and (max-width: 320px){
+	#content{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.address-box,.add-new-address{
+		height: 92px;
+		max-height: 92px;
+	}
+
+	.msg-box{
+		padding-right: 28px;
+	}
+
+	.checked{
+		padding-right: 13px;
+		padding-left: 13px;
+	}
+
+	.user-msg{
+		margin-top: 16px;
+		font-size: 14px;
+	}
+
+	.user-name{
+		margin-right: 21px;
+	}
+
+	.address-msg{
+		margin-top: 14px;
+		font-size: 13px;
+		margin-bottom: 12px;
+	}
+
+	.add-new-address{
+		font-size: 17px;
+		line-height: 92px;
+	}
+
+	.add-new-address>span{
+		margin-right: 22.5px;
+	}
+}

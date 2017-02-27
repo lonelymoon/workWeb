@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+<title>安心用</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/foodlist.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+</head>
+<body ontouchmove="event.preventDefaule()">
+<header>
+	<div class="search-box">
+		<label for="search"></label>
+		<input type="search" id="search" name="search" placeholder="搜索你想要的菜品">
+	</div>
+</header>
+<section id="content">
+	<div id="fn-nav">
+		<div class="fn_list" id="category">
+			<span data-state="down">类别
+				<img src="img/arrow_down.svg" class="arrow_down">
+				<img src="img/arrow_up.svg" class="arrow_up">
+			</span>
+		</div>
+		<div class="fn_list" id="effects">
+			<div></div>
+			<span data-state="down">功能
+				<img src="img/arrow_down.svg" class="arrow_down">
+				<img src="img/arrow_up.svg" class="arrow_up">
+			</span>
+		</div>
+		<div class="fn_list" id="price">
+			<span data-state="off">价格
+				<img src="img/rank.svg" class="rank_off">
+				<img src="img/rank_up.svg" class="rank_up">
+				<img src="img/rank_down.svg" class="rank_down">
+			</span>
+		</div>
+		<div class="fn-classes">
+			<div id="wrapper" class="wrap">
+				<ul id="food-classes" class="outer-ul">
+					<li class="vegetables"><span></span>蔬菜</li>
+					<li class="meats"><span></span>肉类</li>
+					<li class="fruits"><span></span>水果</li>
+					<li class="poultry"><span></span>禽类</li>
+					<li class="fishes"><span></span>水产</li>
+					<li class="protein"><span></span>豆乳蛋</li>
+					<li class="noodles"><span></span>面类</li>
+					<li class="oil"><span></span>油类</li>	
+				</ul>
+			</div>
+			<div id="inner-wrapper" class="inner-wr">
+				<ul class="inner-ul" id="food-ul">
+					<li>菠菜</li>
+					<li>卷心菜</li>
+					<li>青菜</li>
+					<li>鸡毛菜</li>
+					<li>空心菜</li>
+					<li>芹菜</li>
+					<li>豆角</li>
+					<li>土豆</li>
+					<li>菠菜</li>
+					<li>卷心菜</li>
+					<li>青菜</li>
+					<li>鸡毛菜</li>
+					<li>空心菜</li>
+				</ul>
+			</div>	
+			<div id="wrapper-ef" class="wrap">
+				<ul id="effects-classes" class="outer-ul">
+					<li class="healthy-food"><span></span>人群膳食</li>
+					<li class="body-nurse"><span></span>身体调理</li>
+					<li class="illness-nurse"><span></span>疾病调理</li>
+				</ul>
+			</div>
+			<div id="inner-wrapper-ef" class="inner-wr">
+				<ul class="inner-ul" id="effect-ul">
+					<li>菠菜</li>
+					<li>卷心菜</li>
+					<li>青菜</li>
+					<li>鸡毛菜</li>
+					<li>空心菜</li>
+					<li>芹菜</li>
+					<li>豆角</li>
+					<li>土豆</li>
+				</ul>
+			</div>	
+		</div>
+	</div>
+	<div id="content-list">
+		<div class="layer"></div>
+		<div class="msg-box">
+			<div class="food-img-box">
+				<img src="img/1.png" alt="">
+			</div>
+			<div class="food-msg">
+				<div class="above-msg">
+					<h1>奶油炖菜</h1>
+					<div class="tag">
+						<span>清热去火</span>
+						<span>突破天际</span>
+					</div>
+					<div class="food-price">￥ 15</div>
+				</div>
+				<div class="below-msg">鸡腿、土豆、蘑菇、洋葱、胡萝卜...</div>
+			</div>
+		</div>
+
+		<div class="msg-box">
+			<div class="food-img-box">
+				<img src="img/1.png" alt="">
+			</div>
+			<div class="food-msg">
+				<div class="above-msg">
+					<h1>奶油炖菜</h1>
+					<div class="tag">
+						<span>清热去火</span>
+						<span>突破天际</span>
+					</div>
+					<div class="food-price">￥ 15</div>
+				</div>
+				<div class="below-msg">鸡腿、土豆、蘑菇、洋葱、胡萝卜...</div>
+			</div>
+		</div>
+
+		<div class="msg-box">
+			<div class="food-img-box">
+				<img src="img/1.png" alt="">
+			</div>
+			<div class="food-msg">
+				<div class="above-msg">
+					<h1>奶油炖菜</h1>
+					<div class="tag">
+						<span>清热去火</span>
+						<span>突破天际</span>
+					</div>
+					<div class="food-price">￥ 15</div>
+				</div>
+				<div class="below-msg">鸡腿、土豆、蘑菇、洋葱、胡萝卜...</div>
+			</div>
+		</div>
+
+		<div class="msg-box">
+			<div class="food-img-box">
+				<img src="img/1.png" alt="">
+			</div>
+			<div class="food-msg">
+				<div class="above-msg">
+					<h1>奶油炖菜</h1>
+					<div class="tag">
+						<span>清热去火</span>
+						<span>突破天际</span>
+					</div>
+					<div class="food-price">￥ 15</div>
+				</div>
+				<div class="below-msg">鸡腿、土豆、蘑菇、洋葱、胡萝卜...</div>
+			</div>
+		</div>
+
+		<div class="msg-box">
+			<div class="food-img-box">
+				<img src="img/1.png" alt="">
+			</div>
+			<div class="food-msg">
+				<div class="above-msg">
+					<h1>奶油炖菜</h1>
+					<div class="tag">
+						<span>清热去火</span>
+						<span>突破天际</span>
+					</div>
+					<div class="food-price">￥ 15</div>
+				</div>
+				<div class="below-msg">鸡腿、土豆、蘑菇、洋葱、胡萝卜...</div>
+			</div>
+		</div>
+
+		<div class="msg-box">
+			<div class="food-img-box">
+				<img src="img/1.png" alt="">
+			</div>
+			<div class="food-msg">
+				<div class="above-msg">
+					<h1>奶油炖菜</h1>
+					<div class="tag">
+						<span>清热去火</span>
+						<span>突破天际</span>
+					</div>
+					<div class="food-price">￥ 15</div>
+				</div>
+				<div class="below-msg">鸡腿、土豆、蘑菇、洋葱、胡萝卜...</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script type="text/javascript" src="js/foodlist.js"></script>
+</body>
+</html>
+
+
+myScroll_con.on("refresh",function(){
+				pullUpEl.className = '';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '玩命加载中...(ｏ￣∇￣ｏ)♪';
+				_maxScrollY = myScroll_con.maxScrollY + pullUpOffset;
+			});

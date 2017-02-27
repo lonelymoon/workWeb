@@ -55,7 +55,7 @@
             	}
             }
 
-            if(count / (w * h) >= 0.4){
+            if(count / (w * h) >= 0.2){
             	ctx.clearRect(0,0,w,h);
                 hasShow = true;
             	mcp.init();
@@ -106,26 +106,36 @@
 
 jQuery(function($){
 
-var touchstart = "ontouchstart" in document ? "touchstart" : "click";
+var touchstart = "ontouchstart" in document ? "touchstart" : "click",
+    touchDown = touchstart == "touchstart" ? "touchstart" : "mousedown",
+    tempFlg = "",
+    inMobile = "ontouchstart" in document ? true : false,
+    /************链接替换就行**************/
+    page = {
+        "46032" : "http://www.baidu.com" , //100元
+        "46033" : "http://www.google.com", //200元
+        "46036" : "http://www.ctrip.com"   //1000元
+    };
 
-$('.alter-box').on(touchstart,function(e){
-	e.preventDefault();
-	e.stopPropagation();
+
+$('.close').on(touchstart,function(e){
+    $('.alter-box[data-status="done"]').addClass("hide");
+    $('.layer').addClass("hide");
+    window.location.reload();
 });
 
-$('.layer').on(touchstart,function(e){
+$('.I-know').on("click",function(e){
     $('.alter-box[data-status="done"]').addClass("hide");
     $('.layer').addClass("hide");
 });
 
-
-$('.couponlink').on(touchstart,function(e){
+$('.couponlink').on(touchDown,function(e){
     e.preventDefault();
     e.stopPropagation();
     this.click();
     setTimeout(function(){
         localStorage.getCoupon = true;
-    },2500);
+    },1000);
 });
 
 $('.no-win').on(touchstart,function(e){
@@ -158,6 +168,7 @@ myCoupon.prototype = {
 	},
 
 	check : function(val){
+        $('.close').removeClass("hide");
 		$('.layer').removeClass("hide");
 		if(val == "00000"){
 			$('.alter-box[data-status="oh-no"]').removeClass("hide");
@@ -170,6 +181,12 @@ myCoupon.prototype = {
 		$('.alter-hongbao').find("img[data-type="+val+"]").removeClass("hide");
 		$('.btn-box[data-type='+val+']').removeClass("hide");
 		localStorage.hbCode = val;
+
+        if(inMobile){
+            localStorage.getCoupon = true;
+            window.location.href = page[val];
+        }
+
 	},
 
     getCoupon : function(){
@@ -180,11 +197,11 @@ myCoupon.prototype = {
 
     getResult : function(){
         var random = this.getRandom();
-        return (random <= 30 && this.t1000) ? 
+        return (random <= 50 && this.t1000) ? 
                 "46036" : 
-                (random <= 180 && this.t200) ? 
+                (random <= 400 && this.t200) ? 
                 "46033" : 
-                (random <= 430 && this.t100) ? 
+                (random <= 800 && this.t100) ? 
                 "46032" : 
                 "00000";
     },
