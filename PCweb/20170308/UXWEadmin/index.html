@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UXWE信息管理系统</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
+<link rel="stylesheet" type="text/css" href="css/DateTimePicker.min.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div class="container">
+	<div class="banner">
+		<div class="logo">
+			<img src="images/LOGO.png">
+		</div>
+		<div class="nav">
+			<div class="nav-wrapper">
+				<ul class="cate first-cate fn">
+					功能
+					<li class="nlist fnlist">发布活动</li>
+					<li class="nlist">添加讲师</li>
+				</ul>
+				<ul class="cate mana">
+					管理
+					<li class="nlist fnlist">活动管理</li>
+					<li class="nlist">讲师管理</li>
+					<li class="nlist">用户管理</li>
+				</ul>
+				<ul class="cate send">
+					推广
+					<li class="nlist fnlist">广告主</li>
+				</ul>
+				<ul class="cate count">
+					统计
+					<li class="nlist fnlist">用户分析</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="header">
+			<div class="search-box">
+				<input type="text" id="search" name="search" >
+				<button id="search-btn"></button>
+			</div>
+			<div class="manager">
+				<div class="photo"></div>
+				<div class="name">管理员</div>
+			</div>
+		</div>
+		<div class="content-box">
+			<div class="content-wrapper">
+				<div class="total-title">基础信息</div>
+				<div class="content-msg">
+					<!--start-->
+
+					<div class="column">
+						<div class="column-title">
+							您打算发布什么活动？
+						</div>
+						<div class="column-content">
+							<div class="column-item">
+								<div class="item-title">活动名称</div>
+								<div class="item-content">
+									<input type="text" placeholder="活动标题（不得少于5个字）" id="act-title" >
+								</div>
+							</div>
+							<div class="column-item">
+								<div class="item-title">活动类型</div>
+								<div class="item-content last-item-content">
+									<div class="checkBox">
+										<div class="checkIcon"></div>
+										<div class="checkItem">视觉设计</div>
+									</div>
+									<div class="checkBox">
+										<div class="checkIcon"></div>
+										<div class="checkItem">交互设计</div>
+									</div>
+									<div class="checkBox">
+										<div class="checkIcon"></div>
+										<div class="checkItem">产品设计</div>
+									</div>
+									<div class="checkBox">
+										<div class="checkIcon"></div>
+										<div class="checkItem">用户体验</div>
+									</div>
+									<div class="checkBox" data-id="5">
+										<div class="checkIcon"></div>
+										<div class="checkItem">其他相关</div>
+									</div>
+									<div class="input-box hide">
+										<input type="text" placeholder="其他相关" id="others">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="column-title">
+							您的活动位于什么地方？
+						</div>
+						<div class="column-content">
+							<div class="column-item inline-item">
+								<div class="item-title">城市</div>
+								<div class="item-content">
+									<div class="selectorBox">
+										<div class="selectorVal">南京</div>
+										<div class="selectorLists">
+											<li class="sel-list">南京</li>
+											<li class="sel-list">上海</li>
+										</div>
+									</div>
+									<div class="addNewCity">添加城市</div>
+								</div>
+							</div>
+							<div class="column-item inline-item">
+								<div class="item-title">街道地址</div>
+								<div class="item-content">
+									<input type="text" id="address" placeholder="例如：黄河南大街1号" >
+								</div>
+							</div>
+							<div class="column-item pCode-item">
+								<div class="item-title">邮政编码</div>
+								<div class="item-content last-item-content">
+									<input type="text" id="post-code" placeholder="例如：110000" >
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="column-title">
+							您的活动何时举行？
+						</div>
+						<div class="column-content">
+							<div class="column-item">
+								<div class="item-title">活动时间</div>
+								<div class="item-content">
+									<div class="dateChooseBox activeDate">
+										<div class="dateInputBox">
+											<input type="text" data-field="date" class="cDate startDate" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="time" class="cTime startTime" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="date" class="cDate endDate" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="time" class="cTime endTime" readonly />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="column-item">
+								<div class="item-title">报名时间</div>
+								<div class="item-content">
+									<div class="dateChooseBox enrollDate">
+										<div class="dateInputBox">
+											<input type="text" data-field="date" class="cDate startDate" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="time" class="cTime startTime" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="date" class="cDate endDate" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="time" class="cTime endTime" readonly />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="column-item">
+								<div class="item-title">通知时间</div>
+								<div class="item-content">
+									<div class="dateChooseBox callDate">
+										<div class="dateInputBox">
+											<input type="text" data-field="date" class="cDate startDate" readonly />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--end-->
+				</div>
+			</div>
+		</div>
+		<div class="footer-wrapper">
+			<div class="loading-status"></div>
+			<div class="save-btn">保存</div>
+		</div>
+	</div>
+</div>
+<div id="dtBox"></div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/DateTimePicker.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

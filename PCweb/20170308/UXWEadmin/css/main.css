@@ -1,0 +1,107 @@
+#act-title{
+	position: relative;
+	border: 2px solid #D9DADC;
+	display: block;
+	height: 60px;
+	text-indent: 22px;
+	font-size: 18px;
+	color: #B3B3B3;
+	letter-spacing: 0;
+	max-width: 796px;
+	width: 100%;
+	outline: none;
+	-webkit-appearance:none;
+}
+
+.input-box{
+	position: relative;
+	float: left;
+	border: 2px solid #D9DADC;
+	width: 156px;
+	height: 56px;
+	margin-top: -15px;
+}
+
+#others{
+	border: none;
+	outline: none;
+	-webit-appearance:none;
+	width: 100%;
+	height: 100%;
+	text-indent: 10px;
+	font-size: 18px;
+	color: #333333;
+	letter-spacing: 0;
+}
+
+#address{
+	position: relative;
+	width: 476px;
+	height: 56px;
+	border: 2px solid #D9DADC;
+	text-indent: 22px;
+	font-size: 18px;
+	color: rgba(178,178,178,0.80);
+	letter-spacing: 0;
+}
+
+.pCode-item{
+	padding-top: 15px;
+}
+
+#post-code{
+	position: relative;
+	width: 226px;
+	height: 56px;
+	border: 2px solid #D9DADC;
+	text-indent: 22px;
+	font-size: 18px;
+	color: rgba(178,178,178,0.80);
+	letter-spacing: 0;
+}
+
+.addNewCity{
+	position: absolute;
+	height: auto;
+	font-size: 16px;
+	color: #41BDB6;
+	letter-spacing: 0;
+	bottom: -25px;
+	left: 0px;
+}
+
+.addNewCity:hover{
+	cursor: pointer;
+}
+
+.dateInputBox{
+	position: relative;
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.dateChooseBox input{
+	position: relative;
+	width: 276px;
+	height: 56px;
+	border: 2px solid #D9DADC;
+	font-size: 18px;
+	color: #333333;
+	letter-spacing: 1px;
+	text-indent: 22px;
+}
+
+input.startTime,input.endTime{
+	width: 176px;
+}
+
+.dateInputBox:after{
+	position: absolute;
+	content: "";
+	background: url("../images/jt_1.png") no-repeat top center;
+	width: 15px;
+	height: 7px;
+	right: 20px;
+	top: 24px;
+}

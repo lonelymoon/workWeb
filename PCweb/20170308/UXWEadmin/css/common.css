@@ -1,0 +1,459 @@
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+
+.container{
+	position: relative;
+	height: 100%;
+	padding-left: 258px;
+}
+
+.banner{
+	position: absolute;
+	height: 100%;
+	width: 258px;
+	left: 0px;
+	top: 0px;
+}
+
+.logo{
+	position: relative;
+	height: 104px;
+	background: #FF7575;
+	line-height: 123px;
+	text-align: center;
+	z-index: 2;
+}
+
+.logo img{
+	max-width: 100%;
+}
+
+.nav{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 104px;
+	bottom: 0px;
+	background: #2A2D33;
+}
+
+.cate{
+	position: relative;
+	display: block;
+	font-family: 'PingFangSC-Regular','Microsoft Yahei';
+	font-size: 16px;
+	color: #ACACAD;
+	letter-spacing: 0;
+	padding-left: 75px;
+	margin-bottom: 41px;
+}
+
+.first-cate{
+	padding-top: 36px;
+}
+
+.fnlist{
+	margin-top: 10px;
+}
+
+.nlist{
+	position: relative;
+	padding: 10px 0px;
+}
+
+.nlist:hover{
+	cursor: pointer;
+	opacity: 0.9;
+	color: #fff;
+}
+
+.nchoose{
+	color: #fff;
+}
+
+.nlist:hover:after,.nchoose:after{
+	position: absolute;
+	content: "";
+	width: 258px;
+	height: 100%;
+	left: -75px;
+	top: 0px;
+	background:#656C7E;
+	z-index: -1;
+}
+
+.cate:before{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	content: "";
+	left: 45px;
+}
+
+.content{
+	position: relative;
+	min-width: 500px;
+	height: 100%;
+	background: #F9F9F9;
+}
+
+.header{
+	position: relative;
+	height: 104px;
+	background: #FFFFFF;
+	line-height: 104px;
+}
+
+.search-box{
+	position: relative;
+	height: auto;
+	padding-left: 66px;
+	padding-top: 27px;
+}
+
+.search-box:after{
+	clear:both;
+	content: "";
+	display: block;
+}
+
+#search,#search-btn{
+	float: left;
+}
+
+#search{
+	position: relative;
+	width: 40%;
+	height: 50px;
+	background: #F7F7F7;
+	border-radius: 2px;
+	border: none;
+	outline: none;
+	-webkit-appearance:none;
+	text-indent: 16px;
+	font-size: 20px;
+}
+
+#search-btn{
+	position: relative;
+	width: 54px;
+	height: 50px;
+	background: #BDC2CA;
+	border: none;
+	outline: none;
+}
+
+#search-btn:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.manager{
+	position: absolute;
+	width: auto;
+	height: 68px;
+	line-height: 68px;
+	top: 18px;
+	right: 18px;
+}
+
+.manager:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.photo{
+	position: relative;
+	float: right;
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+	background: #D8D8D8;
+	overflow: hidden;
+}
+
+.name{
+	position: relative;
+	float: right;
+	font-size: 16px;
+	color: rgba(20,5,2,0.80);
+	letter-spacing: 0;
+	margin-right: 28px;
+}
+
+.content-box{
+	position: absolute;
+	left: 60px;
+	top: 134px;
+	right: 60px;
+	bottom: 100px;
+	background: #fff;
+	overflow: hidden;
+}
+
+.content-wrapper{
+	position: relative;
+	height: auto;
+}
+
+.total-title{
+	padding-left: 26px;
+	background: #FFF2F2;
+	border: 1px solid #FFF2F2;
+	font-size: 16px;
+	color: #646464;
+	letter-spacing: 0;
+	height: 50px;
+	line-height: 50px;
+}
+
+.content-msg{
+	position: relative;
+	padding: 0px 20px 0px 60px;
+	height: auto;
+}
+
+.column{
+	position: relative;
+	height: auto;
+	padding-top: 50px;
+	max-width: 800px;
+}
+
+.column-title{
+	position: relative;
+	height: auto;
+	font-size: 28px;
+	color: #484848;
+	letter-spacing: 0;
+	padding-bottom: 35px;
+}
+
+.column-content{
+	position: relative;
+	height: auto;
+}
+
+.column-item{
+	position: relative;
+	height: auto;
+}
+
+.inline-item{
+	display: inline-block;
+	margin-right: 25px;
+}
+
+.item-title{
+	position: relative;
+	padding-bottom: 14px;
+	height: auto;
+	opacity: 0.8;
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 0;
+}
+
+.item-content{
+	position: relative;
+	height: auto;
+	margin-bottom: 24px;
+}
+
+.last-item-content{
+	margin-bottom: 0px;
+}
+
+.item-content:after{
+	content: "";
+	float: none;
+	clear: both;
+	display: block;
+}
+
+.checkBox{
+	position: relative;
+	height: 60px;
+	float: left;
+	margin-right: 28px;
+}
+
+.checkBox:after{
+	content: "";
+	clear: both;
+	float: none;
+	display: block;
+}
+
+.checkBox:hover{
+	cursor: pointer;
+}
+
+.checkIcon{
+	position: relative;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #DBDBDB;
+	border-radius: 2px;
+	margin-right: 8px;
+	margin-top: 3px;
+	float: left;
+}
+
+.checked{
+	border: 1px solid #fff;
+}
+
+.checked:after{
+	position: absolute;
+    content: "√";
+    background: #6cf;
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    width: 100%;
+    height: 100%;
+}
+
+.checkItem{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 0;
+	float: left;
+}
+
+.selectorBox{
+	position: relative;
+	height: 54px;
+	width: 204px;
+	border: 2px solid #D9DADC;
+	font-size: 18px;
+	color: rgba(0,0,0,0.80);
+	letter-spacing: 0;
+	padding-left: 22px;
+	line-height: 54px;
+}
+
+.selectorBox:after{
+	position: absolute;
+	content: "";
+	background: url("../images/jt_1.png") no-repeat top center;
+	width: 15px;
+	height: 7px;
+	right: 20px;
+	top: 24px;
+}
+
+.selectorVal{
+	position: relative;
+	height: auto;
+}
+
+.selectorLists{
+	position: absolute;
+	top: 56px;
+	left: -2px;
+	width: 100%;
+	border-left: 2px solid #D9DADC;
+	border-right: 2px solid #D9DADC;
+	border-bottom: 2px solid #D9DADC;
+	display: none;
+	z-index: 10;
+	background: #fff;
+}
+
+.selectorVal:hover,.selectorLists:hover{
+	cursor: pointer;
+}
+
+.sel-list{
+	position: relative;
+	display: block;
+	border-bottom: 1px dashed #D9DADC;
+	padding-left: 22px;
+}
+
+.sel-list:hover{
+	background: #6cf;
+}
+
+.footer-wrapper{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 60px;
+	width: 100%;
+	background: #fff;
+	z-index: 100;
+	padding: 10px 0px;
+}
+
+.footer-wrapper:after{
+	content: "";
+	clear: "both";
+	display: block;
+}
+
+.save-btn{
+	position: relative;
+	float: right;
+	background: #FF7676;
+	width: 200px;
+	height: 60px;
+	font-size: 20px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	text-align: center;
+	line-height: 60px;
+}
+
+.save-btn:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+/***************************************/
+.fn:before{
+	background: url("../images/gn_1.png") no-repeat top center;
+	top: 37px;
+}
+
+.mana:before{
+	background: url("../images/gl_1.png") no-repeat top center;
+	height: 22px;
+	top: 0px;
+}
+
+.send:before{
+	background: url("../images/tg_1.png") no-repeat top center;
+	height: 24px;
+	top: 0px;
+}
+
+.count:before{
+	background: url("../images/tj_1.png") no-repeat top center;
+	height: 17px;
+	top: 3px;
+}
+
+input{
+	border: none;
+	outline: none;
+	-webkit-appearance:none;
+}
+
+.hide{
+	display: none;
+}
+
+@media screen and (min-width: 1600px){
+	.column{
+		max-width: 1200px;
+	}
+}
