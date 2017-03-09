@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UXWE信息管理系统</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/idangerous.swiper.css">
+<link rel="stylesheet" type="text/css" href="css/DateTimePicker.min.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<div class="container">
+	<div class="banner">
+		<div class="logo">
+			<img src="images/LOGO.png">
+		</div>
+		<div class="nav">
+			<div class="nav-wrapper">
+				<ul class="cate first-cate fn">
+					功能
+					<li class="nlist fnlist nchoose" data-link="publishAct">发布活动</li>
+					<li class="nlist" data-link="addLecturers">添加讲师</li>
+				</ul>
+				<ul class="cate mana">
+					管理
+					<li class="nlist fnlist" data-link="actManager">活动管理</li>
+					<li class="nlist" data-link="lecManager">讲师管理</li>
+					<li class="nlist" data-link="userManager">用户管理</li>
+				</ul>
+				<ul class="cate send">
+					推广
+					<li class="nlist fnlist" data-link="adManager">广告主</li>
+				</ul>
+				<ul class="cate count">
+					统计
+					<li class="nlist fnlist" data-link="userAnalysis">用户分析</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="header">
+			<!-- <div class="search-box">
+				<input type="text" id="search" name="search" >
+				<button id="search-btn">
+					<img src="images/ss_1.png">
+				</button>
+			</div> -->
+			<div class="manager">
+				<div class="photo"></div>
+				<div class="name">管理员</div>
+			</div>
+		</div>
+		<div class="content-box">
+			<div class="content-wrapper">
+				<div class="total-title">基础信息</div>
+				<div class="content-msg">
+					<!--start-->
+
+					<div class="column">
+						<div class="column-title">
+							您的活动位于什么地方？
+						</div>
+						<div class="column-content">
+							<div class="column-item inline-item">
+								<div class="item-title">城市</div>
+								<div class="item-content">
+									<div class="selectorBox cityChoose">
+										<div class="selectorVal">上海</div>
+										<div class="selectorLists">
+											<li class="sel-list">南京</li>
+											<li class="sel-list">上海</li>
+										</div>
+									</div>
+									<div class="addNewCity addNew">添加城市</div>
+								</div>
+							</div>
+							<div class="column-item inline-item">
+								<div class="item-title">街道地址</div>
+								<div class="item-content">
+									<input type="text" id="address" placeholder="例如：黄河南大街1号" >
+								</div>
+							</div>
+							<div class="column-item pCode-item">
+								<div class="item-title">邮政编码</div>
+								<div class="item-content last-item-content">
+									<input type="text" id="post-code" placeholder="例如：110000" >
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="column-title">
+							您的活动何时举行？
+						</div>
+						<div class="column-content">
+
+							<div class="column-item">
+								<div class="item-title">活动时间</div>
+								<div class="item-content">
+									<div class="dateChooseBox activeDate">
+										<div class="dateInputBox">
+											<input type="text" data-field="date" class="cDate startDate" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="time" class="cTime startTime" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="date" class="cDate endDate" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="time" class="cTime endTime" readonly />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="column-item">
+								<div class="item-title">报名时间</div>
+								<div class="item-content">
+									<div class="dateChooseBox enrollDate">
+										<div class="dateInputBox">
+											<input type="text" data-field="date" class="cDate startDate" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="time" class="cTime startTime" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="date" class="cDate endDate" readonly />
+										</div>
+										<div class="dateInputBox">
+											<input type="text" data-field="time" class="cTime endTime" readonly />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="column-item">
+								<div class="item-title">通知时间</div>
+								<div class="item-content">
+									<div class="dateChooseBox callDate">
+										<div class="dateInputBox">
+											<input type="text" data-field="date" class="cDate startDate" readonly />
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="column-title">
+							开始创建活动描述
+						</div>
+						<div class="column-content">
+							<div class="column-item">
+								<div class="item-title">课程描述</div>
+								<div class="item-content">
+									<textarea id="describe" placeholder="介绍..."></textarea>
+								</div>
+							</div>
+							<div class="column-item">
+								<div class="item-title">参与获益</div>
+								<div class="item-content">
+									<textarea id="gain" placeholder="你将获得..."></textarea>
+								</div>
+							</div>
+							<div class="column-item">
+								<div class="item-title">背景介绍</div>
+								<div class="item-content">
+									<textarea id="background" placeholder="背景..."></textarea>
+								</div>
+							</div>
+							<div class="column-item inline-item">
+								<div class="item-title">讲师名字</div>
+								<div class="item-content">
+									<input type="text" id="lecName" placeholder="" >
+									<ul class="lecLists">
+										<li class="lecList"></li>
+									</ul>
+								</div>
+								<div class="addNewLec addNew">添加讲师</div>
+							</div>
+							<div class="column-item inline-item">
+								<div class="item-title">页面显示</div>
+								<div class="item-content">
+									<div class="selectorBox doShow">
+										<div class="selectorVal">不显示</div>
+										<div class="selectorLists">
+											<li class="sel-list">显示</li>
+											<li class="sel-list">不显示</li>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="column-item">
+								<div class="item-title sbjTitle">课程语言</div>
+								<div class="item-content">
+									<div class="checkBox" data-val="cn">
+										<div class="checkIcon"></div>
+										<div class="checkItem">中文</div>
+									</div>
+									<div class="checkBox" data-val="en">
+										<div class="checkIcon"></div>
+										<div class="checkItem">英语</div>
+									</div>
+									<div class="checkBox" data-val="both">
+										<div class="checkIcon"></div>
+										<div class="checkItem">中英双语</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tips-box">
+							描述您举办活动的摘要，内容，报名者能获得什么。
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="column-title">
+							上传活动海报
+						</div>
+						<div class="column-content">
+							<label for="poster" class="poster">
+								<div class="poster-btn">上传海报</div>
+							</label>
+							<div class="addNewPoster addNew">没有准备图片？</div>
+							<input type="file" id="poster" name="poster" class="hide" />
+						</div>
+						<div class="tips-box">
+							上传的海报图片大小不得超过500K（JPG.GIF.PNG.）尺寸不得小于250*100px<br/><br/>
+							一张漂亮的海报，能让你的活动锦上添花，带来更多的用户报名及增加传播效果!
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="column-title">
+							活动赞助商
+							<div class="addNewSponsor addNew">添加赞助商</div>
+						</div>
+						<div class="column-content sponsorColumn">
+							<div class="column-item inline-item">
+								<div class="item-title">赞助商</div>
+								<div class="item-content">
+									<input type="type" class="sponsorName" placeholder="赞助商">
+								</div>
+							</div>
+							<div class="column-item inline-item">
+								<div class="item-title">赞助商网站</div>
+								<div class="item-content">
+									<input type="type" class="sponsorWeb" placeholder="http://">
+								</div>
+							</div>
+							<div class="column-item sponsorLogo-item">
+								<div class="item-title">赞助商LOGO</div>
+								<div class="item-content">
+									<label for="slogo-1" class="logoPost">
+										<div class="logo-btn">上传LOGO</div>
+									</label>
+									<input type="file" class="hide" id="slogo-1">
+								</div>
+							</div>
+						</div>
+						<div class="tips-box">
+							上传的海报图片大小不得超过500K（JPG.GIF.PNG.）尺寸不得小于250*100px<br/><br/>
+							一张漂亮的海报，能让你的活动锦上添花，带来更多的用户报名及增加传播效果!
+						</div>
+					</div>
+
+					<!--end-->
+				</div>
+			</div>
+		</div>
+		<div class="footer-wrapper">
+			<div class="loading-status"></div>
+			<div class="save-btn">保存</div>
+		</div>
+	</div>
+	<div class="layer hide">
+		<div class="layer-content">
+			<div class="layer-close">X</div>
+			<div class="layer-wrapper">
+				<div class="layer-title">发布成功</div>
+				<div class="layer-subtitle">可以预览您发布的活动啦</div>
+				<div class="layer-box">
+					<div class="layer-item">
+						<div class="layer-item-title">创建活动</div>
+						<div class="layer-item-subtitle">活动名称、类型</div>
+						<div class="layer-item-content">
+							<div class="layer-fn-btn redBtn">删除</div>
+							<div class="layer-fn-status">
+								<img src="images/ch_1.png">
+							</div>
+						</div>
+					</div>
+					<div class="layer-item">
+						<div class="layer-item-title">详细信息</div>
+						<div class="layer-item-subtitle">时间、地点、描述、海报以及广告主</div>
+						<div class="layer-item-content">
+							<div class="layer-fn-btn">更改</div>
+							<div class="layer-fn-status">
+								<img src="images/ch_1.png">
+							</div>
+						</div>
+					</div>
+					<div class="preview" data-link="preview">预览</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="layer hide addCityLayer">
+		<div class="layer-content">
+			<div class="layer-close">X</div>
+			<div class="layer-wrapper">
+				<div class="layer-title">添加城市</div>
+				<div class="layer-subtitle">可添加你想发布活动的城市</div>
+				<div class="layer-box">
+					<div class="column-item">
+						<div class="item-title">城市</div>
+						<div class="item-content">
+							<input type="type" class="cityAdd" placeholder="例如：沈阳">
+						</div>
+					</div>
+					<div class="confirm-btn">确认添加</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div id="dtBox"></div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/DateTimePicker.min.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
