@@ -1,0 +1,99 @@
+#c-header{
+	max-width: 1920px;
+	position: relative;
+	height: 856px;
+	margin: 0 auto;
+	background: url("../images/tt.jpg") no-repeat top center;
+}
+
+#c-content{
+	position: relative;
+	max-width: 1920px;
+	height: auto;
+	margin: 0 auto;
+}
+
+.column{
+	position: relative;
+	height: auto;
+}
+
+.cl1-bg{
+	background: url("../images/bj-1.jpg") no-repeat top center;
+	position: relative;
+	height: 1689px;
+}
+
+.slider-box{
+	position: absolute;
+	top: 545px;
+	left: 50%;
+	width: 898px;
+	height: 380px;
+	overflow: hidden;
+	margin-left: -449px;
+}
+
+.column-2{
+	background: url("../images/bj-2.jpg") no-repeat top center;
+	height: 909px;
+}
+
+.column-3{
+	background: url("../images/bj-3.jpg") no-repeat top center;
+	height: 978px;
+}
+
+.column-4{
+	background: url("../images/bj-4.jpg") no-repeat top center;
+	height: 1176px;
+}
+
+.column-5{
+	background: url("../images/bj-5.jpg") no-repeat top center;
+	height: 1638px;
+}
+
+.products{
+	position: absolute;
+	top: 215px;
+	left: 50%;
+	margin-left: -513px;
+	width: 1026px;
+	height: 552px;
+}
+
+.price-box{
+	position: absolute;
+	font-family: "黑体","SimHei";
+	color: #c42d46;
+	font-size: 42px;
+	left: 26px;
+	bottom: 40px;
+}
+
+.swiper-slide,.swiper-wrapper{
+	height: 380px !important;
+}
+
+.pagination {
+  position: absolute;
+  z-index: 20;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #555;
+  margin: 0 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #fff;
+}
