@@ -612,6 +612,31 @@ html,body{
 	top: 20px;
 }
 
+.img-set{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 10;
+	overflow: hidden;
+}
+
+.img-set img{
+	position: relative;
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.preview-img[data-status="loading"]{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -16px;
+	margin-left: -16px;
+}
+
 /***************************************/
 .fn:before{
 	background: url("../images/gn_1.png") no-repeat top center;

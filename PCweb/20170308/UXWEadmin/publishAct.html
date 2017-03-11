@@ -158,8 +158,8 @@ $('.save-btn').on('click',function(e){
 
 	$('#act-title').removeClass("alertBorder");
 
-	tdata.title = $title;
-	tdata.type = "";
+	tdata.strname = $title;
+	tdata.strType = "";
 
 	$('.checked').parent('.checkBox').each(function(e){
 		var $val = $(this).attr("data-val");
@@ -173,9 +173,9 @@ $('.save-btn').on('click',function(e){
 
 	});
 
-	tdata.type = temp.join(",");
+	tdata.strType = temp.join(",");
 
-	if(!tdata.type){
+	if(!tdata.strType){
 		alert("请选择活动类型");
 		return;
 	}
