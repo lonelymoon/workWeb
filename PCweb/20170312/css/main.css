@@ -1,0 +1,310 @@
+#c-header{
+	position: relative;
+	height: 774px;
+	margin: 0 auto;
+	max-width: 1920px;
+	background: url("../images/tt.jpg") no-repeat top center;
+}
+
+#c-content{
+	position: relative;
+	height: auto;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.c-container{
+	position: relative;
+	height: auto;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.ctr-1{
+	height: 1280px;
+	background-image: url("../images/bj1.jpg");
+}
+
+.ctr-2{
+	height: 1786px;
+	background-image: url("../images/bj2.jpg");
+}
+
+.ctr-3{
+	height: 908px;
+	background-image: url("../images/bj3.jpg");
+}
+
+.ctr-4{
+	height: 2030px;
+	background-image: url("../images/bj4.jpg");
+}
+
+.ctr-5{
+	height: 1162px;
+	background-image: url("../images/bj5.jpg");
+}
+
+.ctr-6{
+	height: 1361px;
+	background-image: url("../images/bj6.jpg");
+}
+
+/***************************/
+.column{
+	position: relative;
+	height: auto;
+	margin: 0 auto;
+}
+
+.column-nav{
+	position: relative;
+	height: auto;
+}
+
+.column-list{
+	float: left;
+	position: relative;
+	height: auto;
+}
+
+.last-list{
+	margin-right: 0px!important;
+}
+
+.column-list:hover{
+	cursor: pointer;
+}
+
+.column-content{
+	position: relative;
+	height: auto;
+}
+
+.column-wrapper{
+	position: relative;
+	height: auto;
+	margin: 0 auto;
+}
+
+.column-item{
+	position: relative;
+	height: auto;
+	margin: 0 auto;
+}
+
+/**********************************/
+.column-1{
+	padding-top: 500px;
+}
+
+.column-1 .column-nav{
+	width: 819px;
+	margin: 0 auto;
+	margin-bottom: 106px;
+}
+
+.column-1 .column-list{
+	width: 213px;
+	margin-right: 90px;
+}
+
+.column-1 .column-wrapper{
+	width: 898px;
+}
+
+.column-1 .swiper-wrapper,.column-1 .swiper-slide{
+	height: 363px!important;
+}
+
+.column-2{
+	padding-top: 171px;
+}
+
+.column-2 .column-nav{
+	width: 819px;
+	margin: 0 auto;
+	margin-bottom: 107px;
+}
+
+.column-2 .column-list{
+	width: 213px;
+	margin-right: 90px;
+}
+
+.column-2 .column-wrapper{
+	width: 898px;
+}
+
+.column-2 .swiper-wrapper,.column-2 .swiper-slide{
+	height: 363px!important;
+}
+
+.column-3{
+	padding-top: 217px;
+}
+
+.column-3 .column-nav{
+	width: 934px;
+	margin: 0 auto;
+	margin-bottom: 100px;
+}
+
+.column-3 .column-list{
+	width: 162px;
+	margin-right: 31px;
+}
+
+.column-3 .column-wrapper{
+	width: 898px;
+}
+
+.column-3 .swiper-wrapper,.column-3 .swiper-slide{
+	height: 363px!important;
+}
+
+.column-4{
+	padding-top: 165px;
+}
+
+.column-4 .column-nav{
+	width: 938px;
+	margin: 0 auto;
+	margin-bottom: 110px;
+}
+
+.column-4 .column-list{
+	width: 133px;
+	margin-right: 28px;
+}
+
+.column-4 .column-wrapper{
+	width: 898px;
+}
+
+.column-4 .swiper-wrapper,.column-4 .swiper-slide{
+	height: 363px!important;
+}
+
+.inner-nav{
+	position: absolute;
+	right: -30px;
+	height: auto;
+	width: 31px;
+	top: 0px;
+}
+
+.inner-n-list{
+	position: relative;
+	height: auto;
+	margin-bottom: 17px;
+}
+
+.inner-n-list:hover{
+	cursor: pointer;
+}
+
+.column-5{
+	padding-top: 591px;
+}
+
+.column-5 .column-nav{
+	width: 992px;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+
+.column-5 .column-list{
+	width: 248px;
+	margin-right: 0px;
+}
+
+.column-5 .column-wrapper{
+	width: 998px;
+}
+
+.pro-left-items{
+	position: relative;
+	height: auto;
+	float: left;
+	width: 454px;
+}
+
+.pro-right-items{
+	position: relative;
+	height: auto;
+	float: right;
+	width: 454px;
+}
+
+.pro-item{
+	position: relative;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.pro-title{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 210px;
+	font-size: 24px;
+}
+
+.pro-price{
+	position: absolute;
+	bottom: 36px;
+	right: 115px;
+	font-size: 26px;
+	color: #fff;
+}
+
+.other-item .pro-price{
+	bottom: 33px;
+}
+
+.link-box{
+	position: relative;
+	width: 898px;
+	margin: 0 auto;
+}
+
+.link-item{
+	position: relative;
+	width: 100%;
+	height: 243px;
+    margin-bottom: 17px;
+}
+
+.lb-1{
+	padding-top: 383px;
+}
+
+.lb-2{
+	padding-top: 9px;
+}
+
+.link-more{
+	position: absolute;
+    bottom: -138px;
+    right: -66px;
+    width: 261px;
+    height: 60px;
+}
+
+/*****************************/
+img{
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.clear{
+	clear: both;
+	display: block;
+	float: none!important;
+}
+
+.hide{
+	display: none!important;
+}
