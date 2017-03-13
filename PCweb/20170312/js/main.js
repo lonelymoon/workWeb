@@ -5,7 +5,9 @@ var scs = {};
 function createSwiper(idx){
 	scs["sc_"+idx] = new Swiper(".sc-"+idx,{
 		speed : 800,
-		loop : true
+		loop : true,
+		pagination : '.pgn-'+idx,
+		paginationClickable :true
 	});
 }
 
@@ -28,7 +30,7 @@ setTimeout(loop,4000);
 
 };
 
-createProxySwiper(18);
+createProxySwiper(19);
 
 var ctxAct = function(){
 	var $ev = "ontouchstart" in document? "touchstart" : "click";
@@ -98,10 +100,16 @@ var ctxAct = function(){
 					$tar.addClass("cl-4-choose").find("img").toggleClass("hide");
 				}
 
-				if(evElWrap == ".inner-nav"){
-					$('.in-choose').find("img").toggleClass("hide");
-					$(evElWrap).find(evEl).removeClass("in-choose");
-					$tar.addClass("in-choose").find("img").toggleClass("hide");
+				if(evElWrap == ".inav-1"){
+					$('.in-choose-1').find("img").toggleClass("hide");
+					$(evElWrap).find(evEl).removeClass("in-choose-1");
+					$tar.addClass("in-choose-1").find("img").toggleClass("hide");
+				}
+
+				if(evElWrap == ".inav-2"){
+					$('.in-choose-2').find("img").toggleClass("hide");
+					$(evElWrap).find(evEl).removeClass("in-choose-2");
+					$tar.addClass("in-choose-2").find("img").toggleClass("hide");
 				}
 
 				if(evElWrap == ".column-5 .column-nav"){
@@ -126,7 +134,9 @@ cl_3_g.change('.column-3 .column-nav',['.column-3 .column-wrapper'],'li',['.colu
 var cl_4_g = new ctxAct();
 cl_4_g.change('.column-4 .column-nav',['.column-4 .column-wrapper'],'li',['.column-item'],'','',true);
 var inner_g = new ctxAct();
-inner_g.change('.inner-nav',['.inner-item'],'div',['.column-inner-item'],'','',true);
+inner_g.change('.inav-1',['.iitem-1'],'div',['.column-inner-item'],'','',true);
+var inner2_g = new ctxAct();
+inner2_g.change('.inav-2',['.iitem-2'],'div',['.column-inner-item'],'','',true);
 var cl_5_g = new ctxAct();
 cl_5_g.change('.column-5 .column-nav',['.column-5 .column-wrapper'],'li',['.column-item'],'','',true);
 });
