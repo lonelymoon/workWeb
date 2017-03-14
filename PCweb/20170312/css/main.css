@@ -49,7 +49,7 @@
 }
 
 .ctr-6{
-	height: 1640px;
+	height: 874px;
 	background-image: url("../images/bj6.jpg");
 }
 
@@ -191,7 +191,7 @@
 
 .inner-nav{
 	position: absolute;
-	right: -30px;
+	right: -10px;
 	height: auto;
 	width: 31px;
 	top: 0px;
@@ -365,4 +365,9 @@ img{
 }
 .swiper-active-switch {
   background: #fff;
+}
+
+.sc-16,.sc-17,.sc-15,.sc-19{
+	margin-left: 0px;
+	max-width: 841px;
 }
