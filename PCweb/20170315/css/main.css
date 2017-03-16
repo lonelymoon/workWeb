@@ -1,7 +1,7 @@
 #c-header{
 	position: relative;
-	height: 1000px;
-	min-width: 1000px;
+	height: 800px;
+	min-width: 900px;
 	max-width: 1920px;
 	margin: 0 auto;
 	background: url("../images/tt.jpg") no-repeat top center;
@@ -11,7 +11,7 @@
 #c-content{
 	position: relative;
 	height: auto;
-	min-width: 1000px;
+	min-width: 900px;
 	max-width: 1920px;
 	margin: 0 auto;
 }
@@ -25,44 +25,44 @@
 
 .ctr-1{
 	background-image: url("../images/bj-1.jpg");
-	height: 1284px;
+	height: 923px;
 }
 
 .ctr-2{
 	background-image: url("../images/bj-2.jpg");
-	height: 911px;
+	height: 775px;
 }
 
 .ctr-3{
 	background-image: url("../images/bj-3.jpg");
-	height: 928px;
+	height: 710px;
 }
 
 .ctr-4{
 	background-image: url("../images/bj-4.jpg");
-	height: 1270px;
+	height: 1139px;
 }
 
 .ctr-5{
 	background-image: url("../images/bj-5.jpg");
-	height: 1575px;
+	height: 1158px;
 }
 
 .ctr-6{
 	background-image: url("../images/bj-6.jpg");
-	height: 872px;
+	height: 764px;
 }
 
 .ctr-7{
 	background-image: url("../images/bj-7.jpg");
-	height: 1147px;
+	height: 793px;
 }
 
 /*********************************/
 .column{
 	position: relative;
 	height: auto;
-	width: 1000px;
+	width: 900px;
 	margin: 0 auto;
 }
 
@@ -103,7 +103,7 @@
 	position: absolute;
 	height: auto;
 	width: auto;
-	bottom: -211px;
+	bottom: -195px;
 }
 
 .column-sub-list{
@@ -133,21 +133,21 @@
 
 /***********************************/
 .clm-1{
-	padding-top: 403px;
+	padding-top: 217px;
 }
 
 .clm-1 .column-content,.clm-2 .column-content,.clm-3 .column-content{
-	+height: 574px;
+	+height: 493px;
 }
 
 .clm-1 .column-left-box{ 
-	width: 154px;
-	padding-left: 143px;
+	width: 151px;
+	padding-left: 108px;
     padding-top: 50px;
 }
 
 .clm-1 .column-right-box{ 
-	width: 645px;
+	width: 581px;
 }
 
 .clm-1 .column-sub-nav{
@@ -155,7 +155,7 @@
 }
 
 .clm-1 .column-sub-list{
-	height: 211px;
+	height: 189px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -169,26 +169,27 @@
 	z-index: 10;
 	left: 0px;
 	bottom: 0px;
-	height: 228px;
+	height: 204px;
 	width: 100%;
 }
 
 .clm-1 .column-price{
-	right: 40px;
-	bottom: 12px;
+	right: 16px;
+	bottom: 8px;
+	z-index: 100;
 }
 
 .clm-2{
-	padding-top: 38px;
+	padding-top: 40px;
 }
 
 .clm-2 .column-left-box{ 
-	width: 645px;
+	width: 581px;
 }
 
 .clm-2 .column-right-box{ 
-	width: 168px;
-	padding-right: 130px;
+	width: 153px;
+	padding-right: 108px;
     padding-top: 50px;
 }
 
@@ -197,7 +198,7 @@
 }
 
 .clm-2 .column-sub-list{
-	height: 211px;
+	height: 189px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -211,7 +212,7 @@
 	z-index: 10;
 	left: 0px;
 	bottom: 0px;
-	height: 228px;
+	height: 204px;
 	width: 100%;
 }
 
@@ -221,7 +222,7 @@
 }
 
 .clm-3{
-	padding-top: 54px;
+	padding-top: 0px;
 }
 
 .clm-3 .column-wrapper{
@@ -229,13 +230,13 @@
 }
 
 .clm-3 .column-left-box{ 
-	width: 170px;
-	padding-left: 127px;
+	width: 151px;
+	padding-left: 108px;
     padding-top: 50px;
 }
 
 .clm-3 .column-right-box{ 
-	width: 645px;
+	width: 581px;
 }
 
 .clm-3 .column-sub-nav{
@@ -243,7 +244,7 @@
 }
 
 .clm-3 .column-sub-list{
-	height: 211px;
+	height: 189px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -256,22 +257,22 @@
 	background: url("../images/nav/jt-3.png") no-repeat top center;
 	z-index: 10;
 	left: 0px;
-	bottom: 0px;
-	height: 227px;
+	bottom: 1px;
+	height: 204px;
 	width: 100%;
 }
 
 .clm-3 .column-price{
-	right: 40px;
-	bottom: 12px;
+	right: 16px;
+	bottom: 8px;
 }
 
 .clm-4{
-	padding-top: 300px;
+	padding-top: 282px;
 }
 
 .clm-4 .column-nav{
-	width: 624px;
+	width: 672px;
 	margin: 0 auto;
 }
 
@@ -279,7 +280,7 @@
 	position: relative;
 	height: auto;
 	float: left;
-	margin-right: 80px;
+	margin-right: 116px;
 }
 
 .clm-4 .column-list:hover{
@@ -296,40 +297,40 @@
 }
 
 .clm-4 .column-sub-nav{
-	bottom: 43px;
-    right: -86px;
+	bottom: 45px;
+    right: -10px;
 }
 
 .clm-4 .column-sub-list{
-	height: 130px;
+	height: 86px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
 .clm-4 .column-price{
-	right: 30px;
-    bottom: 224px;
+	right: 63px;
+    bottom: 195px;
     font-size: 40px;
     font-family: "黑体";
     color: #fff;
 }
 
 .clm-5{
-	padding-top: 267px;
+	padding-top: 213px;
 }
 
 .clm-5 .column-nav{
-	width: 986px;
+	width: 894px;
 	margin: 0 auto;
-	margin-bottom: 42px;
+	margin-bottom: 38px;
 }
 
 .clm-5 .column-list{
 	position: relative;
 	height: auto;
 	float: left;
-	width: 242px;
+	width: 219px;
 	margin-right: 6px;
 }
 
@@ -357,10 +358,10 @@
 
 .pro-title{
 	position: absolute;
-	font-size: 22px;
+	font-size: 20px;
 	font-family: "黑体";
 	color:#000;
-	top: 238px;
+	top: 217px;
 	left: 0px;
 	width: 100%;
 	-moz-box-sizing: border-box ;
@@ -375,7 +376,7 @@
 	bottom: 20px;
 	height: auto;
 	width: auto;
-	font-size: 26px;
+	font-size: 23px;
 	font-family: "黑体";
 	color: #e21111;
 }
@@ -388,18 +389,18 @@
 .n-column-box{
 	position: relative;
 	height: auto;
-	width: 1000px;
+	width: 900px;
 	margin: 0 auto;
 }
 
 .ctr-6 .n-column-box{
-	padding-top: 292px;
+	padding-top: 251px;
 }
 
 .n-column-item{
 	position: relative;
-	height: 451px;
-	width: 499px;
+	height: 415px;
+	width: 413px;
 }
 
 .n-column-item img{
@@ -416,12 +417,12 @@
 
 .nci-l{
 	float: left;
-	margin-left: -17px;
+	margin-left: 0px;
 }
 
 .nci-r{
 	float: right;
-	margin-right: -17px;
+	margin-right: 0px;
 }
 
 .link-logo-box{
@@ -449,4 +450,35 @@
 
 .hide{
 	display: none!important;
+}
+
+.slide-box .swiper-slide,.slide-box .swiper-wrapper{
+	height: 336px;
+}
+
+.slide-box .swiper-container{
+	background: url("../images/bwky-3.jpg") no-repeat top center;
+	height: 489px;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 120;
+}
+.swiper-pagination-switch {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #ccc;
+  margin: 0 5px;
+  opacity: 0.8;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.swiper-active-switch {
+  background: #555;
 }

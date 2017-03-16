@@ -1,5 +1,12 @@
 jQuery(function($){
 
+var sc1 = new Swiper(".swiper-container",{
+	loop : true,
+	speed : 600,
+	pagination : '.pagination',
+	paginationClickable :true
+});
+
 var ctxAct = function(){
 	var $ev = "ontouchstart" in document? "touchstart" : "click";
 
@@ -31,7 +38,7 @@ var ctxAct = function(){
 
 			for(var i=0,len=actionElWrap.length;i<len;i++){
 				$(actionElWrap[i]).find(actionEl[i]).hide();
-				$(actionElWrap[i]).find(actionEl[i]+'[data-id='+$id+']').fadeIn(200);	
+				$(actionElWrap[i]).find(actionEl[i]+'[data-id='+$id+']').fadeIn(300);	
 			}
 			
 			if(replaceBgImg && replaceBgImg!="")
@@ -120,5 +127,19 @@ var cl_8_g = new ctxAct();
 cl_8_g.change(".cct-4 .column-sub-nav",['.cct-4 .column-wrapper'],'li',['.column-item'],'','',true);
 var cl_8_g = new ctxAct();
 cl_8_g.change(".clm-5 .column-nav",['.clm-5 .column-wrapper'],'div',['.column-item'],'','',true);
+
+var $ev = "ontouchstart" in document? "touchstart" : "click";
+
+function loop(i){
+	var id = $('.cl-4-choose').attr("data-id") - 1;
+	i = i >= 3 ? 0 : i;
+	$('.clm-4 .column-sub-nav').eq(id).find(".column-sub-list").eq(i).trigger($ev);
+	sc1.swipeNext();
+	setTimeout(function(){  i++; loop(i) },5000);
+}
+
+setTimeout(function(){
+	loop(0);
+},5000);
 
 });
