@@ -75,11 +75,11 @@ img{
 	content: "\e61d";
 }
 
-.li-image:before{
+.li-workshop:before{
 	content: "\e63f";
 }
 
-.li-comments:before{
+.li-lecturer:before{
 	content: "\e642";
 }
 
@@ -121,7 +121,7 @@ img{
 	font-size: 0.3rem;
 }
 
-.menu:before{
+.menu:before,.back:before{
 	color: #F8B72A;
 }
 
@@ -136,4 +136,423 @@ img{
 	right: 0rem;
 	top: 0.8rem;
 	bottom: 0rem;
+}
+
+.column{
+	position: relative;
+	height: auto;
+	padding-top: 0.42rem;
+}
+
+.column-header{
+	position: relative;
+	height: auto;
+	margin-bottom: 0.17rem;
+}
+
+.column-title{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	color: #000000;
+	letter-spacing: 0;
+}
+
+.column-cn-title{
+	font-size: 0.3rem;
+}
+
+.column-en-title{
+	font-size: 0.17rem;
+}
+
+.column-tips{
+	position: absolute;
+	height: 100%;
+	right: 0rem;
+	top: 0rem;
+	line-height: 400%;
+}
+
+.column-tips[data-mode="no-link"]:after{
+	content: "";
+	position: absolute;
+	right: 0rem;
+	top: 0rem;
+	height: 100%;
+	width: 0.04rem;
+	background: #F8B72A;
+}
+
+.know-more{
+	position: relative;
+	opacity: 0.8;
+	font-size: 0.23rem;
+	color: rgba(0,0,0,0.50);
+	letter-spacing: 0;
+}
+
+.column-content{
+	position: relative;
+	height: auto;
+}
+
+/*********************/
+.home-box{
+	position: relative;
+	height: auto;
+}
+
+.other-sub-logo{
+	position: absolute;
+	right: 0.25rem;
+	top: 0rem;
+	width: 2rem;
+	background: #d8d8d8;
+	z-index: 10;
+}
+
+.other-sub-logo img{
+	margin: 0 auto;
+}
+
+.homepage-container{
+	position: relative;
+	height: auto;
+	padding: 0rem 0.25rem;
+	padding-top: 0.1rem;
+}
+
+.homepage-banner{
+	position: relative;
+	height: auto;
+}
+
+.actv-workshop{
+	position: relative;
+	height: auto;
+}
+
+.actv-item{
+	position: relative;
+	height: auto;
+}
+
+.actv-item-image{
+	position: relative;
+	height: auto;
+	margin-bottom: 0.17rem;
+}
+
+.actv-item-msg{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-size: 0.2rem;
+	color: #000000;
+	letter-spacing: 0;
+	padding-left: 0.42rem;
+	padding-bottom: 0.17rem;
+}
+
+.actv-item-enTitle,.actv-item-cnTitle,.actv-item-lecName,.actv-item-lecJob{
+	position: relative;
+	height: auto;
+}
+
+.actv-item-lecName{
+	padding-top: 0.83rem;
+}
+
+.actv-item-otherMsg{
+	position: absolute;
+	right: 0rem;
+	bottom: 0.17rem;
+	text-align: right;
+}
+
+/*******************************************/
+.past-workshop-box{
+	position: relative;
+	height: auto;
+}
+
+.past-item{
+	margin-bottom: 0.17rem;
+	position: relative;
+	height: auto;
+}
+
+.past-item:last-child{
+	margin-bottom: 0rem;
+}
+
+.past-item-msg{
+	position: relative;
+	height: auto;
+	background: #2C2D2F;
+	width: 4.4rem;
+	height: 3.13rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0.19rem 1.54rem 0.17rem 0.17rem;
+	color: #F8B72A;
+	letter-spacing: 0;
+}
+
+.past-item-cnTitle{
+	position: relative;
+	height: auto;
+	font-size: 0.27rem;
+}
+
+.past-item-enTitle{
+	font-size: 0.17rem;
+	position: relative;
+	height: auto;
+}
+
+.past-item-lecName{
+	position: absolute;
+	height: auto;
+	font-size: 0.17rem;
+	left: 0.17rem;
+	bottom: 0.17rem;
+}
+
+.past-item-image{
+	position: absolute;
+	width: 2.7rem;
+	height: 2.7rem;
+	overflow: hidden;
+	right: 0rem;
+	top: 0.28rem;
+}
+
+.past-item[data-type="1"] .past-item-msg{
+	color: #000000;
+	background: #F8B72A;
+}
+
+/********************************************/
+.lecturer-box{
+	position: relative;
+	height: auto;
+}
+
+.lec-item{
+	position: relative;
+	height: auto;
+	width: 1.75rem;
+}
+
+.lec-item-image{
+	position: relative;
+	height: 1.92rem;
+	overflow: hidden;
+}
+
+.lec-item-job{
+	position: relative;
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	box-sizing : border-box;
+	height: 0.9rem;
+	padding: 0.08rem;
+	background: #000000;
+	font-size: 0.14rem;
+	color: #F8B72A;
+	letter-spacing: 0;
+}
+
+.lec-item-lecName{
+	position: relative;
+	height: auto;
+	padding-top: 0.08rem;
+	font-size: 0.21rem;
+	color: #000000;
+	letter-spacing: 0;
+}
+
+.lec-item[data-type="1"] .lec-item-job{
+	background: #F8B72A;
+	color: #000000;
+}
+
+/************************************************/
+.partner-box{
+	position: relative;
+	height: auto;
+}
+
+.partner-box:after{
+	position: relative;
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.partner-item{
+	position: relative;
+	height: auto;
+	float: left;
+	width: 50%;
+}
+
+.partner-item-image{
+	position: relative;
+	height: auto;
+	width: 2.8rem;
+}
+
+.partner-item-name{
+	opacity: 0.8;
+	position: relative;
+	height: auto;
+	font-size: 0.22rem;
+	color: rgba(0,0,0,0.80);
+	letter-spacing: 0;
+	padding: 0.18rem;
+}
+
+/*******************************/
+.join-box{
+	position: relative;
+	height: auto;
+	background: #2C2D2F;
+	height: 1.43rem;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	padding: 0.25rem;
+}
+
+.join-text{
+	position: relative;
+	height: auto;
+	font-size: 0.17rem;
+	color: #F8B72A;
+	letter-spacing: 0;
+}
+
+.join-btn{
+	position: absolute;
+	right: 0.25rem;
+	bottom: 0.25rem;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border: 1px solid #F8B72A;
+	text-align: center;
+	width: 1.5rem;
+	height: 0.43rem;
+	line-height: 0.43rem;
+	color: #F8B72A;
+}
+
+/*********************************/
+.about-box{
+	position: relative;
+	height: auto;
+}
+
+.about-introduction{
+	position: relative;
+	height: auto;
+	padding: 0.25rem;
+	background: #F8B72A;
+}
+
+.about-introduction:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.about-text{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-size: 0.17rem;
+	color: #000000;
+	letter-spacing: 1px;
+	line-height: 0.25rem;
+}
+
+.about-QRcode{
+	position: relative;
+	height: auto;
+	width: 1.67rem;
+	float: right;
+	font-size: 0.1rem;
+	color: #000000;
+	letter-spacing: 2px;
+	text-align: center;
+	line-height: 0.4rem;
+}
+
+.about-msg{
+	position: relative;
+	height: auto;
+	padding: 0.25rem;
+	background: #10141A;
+	font-size: 0.17rem;
+	color: #696D7A;
+	letter-spacing: 0;
+}
+
+.about-msg-name{
+	position: relative;
+	height: auto;
+	color: #fff;
+}
+
+.about-msg>div{
+	position: relative;
+	height: auto;
+	margin-bottom: 0.08rem;
+}
+
+.about-msg-email{
+	padding-bottom: 0.3rem;
+	border-bottom: 3px solid #FFFFFF;
+}
+
+.logo-bottom{
+	width: 0.69rem;
+	padding-top: 0.2rem;
+}
+
+/**********workshop page**********/
+#page-menu .page{
+	padding: 0rem 0.25rem;
+}
+
+#page-menu .page-title{
+	text-align: center;
+	color: #F8B72A;
+}
+
+#page-menu .lec-item{
+	float: left;
+	width: 50%;
+}
+
+#page-menu .lec-item-image{
+	width: 2.8rem;
+	height: 3.07rem;
+}
+
+#page-menu .lecturer-box:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#page-menu .lec-item-job{
+	width: 2.8rem;
+	font-size: 0.2rem;
+	height: 1.2rem;
+	padding: 0.1rem;
 }

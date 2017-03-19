@@ -1,5 +1,6 @@
 /*************reset****************/
-html{color:#333;-webkit-text-size-adjust:none;font-family: 'Microsoft Yahei';height: auto;font-size:120px;}
+*{font-family:"PingFangSC-Regular","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;}
+html{color:#333;-webkit-text-size-adjust:none;height: auto;font-size:120px;}
 body{height: auto;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin:0;padding:0;}
 table{border-collapse:collapse;border-spacing:0;}
@@ -15,9 +16,6 @@ input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inher
 body{font-size:12px;}
 a{color: #333333;text-decoration: none;}
 a:hover{text-decoration:none; cursor: pointer; color:#c00;}
-span,a,p{
-	font-family: "Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
-}
 
 @media screen and (max-width:678px){
 	html{

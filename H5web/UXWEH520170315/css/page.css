@@ -117,7 +117,7 @@ html,body{
 #page-menu{
 	position: relative;
 	height: auto;
-	background: #99cc00;
+	background: #ffffff;
 	z-index: 1;
 }
 
@@ -157,6 +157,7 @@ html,body{
 	position: relative;
 	height: 0.8rem;
 	background: #66ccff;
+	z-index: 1000;
 }
 
 .menu,.back{
