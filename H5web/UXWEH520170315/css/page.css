@@ -189,13 +189,25 @@ html,body{
 	text-align: center;
 }
 
-.lazy-img{
-	max-width: 100%;
-	margin-top: 0.3rem;
+.lazy-img[data-status="unload"]{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 0.25rem;
+	height: 0.25rem;
+	margin-top: -0.125rem;
+	margin-left: -0.125rem;
 }
 
 .lazy-img[data-status="loaded"]{
+	position: relative;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	width: auto;
+	height: auto;
 	margin-top: 0rem;
+	margin-left: 0rem;
 }
 
 

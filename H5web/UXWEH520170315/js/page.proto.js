@@ -1,9 +1,10 @@
-(function(window,document,undefined){
+(function(window,undefined){
+
 var pageConfig = {
 	pagelist : [
 
 		{
-			"name" : "UXWE·工作坊",
+			"name" : "工作坊",
 			"id" : "workshop",
 			"pageCache" : "",
 			"sourceUrl" : "",
@@ -60,7 +61,7 @@ var pageConfig = {
 			}
 		},
 		{
-			"name" : "UXWE·讲师介绍",
+			"name" : "讲师介绍",
 			"id" : "lecturer",
 			"pageCache" : "",
 			"sourceUrl" : "",
@@ -107,6 +108,26 @@ var pageConfig = {
 					}
 				}
 			],
+			"callback" : function(pageDom){
+
+			}
+		},
+		{
+			"name" : "关于我们",
+			"id" : "about",
+			"pageCache" : "",
+			"sourceUrl" : "",
+			"sources" : [],
+			"callback" : function(pageDom){
+
+			}
+		},
+		{
+			"name" : "个人中心",
+			"id" : "center",
+			"pageCache" : "",
+			"sourceUrl" : "",
+			"sources" : [],
 			"callback" : function(pageDom){
 
 			}
@@ -371,4 +392,5 @@ Page.prototype = {
 
 window.Page = Page;
 
-})(window,document);
+})(window);
+

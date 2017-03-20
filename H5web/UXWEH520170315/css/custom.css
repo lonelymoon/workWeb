@@ -36,7 +36,7 @@ img{
 	position: absolute;
 	width: 100%;
 	height: 0.016rem;
-    background: rgba(201, 214, 218, 1);
+    background: rgba(255, 255, 255, 1);
 	bottom: 0rem;
 	left: 0rem;
 }
@@ -59,6 +59,9 @@ img{
 	position: relative;
 	font-size: 0.25rem;
 	line-height: 1rem;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
 }
 
 .menu-box li:before{
@@ -83,13 +86,17 @@ img{
 	content: "\e642";
 }
 
+.li-about:before{
+	content: "\e63e";
+}
+
 .menu-box li:after{
 	content: "";
 	position: absolute;
 	width: 100%;
 	height: 0.016rem;
     background: rgba(255, 255, 255, 1);
-	bottom: 0rem;
+	bottom: 0.02rem;
 	left: 0rem;
 }
 
@@ -241,7 +248,14 @@ img{
 .actv-item-image{
 	position: relative;
 	height: auto;
-	margin-bottom: 0.17rem;
+	-webkit-transform : translate(0.12rem,0.12rem);
+	transform : translate(0.12rem,0.12rem);
+	background: #F7F7F7;
+}
+
+.actv-item-image img{
+	-webkit-transform : translate(-0.12rem,-0.12rem);
+	transform : translate(-0.12rem,-0.12rem);
 }
 
 .actv-item-msg{
@@ -251,8 +265,10 @@ img{
 	font-size: 0.2rem;
 	color: #000000;
 	letter-spacing: 0;
-	padding-left: 0.42rem;
-	padding-bottom: 0.17rem;
+	padding: 0.17rem 0.17rem 0.17rem 0.42rem;
+	background: #F7F7F7;
+	-webkit-transform : translate(0.12rem,0rem);
+	transform : translate(0.12rem,0rem);
 }
 
 .actv-item-enTitle,.actv-item-cnTitle,.actv-item-lecName,.actv-item-lecJob{
@@ -266,7 +282,7 @@ img{
 
 .actv-item-otherMsg{
 	position: absolute;
-	right: 0rem;
+	right: 0.17rem;
 	bottom: 0.17rem;
 	text-align: right;
 }
@@ -349,7 +365,7 @@ img{
 
 .lec-item-image{
 	position: relative;
-	height: 1.92rem;
+	height: 1.9rem;
 	overflow: hidden;
 }
 
@@ -360,7 +376,7 @@ img{
 	box-sizing : border-box;
 	height: 0.9rem;
 	padding: 0.08rem;
-	background: #000000;
+	background: #2C2D2F;
 	font-size: 0.14rem;
 	color: #F8B72A;
 	letter-spacing: 0;
@@ -524,7 +540,7 @@ img{
 	padding-top: 0.2rem;
 }
 
-/**********workshop page**********/
+/**********other page**********/
 #page-menu .page{
 	padding: 0rem 0.25rem;
 }
@@ -537,11 +553,12 @@ img{
 #page-menu .lec-item{
 	float: left;
 	width: 50%;
+	padding-bottom: 0.2rem;
 }
 
 #page-menu .lec-item-image{
 	width: 2.8rem;
-	height: 3.07rem;
+	height: 3.05rem;
 }
 
 #page-menu .lecturer-box:after{
@@ -555,4 +572,275 @@ img{
 	font-size: 0.2rem;
 	height: 1.2rem;
 	padding: 0.1rem;
+}
+
+#page-menu .about-timeline{
+	position: relative;
+	height: auto;
+	padding-top: 0.2rem;
+}
+
+#page-menu .timeline-ul{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-family: "PingFangSC-Medium","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei";
+	font-size: 0.17rem;
+	color: #000000;
+	letter-spacing: 1px;
+}
+
+#page-menu .timeline-list{
+	position: relative;
+	font-family: "PingFangSC-Regular","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei";
+	padding-top: 0.18rem;
+}
+
+#page-menu .about-QRcode{
+	position: absolute;
+	right: 0.25rem;
+	bottom: 0.25rem;
+}
+
+#page-menu #center-page{
+	padding: 0rem;
+}
+
+#page-menu .center-banner{
+	position: relative;
+	height: 1.78rem;
+	overflow: hidden;
+}
+
+#page-menu .center-msg{
+	position: relative;
+	height: auto;
+	padding: 0rem 0.32rem;
+}
+
+#page-menu .center-msg-item{
+	position: relative;
+	height: auto;
+	padding: 0.32rem 0rem;
+	-webkit-box-sizing: box-sizing;
+	-moz-box-sizing: box-sizing;
+	box-sizing: box-sizing;
+	border-bottom: 1px solid #F1F1F1;
+	opacity: 0.8;
+	font-size: 0.22rem;
+	color: #000000;
+	letter-spacing: 0;
+}
+
+#page-menu .msg-first-item{
+	padding: 0.75rem 0rem;
+}
+
+#page-menu .center-msg-item:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#page-menu .center-label{
+	float: left;
+	position: relative;
+	height: auto;
+}
+
+#page-menu .user-head{
+	position: absolute;
+	width: 0.97rem;
+	height: 0.97rem;
+	border-radius: 50%;
+	overflow: hidden;
+	left: 0rem;
+	top: -0.45rem;
+	border: 1px solid #fff;
+	-webkit-box-sizing: box-sizing;
+	-moz-box-sizing: box-sizing;
+	box-sizing: box-sizing;
+}
+
+#page-menu .user-name{
+	float: left;
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-size: 0.35rem;
+	color: #000000;
+	letter-spacing: 1.87px;
+	font-weight: bold;
+}
+
+#page-menu .user-edit{
+	position: relative;
+	height: 0.4rem;
+	width: 1.2rem;
+	-webkit-box-sizing: box-sizing;
+	-moz-box-sizing: box-sizing;
+	box-sizing: box-sizing;
+	text-align: center;
+	line-height: 0.4rem;
+	border: 2px solid #000000;
+	font-size: 0.2rem;
+	float: right;
+}
+
+#page-menu .user-job,#page-menu .user-workyear{
+	float: right;
+	height: auto;
+	position: relative;
+	opacity: 0.5;
+}
+
+#page-menu .center-detail{
+	position: relative;
+	height: auto;
+	padding: 0rem 0.32rem;
+}
+
+#page-menu .center-detail-nav{
+	position: relative;
+	height: auto;
+	padding: 0.39rem 0rem 0.23rem 0rem;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-bottom: 1px solid #F6F6F6;
+}
+
+#page-menu .center-detail-nav:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#page-menu .center-detail-list{
+	position: relative;
+	height: auto;
+	float: left;
+	opacity: 0.5;
+	font-size: 0.21rem;
+	color: #000000;
+	letter-spacing: 0;
+	margin-right: 1.38rem;
+}
+
+#page-menu .center-detail-list:last-child{
+	margin-right: 0rem;
+}
+
+#page-menu .detail-choose{
+	opacity: 0.8;
+}
+
+#page-menu .detail-choose:after{
+	position: absolute;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 0.07rem;
+	background: #E98F2E;
+	left: 0rem;
+	bottom: -0.23rem;
+}
+
+#page-menu .center-detail-content{
+	position: relative;
+	height: auto;
+	padding-top: 0.38rem;
+}
+
+#page-menu .enroll-item{
+	position: relative;
+	height: auto;
+	margin-bottom: 0.18rem;
+}
+
+#page-menu .enroll-item-image{
+	height: 1.44rem;
+	overflow: hidden;
+}
+
+#page-menu .enroll-item-msg{
+	position: relative;
+    height: auto;
+    opacity: 0.8;
+    font-size: 0.2rem;
+    color: #000000;
+    letter-spacing: 0;
+	padding-left: 0rem;
+}
+
+#page-menu .enroll-base-msg{
+	position: relative;
+	height: auto;
+	padding-left: 0.08rem;
+	max-width: 3.8rem;
+}
+
+#page-menu .enroll-item-lecName{
+	padding-top: 0.51rem;
+	color: #E9752E;
+}
+
+#page-menu .enroll-item-enTitle,#page-menu .enroll-item-cnTitle{
+	position: relative;
+	height: auto;
+}
+
+#page-menu .enroll-other-msg-box{
+	position: absolute;
+	left: 3.92rem;
+	top: 0rem;
+	bottom: 0.33rem;
+	right: 0rem;
+	background: #EDEDED;
+}
+
+#page-menu .enroll-item-otherMsg{
+	position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+    text-align: right;
+    padding-right: 0.08rem;
+}
+
+#page-menu .enroll-status-box{
+	position: relative;
+	height: 0.33rem;
+	line-height: 0.33rem;
+	background: #DBDBDB;
+	font-size: 0.2rem;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	padding:0rem 0.08rem;
+}
+
+#page-menu .enroll-status-box:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#page-menu .enroll-hasEnrolled{
+	position: relative;
+	height: auto;
+	float: left;
+}
+
+#page-menu .enroll-hasPassed{
+	position: relative;
+	height: auto;
+	float: right;
+	color: #000;
+}
+
+#page-menu .enroll-hasPassed[data-status="unpass"]{
+	opacity: 0.5;
+}
+
+#page-menu .enroll-hasPassed[data-status="pass"]{
+	color: #E98F2E;
 }

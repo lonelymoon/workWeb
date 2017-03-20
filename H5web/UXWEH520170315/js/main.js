@@ -21,6 +21,7 @@ var myScroll = new IScroll('.home-wrapper', {
 
 setTimeout(function(e){
 	myScroll.refresh();
-},100);
+},300);
 
 });
+

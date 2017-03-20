@@ -396,6 +396,18 @@
 
 	</section>
 </section>
+<script type="text/javascript" src-"js/sea.js"></script>
+<script type="text/javascript">
+seajs.config({
+  base: "",
+  alias: {
+    "jquery" : "jquery.min.js",
+    "swiper" : ""
+  }
+});
+// 加载入口模块
+seajs.use("../static/hello/src/main");
+</script>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript" src="js/iscroll-probe.js"></script>
