@@ -248,14 +248,7 @@ img{
 .actv-item-image{
 	position: relative;
 	height: auto;
-	-webkit-transform : translate(0.12rem,0.12rem);
-	transform : translate(0.12rem,0.12rem);
 	background: #F7F7F7;
-}
-
-.actv-item-image img{
-	-webkit-transform : translate(-0.12rem,-0.12rem);
-	transform : translate(-0.12rem,-0.12rem);
 }
 
 .actv-item-msg{
@@ -267,8 +260,6 @@ img{
 	letter-spacing: 0;
 	padding: 0.17rem 0.17rem 0.17rem 0.42rem;
 	background: #F7F7F7;
-	-webkit-transform : translate(0.12rem,0rem);
-	transform : translate(0.12rem,0rem);
 }
 
 .actv-item-enTitle,.actv-item-cnTitle,.actv-item-lecName,.actv-item-lecJob{
@@ -476,7 +467,7 @@ img{
 .about-introduction{
 	position: relative;
 	height: auto;
-	padding: 0.25rem;
+	padding: 0.25rem 0.25rem 0.05rem 0.25rem;
 	background: #F8B72A;
 }
 
@@ -506,6 +497,7 @@ img{
 	letter-spacing: 2px;
 	text-align: center;
 	line-height: 0.4rem;
+	padding-top: 0.2rem;
 }
 
 .about-msg{

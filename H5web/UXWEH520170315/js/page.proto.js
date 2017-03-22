@@ -1,140 +1,4 @@
-(function(window,undefined){
-
-var pageConfig = {
-	pagelist : [
-
-		{
-			"name" : "工作坊",
-			"id" : "workshop",
-			"pageCache" : "",
-			"sourceUrl" : "",
-			"sources" : [{
-				"wrapper":".past-workshop-box",
-				"callback" : function(data){
-					var tempData = [{
-						"idx" : "1",
-						"cnTitle" : "将“用户走查”融入产品迭代",
-						"enTitle" : 'Will "user walk through" into theproductIteration',
-						"lecName" : "林长青",
-						"img" : "images/gzf_1.png"
-					},{
-						"idx" : "2",
-						"cnTitle" : "UX 真能带来本质性创新？UX价值观反思和重构",
-						"enTitle" : 'Is it really essential to innovation? UX value reflection and reconstruction',
-						"lecName" : "印隽",
-						"img" : "images/gzf_2.png"
-					},{
-						"idx" : "3",
-						"cnTitle" : "越来越跨界的界面设计",
-						"enTitle" : 'More and more cross-border interface design',
-						"lecName" : "应骏赳 JJ Ying",
-						"img" : "images/gzf_3.png"
-					},{
-						"idx" : "4",
-						"cnTitle" : "如何将用户洞察转化为UX设计",
-						"enTitle" : 'How to turn user insights into UX designs',
-						"lecName" : "毛茸",
-						"img" : "images/gzf_4.png"
-					}],temp="";
-
-					for( var i = 0, ndata; ndata = tempData[i++]; ){
-						var templete = '<div class="past-item" data-type="'+ndata["idx"]+'">'+
-									'<div class="past-item-msg">'+
-										'<div class="past-item-cnTitle">'+ndata.cnTitle+'</div>'+
-										'<div class="past-item-enTitle">'+ndata.enTitle+'</div>'+
-										'<div class="past-item-lecName">作者 '+ndata.lecName+'</div>'+
-									'</div>'+
-									'<div class="past-item-image">'+
-										'<img src="images/loading.gif" data-origin="'+ndata.img+'" data-status="unload" class="lazy-img">'+
-									'</div>'+
-								'</div>';
-
-						temp += templete;
-
-					}
-
-					return temp;
-				}
-			}],
-			"callback" : function(pageDom){
-				
-			}
-		},
-		{
-			"name" : "讲师介绍",
-			"id" : "lecturer",
-			"pageCache" : "",
-			"sourceUrl" : "",
-			"sources" : [
-				{
-					"wrapper" : ".lecturer-box",
-					"callback" : function(data){
-						var tempData = [{
-							"idx" : "0",
-							"lecJob" : "脉可寻联合创始人",
-							"lecName" : "包季真",
-							"img" : "images/gyjs_1.png"
-						},{
-							"idx" : "2",
-							"lecJob" : "Top Design创始人兼CEO",
-							"lecName" : "陈莹",
-							"img" : "images/gyjs_2.png"
-						},{
-							"idx" : "3",
-							"lecJob" : "国家数字媒体创新研究中心研究员",
-							"lecName" : "孙博文",
-							"img" : "images/gyjs_3.png"
-						},{
-							"idx" : "4",
-							"lecJob" : "产品经理，搜狗壁纸产品负责人",
-							"lecName" : "林长青",
-							"img" : "images/gyjs_4.png"
-						}],temp="";
-
-						for( var i = 0, ndata; ndata = tempData[i++]; ){
-							var templete = '<div class="lec-item" data-type="'+ndata.idx+'">'+
-												'<div class="lec-item-image">'+
-													'<img src="images/loading.gif" class="lazy-img" data-status="unload" data-origin="'+ndata.img+'">'+
-												'</div>'+
-												'<div class="lec-item-job">'+ndata.lecJob+'</div>'+
-												'<div class="lec-item-lecName">'+ndata.lecName+'</div>'+
-											'</div>';
-
-							temp += templete;
-
-						}
-
-						return temp;
-					}
-				}
-			],
-			"callback" : function(pageDom){
-
-			}
-		},
-		{
-			"name" : "关于我们",
-			"id" : "about",
-			"pageCache" : "",
-			"sourceUrl" : "",
-			"sources" : [],
-			"callback" : function(pageDom){
-
-			}
-		},
-		{
-			"name" : "个人中心",
-			"id" : "center",
-			"pageCache" : "",
-			"sourceUrl" : "",
-			"sources" : [],
-			"callback" : function(pageDom){
-
-			}
-		}
-
-	]
-};
+define(['jquery','pageScroll','pageHand','pageConfig'],function($,Scroll,myHand,config){
 
 var Page = function(options){
 	options = options || {};
@@ -145,32 +9,12 @@ var Page = function(options){
 	this.detailLink = options.detailLink || ".detail-link";
 	this.local = window.location.href;
 	this.path = this.local.substring(0,this.local.lastIndexOf("/")+1);
-	this.pages = pageConfig;
-
-	this.detailPages = {
-		pagelist : [
-			{
-				"name" : "详情",
-				"id" : "detail",
-				"sourceUrl" : "",
-				"sources" : [
-					{
-						"wrapper" : ".content",
-						"callback" : function(data){
-							var temp = "<li>asdasdasd</li>";
-							return temp;
-						}
-					}
-				],
-				"callback" : function(pageDom){
-
-				}
-			}
-		]
-	};
+	this.pages = config.menuPage;
+	this.detailPages = config.detailPage;
+	this.ev = "ontouchstart" in document ? "touchend" : "click";
+	this.__created = false; //用于在页面完全加载后控制相关的功能创建
 
 	this.init();
-
 };
 
 Page.prototype = {
@@ -183,32 +27,60 @@ Page.prototype = {
 		var _self = this,
 			transitionEnd = "transitionEnd" in document ? "transitionEnd" : "webkitTransitionEnd";
 
-		$(this.menu).on('click',function(e){
+		//hands
+		var homeHand = new myHand("#homepage");
+		
+		homeHand.swipeLeft(function(ev){
+			var $tar = $(ev.target).parents(".swiper-container");
+			if($tar.length!=0){
+				return false;
+			}
+			$('#all-wrapper').removeClass('mode-active');
+		});
+		homeHand.swipeRight(function(ev){
+			var $tar = $(ev.target).parents(".swiper-container");
+			if($tar.length!=0){
+				return false;
+			}
+			$('#all-wrapper').addClass('mode-active');
+		});
+
+		var menuHand = new myHand("#page-menu");
+
+		menuHand.swipeRight(function(ev){
+			var $tar = $(ev.target).parents(".swiper-container");
+			if($tar.length!=0){
+				return false;
+			}
+			_self.closePage("menu");
+		});
+
+		var detailHand = new myHand("#page-detail");
+
+		detailHand.swipeRight(function(ev){
+			var $tar = $(ev.target).parents(".swiper-container");
+			if($tar.length!=0){
+				return false;
+			}
+			_self.closePage("detail");
+		});
+		//hands end
+
+		$(this.menu).on("click",function(e){
 			$('#all-wrapper').toggleClass('mode-active');
 		});
 
-		$(this.menuLink).on('click',function(e){
+		$(this.menuLink).on("click",function(e){
 			e.preventDefault();
 			e.stopPropagation();
 
 			var linkID = $(this).attr('data-link'),
 				pagelist = _self.pages.pagelist;
 
-			if(linkID == "homepage"){
-				_self.resetPage();
-				return;
-			}
-
-			for( var i = 0, page; page = pagelist[i++]; ){
-				var id = page.id;
-				if(id == linkID){
-					_self.loadPages(id,page,"menu");
-				}
-			}
-
+			_self.loadProxyPages(linkID,pagelist,"menu");
 		});
 
-		$(this.back).on('click',function(e){
+		$(this.back).on("click",function(e){
 			var flag = $(this).attr("data-flag");
 			_self.closePage(flag);
 		});
@@ -224,27 +96,40 @@ Page.prototype = {
 	},
 
 	detailPageEventListen : function(){
-		var _self = this;
+		var _self = this,
+			ev = this.ev;
 
-		$(this.detailLink).off('click').on('click',function(e){
+		$(this.detailLink).off(ev).on(ev,function(e){
 			e.preventDefault();
 			e.stopPropagation();
 			var linkID = $(this).attr('data-link'),
 				pagelist = _self.detailPages.pagelist;
 
-			for( var i = 0, page; page = pagelist[i++]; ){
-				var id = page.id;
-				if(id == linkID){
-					_self.loadPages(id,page,"detail");
-				}
-			}
+			_self.loadProxyPages(linkID,pagelist,"detail");
 		});
+	},
+
+	//前置判断
+	loadProxyPages : function(linkID,pagelist,type){
+		if(linkID == "homepage"){
+			this.resetPage();
+			return;
+		}
+
+		for( var i = 0, page; page = pagelist[i++]; ){
+			var id = page.id;
+			if(id == linkID){
+				this.loadPages(id,page,type);
+			}
+		}
 	},
 
 	//加载单页
 	loadPages : function(id,page,type){
 		var cache = page.pageCache,
 			_self = this;
+
+		this.__created = false;
 
 		if(cache){
 			_self.end(page,cache);
@@ -285,7 +170,7 @@ Page.prototype = {
 
 		$.get(page.sourceUrl,{},function(res){
 			for(var i = 0, source; source = sources[i++]; ){
-				temp = source.callback.call(_self,res);
+				temp = source.callback.call(_self,res) || "";
 				pageDom.querySelector(source.wrapper).innerHTML = temp;
 			}
 
@@ -301,11 +186,12 @@ Page.prototype = {
 
 	//
 	lazyloadImage : function(){
-		var imgObj = $('.lazy-img[data-status="unload"]').eq(0),
+		var imgObj = $('.lazy-img[data-status=unload]').eq(0),
 			img = document.createElement('img'),
 			_self = this;
 			
 		if(imgObj.length == 0){
+			if(!this.__created) this.createFn();
 			return;
 		}
 		
@@ -349,6 +235,7 @@ Page.prototype = {
 		var status = $(wrapper).attr('data-status');
 		if(status == "hide"){
 			$(wrapper).attr('data-status',"show");
+			this.__triggerWrap = wrapper;
 			this.lazyloadImages();
 		} else {
 			$(wrapper).attr('data-status',"hide");
@@ -365,32 +252,49 @@ Page.prototype = {
 			page.pageCache = pageDom;
 		}
 
+		this.menuPageLoadEnd(page,pageDom);
+		this.resetPage();
+		this.detailPageEventListen();
+		page.callback(pageDom);
+	},
+
+	//添加内容到菜单（一级）页面上
+	menuPageLoadEnd : function(page,pageDom){
 		$('#page-menu').find(".page-wrapper").hide().html(pageDom).show();
 		$('#page-menu').find(".page-title").html(page["name"]);
 		$('#page-box').addClass('page-active');
-		this.resetPage();
-		this.detailPageEventListen();
-		//创建iscroll
-		var tempScroll = new IScroll('#page-menu .page-wrapper', {
-		    mouseWheel: true,
-		    scrollbars: true
-		});
-		setTimeout(function(){
-			tempScroll.refresh()
-		},10);
-		page.callback(pageDom);
 	},
 
 	//detail pages
 	detailPagesEnd : function(page,pageDom){
+		this.detailPageLoadEnd(pageDom);
+		page.callback(pageDom);
+	},
+
+	//添加内容到详细（二级）页面上
+	detailPageLoadEnd : function(pageDom){
 		$('#page-detail').find(".page-wrapper").hide().html(pageDom).show();
 		$('#page-detail').addClass('detail-active');
-		page.callback(pageDom);
+	},
+
+	//创建页面滚动
+	createScroll : function(){
+		//创建iscroll
+		var tempScroll = new Scroll(this.__triggerWrap + ' .page-wrapper', {
+		    mouseWheel: true,
+		    scrollBar: true
+		});
+
+	},
+
+	//创建页面功能
+	createFn : function(){
+		this.createScroll();
+		this.__created = true;
 	}
 
 };
 
-window.Page = Page;
+return Page;
 
-})(window);
-
+});
