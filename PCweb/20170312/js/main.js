@@ -3,6 +3,10 @@ jQuery(function($){
 var scs = {};
 
 function createSwiper(idx){
+	if(idx==17){
+		return;
+	}
+
 	scs["sc_"+idx] = new Swiper(".sc-"+idx,{
 		speed : 800,
 		loop : true,
@@ -30,7 +34,7 @@ setTimeout(loop,4000);
 
 };
 
-createProxySwiper(19);
+createProxySwiper(20);
 
 var ctxAct = function(){
 	var $ev = "ontouchstart" in document? "touchstart" : "click";
