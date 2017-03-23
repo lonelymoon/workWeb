@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>UXWE信息管理系统</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/addLec.css">
+</head>
+<body>
+<div class="container">
+	<div class="banner">
+		<div class="logo">
+			<img src="images/LOGO.png">
+		</div>
+		<div class="nav">
+			<div class="nav-wrapper">
+				<ul class="cate first-cate fn">
+					功能
+					<li class="nlist fnlist" data-link="publishAct">发布活动</li>
+					<li class="nlist" data-link="addLecturers">添加讲师</li>
+				</ul>
+				<ul class="cate mana">
+					管理
+					<li class="nlist fnlist" data-link="actManager">活动管理</li>
+					<li class="nlist" data-link="lecManager">讲师管理</li>
+					<li class="nlist" data-link="userManager">用户管理</li>
+				</ul>
+				<ul class="cate send">
+					推广
+					<li class="nlist fnlist" data-link="adManager">广告主</li>
+				</ul>
+				<ul class="cate count">
+					统计
+					<li class="nlist fnlist" data-link="userAnalysis">用户分析</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="header">
+			<div class="manager">
+				<div class="photo"></div>
+				<div class="name">管理员</div>
+			</div>
+		</div>
+		<div class="content-box">
+			<div class="content-wrapper">
+				<div class="total-title">讲师信息</div>
+				<div class="content-msg">
+					
+					<div class="column">
+						<div class="column-title">
+							添加新晋讲师
+						</div>
+						<div class="column-content">
+
+							<div class="column-item inline-item">
+								<div class="item-title">讲师名字</div>
+								<div class="item-content">
+									<input type="text" id="lecNameCN" placeholder="" >
+								</div>
+							</div>
+							<div class="column-item inline-item">
+								<div class="item-title">英文名字</div>
+								<div class="item-content">
+									<input type="text" id="lecNameEN" placeholder="" >
+								</div>
+							</div>
+							<br/>
+							<div class="column-item inline-item">
+								<div class="item-title">公司</div>
+								<div class="item-content">
+									<input type="text" id="company" placeholder="" >
+								</div>
+							</div>
+							<div class="column-item inline-item">
+								<div class="item-title">岗位</div>
+								<div class="item-content">
+									<input type="text" id="job" placeholder="" >
+								</div>
+							</div>
+							<div class="column-item inline-item">
+								<div class="item-title">工作年限</div>
+								<div class="item-content">
+									<input type="text" id="workYear" placeholder="" value="3">
+								</div>
+							</div>
+							<div class="column-item">
+								<div class="item-title">讲师介绍</div>
+								<div class="item-content">
+									<textarea id="introduce" placeholder=""></textarea>
+								</div>
+							</div>
+							<div class="column-item">
+								<div class="item-title">是否显示</div>
+								<div class="item-content">
+									<div class="selectorBox doShow">
+										<div class="selectorVal">不显示</div>
+										<div class="selectorLists">
+											<li class="sel-list">显示</li>
+											<li class="sel-list">不显示</li>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="column-item">
+								<div class="item-title lecType">讲师类型</div>
+								<div class="item-content last-item-content">
+									<div class="checkBox" data-val="视觉设计">
+										<div class="checkIcon"></div>
+										<div class="checkItem">视觉设计</div>
+									</div>
+									<div class="checkBox" data-val="交互设计">
+										<div class="checkIcon"></div>
+										<div class="checkItem">交互设计</div>
+									</div>
+									<div class="checkBox" data-val="产品设计">
+										<div class="checkIcon"></div>
+										<div class="checkItem">产品设计</div>
+									</div>
+									<div class="checkBox" data-val="用户体验">
+										<div class="checkIcon"></div>
+										<div class="checkItem">用户体验</div>
+									</div>
+								</div>
+							</div>
+
+
+						</div>
+					</div>
+
+					<div class="column">
+						<div class="column-title">
+							上传教师头像
+						</div>
+						<div class="column-content">
+							<label for="poster" class="poster">
+								<div class="poster-btn label-btn">上传头像</div>
+								<div class="img-set hide">
+									<img src="images/loading.gif" class="preview-img" data-status="loading">
+								</div>
+							</label>
+							<input type="file" id="poster" name="poster" class="hide" />
+						</div>
+						<div class="tips-box">
+							上传的头像图片大小不得超过80K（JPG.GIF.PNG.）尺寸不得小于210*230px
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="footer-wrapper">
+			<div class="loading-status"></div>
+			<div class="save-btn">保存</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+<script type="text/javascript" src="js/addLec.js"></script>
+</body>
+</html>

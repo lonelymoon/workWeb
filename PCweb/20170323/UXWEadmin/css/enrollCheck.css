@@ -1,0 +1,132 @@
+.total-title{
+	background: #EDEFED;
+	color: #646464;
+}
+
+.content-table{
+	position: relative;
+	height: auto;
+}
+
+.content-table-head{
+	position: relative;
+	background: #fff;
+	height: 50px;
+	border-bottom: 1px solid #cfcfcf;
+	line-height: 50px;
+}
+
+.table-cell{
+	position: relative;
+	float: left;
+	font-family: 'PingFangSC-Semibold','Microsoft Yahei';
+	font-size: 18px;
+	color: #646464;
+	letter-spacing: 0;
+	width: 12.5%;
+	height: 100%;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	padding-left: 25px;
+}
+
+
+.table-reason{
+	width: 37.5%;
+}
+
+.content-table-body{
+	position: relative;
+	height: auto;
+}
+
+.table-row{
+	position: relative;
+	height: auto;
+}
+
+.table-row:hover{
+	cursor: pointer;
+	background: #6cf;
+}
+
+.table-row:nth-child(odd){
+	background: #FAFCFB;
+}
+
+.table-row .table-cell{
+	padding: 16px 0px;
+	padding-left: 25px;
+	height: auto;
+	font-size: 16px;
+	color: #646464;
+	min-height: 50px;
+}
+
+.table-row .table-call{
+	padding: 10px 0px;
+	padding-left: 25px;
+}
+
+.check-box{
+	position: relative;
+	height: 18px;
+	width: 18px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 1px solid #DBDBDB;
+	border-radius: 2px;
+	text-align: center;
+	line-height: 18px;
+}
+
+.table-row[data-status="choose"] .check-box{
+	border: 1px solid #fff;
+	background: #6cf;
+	color: #fff;
+	font-size: 14px;
+}
+
+.table-row[data-status="choose"] .check-box:after{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	content: "√";
+}
+
+.call-box{
+	position: relative;
+	height: auto;
+	width: 30px;
+	height: 30px;
+	background: #D8D8D8;
+}
+
+.table-row[data-type="pass"] .call-box{
+	background: #00A699;
+}
+
+.table-row[data-type="unpass"] .call-box{
+	background: #F79C2A;
+}
+
+.unpass-btn{
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+    background: #ffffff;
+    color: #FF7676;
+    margin-right: 20px;
+    border: 2px solid #FF7676;
+}
+
+/**************/
+.clear{
+	content: "";
+	display: block;
+	clear: both;
+}
