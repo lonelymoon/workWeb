@@ -116,6 +116,12 @@ var ctxAct = function(){
 					$tar.addClass("in-choose-2").find("img").toggleClass("hide");
 				}
 
+				if(evElWrap == ".inav-3"){
+					$('.in-choose-3').find("img").toggleClass("hide");
+					$(evElWrap).find(evEl).removeClass("in-choose-3");
+					$tar.addClass("in-choose-3").find("img").toggleClass("hide");
+				}
+
 				if(evElWrap == ".column-5 .column-nav"){
 					$('.cl-5-choose').find("img").toggleClass("hide");
 					$(evElWrap).find(evEl).removeClass("cl-5-choose");
@@ -141,6 +147,8 @@ var inner_g = new ctxAct();
 inner_g.change('.inav-1',['.iitem-1'],'div',['.column-inner-item'],'','',true);
 var inner2_g = new ctxAct();
 inner2_g.change('.inav-2',['.iitem-2'],'div',['.column-inner-item'],'','',true);
+var inner3_g = new ctxAct();
+inner3_g.change('.inav-3',['.iitem-3'],'div',['.column-inner-item'],'','',true);
 var cl_5_g = new ctxAct();
 cl_5_g.change('.column-5 .column-nav',['.column-5 .column-wrapper'],'li',['.column-item'],'','',true);
 });

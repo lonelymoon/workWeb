@@ -171,18 +171,18 @@
 }
 
 .column-4 .column-nav{
-	width: 991px;
+	width: 938px;
 	margin: 0 auto;
 	margin-bottom: 90px;
 }
 
 .column-4 .column-list{
 	width: 133px;
-	margin-right: 10px;
+	margin-right: 28px;
 }
 
 .column-4 .column-wrapper{
-	width: 898px;
+	width: 842px;
 }
 
 .column-4 .swiper-wrapper,.column-4 .swiper-slide{
@@ -191,7 +191,7 @@
 
 .inner-nav{
 	position: absolute;
-	right: -10px;
+	right: -40px;
 	height: auto;
 	width: 31px;
 	top: 0px;
@@ -367,7 +367,7 @@ img{
   background: #fff;
 }
 
-.sc-16,.sc-17,.sc-15,.sc-19{
-	margin-left: 0px;
+.sc-16,.sc-17,.sc-15,.sc-19,.sc-14,.sc-20{
+	margin-left: -10px;
 	max-width: 841px;
 }
