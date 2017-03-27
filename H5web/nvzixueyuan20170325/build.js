@@ -9,8 +9,9 @@
         "swiper" : "plugs/swiper.min",      //swiper
         "iscroll" : "plugs/iscroll-probe",  //iscroll
         "hammer" : "plugs/hammer.min",      //hammer
-        "pageScroll" : "./page.scroll",     //整合iscroll.js
-        "pageHand" : "./page.hands",        //整合hammer.js
+        "pageScroll" : "./page.scroll",     //iscroll.js
+        "pageHand" : "./page.hands",        //hammer.js
+        "page" : "./page",
         "main" : "./main"
     }
 })

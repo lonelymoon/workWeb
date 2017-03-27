@@ -8,6 +8,8 @@ var Page = function(){
 		height : window.innerHeight
 	});
 	this.sc = null; //iscroll 滚动
+	this.dataIdx = 0; //数据调用Id
+	this.dataNum = 6; //数据调取条数
 };
 
 Page.prototype = {
@@ -47,8 +49,9 @@ Page.prototype = {
 
 		idx = idx || 1;
 
-		if(idx > 5){
+		if(idx > 4){
 			this.closeFlowerAnimation();
+			this.loadingData(10);
 			this.toPage(2);
 			this.inPage2();
 			$('.animation-text').removeClass(prevSelector);
@@ -58,12 +61,12 @@ Page.prototype = {
 		$('.animation-text').removeClass(prevSelector).addClass(nowSelector);
 		setTimeout(function(){
 			_self.startTextAnimation(idx+1);
-		},3000);
+		},2000);
 	},
 
 	//翻页
 	toPage : function(idx){
-		this.sw.slideNext(idx-1);
+		this.sw.slideTo(idx-1);
 	},
 
 	//page2
@@ -103,28 +106,91 @@ Page.prototype = {
 
 	},
 
+	//alter
+	alert : function(title,msg,btn,callback){
+		callback = callback || function(){};
+		$('.layer-box').removeClass("hide");
+		$('.alter-title').html(title);
+		$('.alter-msg').html(msg);
+		$('.alter-btn').html(btn);
+		$('.alter-btn').off("click").on("click",function(e){
+			$('.layer-box').addClass("hide");
+			callback(e);
+		});
+	},
+
 	//loading data
-	loadingData : function(){
-		var temp = "";
+	loadingData : function(tempNum){
+		var temp = "",
+			_self = this,
+			num = tempNum || this.dataNum;
 
-		for( var i = 0 ; i < 2; i++ ){
-			var tpl  = '<div class="msg-item">'+
-				'<div class="item-header">'+
-					'<div class="item-name">匿名-'+i+'</div>'+
-					'<div class="item-major">土木工程</div>'+
-					'<div class="item-year">04级</div>'+
-				'</div>'+
-				'<div class="item-content">'+
-					'啊速度卡是看得见啊世界顶级啊是的'+
-					'<div class="item-date">2017.03.17</div>'+
-				'</div>'+
-			'</div>';
-
-			temp += tpl;
+		if(this.loading){
+			return false;
 		}
 
-		$('.msg-box').append(temp);
-		this.sc.refresh();
+		this.loading = true;
+
+		$.ajax({
+			type : "get",
+			url : '/Getmessage.action',
+			data : {
+				intstart : this.dataIdx,
+				intnum : num
+			},
+			dataType : "json",
+			success : function(res){
+				var data = res.resultarray,
+					len = data.length;
+				if(len == 0){
+					_self.alert("","已到最后一条数据","我知道了");
+					_self.loading = false;
+					return false;
+				}
+				for( var i = 0 ; i < len; i++ ){
+					var tempData = data[i],
+						year = tempData.strstartschool,
+						tpl  = '<div class="msg-item">'+
+						'<div class="item-header">'+
+							'<div class="item-name">'+tempData.strnickname+'</div>'+
+							'<div class="item-major">'+tempData.strprofession+'</div>'+
+							'<div class="item-year">'+year.substring(year.length - 2)+'</div>'+
+						'</div>'+
+						'<div class="item-content">'+tempData.strmessage+
+							'<div class="item-date">'+tempData.stryyyymmdd+'</div>'+
+						'</div>'+
+					'</div>';
+					temp += tpl;
+				}
+				$('.msg-box').append(temp);
+				if(!tempNum)
+				_self.sc.refresh();
+
+				_self.dataIdx += len;
+				_self.loading = false;
+			},
+			fail : function(status){
+				_self.loading = false;
+				_self.alert("","数据拉取失败，请重试","我知道了");
+			}
+		});
+	},
+
+	//music
+	startMusic : function(){
+		$('#bgmIcon').trigger("click");
+		wx.config({
+		    debug: false,
+		    appId: '',
+		    timestamp:1,
+		    nonceStr: '',
+		    signature: '',
+		    jsApiList: []
+		});
+
+		wx.ready(function(){
+			$('#bgmIcon').trigger("click");
+		});
 	},
 
 	//花瓣动画
@@ -132,7 +198,7 @@ Page.prototype = {
 		var timerArr = ["ease","linear","ease-in","ease-out"],
 			fz = ($('html').css("fontSize").match(/^\d+/,"g"))[0],
 			per = window.innerHeight / fz,
-			height = (per - 2.1).toFixed(2);
+			height = (per - 1.6).toFixed(2);
 
 		this.createFlowerAnimation(timerArr,height);
 	},
@@ -179,7 +245,7 @@ Page.prototype = {
 
 		for( ; idx < tempLen; idx++ ){
 			var left = -(Math.random() * 6.25).toFixed(2),
-				right = (Math.random() * 2.8).toFixed(2),
+				right = (Math.random() * 1.4).toFixed(2),
 				rotateX = (Math.random() * 1800) >> 0,
 				rotateY = (Math.random() * 3600) >> 0,
 				rotateZ = (Math.random() * 180) >> 0;

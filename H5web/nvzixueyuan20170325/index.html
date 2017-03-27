@@ -9,8 +9,19 @@
 <link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 <body>
+<div class="music" data-status="">
+	<img src="images/Note.png" id="bgmIcon">
+	<audio src="media/bg.mp3" controls="false" style="display:none;" id="bgm" loop="loop"></audio>
+</div>
 <div class="layer">
 	<div class="text-inner">loading....</div>
+</div>
+<div class="layer-box hide">
+	<div class="alert">
+		<div class="alter-title"></div>
+		<div class="alter-msg"></div>
+		<div class="alter-btn"></div>
+	</div>
 </div>
 <section id="container">
 	<div class="swiper-container">
@@ -20,10 +31,10 @@
 					<img src="images/bg_1.png">
 					<div class="animation-text">
 						<div class="ani-text ani-text-fir">时光如梭</div>
-						<div class="ani-text ani-text-sec">转眼间</div>
-						<div class="ani-text ani-text-thr">一年又一年</div>
-						<div class="ani-text ani-text-fou">姐妹，你好</div>
-						<div class="ani-text ani-text-fiv">可曾想念...</div>
+						<div class="ani-text ani-text-sec">一年又一年</div>
+						<div class="ani-text ani-text-thr">你还在吗</div>
+						<div class="ani-text ani-text-fou">可曾想念...</div>
+						<div class="ani-text ani-text-fiv"></div>
 					</div>
 					<div class="animation-flower"></div>
 				</div>
@@ -36,69 +47,7 @@
 					<div class="page-wrapper">
 						<div class="page-title">留言墙</div>
 						<div class="page-content">
-							<div class="msg-box">
-
-								<div class="msg-item">
-									<div class="item-header">
-										<div class="item-name">匿名</div>
-										<div class="item-major">土木工程</div>
-										<div class="item-year">04级</div>
-									</div>
-									<div class="item-content">
-										啊速度卡是看得见啊世界顶级啊是的
-										<div class="item-date">2017.03.17</div>
-									</div>
-								</div>
-
-								<div class="msg-item">
-									<div class="item-header">
-										<div class="item-name">匿名</div>
-										<div class="item-major">土木工程</div>
-										<div class="item-year">04级</div>
-									</div>
-									<div class="item-content">
-										啊速度卡是看得见啊世界顶级啊是的
-										<div class="item-date">2017.03.17</div>
-									</div>
-								</div>
-
-								<div class="msg-item">
-									<div class="item-header">
-										<div class="item-name">匿名</div>
-										<div class="item-major">土木工程</div>
-										<div class="item-year">04级</div>
-									</div>
-									<div class="item-content">
-										啊速度卡是看得见啊世界顶级啊是的
-										<div class="item-date">2017.03.17</div>
-									</div>
-								</div>
-
-								<div class="msg-item">
-									<div class="item-header">
-										<div class="item-name">匿名</div>
-										<div class="item-major">土木工程</div>
-										<div class="item-year">04级</div>
-									</div>
-									<div class="item-content">
-										啊速度卡是看得见啊世界顶级啊是的
-										<div class="item-date">2017.03.17</div>
-									</div>
-								</div>
-
-								<div class="msg-item">
-									<div class="item-header">
-										<div class="item-name">匿名</div>
-										<div class="item-major">土木工程</div>
-										<div class="item-year">04级</div>
-									</div>
-									<div class="item-content">
-										啊速度卡是看得见啊世界顶级啊是的
-										<div class="item-date">2017.03.17</div>
-									</div>
-								</div>
-
-							</div>
+							<div class="msg-box"></div>
 						</div>
 						<div class="page-footer">
 							<div class="page-btn say-btn">我有话说</div>
@@ -132,9 +81,9 @@
 									<ul class="selector">
 										<div class="selector-wrapper">
 											<div class="selector-scroll">
-												<li class="selector-list">汉语言文学</li>
-												<li class="selector-list">公共关系</li>
-												<li class="selector-list">文化产业管理</li>
+												<li class="selector-list" data-type="1">汉语言文学</li>
+												<li class="selector-list" data-type="2">公共关系</li>
+												<li class="selector-list" data-type="3">文化产业管理</li>
 											</div>
 										</div>
 									</ul>
@@ -153,6 +102,7 @@
 		</div>
 	</div>
 </section>
-<script type="text/javascript" src="js/plugs/require.js" data-main="js/main"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="js/plugs/require.js" data-main="js/main-built"></script>
 </body>
 </html>

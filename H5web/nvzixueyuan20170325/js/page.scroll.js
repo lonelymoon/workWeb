@@ -15,6 +15,7 @@ var Scroll = function(selector,options){
 	this.mouseWheel 		= options.mouseWheel 	|| true;  	//滚轮
 	this.scrollX 			= options.scrollX 		|| false;	//横向滚动
 	this.scrollY			= options.scrollY		|| true;	//纵向滚动
+	this.startY				= options.startY		|| 0;		//起始位置
 	this.tap 				= options.tap 			|| false;	//点击
 	this.bounceEasing		= options.easing 		|| "quadratic";	//运动时间曲线
 	this.bounceTime			= options.timing		|| 600;		//运动时间<ms>
@@ -39,6 +40,7 @@ Scroll.prototype = {
     		scrollbars: this.scrollBar,
     		scrollX : this.scrollX,
     		scrollY : this.scrollY,
+    		startY	: this.startY,
     		tap 	: this.tap,
     		fadeScrollBars : this.fadeScrollBar,
     		interactiveScrollbars : this.dragBar,
