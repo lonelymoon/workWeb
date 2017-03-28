@@ -1,0 +1,241 @@
+#h-header{
+	position: relative;
+	height: 849px;
+	max-width: 1920px;
+	min-width: 900px;
+	margin: 0 auto;
+	background: url("../images/tt.jpg") no-repeat top center;
+	margin-top: -10px;
+}
+
+#h-content{
+	position: relative;
+	height: auto;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.ctr{
+	position: relative;
+	height: auto;
+}
+
+.ctr-1{
+	height: 601px;
+	background: url("../images/bj-1.jpg") no-repeat top center;
+}
+
+.ctr-2{
+	height: 1728px;
+	background: url("../images/bj-2.jpg") no-repeat top center;
+}
+
+.ctr-3{
+	height: 1178px;
+	background: url("../images/bj-3.jpg") no-repeat top center;
+}
+
+.ctr-4{
+	height: 1313px;
+	background: url("../images/bj-4.jpg") no-repeat top center;
+}
+
+/**********************************************************/
+.slide-box{
+	position: relative;
+	width: 900px;
+	margin: 0 auto;
+	padding-top: 182px;
+	height: auto;
+}
+
+.arrow{
+	position: absolute;
+	top: 50%;
+	width: 110px;
+	height: 219px;
+	margin-top: -110px;
+}
+
+.arrow:hover{
+	cursor: pointer;
+}
+
+.prev-arrow{
+	left: -130px;
+}
+
+.next-arrow{
+	right: -130px;
+}
+
+.products-box{
+	position: relative;
+	height: auto;
+	padding-top: 275px;
+	width: 900px;
+	margin: 0 auto;
+}
+
+.column{
+	position: relative;
+	height: auto;
+}
+
+.column-nav{
+	position: relative;
+	height: auto;
+	margin-bottom: 50px;
+	+height: 60px;
+}
+
+.column-list{
+	position: relative;
+	height: auto;
+	float: left;
+	margin-right: 10px;
+}
+
+.column-body{
+	position: relative;
+	height: auto;
+	width: 900px;
+	margin: 0 auto;
+}
+
+.column-list:hover{
+	cursor: pointer;
+}
+
+.column-item{
+	position: relative;
+	height: auto;
+}
+
+.column-arrow{
+	position: absolute;
+	top: 50%;
+	width: 61px;
+	height: 121px;
+	margin-top: -60px;
+	z-index: 20;
+}
+
+.column-arrow:hover{
+	cursor: pointer;
+}
+
+.column-prev-arrow{
+	left: 0px;
+}
+
+.column-next-arrow{
+	right: 4px;
+}
+
+.title-box{
+	position: absolute;
+	font-size: 22px;
+	font-family: "黑体","Microsoft Yahei";
+	width: 80%;
+	padding: 0 10%;
+	top: 345px;
+	left: 0px;
+	height: auto;
+}
+
+.title-box div{
+	font-size: 18px;
+}
+
+.price-box{
+	position: absolute;
+	height: 74px;
+	line-height: 74px;
+	left: 0px;
+	bottom: 4px;
+	width: 100%;
+	font-size: 24px;
+	font-family: "黑体","Microsoft Yahei";
+	color: #fff;
+	text-indent: 10px;
+	z-index: 20;
+}
+
+.other-products-box{
+	position: relative;
+	height: auto;
+	padding-top: 220px;
+	width: 900px;
+	margin: 0 auto;
+}
+
+.op-content{
+	position: relative;
+	height: 620px;
+}
+
+.op-nav{
+	position: relative;
+	height: auto;
+	padding-left: 180px;
+	margin-top: -45px;
+}
+
+.op-list{
+	position: relative;
+	height: auto;
+	float: left;
+	margin-right: 5px;
+}
+
+.op-list:hover{
+	cursor: pointer;
+}
+
+.op-nav-2{
+	padding-left: 0px;
+	padding-right: 40px;
+}
+
+.op-nav-2 .op-list{
+	float: right;
+}
+
+.logo-link{
+    position: absolute;
+    width: 440px;
+    left: 50%;
+    height: 140px;
+    margin-left: -50px;
+    bottom: 70px;
+}
+
+.link-set{
+	position: relative;
+	float: left;
+	height: 100%;
+	width: 40%;
+}
+
+.ls-1{
+	width: 60%;
+}
+
+/***********************/
+.clear{
+	float: none!important;
+	clear: both;
+}
+
+.swiper-slide{
+	position: relative;
+}
+
+.hide{
+	display: none!important;
+}
+
+.last-list{
+	margin-right: 0px;
+}
