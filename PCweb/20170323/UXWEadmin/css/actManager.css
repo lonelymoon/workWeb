@@ -154,3 +154,75 @@
 	color: #FFFFFF;
 	background: #FE5B5E;
 }
+
+.actItem-otherMsg{
+	position: absolute;
+	width: auto;
+	top: 30px;
+	right: 0px;
+	bottom: 0px;
+	min-width: 200px;
+	text-align: right;
+	font-size: 16px;
+	color: #646464;
+	letter-spacing: 0;
+}
+
+.peopleHasJoined{
+	position: relative;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+.peopleHasChecked{
+	position: relative;
+	height: auto;
+}
+
+.actItem-other-fn-box{
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	height: auto;
+}
+
+.actItem-other-fn-box:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.actItem-other-btn{
+	position: relative;
+	float: right;
+	background: #FE5B5E;
+	height: 36px;
+	min-width: 70px;
+	text-align: center;
+	padding: 0px 12px;
+	line-height: 36px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 14px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	margin-left:10px; 
+}
+
+.actItem-other-btn:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.unPublish .actItem-otherMsg{
+	display: none;
+}
+
+.publish[data-isEnd="end"] .peopleHasChecked,.publish[data-isEnd="end"] .looking{
+	display: none;
+}
+
+.content-box{
+	bottom: 30px;
+}

@@ -1,0 +1,54 @@
+.total-title{
+	background: #EDEFED;
+	border: 1px solid #E0E3E2;
+}
+
+.content-box{
+	bottom: 20px;
+}
+
+.content-container{
+	position: relative;
+	height: auto;
+}
+
+.row{
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background: #fff;
+}
+
+.table-content .row:nth-child(odd){
+	background: #FAFCFB;
+}
+
+.row:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.tabel-cell{
+	position: relative;
+	float: left;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 16px;
+	color: #646464;
+	letter-spacing: 0;
+	padding: 16px 0px;
+	padding-left: 26px;
+}
+
+.username,.year,.job{
+	width: 15%;
+}
+
+.company{
+	width: 55%;
+}
