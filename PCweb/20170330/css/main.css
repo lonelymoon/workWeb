@@ -1,0 +1,233 @@
+#g-header{
+	position: relative;
+	height: 624px;
+	max-width: 1920px;
+	min-width: 1100px;
+	margin: 0 auto;
+	margin-top: -10px;
+	background: url("../images/tt.jpg") no-repeat top center;
+}
+
+#g-content{
+	position: relative;
+	height: auto;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.ctr{
+	position: relative;
+	height: auto;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.ctr-1{
+	height: 579px;
+	background-image: url("../images/bj-1.jpg");
+}
+
+.ctr-2{
+	height: 601px;
+	background-image: url("../images/bj-2.jpg");
+}
+
+.ctr-3{
+	height: 908px;
+	background-image: url("../images/bj-3.jpg");
+}
+
+.ctr-4{
+	height: 671px;
+	background-image: url("../images/bj-4.jpg");
+}
+
+.ctr-5{
+	height: 501px;
+	background-image: url("../images/bj-5.jpg");
+}
+
+.ctr-6{
+	height: 1041px;
+	background-image: url("../images/bj-6.jpg");
+}
+
+/**************************************************/
+.products-box{
+	position: relative;
+	height: auto;
+	padding-top: 181px;
+}
+
+.column{
+	position: relative;
+	height: auto;
+	width: 900px;
+	margin: 0 auto;
+}
+
+.column-nav{
+	position: relative;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.column-list{
+	position: relative;
+	height: auto;
+	float: left;
+	margin-right: -4px;
+}
+
+.column-list:hover{
+	cursor: pointer;
+}
+
+.column-content{
+	position: relative;
+	height: auto;
+}
+
+.column-item{
+	position: relative;
+	height: auto;
+}
+
+.title-box{
+	position: absolute;
+    top: 181px;
+    font-size: 16px;
+    left: 14px;
+    color: #fff;
+    width: 305px;
+}
+
+.price-box{
+	position: absolute;
+    bottom: 5px;
+    font-size: 24px;
+    font-family: "黑体";
+    color: #f7ea78;
+    left: 12px;
+}
+
+.column-btn{
+	position: absolute;
+	width: 94px;
+	height: 157px;
+	top: 50%;
+	margin-top: -80px;
+	z-index: 100;
+}
+
+.column-btn:hover{
+	cursor: pointer;
+}
+
+.column-prev-btn{
+	left: -120px;
+}
+
+.column-next-btn{
+	right: -120px;
+}
+
+/******************************/
+.view-box{
+	position: relative;
+	height: auto;
+	padding-top: 174px;
+	margin: 0 auto;
+	width: 900px;
+}
+
+.view-content{
+	position: relative;
+	height: auto;
+}
+
+.view-nav{
+	position: absolute;
+	bottom: 10px;
+	right: -6px;
+	width: 380px;
+	height: auto;
+}
+
+.view-row{
+	position: relative;
+	height: auto;
+	margin-top: 5px;
+}
+
+.view-list{
+	position: relative;
+	float: left;
+	margin-right: 5px;
+}
+
+.view-list:hover{
+	cursor: pointer;
+}
+
+.link-box{
+	position: relative;
+	height: auto;
+	padding-top: 215px;
+	width: 900px;
+	margin: 0 auto;
+}
+
+.link-item{
+	position: relative;
+	width: 167px;
+    height: 434px;
+	float: left;
+	margin-right: 15px;
+}
+
+.logo-link{
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	width: 900px;
+	margin-left: -450px;
+	height: 100px;
+}
+
+.guilin{
+	position: relative;
+	height: 100%;
+	width: 205px;
+	float: left;
+}
+
+.ctrip{
+	position: relative;
+	height: 100%;
+	float: right;
+	width: 205px;
+}
+
+/******************************/
+.swiper-slide{
+	position: relative;
+}
+
+.hide{
+	display: none!important;
+}
+
+.clear{
+	display: block;
+	float: none!important;
+	clear: both;
+}
+
+.last-list,.last-item{
+	margin-right: 0px!important;
+}
+
+.floatRight{
+	float: right!important;
+}
