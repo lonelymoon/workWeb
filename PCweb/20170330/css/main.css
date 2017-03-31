@@ -56,7 +56,7 @@
 .products-box{
 	position: relative;
 	height: auto;
-	padding-top: 181px;
+	padding-top: 200px;
 }
 
 .column{
@@ -69,7 +69,7 @@
 .column-nav{
 	position: relative;
 	height: auto;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .column-list{
@@ -136,7 +136,7 @@
 .view-box{
 	position: relative;
 	height: auto;
-	padding-top: 174px;
+	padding-top: 215px;
 	margin: 0 auto;
 	width: 900px;
 }
