@@ -1,0 +1,179 @@
+#header{
+	position: relative;
+	height: auto;
+	background: #fff;
+}
+
+#container{
+	position: relative;
+	height: auto;
+	width: 1200px;
+	margin: 0 auto;
+	margin-top: 40px;
+	padding-bottom: 100px;
+}
+
+.container-box{
+	position: relative;
+	height: auto;
+}
+
+#content{
+	position: relative;
+	height: auto;
+	width: 898px;
+	padding: 26px 0px 60px 0px;
+	box-shadow: 0 0px 4px 0 rgba(0,0,0,0.20);
+	border: 1px solid #FFFFFF;
+	background: #fff;
+}
+
+.about-item{
+	position: relative;
+	height: auto;
+	padding: 0px 40px;
+	padding-top: 46px;
+}
+
+.item-title{
+	position: relative;
+	height: auto;
+	font-family: 'PingFangSC-Medium','Microsoft Yahei';
+	font-size: 38px;
+	color: #000000;
+	letter-spacing: 1.72px;
+}
+
+.item-text{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-family: 'PingFangSC-Regular','Microsoft Yahei';
+	font-size: 20px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 30px;
+	margin-top: 38px;
+}
+
+.time-line{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-family: 'PingFangSC-Regular','Microsoft Yahei';
+	font-size: 20px;
+	color: #000000;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+
+.time-line:last-child{
+	margin-bottom: 0px;
+}
+
+.li-time{
+	min-width: 100px;
+    display: inline-block;
+}
+
+.slogon{
+	opacity: 0.8;
+	font-size: 20px;
+	color: #000000;
+	letter-spacing: 1px;
+}
+
+.join-us{
+	position: absolute;
+	right: 0px;
+	top: -4px;
+	width: 136px;
+	height: 38px;
+}
+
+.join-us-btn{
+	position: relative;
+	height: 100%;
+	background-image: linear-gradient(-180deg, #FFA229 0%, #FD9206 100%);
+	border: 1px solid #FF9000;
+	border-radius: 4px;
+	font-size: 16px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.50);
+	text-align: center;
+	line-height: 38px;
+}
+
+
+/************banner************/
+#banner{
+	position: absolute;
+	width: 300px;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	background: #fafafa;
+	box-shadow: 0 0px 4px 0 rgba(0,0,0,0.20);
+}
+
+.banner-content{
+	position: relative;
+	height: auto;
+	padding: 0px 40px;
+}
+
+.banner-logo{
+	position: relative;
+	height: auto;
+	padding: 32px 0px 25px 0px;
+	border-bottom: 1px dashed #979797;
+	text-align: center;
+}
+
+.banner-logo img{
+	max-width: 100%;
+}
+
+.banner-QRcode{
+	position: relative;
+	height: auto;
+	padding: 26px 0px 20px 0px;
+	border-bottom: 1px dashed #979797;
+	text-align: center;
+}
+
+.QRcode-item{
+	position: relative;
+	height: auto;
+	padding-bottom: 10px;
+}
+
+.QRcode-text{
+	position: relative;
+	height: auto;
+	font-family: 'PingFangSC-Medium','Microsoft Yahei';
+	font-size: 20px;
+	color: #000000;
+	letter-spacing: 1px;
+}
+
+.banner-msg{
+	position: relative;
+	height: auto;
+}
+
+.banner-item{
+	position: relative;
+	height: auto;
+	padding: 25px 0px;
+	font-family: 'PingFangSC-Medium','Microsoft Yahei';
+	font-size: 16px;
+	color: #000000;
+	border-bottom: 1px dashed #979797;
+	letter-spacing: 1px;
+}
+
+.banner-item:last-child{
+	border-bottom:none;
+}

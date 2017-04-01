@@ -1,0 +1,312 @@
+#header{
+	background: #fff;
+}
+
+.content{
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	max-width: 1160px;
+	margin: 0 auto;
+	margin-top: 30px;
+	padding: 50px;
+	background: #fff;
+}
+
+.user-msg-box{
+	position: relative;
+	height: auto;
+}
+
+.user-msg-box:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.user-photo{
+	position: relative;
+	width: 240px;
+	height: 240px;
+	background: #EDEFED;
+	float: left;
+}
+
+.user-msg{
+	position: relative;
+	height: 100%;
+	margin-left: 25px;
+	float: left;
+}
+
+.user-name{
+	position: relative;
+	height: auto;
+	font-size: 30px;
+	color: #484848;
+	letter-spacing: 0;
+}
+
+.user-working{
+	position: relative;
+	height: auto;
+	opacity: 0.5;
+	margin-top: 20px;
+	font-size: 14px;
+	color: #000000;
+	letter-spacing: 0;
+}
+
+.user-working span{
+	padding-right: 40px;
+}
+
+.edit{
+	position: relative;
+	height: auto;
+	margin-top: 10px;
+	font-size: 14px;
+	letter-spacing: 0;
+}
+
+.edit a{
+	color: #218B90;
+}
+
+.user-status-box{
+	position: relative;
+	height: auto;
+	padding-top: 14px;
+}
+
+.user-status-box:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.user-comfirm{
+	float: left;
+	width: 240px;
+	min-height: 200px;
+	padding-bottom: 30px;
+}
+
+.user-activities{
+	float: right;
+	width: 794px;
+}
+
+.u-column{
+	position: relative;
+	height: auto;
+	border: 1px solid #DCE0E0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.u-column-title{
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	background: #EDEFED;
+	font-size: 16px;
+	color: #484848;
+	letter-spacing: 0;
+	padding-left: 22px;
+}
+
+.u-column-content{
+	position: relative;
+	height: auto;
+	padding: 20px 22px 20px 22px;
+}
+
+.comfirm-list{
+	position: relative;
+	height: auto;
+	margin-bottom: 22px;
+	font-size: 14px;
+	color: #484848;
+	letter-spacing: 0;
+}
+
+.comfirm-list:after{
+	position: absolute;
+	content: "";
+	display: block;
+	right: 0px;
+	top: -1px;
+	width: 23px;
+	height: 23px;
+}
+
+.comfirm-list[data-status="pass"]:after{
+	background: url("../images/Correct_1.png") no-repeat top center;
+}
+
+.comfirm-list[data-status="unpass"]:after{
+	background: url("../images/error_1.png") no-repeat top center;
+}
+
+.u-column-item{
+	position: relative;
+	height: auto;
+	min-height: 200px;
+	-webkit-box-sizing: border-box ;
+	-moz-box-sizing: border-box ;
+	box-sizing: border-box ;
+	padding: 20px;
+	border: 1px solid #DCE0E0;
+	margin-bottom: 20px;
+}
+
+.u-column-item:last-child{
+	margin-bottom: 0px;
+}
+
+.act-title-en{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+
+.act-title-cn{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-size: 18px;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 32px;
+	margin-bottom: 4px;
+}
+
+.act-lecName{
+	position: relative;
+	height: auto;
+	font-size: 16px;
+	color: #333333;
+	letter-spacing: 0;
+}
+
+.act-address{
+	position: relative;
+	height: auto;
+	margin-top: 35px;
+	opacity: 0.8;
+	font-size: 16px;
+	color: #000000;
+	letter-spacing: 0;
+}
+
+.act-date{
+	position: relative;
+	height: auto;
+	margin-top: 5px;
+	opacity: 0.8;
+	font-size: 16px;
+	color: #000000;
+	letter-spacing: 0;
+}
+
+.act-QRcode{
+	position: absolute;
+	width: 100px;
+	height: 40px;
+	border: 1px solid #D9DADC;
+	line-height: 40px;
+	text-align: center;
+	font-size: 16px;
+	color: #E9752E;
+	letter-spacing: 0;
+	right: 20px;
+	top: 20px;
+}
+
+.act-manager-status{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: auto;
+	height: auto;
+	display: none;
+}
+
+.manager-status{
+	position: relative;
+	height: auto;
+	margin-bottom: 20px;
+	font-size: 16px;
+	color: #646464;
+	letter-spacing: 0;
+}
+
+.manager-status:before{
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	content: "";
+	display: block;
+	background: url("../images/qr_1.png") no-repeat top center;
+	left: -30px;
+	top: -1px;
+}
+
+#container[data-mode="manager"] .act-manager-status{
+	display: block;
+}
+
+#container[data-mode="manager"] .act-passed{
+	display: none;
+}
+
+#container[data-mode="manager"] .edit{
+	display: none;
+}
+
+.act-status{
+	position: absolute;
+	height: auto;
+	right: 20px;
+	bottom: 20px;
+	text-align: right;
+}
+
+.act-started{
+	position: relative;
+	height: auto;
+	padding-bottom: 5px;
+	font-size: 16px;
+	color: #000000;
+	letter-spacing: 0;
+}
+
+.act-passed{
+	position: relative;
+	height: auto;
+	font-size: 16px;
+	color: #000;
+	letter-spacing: 0;
+}
+
+.act-passed[data-status="pass"]{
+	color: #E9752E;
+}
+
+.act-passed[data-status="unpass"]{
+	color: #c3c3c3;
+}
+
+img{
+	max-width: 100%;
+	display: block;
+}

@@ -1,0 +1,109 @@
+#content{
+	max-width: 1920px;
+	position: relative;
+	margin: 0 auto;
+	height: auto;
+}
+
+.login-box{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 104px;
+	position: relative;
+	height: auto;
+}
+
+.logo{
+	text-align: center;
+	font-size: 28px;
+	color: #604A41;
+	letter-spacing: 0;
+	font-weight: 800;
+	padding-bottom: 52px;
+}
+
+.logo>span{
+	color: #ffa229;
+}
+
+.title{
+	border: 1px solid #C0C0C0;
+	font-size: 18px;
+	color: rgba(0,0,0,0.8);
+	letter-spacing: 0.8px;
+	height: auto;
+	position: relative;
+	max-width: 480px;
+	margin: 0 auto;
+}
+
+.title>div{
+	position: absolute;
+	width: 94px;
+	padding: 10px 0px;
+	left: 50%;
+	margin-left: -47px;
+	top: -22px;
+	background: #fff;
+	text-align: center;
+}
+
+.login-type{
+	margin-top: 58px;
+	position: relative;
+	height: auto;
+}
+
+.type-wechat{
+	max-width: 480px;
+	text-align: center;
+	position: relative;
+	height: 77px;
+	line-height: 77px;
+	margin: 0 auto;
+	font-size: 18px;
+	color: #FFFFFF;
+	letter-spacing: 0.8px;
+	background: #3ad41a;
+}
+
+.type-wechat .icon{
+	position: absolute;
+	top: 28px;
+	left: 28px;
+	line-height: 0;
+}
+
+.type-wechat:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.QRcode-layer{
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	top: 0px;
+	z-index: 9990;
+	background: rgba(0,0,0,0.7);
+	display: none;
+}
+
+.code-box{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 430px;
+	height: 430px;
+	margin-left: -215px;
+	margin-top: -215px;
+}
+
+.close{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	color: #fff;
+	font-size: 32px;
+}

@@ -1,0 +1,13 @@
+#header{
+	background: #fff;
+	height: auto;
+	position: relative;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.filter-box{
+	float: right;
+	font-size: 18px;
+	padding-top: 18px;
+}
