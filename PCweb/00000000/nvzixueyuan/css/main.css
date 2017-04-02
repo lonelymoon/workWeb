@@ -1,0 +1,403 @@
+html,body{
+	height: 100%;
+}
+
+#content{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+
+.nav-box{
+	position: relative;
+	height: 100%;
+	width: 125px;
+	background: #FF696A;
+	text-align: center;
+}
+
+.logo{
+	position: relative;
+	height: auto;
+	padding: 15px 0px 23px 0px;
+}
+
+.check{
+	position: relative;
+	height: auto;
+	padding: 70px 0px;
+}
+
+.logo:after,.check:after{
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	width: 34px;
+	height: 6px;
+	margin-left: -17px;
+	content: "";
+	display: block;
+	background: url("../images/point.png") no-repeat;
+}
+
+.check-text{
+	position: relative;
+	font-family:"PingFangSC-Regular","Microsoft Yahei";
+	font-size: 18px;
+	color: #FFFFFF;
+	letter-spacing: 0.53px;
+	padding-top: 10px;
+}
+
+.user-logout{
+	position: absolute;
+	bottom: 70px;
+	left: 0px;
+	width: 100%;
+	height: auto;
+}
+
+.logout-text{
+	position: relative;
+	height: auto;
+	font-family:"PingFangSC-Regular","Microsoft Yahei";
+	font-size: 18px;
+	color: #FFFFFF;
+	letter-spacing: 0.53px;
+	padding-top: 10px;
+}
+
+.content-box{
+	position: absolute;
+	left: 125px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	min-width: 600px;
+}
+
+.content-header{
+	position: relative;
+	height: 104px;
+	line-height: 104px;
+	text-align: right;
+	border-bottom: 1px solid #EDEFED;
+	font-family:"PingFangSC-Regular","Microsoft Yahei";
+	font-size: 18px;
+	color: rgba(0,0,0,0.80);
+	letter-spacing: 0.53px;
+	padding-right: 50px;
+}
+
+.header-btn-box{
+	position: absolute;
+	left: 60px;
+	height: 40px;
+	top: 30px;
+}
+
+.header-btn-box:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.header-btn{
+	position: relative;
+	padding: 0px 10px 0px 33px;
+	line-height: 40px;
+	border: 1px solid #E0E3E2;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family:"PingFangSC-Regular","Microsoft Yahei";
+	font-size: 18px;
+	color: rgba(0,0,0,0.80);
+	letter-spacing: 0.53px;
+	background: #EDEFED;
+	border-radius: 3.5px;
+	float: left;
+	margin-right: 10px;
+}
+
+.header-btn:hover{
+	cursor: pointer;
+}
+
+.header-btn:after{
+	position: absolute;
+	content: "";
+	display: block;
+	width: 18px;
+	height: 19px;
+	left: 10px;
+	top: 10px;
+}
+
+.allPass:after{
+	background: url("../images/icon2.png") no-repeat top center;
+}
+
+.allUnPass:after{
+	background: url("../images/Icon.png") no-repeat top center;
+}
+
+.all:after{
+	background: url("../images/Icon4.png") no-repeat top center;
+}
+
+.content-footer{
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	height: 80px;
+	width: 100%;
+	border-top: 1px solid #EDEFED;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px 0px;
+}
+
+.save-btn{
+	position: relative;
+	float: right;
+	margin-right: 20px;
+	width: 200px;
+	height: 60px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	line-height: 60px;
+	font-family:"PingFangSC-Medium","Microsoft Yahei";
+	font-size: 20px;
+	color: #FF7676;
+	letter-spacing: 0;
+	border: 2px solid #FF7676;
+	border-radius: 4px;
+	background: #fff;
+}
+
+.save-btn:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.pass{
+	border: none;
+	color: #fff;
+	background: #FF7676;
+	border-radius: 4px;
+}
+
+.fenye{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	padding: 15px 0px;
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-right: 20px;
+	border-top: 1px solid #EDEFED;
+	z-index: 10;
+}
+
+.content-container{
+	position: absolute;
+	left: 60px;
+	top: 140px;
+	bottom: 80px;
+	right: 20px;
+}
+
+.content-title{
+	position: relative;
+	height: 50px;
+	line-height: 50px;
+	background: #EDEFED;
+	border: 1px solid #E0E3E2;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 25px;
+	font-family:"PingFangSC-Regular","Microsoft Yahei";
+	font-size: 18px;
+	color: rgba(0,0,0,0.80);
+	letter-spacing: 0.53px;
+}
+
+.content-wrapper{
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}
+
+.row{
+	position: relative;
+	height: auto;
+	background: #fff;
+	z-index: 3;
+}
+
+.row:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.item{
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family:"PingFangSC-Regular","Microsoft Yahei";
+	font-size: 18px;
+	color: rgba(0,0,0,0.80);
+	letter-spacing: 0.53px;
+	padding: 15px 0px;
+	float: left;
+	padding-left: 50px;
+}
+
+.name,.major,.year,.time{
+	width: 15%;
+}
+
+.msg{
+	width: 30%;
+}
+
+.status{
+	width: 10%;
+}
+
+.scroll-wrapper{
+	position: absolute;
+	top: 50px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.swiper-container{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 60px;
+	overflow: hidden;
+}
+
+.swiper-slide{
+	width: 100%;
+}
+
+.swiper-slide .row:hover{
+	background: #6cf!important;
+	cursor: pointer;
+}
+
+.row[data-status="checked"] .name-content:after{
+	content: "√";
+	display: block;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	color: "green";
+	text-align: center;
+	line-height: 30px;
+	font-size: 24px;
+	top: 15px;
+	left: 0px;
+}
+
+.swiper-slide .row:nth-child(odd){
+	background: #F3ECEF;
+}
+
+.status-content{
+	padding: 10px 0px;
+	padding-left: 50px;
+}
+
+.check-status{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	background: #D8D8D8;
+	border-radius: 4px;
+}
+
+.check-status[data-status="0"]{
+	background: #00A699;
+}
+
+.check-status[data-status="1"]{
+	background: #EC8010;
+}
+
+/*******************************/
+.clear{
+	float: none!important;
+	clear: both;
+}
+
+.activP{
+	background: #FF696A!important;
+	color: #fff!important;
+}
+
+.prv:hover, .next:hover, .first:hover, .last:hover, .pagingUl li a:hover{
+	background: #FF696A!important;
+}
+
+.pagingUl li,.fr{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border:1px solid #FF696A;
+}
+
+.swiper-scrollbar {
+   position: absolute;
+   height:100%;
+   width: 6px;
+   right: 0px;
+   top: 0px;
+   z-index: 10;
+}
+
+.swiper-scrollbar-drag{
+	background: #FF696A;
+	opacity: 0.9;
+}
+
+@media screen and (max-width: 1080px){
+	.item{
+		padding-left: 20px;
+	}
+	.status-content{
+		padding-left: 20px;
+	}
+}
+
+@media screen and (max-width: 880px){
+	.item{
+		padding-left: 5px;
+	}
+	.status-content{
+		padding-left: 5px;
+	}
+	.header-hello{
+		display: none;
+	}
+}
