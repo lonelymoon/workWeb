@@ -32,6 +32,19 @@ $(function(){
 //Page
 var page = new Page();
 
+$.ajax({
+	url : "",
+	data : {},
+	type : "get",
+	dataType : "jsonp",
+	success : function(res){
+
+	},
+	fail : function(status){
+		
+	}
+});
+
 //swiper
 var sc1 = new Swiper(".sc-1",{
 	speed : 800,
