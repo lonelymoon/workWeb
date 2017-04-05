@@ -33,15 +33,88 @@ $(function(){
 var page = new Page();
 
 $.ajax({
-	url : "",
-	data : {},
-	type : "get",
-	dataType : "jsonp",
-	success : function(res){
+	"type" : "get",
+	"url" : "/weixintest/Getongoing.action",
+	"data" : {userName:'userName01'},
+	"dataType" : "json",
+	"success" : function(res){
+		var results = res.resultArray,
+			temp = [],
+			tempObj = null;
+		for(var i = 0, resultItem; resultItem = results[i++]; ){
+			tempObj = {
+				"index" : i,
+				"id" : resultItem.intid,
+				"intro-text" : resultItem.strmessage ,
+				"speecher-photo" : resultItem.strteacherimgurl,
+				"speecher-name" : resultItem.strteachername,
+				"experience" : resultItem.strteachermesssage,
+				"speech-title" : resultItem.strname ,
+				"date" : "时间："+resultItem.strstartime,
+				"address" : "地点："+resultItem.straddress ,
+				"left-day" : Math.max(utils.getLeftDay(resultItem.strstartime),0),
+				"placeCn" : resultItem.strcity ,
+				"placeEn" : resultItem.strcityenglish ,
+				"noteMsg" : resultItem.strremarkmessage
+			};
+			temp.push(tempObj);
+		}
+	}
+});
+//获取往期活动
+$.ajax({
+	"type" : "get",
+	"url" : "/weixintest/Getpast.action",
+	"data" : {userName:'userName01'},
+	"dataType" : "json",
+	"success" : function(res){
+		var results = res.resultArray,
+			temp = [],
+			tempObj = null;
+		for( var i = 0, resultItem; resultItem = results[i++]; ){
+			var actFlag = resultItem.intshowflag,
+				enrollFlag = resultItem.intenrollflg;
 
-	},
-	fail : function(status){
-		
+			tempObj = {
+				"id" : resultItem.intid,
+				"actsImg" : resultItem.strimgurl,
+				"actsTitle" : resultItem.strname,
+				"actsSpeecher" : resultItem.strteachername,
+				"type" : resultItem.strtype,
+				"time" : resultItem.strstartime,
+				"cost" : "免费",
+				"hasStarted" : actFlag == 1 ? "已结束" : actFlag == -1 ? "未开始" : "进行中",
+				"btnLink" : dPath+"/UXWE/pages/details/details.html?uid="+resultItem.intid,
+				"btnText" : "查看详情"
+			};
+
+			temp.push(tempObj);
+		}
+	}
+});
+//获取赞助商
+$.ajax({
+	"type" : "get",
+	"url" : "/weixintest/Getsponsor.action",
+	"data" : {userName:'userName01'},
+	"dataType" : "json",
+	"success" : function(res){
+		var results = res.resultArray,
+			temp = [],
+			tempObj = null;
+		for( var i = 0, resultItem; resultItem = results[i++]; ){
+			var actFlag = resultItem.intshowflag,
+				enrollFlag = resultItem.intenrollflg;
+
+			tempObj = {
+				"id" : resultItem.intid,
+				"name" : resultItem.strname,
+				"link" : resultItem.strwwwurl,
+				"logo" : resultItem.strimgurl
+			};
+
+			temp.push(tempObj);
+		}
 	}
 });
 
