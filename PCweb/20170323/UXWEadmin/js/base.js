@@ -47,10 +47,20 @@ OutPut.registerFileReader = function(){
 		reader.readAsDataURL(file);
 
 	});
-}
+};
+
+OutPut.checkLocalStorage = function(){
+	try {
+        localStorage.setItem("testKey", 'testValue');
+        localStorage.removeItem("testKey");
+        return true;
+    } catch (error) {
+        return false;
+    }
+};
 
 OutPut.registerFileReader();
 
-window.output = OutPut;
+window.Output = OutPut;
 
 });

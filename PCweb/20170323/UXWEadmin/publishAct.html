@@ -58,7 +58,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="layer">
+	<div class="layer slayer">
 		<div class="layer-content">
 			<div class="layer-close">X</div>
 			<div class="column">
@@ -67,9 +67,15 @@
 				</div>
 				<div class="column-content">
 					<div class="column-item">
-						<div class="item-title">活动名称</div>
+						<div class="item-title">活动名称（中文）</div>
 						<div class="item-content">
 							<input type="text" placeholder="活动标题（不得少于5个字）" id="act-title" >
+						</div>
+					</div>
+					<div class="column-item">
+						<div class="item-title">活动名称（英文）</div>
+						<div class="item-content">
+							<input type="text" placeholder="活动标题" id="act-Entitle" >
 						</div>
 					</div>
 					<div class="column-item">
@@ -139,11 +145,19 @@
 <script type="text/javascript">
 jQuery(function($){
 
-var uploading = false;
+var uploading = false,
+	support = Output.checkLocalStorage();
+
+if(!support){
+	alert("请开启cookie功能，否则程序无法执行");
+	return false;
+}
 
 $('.save-btn').on('click',function(e){
 	var $title = $('#act-title').val(),
+		$enTitle = $('#act-Entitle').val(),
 		$len = $title.length,
+		$enlen = $enTitle.length,
 		tdata = {},
 		temp = [];
 
@@ -156,9 +170,17 @@ $('.save-btn').on('click',function(e){
 		return false;
 	}
 
+	if($enlen < 6){
+		$('#act-Entitle').addClass("alertBorder").focus();
+		return false;
+	}
+
 	$('#act-title').removeClass("alertBorder");
+	$('#act-Entitle').removeClass("alertBorder");
 
 	tdata.strname = $title;
+	tdata.intid = 0;
+	tdata.strengname = $enTitle;
 	tdata.strType = "";
 
 	$('.checked').parent('.checkBox').each(function(e){
@@ -182,15 +204,22 @@ $('.save-btn').on('click',function(e){
 
 	uploading = true;
 	$(this).html("上传中...");
-
 	$.ajax({
-		"url" : "",
+		"url" : "/CreateActive.action",
 		"type" : "post",
 		"data" : tdata,
 		"success" : function(data){
 			uploading = false;
-			$('.save-btn').html("创建活动");
-			$('.layer').toggleClass("hide");
+			console.log(data);
+			if(data.strflg == "0"){
+				$('.save-btn').html("创建活动");
+				$('.layer').toggleClass("hide");
+				localStorage.actId = data.intactiveid;
+			} else if( data.strflg == "1" ) {
+				alert("活动创建失败，数据插入未成功");
+			} else {
+				alert("活动创建失败，该活动已存在");
+			}
 		},
 		"fail" : function(status){
 			uploading = false;

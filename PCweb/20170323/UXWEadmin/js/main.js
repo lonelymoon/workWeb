@@ -3,6 +3,10 @@ jQuery(function($){
 var click = "ontouchend" in document ? "touchend" : "click",
 	sc2 = new IScroll('.content-box',{
 		mouseWheel : true
+	}),
+	isc1 = new IScroll('.selectorLists',{
+		mouseWheel : true,
+		tap : true
 	});
 
 $("#dtBox").DateTimePicker({			
@@ -10,11 +14,18 @@ $("#dtBox").DateTimePicker({
 	timeFormat: "hh:mm"
 });
 
-$('.sel-list').on(click,function(e){
+$('.cityChoose').on("tap",'.sel-list',function(e){
 	var $val = $(this).html(),
 		$id = $(this).attr("data-id");
 	$(this).parents('.selectorLists').slideToggle(200);
 	$(this).parents('.selectorBox').find('.selectorVal').html($val).attr("data-id",$id);
+	sc2.enable();
+});
+
+$('.doShow').on(click,'.sel-list',function(e){
+	var $val = $(this).html();
+	$(this).parents('.selectorLists').slideToggle(200);
+	$(this).parents('.selectorBox').find('.selectorVal').html($val);
 });
 
 var date = new Date(),
@@ -45,16 +56,30 @@ $('.cTime').on('change',function(e){
 var hasGetSelector = false;
 
 $('.cityChoose').on(click,'.selectorVal',function(e){
+	sc2.disable();
 	if(hasGetSelector){
 		$('.cityChoose').find('.selectorLists').slideToggle(200);
 		return;
 	}
 	$.ajax({
-		url : "",
-		data : {},
-		type : "get",
+		url:'/weixintestadmin/GetCity.action',   	
+		data:{intid:0},
+		type : "post",
 		"success" : function(data){
+			console.log(data);
 			hasGetSelector = true;
+			var d = data.resultarray,
+				len = d.length,
+				temp = "";
+
+			for( var i = 0; i < len; i++ ){
+				var city = d[i];
+				temp += '<li class="sel-list" data-id="'+city.intid+'">'+city.strname+'</li>';
+			}
+			$('.cse-scroll').html(temp);
+			setTimeout(function(){
+				isc1.refresh();
+			},100);
 			$('.cityChoose').find('.selectorLists').slideToggle(200);
 		}
 	});
@@ -74,9 +99,9 @@ $('.confirm-btn').on(click,function(e){
 	$(".cityAdd").removeClass("alertBorder");
 
 	$.ajax({
-		url : "",
+		url : "/weixintestadmin/CreateCity.action",
 		type : "post",
-		data : {},
+		 data:{intid:0,strname:$val,strenglishname:$val,strdistinguish:"1"},
 		success : function(data){
 			hasGetSelector = false;
 			$('.layer').fadeOut();
@@ -94,16 +119,25 @@ $('.addNewLec').on(click,function(e){
 	window.open("addLecturers.html","_blank");
 });
 
-$('#lecName').on("change",function(e){
+$('#lecName').on("keyup",function(e){
 	var $val = $(this).val();
 
 	if(!isSearching){
 		isSearching = true;
 		$.ajax({
-			url : "",
+			url : "/Getfromname.action",
 			type : "post",
-			data : {},
+			data : {strname : $val},
 			success : function(data){
+				var d = data.resultarray,
+					len = d.length,
+					temp = "";
+
+				for( var i = 0; i < len; i++ ){
+					var lec = d[i];
+					temp += '<li class="lecList" data-id="'+lec.intid+'">'+lec.strname+'</li>';
+				}
+				$('.lecLists').html(temp);
 				isSearching = false;
 			},
 			fail : function(status){
@@ -112,6 +146,13 @@ $('#lecName').on("change",function(e){
 		});
 	}
 
+});
+
+$('.lecLists').on("click",'li',function(e){
+	var $val = $(this).text(),
+		$id = $(this).attr("data-id");
+	$('#lecName').val($val).attr("data-id",$id);
+	$('.lecLists').html("");
 });
 //end
 var tpl = '<div class="column-item inline-item">'+
@@ -149,10 +190,9 @@ $('.addNewSponsor').on(click,function(e){
    	$(div).find(".logoPost").attr("for","slogo-"+len);
    	$(div).find("input[type='file']").attr('id','slogo-'+len);
 
-    html += div.innerHTML;
-    $('.sponsorColumn')[0].innerHTML = html;
+    $('.sponsorColumn').append(div.innerHTML);
     sc2.refresh();
-    output.registerFileReader();
+    Output.registerFileReader();
 });
 
 $('.checkBox').on("click",function(e){
@@ -233,6 +273,7 @@ if(!$postImg){
 
 var len = $('.sponsorName').length;
 
+var formData1 = new FormData();
 for( var i = 0 ; i < len; i++){
 	var idx = i + 1,
 		name = $('.sponsorName').eq(i).val() || "",
@@ -245,15 +286,20 @@ for( var i = 0 ; i < len; i++){
 		continue;
 	}
 
-	formData.append("strname"+idx,name);
-	formData.append("fileurlimg"+idx,file);
-	formData.append("strdistinguish"+idx,"1");
-	formData.append("intsponsorid"+idx,0);
-	formData.append("intproperty"+idx,0);
-	formData.append("strhttpurl"+idx,link);
+	formData1.append("strname"+idx,name);
+	formData1.append("fileurlimg"+idx,file);
+	formData1.append("strdistinguish"+idx,"1");
+	formData1.append("intsponsorid"+idx,0);
+	formData1.append("intproperty"+idx,0);
+	formData1.append("strhttpurl"+idx,link);
 }
+formData1.append("intnumber",len);
 
-formData.append("intid",0);
+
+var actId = localStorage.actId;
+formData1.append("intid",actId);
+console.log(actId);
+formData.append("intid",actId);
 formData.append("fileurlimg",$postImg);
 formData.append("straddress",$address);
 formData.append("strpost_code",$pCode);
@@ -275,23 +321,39 @@ formData.append("strgain",$gain);
 formData.append("strremarkmessage","0");
 formData.append("strtype","0");
 
-formData.append("intnumber",len);
+
 
 isUploading = true;
 
-$.ajax({
-	url : "",
-	type : "post",
-	contentType : false,
-	processData : false,
-	data : formData,
-	success : function(data){
-		isUploading = false;
-	},
-	fail : function(status){
-		isUploading = false;
+
+var xhr = new XMLHttpRequest();
+
+
+xhr.open("post","/CreateActive");
+xhr.addEventListener("load",function(e){
+	uploading = false;
+	var res = xhr.responseText,
+		res1 = JSON.parse(res);
+	if(res1["strflg"] == "0"){		
+		var xhr1 = new XMLHttpRequest();
+		xhr1.open("post","/ActivitySponsor");
+		xhr1.addEventListener("load",function(e){
+			uploading = false;
+			var res2 = xhr1.responseText,
+				res1 = JSON.parse(res2);
+			if(res1["strflg"] == "0"){
+				$('.mana').find("li[data-link='actManager']").trigger("click");
+			} else if(res1["strflg"] == "1"){
+				alert("数据库插入失败,请重试");
+			}
+		});
+		xhr1.send(formData1);
+
+	} else if(res1["strflg"] == "1"){
+		alert("数据库插入失败,请重试");
 	}
 });
+xhr.send(formData); 
 
 });
 

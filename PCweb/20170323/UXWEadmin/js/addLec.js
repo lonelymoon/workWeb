@@ -79,26 +79,31 @@ $('.save-btn').on(click,function(e){
 	$('input').removeClass('alertBorder');
 
 	formData.append("fileurlimg",lecImg);
-	formData.append("strname",lecNameCN);
-	formData.append("strengname",lecNameEN);
-	formData.append("strcompany",lecCompany);
-	formData.append("strjob",lecJob);
+	formData.append("strname",encodeURI(lecNameCN));
+	formData.append("strengname",encodeURI(lecNameEN));
+	formData.append("strcompany",encodeURI(lecCompany));
+	formData.append("strjob",encodeURI(lecJob));
 	formData.append("worktime",lecWorkYear);
-	formData.append("strmesssage",lecIntro);
-	formData.append("strdistinguish",lecShow);
-	formData.append("strtype",lecType);
+	formData.append("strmesssage",encodeURI(lecIntro));
+	formData.append("strdistinguish",encodeURI(lecShow));
+	formData.append("strtype",encodeURI(lecType));
 	formData.append("intid",0);
 
-	$.ajax({
-		"url" : "",
-		"type" : "post",
-		"contentType" : false,
-		"processData" : false,
-		"data" : {},
-		"success" : function(data){
-			localStorage.removeItem("save");
+	
+	var xhr = new XMLHttpRequest();
+	xhr.open("post","/CreateTeacher");
+	xhr.addEventListener("load",function(e){
+		uploading = false;
+		var res = xhr.responseText,
+			res1 = JSON.parse(res);
+		if(res1["strflag"] == "0"){
+			alert("上传成功");
+			$('.mana').find("li[data-link='lecManager']").trigger("click");
+		} else if(res1["strflag"] == "1"){
+			alert("数据库插入失败,请重试");
 		}
-	})
+	});
+	xhr.send(formData); 
 
 });
 

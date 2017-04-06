@@ -97,6 +97,29 @@ textarea{
 	font-size: 18px;
 }
 
+.lecLists{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 60px;
+	background: #fff;
+	z-index: 10;
+	line-height: 30px;
+}
+
+.lecList{
+	border-left:  2px solid #D9DADC;
+	border-right:  2px solid #D9DADC;
+}
+
+.lecList:hover{
+	cursor: pointer;
+}
+
+.lecList:last-child{
+	border-bottom: 2px solid #D9DADC;
+}
+
 .poster{
 	position: relative;
 	display: block;
@@ -234,4 +257,9 @@ textarea{
 .confirm-btn:hover{
 	cursor: pointer;
 	opacity: 0.9;
+}
+
+.selectorLists{
+	height: 168px;
+	overflow: hidden;
 }
