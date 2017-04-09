@@ -15,6 +15,7 @@ var Scroll = function(selector,options){
 	this.mouseWheel 		= options.mouseWheel 	|| true;  	//滚轮
 	this.scrollX 			= options.scrollX 		|| false;	//横向滚动
 	this.scrollY			= options.scrollY		|| true;	//纵向滚动
+	this.startY				= options.startY		|| 0;		//起始位置
 	this.tap 				= options.tap 			|| false;	//点击
 	this.bounceEasing		= options.easing 		|| "quadratic";	//运动时间曲线
 	this.bounceTime			= options.timing		|| 600;		//运动时间<ms>
@@ -35,10 +36,11 @@ Scroll.prototype = {
 		var _self = this;
 
 		this.scroll = new IScroll(this.selector,{
-			mouseWheel: this.scrollBar,
-    		scrollbars: this.mouseWheel,
+			mouseWheel: this.mouseWheel,
+    		scrollbars: this.scrollBar,
     		scrollX : this.scrollX,
     		scrollY : this.scrollY,
+    		startY	: this.startY,
     		tap 	: this.tap,
     		fadeScrollBars : this.fadeScrollBar,
     		interactiveScrollbars : this.dragBar,
@@ -74,6 +76,7 @@ Scroll.prototype = {
 	updatePage : function(direc,callback){
 		if(!this.usePullDownFresh)
 		return false;
+		var _self = this;
 
 		callback = callback || function(){};
 
@@ -81,15 +84,21 @@ Scroll.prototype = {
 		this.__updatePageX(callback);
 		else
 		this.__updatePageY(callback);
+
+		this.scrollEnd(function(){
+			if(this.refreshing){
+				this.refreshing = false;
+				callback(this);
+			}
+		});
 	},
 
 	__updatePageY : function(callback){
 		var _self = this;
 
 		this.scrolling(function(){
-			if( this.y >= _self.downHeight ){
-				callback(this);
-				_self.refresh();
+			if( this.y >= _self.downHeight && !this.updating){
+				this.refreshing = true;
 			}
 		});
 
@@ -99,9 +108,8 @@ Scroll.prototype = {
 		var _self = this;
 
 		this.scrolling(function(){
-			if( this.x >= _self.downHeight ){
-				callback(this);
-				_self.refresh();
+			if( this.x >= _self.downHeight && !this.updating ){
+				this.refreshing = true;
 			}
 		});
 	},
@@ -110,20 +118,27 @@ Scroll.prototype = {
 	update : function(direc,callback){
 		if(!this.usePullUpFresh)
 		return false;
+		var _self = this;
 
 		if(direc == "x")
 		this.__updateX(callback);
 		else
 		this.__updateY(callback);
+
+		this.scrollEnd(function(){
+			if(this.refreshing){
+				this.refreshing = false;
+				callback(this);
+			}
+		});
 	},
 
 	__updateY : function(callback){
 		var _self = this;
 
 		this.scrolling(function(){
-			if( this.y <= this.maxScrollY - _self.upHeight ){
-				callback(this);
-				_self.refresh();
+			if( this.y <= this.maxScrollY - _self.upHeight){
+				this.refreshing = true;
 			}
 		});
 	},
@@ -132,9 +147,8 @@ Scroll.prototype = {
 		var _self = this;
 
 		this.scrolling(function(){
-			if( this.x <= this.maxScrollX - _self.upHeight ){
-				callback(this);
-				_self.refresh();
+			if( this.x <= this.maxScrollX - _self.upHeight && !this.updating ){
+				this.refreshing = true;
 			}
 		});
 	},

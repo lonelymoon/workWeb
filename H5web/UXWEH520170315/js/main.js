@@ -32,6 +32,18 @@ $(function(){
 //Page
 var page = new Page();
 
+//获取有没有登陆
+$.ajax({
+	"type" : "post",
+	"url" : "/Enrollbefore.action",
+	"data" : {intid:0},
+	"dataType" : "json",
+	"async" : false,
+	"success" : function(res){
+		
+	}
+});
+
 $.ajax({
 	"type" : "get",
 	"url" : "/weixintest/Getongoing.action",
@@ -40,25 +52,22 @@ $.ajax({
 	"success" : function(res){
 		var results = res.resultArray,
 			temp = [],
-			tempObj = null;
-		for(var i = 0, resultItem; resultItem = results[i++]; ){
-			tempObj = {
-				"index" : i,
-				"id" : resultItem.intid,
-				"intro-text" : resultItem.strmessage ,
-				"speecher-photo" : resultItem.strteacherimgurl,
-				"speecher-name" : resultItem.strteachername,
-				"experience" : resultItem.strteachermesssage,
-				"speech-title" : resultItem.strname ,
-				"date" : "时间："+resultItem.strstartime,
-				"address" : "地点："+resultItem.straddress ,
-				"left-day" : Math.max(utils.getLeftDay(resultItem.strstartime),0),
-				"placeCn" : resultItem.strcity ,
-				"placeEn" : resultItem.strcityenglish ,
-				"noteMsg" : resultItem.strremarkmessage
-			};
-			temp.push(tempObj);
-		}
+			tempObj = null,
+			resultItem = results[0],
+			time = resultItem.strstartime.replace(/-|,/g,"/"),
+			leftTime = new Date().getTime() - new Date(time.strstartime),
+			status = leftTime < 0 ? "未开始" : "已结束";
+
+		$('.actv-item-image').html('<img src="'+resultItem.strteacherimgurl+'">');
+		$('.actv-item-enTitle').html(resultItem.strengname);
+		$('.actv-item-cnTitle').html(resultItem.strname);
+		$('.actv-item-lecName').html("主讲人："+resultItem.strteachername);
+		$('.actv-item-lecJob').html(resultItem.strteachermesssage);
+		$('.actv-item-city').html(resultItem.strcity);
+		$('.actv-item-date').html(resultItem.strstartime);
+		$('.actv-item-hasStarted').html(status);
+		$('.actv-item').attr("data-id",resultItem.intid);
+		myScroll.refresh();
 	}
 });
 //获取往期活动
@@ -69,27 +78,62 @@ $.ajax({
 	"dataType" : "json",
 	"success" : function(res){
 		var results = res.resultArray,
-			temp = [],
+			temp = "",
 			tempObj = null;
-		for( var i = 0, resultItem; resultItem = results[i++]; ){
+		for( var i = 0, resultItem; i < 4 && resultItem = results[i++]; ){
 			var actFlag = resultItem.intshowflag,
 				enrollFlag = resultItem.intenrollflg;
 
-			tempObj = {
-				"id" : resultItem.intid,
-				"actsImg" : resultItem.strimgurl,
-				"actsTitle" : resultItem.strname,
-				"actsSpeecher" : resultItem.strteachername,
-				"type" : resultItem.strtype,
-				"time" : resultItem.strstartime,
-				"cost" : "免费",
-				"hasStarted" : actFlag == 1 ? "已结束" : actFlag == -1 ? "未开始" : "进行中",
-				"btnLink" : dPath+"/UXWE/pages/details/details.html?uid="+resultItem.intid,
-				"btnText" : "查看详情"
-			};
+			var tpl = '<div class="past-item" data-id="'+resultItem.intid+'">'+
+						'<div class="past-item-msg">'+
+							'<div class="past-item-cnTitle">'+resultItem.strname+'</div>'+
+							'<div class="past-item-enTitle">'+resultItem.strengname+'</div>'+
+							'<div class="past-item-lecName">作者 '+resultItem.strteachername+'</div>'+
+						'</div>'+
+						'<div class="past-item-image">'+
+							'<img src="'+resultItem.strimgurl+'">'+
+						'</div>'+
+					'</div>';
 
-			temp.push(tempObj);
+			temp += tpl;
 		}
+
+		$('.past-workshop-box').html(temp).find('.past-item').eq(0).attr("data-type","1");
+		myScroll.refresh();
+	}
+});
+//获取讲师
+$.ajax({
+	"type" : "get",
+	"url" : "/weixintest/Getnear5.action",
+	"data" : {userName:'userName01'},
+	"dataType" : "json",
+	"success" : function(res){
+		var results = res.resultArray,
+			temp = ""
+			tempObj = null;
+		for( var i = 0, resultItem; i < 6 && resultItem = results[i++]; ){
+
+			var tpl = '<div class="swiper-slide">'+
+						'<div class="lec-item" data-id="'+resultItem.intid+'">'+
+							'<div class="lec-item-image">'+
+								'<img src="'+resultItem.strimgurl+'">'+
+							'</div>'+
+							'<div class="lec-item-job">'+resultItem.strmesssage+'</div>'+
+							'<div class="lec-item-lecName">'+resultItem.strname+'</div>'+
+						'</div>'+
+					'</div>';
+
+			temp += tpl;
+		}
+
+		$('.sc-2').find(".swiper-wrapper").html(temp).find('.lec-item').eq(0).attr("data-type","1");
+		var sc2 = new Swiper(".sc-2",{
+			direction : "horizontal",
+			touchMoveStopPropagation : true,
+			slidesPerView: 3
+		});
+		myScroll.refresh();
 	}
 });
 //获取赞助商
@@ -100,21 +144,27 @@ $.ajax({
 	"dataType" : "json",
 	"success" : function(res){
 		var results = res.resultArray,
-			temp = [],
+			temp = "",
 			tempObj = null;
 		for( var i = 0, resultItem; resultItem = results[i++]; ){
 			var actFlag = resultItem.intshowflag,
 				enrollFlag = resultItem.intenrollflg;
 
-			tempObj = {
-				"id" : resultItem.intid,
-				"name" : resultItem.strname,
-				"link" : resultItem.strwwwurl,
-				"logo" : resultItem.strimgurl
-			};
+			var tpl = '<a href="'+resultItem.strwwwurl+'">'+
+						'<div class="partner-item" data-id="'+resultItem.intid+'">'+
+							'<div class="partner-item-image">'+
+								'<img src="'+resultItem.strimgurl+'">'+
+							'</div>'+
+							'<div class="partner-item-name">'+
+								resultItem.strname+
+							'</div>'+
+						'</div>'+
+					'</a>';
 
-			temp.push(tempObj);
+			temp += tpl;
 		}
+		$('.partner-box').html(temp);
+		myScroll.refresh();
 	}
 });
 
@@ -124,10 +174,6 @@ var sc1 = new Swiper(".sc-1",{
 	autoplay : 5000,
 	loop : true,
 	touchMoveStopPropagation : true
-}), sc2 = new Swiper(".sc-2",{
-	direction : "horizontal",
-	touchMoveStopPropagation : true,
-	slidesPerView: 3
 });
 
 //IScroll

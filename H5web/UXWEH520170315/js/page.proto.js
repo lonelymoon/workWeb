@@ -77,6 +77,10 @@ Page.prototype = {
 			var linkID = $(this).attr('data-link'),
 				pagelist = _self.pages.pagelist;
 
+			if(linkID == "center"){
+				
+			}
+
 			_self.loadProxyPages(linkID,pagelist,"menu");
 		});
 
@@ -168,7 +172,7 @@ Page.prototype = {
 			temp = "",
 			_self = this;
 
-		$.get(page.sourceUrl,{},function(res){
+		$.get(page.sourceUrl,{userName:'userName01'},function(res){
 			for(var i = 0, source; source = sources[i++]; ){
 				temp = source.callback.call(_self,res) || "";
 				pageDom.querySelector(source.wrapper).innerHTML = temp;

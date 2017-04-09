@@ -28,6 +28,16 @@ myHand.prototype = {
 		});
 	},
 
+	swipeTop : function(callback){
+		callback = callback || function(){};
+		this.hammer.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+		this.swipe(function(ev){
+			if(ev.direction == 8){
+				callback(ev);
+			}
+		});
+	},
+
 	swipeRight : function(callback){
 		callback = callback || function(){};
 		this.swipe(function(ev){
@@ -41,6 +51,11 @@ myHand.prototype = {
 		callback = callback || function(){};
 		this.hammer.off("pan",callback);
 		this.hammer.on("pan",callback);
+	},
+
+	destroy : function(callback){
+		callback = callback || function(){};
+		this.hammer.destroy();
 	}
 
 };
