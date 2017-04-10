@@ -80,7 +80,7 @@ $.ajax({
 		var results = res.resultArray,
 			temp = "",
 			tempObj = null;
-		for( var i = 0, resultItem; i < 4 && resultItem = results[i++]; ){
+		for( var i = 0, resultItem; resultItem = results[i++]; ){
 			var actFlag = resultItem.intshowflag,
 				enrollFlag = resultItem.intenrollflg;
 
@@ -96,6 +96,9 @@ $.ajax({
 					'</div>';
 
 			temp += tpl;
+			if(i >= 4){
+				break;
+			}
 		}
 
 		$('.past-workshop-box').html(temp).find('.past-item').eq(0).attr("data-type","1");
@@ -112,7 +115,7 @@ $.ajax({
 		var results = res.resultArray,
 			temp = ""
 			tempObj = null;
-		for( var i = 0, resultItem; i < 6 && resultItem = results[i++]; ){
+		for( var i = 0, resultItem; resultItem = results[i++]; ){
 
 			var tpl = '<div class="swiper-slide">'+
 						'<div class="lec-item" data-id="'+resultItem.intid+'">'+
@@ -125,6 +128,9 @@ $.ajax({
 					'</div>';
 
 			temp += tpl;
+			if(i >= 6){
+				break;
+			}
 		}
 
 		$('.sc-2').find(".swiper-wrapper").html(temp).find('.lec-item').eq(0).attr("data-type","1");

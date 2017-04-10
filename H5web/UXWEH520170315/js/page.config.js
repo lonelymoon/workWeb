@@ -12,7 +12,7 @@ var pageConfig = {
 			"sources" : [{
 				"wrapper":".past-workshop-box",
 				"callback" : function(data){
-					var results = res.resultArray,
+					var results = data.resultArray,
 						tempData = results,
 						temp="";
 
