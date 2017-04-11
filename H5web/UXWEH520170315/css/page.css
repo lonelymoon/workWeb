@@ -125,7 +125,7 @@ html,body{
 	position: fixed;
 	left: 100%;
 	top: 0%;
-	background: #bb88aa;
+	background: #ffffff;
 	z-index: 2;
 }
 
@@ -150,6 +150,13 @@ html,body{
 	-o-transform: translate3d(-100%,0,0);
 	-moz-transform: translate3d(-100%,0,0);
 	transform: translate3d(-100%,0,0);
+}
+
+.detail-moreActive{
+	-webkit-transform: translate3d(-200%,0,0);
+	-o-transform: translate3d(-200%,0,0);
+	-moz-transform: translate3d(-200%,0,0);
+	transform: translate3d(-200%,0,0);
 }
 
 /************utils************/

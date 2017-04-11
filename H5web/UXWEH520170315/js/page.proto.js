@@ -11,6 +11,7 @@ var Page = function(options){
 	this.path = this.local.substring(0,this.local.lastIndexOf("/")+1);
 	this.pages = config.menuPage;
 	this.detailPages = config.detailPage;
+	this.detailActive = "normal";
 	this.ev = "ontouchstart" in document ? "touchend" : "click";
 	this.__created = false; //用于在页面完全加载后控制相关的功能创建
 
@@ -77,11 +78,31 @@ Page.prototype = {
 			var linkID = $(this).attr('data-link'),
 				pagelist = _self.pages.pagelist;
 
-			if(linkID == "center"){
-				
-			}
-
 			_self.loadProxyPages(linkID,pagelist,"menu");
+		});
+
+		function detailPageShow(e){
+			e.preventDefault();
+			e.stopPropagation();
+			var linkID = $(this).attr('data-link'),
+				pagelist = _self.detailPages.pagelist,
+				$id = $(this).attr("data-id"),
+				hasMenu = $('#page-box').hasClass("page-active");
+
+			localStorage.aid = $id;
+			_self.detailActive = "normal";
+			if(!hasMenu){
+				_self.detailActive = "more";
+			}
+			_self.loadProxyPages(linkID,pagelist,"detail");
+		}
+
+		$(".page-wrapper").on("click",this.detailLink,function(e){
+			detailPageShow.call(this,e);
+		});
+
+		$(".homepage-content").on("click",this.detailLink,function(e){
+			detailPageShow.call(this,e);
 		});
 
 		$(this.back).on("click",function(e){
@@ -100,17 +121,7 @@ Page.prototype = {
 	},
 
 	detailPageEventListen : function(){
-		var _self = this,
-			ev = this.ev;
-
-		$(this.detailLink).off(ev).on(ev,function(e){
-			e.preventDefault();
-			e.stopPropagation();
-			var linkID = $(this).attr('data-link'),
-				pagelist = _self.detailPages.pagelist;
-
-			_self.loadProxyPages(linkID,pagelist,"detail");
-		});
+		
 	},
 
 	//前置判断
@@ -135,7 +146,7 @@ Page.prototype = {
 
 		this.__created = false;
 
-		if(cache){
+		if(cache && type != "detail"){
 			_self.end(page,cache);
 			return;
 		}
@@ -170,9 +181,10 @@ Page.prototype = {
 	loadSources : function(page,pageDom,type){
 		var sources = page.sources,
 			temp = "",
-			_self = this;
+			_self = this,
+			pData = page.sourceData();
 
-		$.get(page.sourceUrl,{userName:'userName01'},function(res){
+		$.post(page.sourceUrl,pData,function(res){
 			for(var i = 0, source; source = sources[i++]; ){
 				temp = source.callback.call(_self,res) || "";
 				pageDom.querySelector(source.wrapper).innerHTML = temp;
@@ -278,7 +290,10 @@ Page.prototype = {
 	//添加内容到详细（二级）页面上
 	detailPageLoadEnd : function(pageDom){
 		$('#page-detail').find(".page-wrapper").hide().html(pageDom).show();
+		if(this.detailActive == "normal")
 		$('#page-detail').addClass('detail-active');
+		else
+		$('#page-detail').addClass('detail-moreActive');
 	},
 
 	//创建页面滚动
@@ -288,7 +303,6 @@ Page.prototype = {
 		    mouseWheel: true,
 		    scrollBar: true
 		});
-
 	},
 
 	//创建页面功能

@@ -53,6 +53,14 @@ img{
 	box-shadow: 0rem 0rem 0.1rem rgba(0,0,0,0.3);
 }
 
+.user-status{
+	position: absolute;
+    left: 1.8rem;
+    bottom: 0.8rem;
+    color: #fff;
+    font-size: 0.23rem;
+}
+
 .menu-box li{
 	padding-left: 0.8rem;
 	height: 1rem;
@@ -835,4 +843,135 @@ img{
 
 #page-menu .enroll-hasPassed[data-status="pass"]{
 	color: #E98F2E;
+}
+
+/**************************/
+#detail-page .detail-header{
+	position: relative;
+	height: auto;
+	background: #2C2D2F;
+	padding: 0.44rem 0.61rem 0.6rem 0.39rem;
+	color: #fff;
+}
+
+#detail-page .detail-title{
+	position: relative;
+	height: auto;
+}
+
+#detail-page .detail-cnTitle{
+	position: relative;
+	font-size: 0.33rem;
+	color: #FFFFFF;
+	letter-spacing: -0.13px;
+}
+
+#detail-page .detail-enTitle{
+	position: relative;
+	font-size: 0.25rem;
+	color: #FFFFFF;
+	letter-spacing: -0.11px;
+}
+
+#detail-page .detail-msg{
+	position: relative;
+	height: auto;
+	color: #FFFFFF;
+	font-size: 0.23rem;
+	letter-spacing: 1px;
+	line-height: 0.3rem;
+	margin-top: 0.39rem;
+}
+
+#detail-page .detail-content{
+	position: relative;
+	height: auto;
+	padding: 0rem 0.39rem;
+}
+
+#detail-page .user-row{
+	position: relative;
+	height: auto;
+	padding: 0.45rem 0rem 0.33rem 0rem;
+}
+
+#detail-page .user-name{
+	position: relative;
+	height: auto;
+	font-size: 0.2rem;
+	color: rgba(0,0,0,0.80);
+	letter-spacing: 0;
+}
+
+#detail-page .user-job{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-size: 0.2rem;
+	color: rgba(0,0,0,0.80);
+	letter-spacing: 0;
+	line-height: 0.3rem;
+	margin-top: 0.05rem;
+	max-width: 4rem;
+}
+
+#detail-page .user-photo{
+	position: absolute;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	overflow: hidden;
+	right: 0rem;
+	top: 0.5rem;
+	border: none;
+}
+
+#detail-page .detail-row{
+	position: relative;
+	height: auto;
+	padding: 0.43rem 0rem;
+	border-top: 2px solid #EBEBEB;
+}
+
+#detail-page .detail-row:after{
+	position: relative;
+	display: block;
+	content: "";
+	clear: both;
+}
+
+#detail-page .detail-label{
+	position: relative;
+	float: left;
+	font-size: 0.23rem;
+	color: rgba(0,0,0,0.80);
+	letter-spacing: 0;
+}
+
+#detail-page .detail-data{
+	position: relative;
+	float: right;
+	font-size: 0.23rem;
+	color: rgba(0,0,0,0.50);
+	letter-spacing: 0;
+}
+
+#detail-page .detail-row-title{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-size: 0.2rem;
+	color: #000000;
+	letter-spacing: -0.09px;
+}
+
+#detail-page .detail-row-content{
+	position: relative;
+	height: auto;
+	opacity: 0.8;
+	font-size: 0.2rem;
+	color: #000000;
+	letter-spacing: 0;
+	line-height: 0.37rem;
+	padding-top: 0.25rem;
 }

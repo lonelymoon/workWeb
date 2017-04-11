@@ -11,6 +11,9 @@ require.config({
 		"page" : "./page.proto"				//主代码
 	},
 	shim : {
+		"pageConfig" : {
+			deps : ["jquery"]
+		},
 		"pageHand" : {
 			deps : ["hammer"]
 		},
@@ -35,12 +38,14 @@ var page = new Page();
 //获取有没有登陆
 $.ajax({
 	"type" : "post",
-	"url" : "/Enrollbefore.action",
-	"data" : {intid:0},
+	"url" : "/weixintest/Gettuserlist.action",
+	"data" : {},
 	"dataType" : "json",
 	"async" : false,
 	"success" : function(res){
-		
+		var userMsg = res.jsonusermessage;
+		$('.user-photo').find("img").attr("src",userMsg.strimageurl);
+		$('.user-status').html(userMsg.strnickname);
 	}
 });
 
@@ -84,7 +89,7 @@ $.ajax({
 			var actFlag = resultItem.intshowflag,
 				enrollFlag = resultItem.intenrollflg;
 
-			var tpl = '<div class="past-item" data-id="'+resultItem.intid+'">'+
+			var tpl = '<div class="past-item detail-link" data-id="'+resultItem.intid+'" data-link="detail">'+
 						'<div class="past-item-msg">'+
 							'<div class="past-item-cnTitle">'+resultItem.strname+'</div>'+
 							'<div class="past-item-enTitle">'+resultItem.strengname+'</div>'+
