@@ -1,0 +1,274 @@
+#g-header{
+	position: relative;
+	height: 636px;
+	max-width: 1920px;
+	min-width: 1100px;
+	margin: 0 auto;
+	margin-top: -10px;
+	background: url("../images/tt.jpg") no-repeat top center;
+}
+
+#g-content{
+	position: relative;
+	height: auto;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.ctr{
+	position: relative;
+	height: auto;
+	background-repeat: no-repeat;
+	background-position: top center;
+}
+
+.ctr-1{
+	height: 539px;
+	background-image: url("../images/bj-1.jpg");
+	z-index: 2;
+}
+
+.ctr-2{
+	height: 508px;
+	background-image: url("../images/bj-2.jpg");
+	z-index: 1;
+}
+
+.ctr-3{
+	height: 482px;
+	background-image: url("../images/bj-3.jpg");
+	z-index: 2;
+}
+
+.ctr-4{
+	height: 475px;
+	background-image: url("../images/bj-4.jpg");
+	z-index: 1;
+}
+
+.ctr-5{
+	height: 452px;
+	background-image: url("../images/bj-5.jpg");
+	z-index: 2;
+}
+
+.ctr-6{
+	height: 701px;
+	background-image: url("../images/bj-6.jpg");
+	z-index: 1;
+}
+
+.ctr-7{
+	height: 763px;
+	background-image: url("../images/bj-7.jpg");
+}
+
+.column{
+	position: relative;
+	height: auto;
+}
+
+.column-nav{
+	position: relative;
+	height: auto;
+}
+
+.column-list{
+	position: relative;
+	height: auto;
+	float: left;
+}
+
+.column-list:hover{
+	cursor: pointer;
+}
+
+.column-content{
+	position: relative;
+	height: auto;
+}
+
+.row{
+	position: relative;
+	height: auto;
+}
+
+.clear{
+	float: none!important;
+	clear: both;
+}
+
+.last-item,.last-list{
+	margin-right: 0px!important;
+}
+
+.hide{
+	display: none!important;
+}
+
+/**************************************************/
+.pros-box{
+	position: relative;
+	height: auto;
+	padding-top: 250px;
+	width: 965px;
+	margin: 0 auto;
+}
+
+.pro-nav{
+	margin: 0 auto;
+	width: 818px;
+	margin-bottom: 34px;
+}
+
+.pro-nav .column-list{
+	width: 162px;
+	margin-right: 2px;
+}
+
+.pro-item{
+	float: left;
+	position: relative;
+	height: auto;
+	margin-right: 46px;
+}
+
+.pro-content .row-down{
+	position: relative;
+	height: auto;
+	width: 628px;
+	margin: 0 auto;
+	margin-top: 49px;
+}
+
+.title-box{
+	position: absolute;
+    top: 190px;
+    width: 90%;
+    left: 5%;
+    font-size: 20px;
+}
+
+.ddwl-item .title-box,.zyx-item .title-box,.gty-item .title-box{
+	top: 185px;
+	font-size: 18px;
+}
+
+.price-box{
+	position: absolute;
+	bottom: 24px;
+	left: 5%;
+	width: 50%;
+	color: rgb(226, 17, 17);
+	font-size: 22px;
+}
+
+/************************/
+.view-box{
+	position: relative;
+	height: auto;
+	width: 965px;
+	margin: 0 auto;
+	padding-top: 293px;
+}
+
+.view-nav{
+	float: left;
+	width: 284px;
+	height: auto;
+}
+
+.view-nav .column-list{
+	float: left;
+	width: 59px;
+	height: auto;
+	margin-right: 16px;
+}
+
+.view-content{
+	float: right;
+	width: 565px;
+	height: auto;
+}
+
+/************************/
+.food-box{
+	position: relative;
+	height: auto;
+	width: 910px;
+	margin: 0 auto;
+	padding-top: 300px;
+}
+
+.food-nav{
+	float: right;
+	width: 300px;
+	height: auto;
+}
+
+.food-nav .column-list{
+	float: right;
+	width: 60px;
+	height: auto;
+	margin-right: 20px;
+}
+
+.food-content{
+	float: left;
+	width: 570px;
+	height: auto;
+}
+
+/************************/
+.artical-box{
+	position: relative;
+	height: auto;
+	width: 859px;
+	margin: 0 auto;
+	padding-top: 0px;
+}
+
+.artical-nav{
+	position: absolute;
+	width: 493px;
+	height: auto;
+	right: 20px;
+	bottom: -80px;
+	z-index: 2;
+}
+
+.artical-nav .column-list{
+	float: left;
+	width: 89px;
+	height: auto;
+	margin-right: 12px;
+}
+
+.artical-content{
+	height: auto;
+}
+
+.link-box{
+	position: absolute;
+	width: 300px;
+	height: 100px;
+	bottom: 43px;
+	left: 50%;
+	margin-left: -190px;
+}
+
+.logo-link{
+	position: relative;
+	height: 100%;
+	width: 30%;
+	float: left;
+}
+
+.ll-1{
+	width: 70%;
+}
+
+.view-content .column-item a{
+	display: block;
+    padding-bottom: 65px;
+}
