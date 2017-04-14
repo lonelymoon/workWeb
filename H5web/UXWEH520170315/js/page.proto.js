@@ -243,7 +243,10 @@ Page.prototype = {
 			return;
 		}
 
+		if(this.detailActive == "normal")
 		$('#page-detail').removeClass('detail-active');
+		else if (this.detailActive == "more")
+		$('#page-detail').removeClass('detail-moreActive');
 	},
 
 	//transitionEnd
@@ -301,7 +304,8 @@ Page.prototype = {
 		//创建iscroll
 		var tempScroll = new Scroll(this.__triggerWrap + ' .page-wrapper', {
 		    mouseWheel: true,
-		    scrollBar: true
+		    scrollBar: true,
+		    tap : true
 		});
 	},
 

@@ -86,7 +86,6 @@ html,body{
 	top: 0rem;
 	z-index: 2;
 	background: #a34c5e;
-	overflow: hidden;
 	-webkit-transition:-webkit-transform 0.3s ease-in;
 	-moz-transition:-moz-transform 0.3s ease-in;
 	-o-transition:-o-transform 0.3s ease-in;

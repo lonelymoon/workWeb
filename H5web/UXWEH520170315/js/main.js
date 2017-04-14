@@ -43,9 +43,18 @@ $.ajax({
 	"dataType" : "json",
 	"async" : false,
 	"success" : function(res){
-		var userMsg = res.jsonusermessage;
-		$('.user-photo').find("img").attr("src",userMsg.strimageurl);
-		$('.user-status').html(userMsg.strnickname);
+		if(res.strflg == "1"){
+			$('.user-photo').find("img").attr("src",localStorage.userImg);
+			$('.user-status').html(localStorage.userName);
+			return false;
+		}
+		var userMsg = res.jsonusermessage,
+			url = userMsg.strimageurl,
+			name = userMsg.strnickname;
+		$('.user-photo').find("img").attr("src",url);
+		$('.user-status').html(name);
+		localStorage.userImg = url;
+		localStorage.userName = name;
 	}
 });
 
