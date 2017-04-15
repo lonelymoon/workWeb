@@ -1,5 +1,35 @@
 jQuery(function($){
 
+function getUrlObj(url){
+	url = url || window.location.href;
+	var reg = /([^?&=]+)=([^?&=]*)/g,
+		tempObj = {};
+	url.replace(reg,function(url,$1,$2){
+		var key = encodeURIComponent($1),
+			val = encodeURIComponent($2);
+		
+		tempObj[key] = val;
+		return url;
+	});
+
+	return tempObj;
+}
+
+var type = getUrlObj()["type"] || "";
+if(type == "edit"){
+	$.ajax({
+		type : "post",
+		data : {},
+		url : "",
+		datatype : "json",
+		success : function(data){
+			var resArr = data.resultarray;
+			$('.cityChoose').find(".selectorVal").attr("data-id","");
+		}
+	});
+	return;
+}
+
 var click = "ontouchend" in document ? "touchend" : "click",
 	sc2 = new IScroll('.content-box',{
 		mouseWheel : true
@@ -66,7 +96,6 @@ $('.cityChoose').on(click,'.selectorVal',function(e){
 		data:{intid:0},
 		type : "post",
 		"success" : function(data){
-			console.log(data);
 			hasGetSelector = true;
 			var d = data.resultarray,
 				len = d.length,
@@ -298,7 +327,6 @@ formData1.append("intnumber",len);
 
 var actId = localStorage.actId;
 formData1.append("intid",actId);
-console.log(actId);
 formData.append("intid",actId);
 formData.append("fileurlimg",$postImg);
 formData.append("straddress",$address);

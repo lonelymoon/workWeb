@@ -59,6 +59,24 @@ OutPut.checkLocalStorage = function(){
     }
 };
 
+OutPut.getUrlObj = function(url){
+	var u = url || window.location.href,
+		ulen = u.length,
+		str = u.substring(u.indexOf("?")),
+		reg = /([^&=?]+)=([^&=?]*)/g,
+		tempObjs = {};
+
+	str.replace(reg,function(str,$1,$2){
+		var key = decodeURIComponent($1),
+			value = decodeURIComponent($2);
+
+		tempObjs[key] = value + "";
+		return str;
+	});
+
+	return tempObjs;
+};
+
 OutPut.registerFileReader();
 
 window.Output = OutPut;
