@@ -261,8 +261,20 @@
 	top: -1px;
 }
 
+.check-status[data-status="unpass"]:before{
+	background: none;
+}
+
+.sign-status[data-status="unsign"]:before{
+	background: none;
+}
+
 #container[data-mode="manager"] .act-manager-status{
 	display: block;
+}
+
+#container[data-mode="manager"] .act-QRcode{
+	display: none;
 }
 
 #container[data-mode="manager"] .act-passed{

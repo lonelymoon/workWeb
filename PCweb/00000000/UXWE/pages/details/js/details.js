@@ -3,6 +3,7 @@
 var utils = uxwe.utils,
 	templete = uxwe.templete,
 	uid = utils.getUrlObj("uid") * 1,
+	type = utils.getUrlObj("type") || "",
 	subjectImgs = [{
 		"img" : "images/1.png",
 		"class" : ""
@@ -230,7 +231,7 @@ function createSwiper(ele,options){
 };
 
 /////////////////////////////////////////////////
-console.log(uid);
+utils.addClass("body",type);
 utils.ajax({
 	"method" : "post",
 	"url" : "/weixintest/Getactivityfromid.action",

@@ -1,16 +1,15 @@
 jQuery(function($){
 
-var utils = uxwe.utils,
-	actvts = [{
-		enTitle : "s",
-		cnTitle : "打撒",
-		lecName : "撒旦",
-		city : "上海",
-		date : "2013-04-20",
-		started : "未开始",
-		passed : "未通过"
-	}];
+if(!document.referrer){
+	window.location.href = "http://uxwetest.uxwe.org/UXWE/login/index.html?source=register";
+	return false;
+}
 
+var utils = uxwe.utils,
+	actvts = [];
+
+var uid = utils.getUrlObj("uid"),
+	type = utils.getUrlObj("type");
 
 var createActv = function(selector){
 	var wrapper = document.querySelector(selector),
@@ -65,9 +64,11 @@ var createActv = function(selector){
 			utils.addClass(QR,"hide");
 		}
 
+		var passed = actvt.strissuccess == "0" ? "pass" : "unpass",
+			signed = actvt.strsign == "0" ? "sign" : "unsign";
 		managerStatus.innerHTML = '<div class="manager-status enroll-status">报名情况</div>'+
-						'<div class="manager-status check-status">审核情况</div>'+
-						'<div class="manager-status sign-status">签到情况</div>';
+						'<div class="manager-status check-status" data-status="'+passed+'">审核情况</div>'+
+						'<div class="manager-status sign-status" data-status="'+signed+'">签到情况</div>';
 
 		enName.innerHTML = actvt.enTitle;
 		cnName.innerHTML = actvt.cnTitle;
@@ -100,39 +101,59 @@ uxwe.templete.loadTemplete([{
 	"wrapper" : "#header"
 }]);
 
-utils.ajax({
-	"method" : "get",
-	"url" : "/weixintest/Gettuserlist.action",
-	"data" : {},
-	"dataType" : "json",
-	"success" : function(data){
-		var result= data,
-			userMsg = result.jsonusermessage,
-			items = result.resultArray;
+function updateMsg(data){
 
-		$('.user-name').html(userMsg.strnickname);
-		$('.user-working').find("span").eq(0).html(userMsg.strjob);
-		$('.user-working').find("span").eq(1).html(userMsg.intworktime+"年");
-		$('.user-photo').html("<img src='"+userMsg.strimageurl+"' />");
+var result= data,
+	userMsg = result.jsonusermessage,
+	items = result.resultarray;
 
-		for( var i = 0, item; item = items[i++]; ){
-			var tempObj = {
-				"enTitle" : item.strengname,
-				"cnTitle" : item.stractivename,
-				"lecName" : item.strteachername,
-				"city" : item.strcityname,
-				"date" : (item.strStartime.split(" "))[0],
-				"started" : item.intshowflg,
-				"passed" : item.strissuccess
-			}
+$('.user-name').html(userMsg.strnickname);
+$('.user-working').find("span").eq(0).html(userMsg.strjob);
+$('.user-working').find("span").eq(1).html(userMsg.intworktime+"年");
+$('.user-photo').html("<img src='"+userMsg.strimageurl+"' />");
 
-			actvts.push(tempObj);
-		}
-
-		createActv(".user-activities .u-column-content");
-
+for( var i = 0, item; item = items[i++]; ){
+	var tempObj = {
+		"enTitle" : item.strengname,
+		"cnTitle" : item.stractivename,
+		"lecName" : item.strteachername,
+		"city" : item.strcityname,
+		"date" : (item.strStartime.split(" "))[0],
+		"started" : item.intshowflg,
+		"passed" : item.strissuccess,
+		"strissuccess" : item.strissuccess,
+		"strsign" : item.strsign
 	}
-});
+
+	actvts.push(tempObj);
+}
+
+createActv(".user-activities .u-column-content");
+
+}
+
+if(type!="manager"){
+	utils.ajax({
+		"method" : "get",
+		"url" : "/weixintest/Gettuserlist.action",
+		"data" : {},
+		"dataType" : "json",
+		"success" : function(data){
+			updateMsg(data);
+		}
+	});
+}else{
+	$('#container').attr("data-mode","manager");
+	utils.ajax({
+		"method" : "post",
+		"url" : "/Gettuserlistadmin.action",
+		"data" : {intid:uid},
+		"dataType" : "json",
+		"success" : function(data){
+			updateMsg(data);
+		}
+	});
+}
 
 
 });

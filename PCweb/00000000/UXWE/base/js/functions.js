@@ -514,6 +514,7 @@ templete.loadTemplete = function(options){
 };
 /*****************end******************/
 //获取有没有登陆
+if(!utils.getUrlObj("type"))
 utils.ajax({
 	"method" : "post",
 	"url" : "/Enrollbefore.action",

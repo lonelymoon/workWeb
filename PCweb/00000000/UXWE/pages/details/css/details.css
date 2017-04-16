@@ -341,3 +341,23 @@
 	max-width: 100%;
 	display: block;
 }
+
+.preview-title{
+	position: relative;
+	background: #FFF2F2;
+	border: 1px solid #FFF2F2;
+	height: 50px;
+	line-height: 50px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 22px;
+	font-size: 16px;
+	color: #646464;
+	letter-spacing: 0;
+	display: none;
+}
+
+.preview .preview-title{
+	display: block;
+}
