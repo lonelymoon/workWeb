@@ -522,9 +522,17 @@ utils.ajax({
 	"dataType" : "json",
 	"async" : false,
 	"success" : function(res){
+		res = JSON.parse(res);
 		if(res.strflg != "1" ){
 			navLists[4].text = "个人中心";
 			navLists[4].href = pathUrl+"pages/usercenter/userCenter.html";
+		}
+		else
+		{
+			var reg = new RegExp("usercenter","g"),
+				isUserCenter = reg.test(window.location.href);
+			if(isUserCenter)
+			window.location.href = pathUrl + "login/index.html?source=register";
 		}
 	}
 });
