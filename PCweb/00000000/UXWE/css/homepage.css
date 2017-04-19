@@ -246,6 +246,9 @@
 	-moz-transform: translateX(-3px);
 	-o-transform: translateX(-3px);
 	transform: translateX(-3px);
+}
+
+.left-time-register-btn[data-status="end"]{
 	display: none;
 }
 
@@ -499,10 +502,6 @@
 }
 
 /*other*/
-.choose{
-	min-width: 70px;
-	background: #FFE8D4;
-}
 
 .sChoose{
 	background: url("../images/hd_02.jpg") no-repeat center;

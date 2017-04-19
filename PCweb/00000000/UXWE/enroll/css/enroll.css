@@ -1,0 +1,206 @@
+#content{
+	max-width: 1920px;
+	position: relative;
+	margin: 0 auto;
+	height: auto;
+}
+
+.enroll-box{
+	max-width: 1000px;
+	margin: 0 auto;
+	padding-top: 104px;
+	position: relative;
+	height: auto;
+}
+
+.logo{
+	text-align: center;
+	font-size: 28px;
+	color: #604A41;
+	letter-spacing: 0;
+	font-weight: 800;
+	padding-bottom: 52px;
+}
+
+.logo>span{
+	color: #ffa229;
+}
+
+.title{
+	border: 1px solid #C0C0C0;
+	font-size: 18px;
+	color: rgba(0,0,0,0.8);
+	letter-spacing: 0.8px;
+	height: auto;
+	position: relative;
+	max-width: 480px;
+	margin: 0 auto;
+}
+
+.title>div{
+	position: absolute;
+	padding: 10px 20px;
+	left: 50%;
+	margin-left: -57px;
+	top: -22px;
+	background: #fff;
+}
+
+.status-box{
+	max-width: 480px;
+	margin: 0 auto;
+	padding-top: 60px;
+	padding-bottom: 170px;
+	height: auto;
+	position: relative;
+	text-align: center;
+	display: none;
+}
+
+.status-title{
+	font-size: 28px;
+	color: #FFA229;
+	letter-spacing: 1.24px;
+	line-height: 25px;
+}
+
+.under-review>.status-title,.success>.status-title{
+	padding-top: 20px;
+	font-size: 35px;
+	color: #FFA229;
+	letter-spacing: 1.6px;
+	font-weight: 700;
+}
+
+.note-msg{
+	font-size: 16px;
+	color: rgba(0,0,0,0.5);
+	letter-spacing: 0.71px;
+	padding-top: 50px;
+}
+
+.under-review>.note-msg{
+	font-size: 13px;
+	color: rgba(0,0,0,0.8);
+	letter-spacing: 0.49px;
+	line-height: 20px;
+	padding-top: 46px;
+}
+
+.success>.note-msg{
+	font-size: 20px;
+	color: rgba(0,0,0,0.8);
+	letter-spacing: 0.88px;
+	line-height: 25px;
+}
+
+.status-content{
+	position: relative;
+	height: auto;
+}
+
+.success .status-content{
+	margin-top: 20px;
+}
+
+.status-content:after{
+	content: "";
+	float: none;
+	clear: both;
+	display: block;
+}
+
+#reason{
+	height: 181px;
+	border: 2px solid #FFA229;
+	padding-top: 15px;
+	max-width: 480px;
+	width: 100%;
+	text-indent: 15px;
+	font-size: 16px;
+	color: rgba(166,165,165,0.8);
+	letter-spacing: 0.8px;
+	outline: none;
+	margin-top: 13px;
+}
+
+.btn-submit{
+	height: 60px;
+	background: rgba(255,162,41,1);
+	text-align: center;
+	line-height: 60px;
+	font-size: 22px;
+	color: #FFFFFF;
+	letter-spacing: 0.97px;
+	margin-top: 55px;
+}
+
+.bottom-link{
+	margin-top: 30px;
+	border-top: 1px solid #C0C0C0;
+	padding-top: 30px;
+	font-size: 18px;
+	color: #FFA229;
+	letter-spacing: 0.8px;
+}
+
+.under-review>.bottom-link{
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+.success>.bottom-link{
+	margin-top: 16px;
+	padding-top: 20px;
+	font-size: 22px;
+	letter-spacing: 0.97px;
+}
+
+.bottom-link span:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.bottom-link a{
+	color: #FFA229;
+}
+
+.code-msg{
+	padding: 10px;
+	font-size: 12px;
+	color: rgba(0,0,0,0.5);
+	letter-spacing: 0.5px;
+	border-bottom: 1px solid #C0C0C0;
+	width: 120px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.event{
+	max-width: 290px;
+	height: 190px;
+	overflow: hidden;
+	position: relative;
+	float: left;
+}
+
+.event>img{
+	display: block;
+	max-width: 290px;
+}
+
+.success .QRcode{
+	float: left;
+	width: 190px;
+	height: 190px;
+	text-align: center;
+}
+
+.note-msg-bottom{
+	font-size: 12px;
+	color: #A6A5A5;
+	letter-spacing: 0.5px;
+	line-height: 16px;
+	margin-top: 10px;
+	text-align: left;
+}

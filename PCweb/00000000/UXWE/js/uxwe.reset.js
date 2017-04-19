@@ -235,10 +235,14 @@
 
 	      	speechNoteMsg.innerHTML = nowActvt["noteMsg"];
 
+	      	var end = "";
+	      	if(nowActvt["left-day"] == 0){
+	      		end = "end";
+	      	}
 	      	leftTimeBox.innerHTML = '<div class="left-time">'+nowActvt["left-day"]+'<span>天</span></div>'+
 		      						'<div class="left-time-note">距离活动开始还有</div>'+
 		      						'<a href="enroll/index.html?source=enroll&id='+nowActvt["id"]+'">'+
-		      							'<div class="left-time-register-btn">立即报名</div>'+
+		      							'<div class="left-time-register-btn" data-status='+end+'>立即报名</div>'+
 		      						'</a>';
 
 		    paginationList.innerHTML = '<div class="pagination-list">'+

@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>欢迎加入UXWE</title>
+<link rel="Shortcut Icon" href="favicon.ico" />
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+<link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+<body>
+<section id="content">
+
+	<div class="context-box">
+		<div class="register-total-title">
+			完善个人资料
+		</div>
+		<div class="register-content">
+			<div class="note-msg">
+				必填项
+			</div>
+			<div class="input-list-box">
+				<label for="name">称呼</label>
+				<div class="input-box">
+					<input type="text" id="name" class="input-list" placeholder="称呼" />
+				</div>	
+			</div>
+			<div class="input-list-box">
+				<label for="phone">手机号码</label>
+				<div class="phone-box input-box">
+					<div class="phone-before">+86</div>
+					<input type="text" id="phone" class="input-list" placeholder="18823333333" />
+				</div>
+			</div>
+			<div class="input-list-box">
+				<label for="code">验证手机号码</label>
+				<div class="input-box code-box">
+					<input type="text" id="code" class="input-list" placeholder="请输入手机验证码" />
+					<div class="code-after">点击获取验证码</div>
+				</div>
+			</div>
+			<div class="input-list-box">
+				<label for="company">公司</label>
+				<div class="input-box">
+					<input type="text" id="company" class="input-list" placeholder="公司名称" />
+				</div>	
+			</div>
+			<div class="input-list-box">
+				<div class="select-box">
+					<label for="job">工作领域</label>
+					<div id="job" class="selector">
+						<span>视觉设计</span>
+						<ul>
+							<li>视觉设计</li>
+							<li>交互设计</li>
+							<li>产品经理</li>
+							<li>创意总监</li>
+							<li>其他</li>
+						</ul>
+						<div class="icon-select">
+							<img src="images/select.png">
+						</div>
+					</div>
+				</div>
+				<div class="select-box">
+					<label for="duration">工作年限</label>
+					<input type="text" id="duration" class="duration" maxlength="2" placeholder="1" />
+					<span class="years">年</span>
+				</div>
+			</div>
+			<div class="btn-submit">
+				提交
+			</div>
+			<div class="note-msg-bottom">
+				请填写所有必填(<span>*</span>)信息
+			</div>
+			<div class="rights">
+				单击 "创建账户"，即表示您同意 UXWE 的<a href="">条款和条件</a>以及<a href="">隐私政策</a>
+			</div>
+		</div>
+	</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/uxwee.js"></script>
+<script type="text/javascript" src="../js/uxwee.utils.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
+</body>
+</html>

@@ -25,7 +25,7 @@ var templete = {},
 		"children" : {}
 	},{
 		"text" : "注册/登录",
-		"href" : "javascript:;",
+		"href" : "http://uxwetest.uxwe.org/UXWE/login/index.html?source=register",
 		"children" : {}
 	}],
 	//lecturers
@@ -244,7 +244,8 @@ templete.nav = {
 
 	createNavList : function(selector){
 		var wrapper = document.querySelector(selector),
-			temp = "";
+			temp = "",
+			loca = window.location.href;
 
 		for( var i = 0, list; list = navLists[i++]; ){
 
@@ -252,9 +253,9 @@ templete.nav = {
 				"class" : "nav-list",
 				"data-id" : i,
 				"data-link" : list["href"]				
-			});
+			}), href = new RegExp(list["href"]);
 
-			if(i == 1){
+			if(href.test(loca)){
 				li.className += " choose";
 			}
 

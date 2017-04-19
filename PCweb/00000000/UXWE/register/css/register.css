@@ -1,0 +1,303 @@
+#content{
+	max-width: 1920px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+}
+
+.context-box{
+	max-width: 634px;
+	height: auto;
+	margin: 0 auto;
+	position: relative;
+}
+
+.register-total-title{
+	padding-top: 110px;
+	font-size: 26px;
+	color: #000000;
+	letter-spacing: 0;
+	font-weight: 600;
+}
+
+.register-content{
+	padding-top: 40px;
+	position: relative;
+	height: auto;
+}
+
+.note-msg{
+	position: absolute;
+	right: 4px;
+	top: 28px;
+	font-size: 14px;
+	color: #666666;
+	letter-spacing: 0;
+}
+
+.note-msg:before{
+	content: "*";
+	font-size: 16px;
+	color: #EA5514;
+	letter-spacing: 0;
+}
+
+.input-list-box{
+	position: relative;
+	height: auto;
+	padding-bottom: 42px;
+}
+
+.input-list-box:last-child{
+	padding-bottom: 0px;
+}
+
+.input-list-box:after{
+	content: "";
+	display: block;
+	float: none;
+	clear: both;
+}
+
+.input-list-box label{
+	font-size: 14px;
+	color: #666666;
+	letter-spacing: 0;
+	padding-bottom: 14px;
+	display: block;
+	position: relative;
+	padding-left: 12px;
+}
+
+.input-list-box label:before{
+	content: "*";
+	font-size: 16px;
+	color: #FFA229;
+	letter-spacing: 0;
+	position: absolute;
+	left: 0px;
+	top: -2px;
+}
+
+.input-box{
+	position: relative;
+	height: auto;
+}
+
+.input-box:after{
+	content: "";
+	display: block;
+	clear: both;
+	float: none;
+}
+
+.input-list{
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	height: 50px;
+	max-width: 634px;
+	width: 100%;
+	outline: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	text-indent: 24px;
+	font-size: 18px;
+	color: #C2C2C2;
+	letter-spacing: 0;
+}
+
+.phone-box{
+	padding-left: 139px;
+}
+
+.phone-before{
+	position: absolute;
+	max-width: 139px;
+	width: 100%;
+	border: 1px solid #cccccc;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+	color: rgba(0,0,0,0.8);
+	letter-spacing: 2px;
+	left: 0px;
+	top : 0px;
+	border-radius: 3px 0px 0px 3px;
+	border-right: none;
+}
+
+#phone{
+	max-width: 495px;
+	font-size: 18px;
+	color: rgba(194,194,194,0.9);
+	letter-spacing: 5.69px;
+}
+
+#code{
+	max-width: 495px;
+	border-right: none;
+	letter-spacing: 0;
+	color: rgba(194,194,194,1);
+	font-size: 18px;
+}
+
+.code-box{
+	padding-right: 139px;
+}
+
+.code-after{
+	position: absolute;
+	max-width: 139px;
+	border: 1px solid #cccccc;
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	right: 0px;
+	top : 0px;
+	border-left: none;
+	border-radius: 0px 3px 3px 0px;
+	background: rgba(255,162,41,1);
+}
+
+.code-after:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.select-box{
+	float: left;
+	margin-right: 12px;
+	max-width: 309px;
+	width: 100%;
+	position: relative;
+}
+
+.select-box:last-child{
+	margin-right: 0px;
+}
+
+.selector{
+	background: #F1F1F1;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	font-size: 18px;
+	color: rgba(0,0,0,0.8);
+	letter-spacing: 0;
+	height: 50px;
+	text-indent: 16px;
+	line-height: 50px;
+}
+
+.selector:hover{
+	cursor: pointer;
+	opacity: 0.9;
+}
+
+.selector ul{
+	display: none;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-top: none;
+	margin-left: -1px;
+	position: absolute;
+}
+
+.selector ul li{
+	background: rgba(241,241,241,0.7);
+	border-bottom: 1px solid #ccc;
+}
+
+.selector ul li:last-child{
+	border-bottom: none;
+}
+
+.selector ul li:hover{
+	background: #66ccff;
+	color: #fff;
+}
+
+#duration{
+	max-width: 309px;
+	width: 100%;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	font-size: 18px;
+	color: rgba(0,0,0,0.8);
+	letter-spacing: 0;
+	height: 50px;
+	text-indent: 40px;
+	line-height: 50px;
+}
+
+.years{
+	position: absolute;
+	left: 94px;
+	top: 48px;
+	font-size: 18px;
+	border-left: 1px solid #cccccc;
+	padding-left: 10px;
+}
+
+.icon-select{
+	position: absolute;
+	right: 20px;
+	top: 37px;
+}
+
+.btn-submit{
+	max-width: 634px;
+	height: 65px;
+	line-height: 65px;
+	background: rgba(255,162,41,1);
+	font-size: 24px;
+	color: #FFFFFF;
+	letter-spacing: 0.58px;
+	text-align: center;
+	margin-top: 114px;
+}
+
+.btn-submit:hover{
+	opacity: 0.9;
+	cursor: pointer;
+}
+
+.note-msg-bottom{
+	text-align: center;
+	font-size: 16px;
+	color: #666666;
+	letter-spacing: 1px;
+	padding-top: 25px;
+}
+
+.note-msg-bottom>span{
+	color: rgba(255,162,41,1);
+}
+
+.rights{
+	padding-top: 50px;
+	font-size: 16px;
+	color: #666666;
+	letter-spacing: -0.5px;
+	text-align: center;
+	padding-bottom: 113px;
+}
+
+.rights>a{
+	color: rgba(255,162,41,1);
+}
+
+/*****/
+.alert{
+	border-color : #FF2323;
+}
+
+.sending{
+	background: #d0d0d0;
+	color: #3a3a3a;
+	font-size: 14px;
+}
