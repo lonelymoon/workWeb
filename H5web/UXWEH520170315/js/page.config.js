@@ -146,6 +146,7 @@ var pageConfig = {
 							tpl = '<div class="enroll-item">'+
 									'<div class="enroll-item-image">'+
 										'<img src="'+item.strimgurl+'">'+
+										'<div class="enroll-QRcode-box" data-status="'+passed+'"><img src="'+(item.strercodeurl || "")+'"></div>'+
 									'</div>'+
 									'<div class="enroll-item-msg">'+
 										'<div class="enroll-base-msg">'+

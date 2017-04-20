@@ -759,8 +759,28 @@ img{
 }
 
 #page-menu .enroll-item-image{
+	position: relative;
 	height: 1.44rem;
 	overflow: hidden;
+}
+
+#page-menu .enroll-QRcode-box{
+	position: absolute;
+	right: 0.4rem;
+	width: 1.2rem;
+	height: 1.2rem;
+	top: 50%;
+	margin-top: -0.6rem;
+	z-index: 2;
+}
+
+#page-menu .enroll-QRcode-box img{
+	max-width: 100%;
+	display: block;
+}
+
+#page-menu .enroll-QRcode-box[data-status="unpass"]{
+	display: none;
 }
 
 #page-menu .enroll-item-msg{
