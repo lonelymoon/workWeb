@@ -322,13 +322,12 @@
 
 	utils.getDate = function(date){
 		if(date){
-			if(!date instanceof Date)
-			date = date.replace(/-|,/g,"/");
+			date = date.replace(/-/g,"/");
 		} else {
 			date = new Date();
 		}
 
-		return new Date(date);
+		return new Date(Date.parse(date));
 	};
 
 	utils.getTime = function(date){
@@ -388,8 +387,6 @@
 		if(!date){
 			return false;
 		}
-
-		date2 = date2 || new Date();
 
 		return (this.getTime(date) - this.getTime(date2));
 	};

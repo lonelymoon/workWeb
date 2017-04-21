@@ -13,11 +13,12 @@ sup{vertical-align:baseline;}
 sub{vertical-align:baseline;}legend{color:#000;}
 input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}input,button,textarea,select{*font-size:100%;}
 body{font-size:12px;}
-a{color: #333333;text-decoration: none;}
+a{color: #333333;text-decoration: none;-webkit-tap-highlight-color: rgba(255,0,0,0);}
 a:hover{text-decoration:underline; color:#c00;}
 
 /*font*/
 *{
 	/*font-family: "SimHei","Heiti SC","STHeiti","黑体";*/
 	font-family: "PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
+	-webkit-tap-highlight-color: rgba(255,0,0,0);
 }
