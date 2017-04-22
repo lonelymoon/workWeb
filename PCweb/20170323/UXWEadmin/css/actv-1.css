@@ -39,11 +39,13 @@
 	width: 740px;
 	top: 50%;
 	margin-top: -300px;
-	height: 600px;
+	min-height: 600px;
 	left: 50%;
 	margin-left: -400px;
+	padding-bottom: 10px;
 }
 
 .save-btn{
 	margin-top: 0px;
+	margin-right: 0px;
 }

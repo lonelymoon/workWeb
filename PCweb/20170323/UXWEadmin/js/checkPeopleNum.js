@@ -6,7 +6,7 @@ function createData(data){
 	var temp = "",
 		arr = data.resultarray,
 		len = arr.length;
-
+	console.log("arr==" + arr);
 	for( var i = 0; i < len; i++ ){
 		var done = arr[i].strsign == "0" ? "done" : "no";
 			tpl = '<div class="row">'+
@@ -41,7 +41,8 @@ $.ajax({
 	data:{activeid:$aid},   
 	dataType:'json', //很重要!!!.预期服务器返回的数据类型 ,  
 	success:function(data)
-	{              	                 
+	{             
+		console.log("data==" + data);
 		createData(data);                         				
 	},
 	error:function()

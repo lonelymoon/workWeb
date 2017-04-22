@@ -15,21 +15,6 @@ function getUrlObj(url){
 	return tempObj;
 }
 
-var type = getUrlObj()["type"] || "";
-if(type == "edit"){
-	$.ajax({
-		type : "post",
-		data : {},
-		url : "",
-		datatype : "json",
-		success : function(data){
-			var resArr = data.resultarray;
-			$('.cityChoose').find(".selectorVal").attr("data-id","");
-		}
-	});
-	return;
-}
-
 var click = "ontouchend" in document ? "touchend" : "click",
 	sc2 = new IScroll('.content-box',{
 		mouseWheel : true
@@ -254,9 +239,11 @@ function checkNull(selector){
 
 $('.save-btn').on(click,function(e){
 
-if(isUploading){
-	return false;
-}
+	canUpload = true;
+
+	if(isUploading){
+		return false;
+	}
 
 var formData = new FormData(),
 	$city = $('.cityChoose').find('.selectorVal').attr("data-id"),
@@ -295,6 +282,11 @@ if(!$lang){
 	return false;
 }
 
+if(!$city){
+	alert("请选择城市");
+	return false;
+}
+
 if(!$postImg){
 	alert("请选择banner");
 	return false;
@@ -315,7 +307,7 @@ for( var i = 0 ; i < len; i++){
 		continue;
 	}
 
-	formData1.append("strname"+idx,name);
+	formData1.append("strname"+idx,encodeURI(name));
 	formData1.append("fileurlimg"+idx,file);
 	formData1.append("strdistinguish"+idx,"1");
 	formData1.append("intsponsorid"+idx,0);
@@ -329,23 +321,23 @@ var actId = localStorage.actId;
 formData1.append("intid",actId);
 formData.append("intid",actId);
 formData.append("fileurlimg",$postImg);
-formData.append("straddress",$address);
-formData.append("strpost_code",$pCode);
+formData.append("straddress",encodeURI($address));
+formData.append("strpost_code",encodeURI($pCode));
 formData.append("strstartime",$actDate+" "+$actTime);
 formData.append("strendtime",$actEndDate+" "+$actEndTime);
 formData.append("strenrollstarttime",$enrollDate+" "+$enrollTime);
 formData.append("strenrollendtime",$enrollEndDate+" "+$enrollEndTime);
 formData.append("intpeoplenumber",0);
-formData.append("strmessage",$describe);
+formData.append("strmessage",encodeURI($describe));
 formData.append("strnoticeTime",$callDate);
 formData.append("intcity",$city * 1);
 formData.append("strdistinguish",$doShow);
 formData.append("intteacher_id",$lec * 1)
 formData.append("strengname","0");
-formData.append("strcourse",$describe);
-formData.append("strlanguage",$lang);
-formData.append("strbackground",$bg);
-formData.append("strgain",$gain);
+formData.append("strcourse",encodeURI($describe));
+formData.append("strlanguage",encodeURI($lang));
+formData.append("strbackground",encodeURI($bg));
+formData.append("strgain",encodeURI($gain));
 formData.append("strremarkmessage","0");
 formData.append("strtype","0");
 
@@ -356,17 +348,15 @@ isUploading = true;
 
 var xhr = new XMLHttpRequest();
 
-
 xhr.open("post","/CreateActive");
 xhr.addEventListener("load",function(e){
-	uploading = false;
 	var res = xhr.responseText,
 		res1 = JSON.parse(res);
 	if(res1["strflg"] == "0"){		
 		var xhr1 = new XMLHttpRequest();
 		xhr1.open("post","/ActivitySponsor");
 		xhr1.addEventListener("load",function(e){
-			uploading = false;
+			isUploading = false;
 			var res2 = xhr1.responseText,
 				res1 = JSON.parse(res2);
 			if(res1["strflg"] == "0"){

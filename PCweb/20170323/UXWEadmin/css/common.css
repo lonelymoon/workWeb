@@ -414,6 +414,7 @@ html,body{
 	letter-spacing: 0;
 	text-align: center;
 	line-height: 60px;
+	margin-right: 60px;
 }
 
 .save-btn:hover{
