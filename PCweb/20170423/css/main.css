@@ -1,0 +1,204 @@
+#n-header{
+	position: relative;
+	height: 820px;
+	max-width: 1920px;
+	min-width: 1000px;
+	background: url("../images/tt.jpg") no-repeat top center;
+	margin: 0 auto;
+	margin-top: -10px;
+}
+
+#n-content{
+	position: relative;
+	height: auto;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.ctr{
+	position: relative;
+	height: auto;
+	min-width: 1000px;
+}
+
+.ctr-1{
+	background: url("../images/bj-1.jpg") no-repeat top center;
+	height: 663px;
+}
+
+.ctr-2{
+	background: url("../images/bj-2.jpg") no-repeat top center;
+	height: 525px;
+}
+
+.ctr-3{
+	background: url("../images/bj-3.jpg") no-repeat top center;
+	height: 791px;
+}
+
+.ctr-4{
+	background: url("../images/bj-4.jpg") no-repeat top center;
+	height: 456px;
+}
+
+.ctr-5{
+	background: url("../images/bj-5.jpg") no-repeat top center;
+	height: 1082px;
+}
+
+/*************/
+.pro-box{
+	position: relative;
+	height: auto;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.pro-box-1,.pro-box-3{
+	position: absolute;
+	width: 916px;
+	left: 50%;
+	margin-left: -460px;
+	height: 310px;
+	bottom: 19px;
+}
+
+.pro-box-2,.pro-box-4{
+	position: absolute;
+	width: 916px;
+	left: 50%;
+	margin-left: -460px;
+	height: 310px;
+	top: 0px;
+}
+
+.pro-box-3{
+	width: 973px;
+	margin-left: -487px;
+	bottom: 24px;
+}
+
+.pro-box-4{
+	width: 973px;
+	margin-left: -487px;
+	top: 69px;
+	height: 303px;
+}
+
+.pro-box-3 .pro-item,.pro-box-4 .pro-item{
+	width: 474px;
+}
+
+.pro-item{
+	position: relative;
+	height: auto;
+	float: left;
+}
+
+.p-1-1,.p-1-2{
+	height: 100%;
+	width: 447px;
+	margin-right: 21px;
+}
+
+.p-1-2{
+	margin-right: 0px;
+}
+
+.pro-title{
+	position: absolute;
+	width: 90%;
+	left: 5%;
+	bottom: 45px;
+	font-size: 20px;
+	font-family: "黑体";
+	color: #000;
+}
+
+.pro-price{
+	position: absolute;
+	left: 5%;
+	bottom: 10px;
+	font-size: 28px;
+	font-family: "黑体";
+	color: #df4539;
+}
+
+.pro-price>span{
+	padding-right: 5px;
+}
+
+.more-btn{
+	position: absolute;
+    bottom: -114px;
+    right: -10px;
+    width: 155px;
+    height: 45px;
+}
+
+.more-btn-2{
+	position: absolute;
+	right: 0px;
+	top: -58px;
+	width: 100px;
+	height: 40px;
+}
+
+.more-btn-3{
+	position: absolute;
+    right: 29px;
+    bottom: -93px;
+    width: 169px;
+    height: 50px;
+}
+
+.nav-box{
+	position: relative;
+	height: auto;
+	padding-top: 288px;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.nav-item{
+	position: relative;
+	height: auto;
+	float: left;
+	margin-right: 29px;
+	margin-bottom: 62px;
+}
+
+.last-item{
+	margin-right: 0px;
+}
+
+.last-row{
+	margin-bottom: 0px;
+}
+
+.logo-box{
+	position: absolute;
+	bottom: 24px;
+	width: 600px;
+	margin-left: -300px;
+	left: 50%;
+	height: 160px;
+}
+
+.logo-set{
+	position: relative;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.clear{
+	position: relative;
+	display: block;
+	clear: both;
+	float: none!important;
+}
+
+.hide{
+	display: none;
+}
