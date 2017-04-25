@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>约惠南通、礼让上海</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="https://webresource.c-ctrip.com/code/lizard/2.1/web/lizard.seed.js"></script>
+<script type="text/javascript" src="js/head.js"></script>
+</head>
+<body>
+
+<section id="page1-bg">
+  <img src="images/sy.jpg">
+  <a href="index2.html">
+    <div class="link-set"></div>
+  </a>
+</section>
+
+<div id="ios" class="apple">
+	该活动苹果不是赞助商，并且苹果也不会以任何形式参与其中！
+</div>
+<script>
+var ua = navigator.userAgent.toLowerCase() || '',
+	isIOS = /(ios|iphone|ipad|ipod)/.test(ua);
+if (isIOS) {
+	document.getElementById('ios').style.display = 'block';
+}
+isAPP = /ctripwireless/.test(ua);
+</script>
+
+<script>
+Lizard.viewReady(function () {
+  var CtripGS = {},
+      nlocaHref = window.location.href,
+      locaPath = nlocaHref.substring(0,nlocaHref.lastIndexOf("/")+1);
+
+  CtripGS.shareCommon = function (JSONString) {
+    if (Internal.isNotEmptyString(JSONString)) {
+      jsonObj = JSON.parse(JSONString);
+      jsonObj.service = "Destination";
+      jsonObj.action = "shareCommon";
+      paramString = JSON.stringify(jsonObj);
+      if (Internal.isIOS || Internal.isOldVersion) {
+        url = Internal.makeURLWithParam(paramString);
+        Internal.loadURL(url);
+      }
+      else if (Internal.isAndroid) {
+        window.CtripGS_a.shareCommon(paramString);
+      }
+    }
+  };
+  var nav_bar_config_json = {
+    "center": [{"tagname": "title", "value": "约惠南通、礼让上海"}],
+    "right": [{"tagname": "share", "value": "分享"}]
+  };
+  var json_str = JSON.stringify(nav_bar_config_json);
+  CtripBar.app_refresh_nav_bar(json_str);
+
+  window.app = {
+    callback: function (json_obj) {
+      
+      var tagname = json_obj.tagname;
+      if (tagname == 'share') {
+
+        var param = {
+          sharetag: '约惠南通、礼让上海',
+          shareUrl: nlocaHref,
+          weixinContent: "约惠南通、礼让上海",
+          weiboContent: "约惠南通、礼让上海",
+          title: "约惠南通、礼让上海",
+          picUrl: locaPath + "images/h.jpg"
+        };
+        CtripGS.shareCommon(JSON.stringify(param));
+      }
+    }
+  };
+
+});
+</script>
+<script type='text/javascript' src='https://webresource.c-ctrip.com/code/cquery/LABjs/LAB.js'></script>
+<input type='hidden' id='page_id' value='10320661714'/>
+</body>
+</html>
