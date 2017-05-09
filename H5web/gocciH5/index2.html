@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>Pay the merchant</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<section id="container">
+  <img src="images/jiaoyi.png">
+  <a href="index2-1.html" class="link">
+    <div class="link-payend"></div>
+  </a>
+</section>
+<script type="text/javascript">
+document.querySelector(".link").onclick = function(e){
+	e = e || event;
+	e.preventDefault();
+	e.stopPropagation();
+	var href = window.location.href,
+		idx = href.indexOf("?")+1, 
+		obj = "";
+
+	if(idx > 0){
+		obj = href.substring(idx);
+	}
+
+	window.location.href = "index2-1.html?"+obj;
+};
+</script>
+</body>
+</html>

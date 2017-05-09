@@ -1,0 +1,201 @@
+#container{
+	position: relative;
+	height: auto;
+	max-width: 6.25rem;
+	margin: 0 auto;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+.link-pay{
+	position: absolute;
+	width: 1rem;
+	height: 0.6rem;
+	left: 4.8rem;
+	top: 2.36rem;
+}
+
+.link-set{
+	position: absolute;
+	top: 3.56rem;
+	height: 0.55rem;
+	width: 4.15rem;
+	left: 50%;
+	margin-left: -2.375rem;
+	z-index: 2;
+}
+
+.mapBox{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0rem;
+	top: 0rem;
+	z-index: 2;
+}
+
+.startBox{
+	position: absolute;
+	top: 4.42rem;
+	left: 3.23rem;
+	width: 0.183rem;
+	height: 0.183rem;
+}
+
+.startPoint{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.startIcon{
+	position: absolute;
+	left: -0.09rem;
+	top: -0.32rem;
+	width: 0.35rem;
+	height: 0.433rem;
+}
+
+.endBox{
+	position: absolute;
+	top: 5rem;
+	left: 3.82rem;
+	width: 0.183rem;
+	height: 0.183rem;
+}
+
+.endPoint{
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+.endIcon{
+	position: absolute;
+	left: -0.09rem;
+	top: -0.32rem;
+	width: 0.35rem;
+	height: 0.433rem;
+}
+
+.endTitle{
+	position: absolute;
+	width: 3.683rem;
+	height: auto;
+	top: -2.5rem;
+	left: -1.8rem;
+}
+
+.lineBox{
+	position: absolute;
+	top: 4.42rem;
+	left: 2.16rem;
+	width: 1.73rem;
+	height: 1.53rem;
+}
+
+.line{
+	position: absolute;
+	height: 0.06rem;
+	background: #1BAC3F;
+}
+
+.line-1{
+	width: 0.59rem;
+	left: 0.51rem;
+	top: 0.06rem;
+}
+
+.line-2{
+	width: 1rem;
+	left: -0.23rem;
+	top: 0.48rem;
+	-webkit-transform:rotate(-60deg);
+	transform:rotate(-60deg);
+}
+
+.line-3{
+	width: 0.8rem;
+	left: -0.27rem;
+	top: 1.28rem;
+	-webkit-transform:rotate(75deg);
+	transform:rotate(75deg);
+}
+
+.line-4{
+	width: 1.2rem;
+	left: 0.23rem;
+	top: 1.65rem;
+}
+
+.line-5{
+	width: 0.5rem;
+	left: 1.17rem;
+	top: 1.422rem;
+	-webkit-transform:rotate(90deg);
+	transform:rotate(90deg);
+}
+
+.line-6{
+	width: 0.56rem;
+	left: 1.28rem;
+	top: 0.94rem;
+	-webkit-transform:rotate(120deg);
+	transform:rotate(120deg);
+}
+
+.link-payend{
+	position: absolute;
+	bottom:0rem;
+	left: 0rem;
+	height: 3.6rem;
+	width: 100%; 
+	z-index: 2;
+}
+
+.link-btn{
+	position: absolute;
+	top: 7.56rem;
+	width: 3rem;
+	height: 0.6rem;
+	left: 50%;
+	margin-left: -1.5rem;
+}
+
+.link-list{
+	position: absolute;
+	width: 50%;
+	height: 4.58rem;
+	bottom: 0rem;
+}
+
+.ll1{
+	left: 0rem;
+}
+
+.ll2{
+	right: 0rem;
+}
+
+.follow-btn{
+	position: absolute;
+	bottom: 0.86rem;
+	width: 4.5rem;
+	left: 50%;
+	margin-left: -2.25rem;
+	height: 0.6rem
+}
+
+.follow-complete{
+	position: fixed;
+	z-index: 3;
+	width: 2rem;
+	height: 2rem;
+	left: 50%;
+	margin-left: -1rem;
+	top: 4.4rem;
+	display: none;
+}
