@@ -9,19 +9,30 @@
 </head>
 <body>
 <section id="container">
-  <img src="images/zhifu.png">
+  <img src="images/zhifu.png" class="img2 hide">
+  <img src="images/zhifu1.png" class="img1 hide">
   <a href="" class="link">
     <div class="link-btn"></div>
   </a>
+  <a href="index2-2.html">
+  	<div class="follow-link"></div>
+  </a>
 </section>
 <script type="text/javascript">
+var href = window.location.href,
+	obj = href.substring(href.indexOf("?")+1),
+	regIn = new RegExp("in");
+
+if(regIn.test(obj)){
+	document.querySelector(".img1").className = "img1";
+} else {
+	document.querySelector(".img2").className = "img2";
+}
+
 document.querySelector(".link").onclick = function(e){
 	e = e || event;
 	e.preventDefault();
 	e.stopPropagation();
-	var href = window.location.href,
-		obj = href.substring(href.indexOf("?")+1),
-		regIn = new RegExp("in");
 
 	if(regIn.test(obj)){
 		window.location.href = "index.html";

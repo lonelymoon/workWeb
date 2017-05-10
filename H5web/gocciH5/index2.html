@@ -9,19 +9,27 @@
 </head>
 <body>
 <section id="container">
-  <img src="images/jiaoyi.png">
+  <img src="images/jiaoyi.png" class="img2 hide">
+  <img src="images/jiaoyi1.png" class="img1 hide">
   <a href="index2-1.html" class="link">
     <div class="link-payend"></div>
   </a>
 </section>
 <script type="text/javascript">
+var href = window.location.href,
+	idx = href.indexOf("?")+1, 
+	obj = "";
+
+if(idx <= 0){
+	document.querySelector(".img2").className = "img2";
+} else {
+	document.querySelector(".img1").className = "img1";
+}
+
 document.querySelector(".link").onclick = function(e){
 	e = e || event;
 	e.preventDefault();
 	e.stopPropagation();
-	var href = window.location.href,
-		idx = href.indexOf("?")+1, 
-		obj = "";
 
 	if(idx > 0){
 		obj = href.substring(idx);
