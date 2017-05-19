@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>检测预约申请表</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+<section id="container">
+	<div class="slideBox">
+		<div class="wrapper select-wrapper">
+			<div class="select-item">
+				<div class="select-label" data-key="area">房屋面积：</div>
+				<div class="select-val">90平以下</div>
+			</div>
+			<div class="select-item">
+				<div class="select-label" data-key="type">房屋格局：</div>
+				<div class="select-val">1室1厅</div>
+			</div>
+			<div class="select-item">
+				<div class="select-label" data-key="finishTime">完成装修时间：</div>
+				<div class="select-val">1个月内</div>
+			</div>
+			<div class="select-item">
+				<div class="select-label" data-key="hasFur">家具是否入住：</div>
+				<div class="select-val">是</div>
+			</div>
+			<div class="select-item">
+				<div class="select-label" data-key="hasBaby">家中是否有儿童或孕妇：</div>
+				<div class="select-val">备孕</div>
+			</div>
+			<div class="select-item">
+				<div class="select-label" data-key="checkTime">计划多久后入住新家：</div>
+				<div class="select-val">1周内</div>
+			</div>
+			<div class="select-item">
+				<div class="select-label" data-key="orderTime">可接待上门检测的时间：</div>
+				<div class="select-val">近期周末</div>
+			</div>
+			<div class="wrapper-btn">
+				下一步
+			</div>
+		</div>
+		<div class="wrapper submit-wrapper">
+			<div class="sub-title">请对室内空气做出描述:</div>
+			<div class="sub-others">
+				<textarea id="sub-discribe" placeholder="如：有刺激性气味或产生不良感受"></textarea>
+			</div>
+			<div class="wrapper-btn submit-btn">下一步</div>
+			<div class="wrapper-back">返回</div>
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+		</div>
+		<div class="wrapper msg-wrapper">
+			<div class="input-item tel">
+				<input type="tel" id="tel" placeholder="电话号码" />
+			</div>
+			<div class="input-item name">
+				<input type="text" id="name" placeholder="称呼" />
+			</div>
+			<div class="input-item address">
+				<input type="text" id="address" placeholder="地址" />
+			</div>
+			<div class="input-item mail">
+				<input type="text" id="mail" placeholder="邮箱" />
+			</div>
+			<div class="note-msg">
+				申请表的资料仅作为上门检测的依据，不会泄露您的个人隐私，请放心填写。
+			</div>
+			<div class="wrapper-btn msg-btn">提交申请</div>
+			<div class="wrapper-back">返回</div>
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+		</div>
+	</div>
+	<div class="dialog-box">
+		<div class="dialog-layer"></div>
+		<div class="dialog-wrapper">
+			<div class="dialog-title">请选择<em></em></div>
+			<div class="dialog-content"></div>
+		</div>
+	</div>
+</section>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
