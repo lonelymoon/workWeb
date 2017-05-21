@@ -6,14 +6,18 @@
 </head>
 <body>
 <input type="file" id="fileGet" accept="image/*" />
+<img src="" id="img">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/lrz.bundle.js"></script>
 <script type="text/javascript">
-var fe = document.querySelector("#fileGet");
+var fe = document.querySelector("#fileGet"),
+	img = document.querySelector("#img");
 fe.onchange = function(){
 	var file = fe.files[0];
-	lrz(file).then(function(res){
-		console.log(res);
+	lrz(file,{
+		width : 640
+	}).then(function(res){
+		img.src = res.base64;
 	}).catch(function(err){
 		console.log(err);
 	});
