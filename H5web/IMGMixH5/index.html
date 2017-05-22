@@ -1,27 +1,208 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>1拍1赞1关怀</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-<input type="file" id="fileGet" accept="image/*" />
-<img src="" id="img">
+<div id="wrapper">
+	<div class="loading">
+		<div class="loadingText">加载中...</div>
+	</div>
+	<div class="btn creBtn">生成爱心图片</div>
+	<div class="btn saveBtn">请长按图片保存至本地</div>
+	<div class="slideBox">
+		<div class="page page1">
+			<div class="note-title">请点击"+"进行图片上传</div>
+			<div class="uploadBox">
+				<label for="fileGet" class="upFile">+</label>
+				<img src="" class="disImg">
+				<input type="file" id="fileGet" accept="image/*" />
+			</div>
+			
+		</div>
+		<div class="page page2">
+			<div class="displayBox">
+				<img src="" id="img">
+			</div>
+		</div>
+	</div>
+</div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/lrz.bundle.js"></script>
 <script type="text/javascript">
+//时间比较急，代码就随意了点,不要介意
+jQuery(function($){
+
 var fe = document.querySelector("#fileGet"),
-	img = document.querySelector("#img");
+	img = document.querySelector("#img"),
+	disImg = document.querySelector(".disImg"),
+	canvas = document.createElement("canvas"),
+	cxt = canvas.getContext("2d"),
+	width = $("#wrapper").width(),
+	stand = width * 15;
+
+$(disImg).on("click",function(e){
+	$('.upFile').trigger("click");
+});
+
+var sx;
+
+$('.page2').on('touchstart',function(e){
+	e.stopPropagation();
+	sx = e.originalEvent.touches[0].pageX;
+});
+
+$('.page2').on('touchend',function(e){
+	e.stopPropagation();
+	var ex = e.originalEvent.changedTouches[0].pageX,
+		dis = ex - sx;
+
+	if( dis > stand){
+		$('#wrapper').attr("data-step","1");
+		$('.creBtn').show();
+		$('.saveBtn').hide();
+	}
+});
+
 fe.onchange = function(){
 	var file = fe.files[0];
-	lrz(file,{
-		width : 640
-	}).then(function(res){
-		img.src = res.base64;
-	}).catch(function(err){
-		console.log(err);
+	$('.loading').show();
+	setTimeout(function(){
+		lrz(file,{
+			width : width
+		}).then(function(res){
+			disImg.onload = function(){
+				$('.upFile').hide();
+				$(disImg).show();
+				$('.loading').hide();
+				resetCanvas(disImg);
+			};
+			disImg.src = res.base64;
+		}).catch(function(err){
+			console.log(err);
+		});
+	},100);
+};
+
+function resetCanvas(disImg){
+	var height = disImg.naturalHeight;
+	canvas.width = width;
+	canvas.height = height;
+	cxt.fillStyle = '#d0d4dd';
+	cxt.fillRect(0,0,width,height);
+	cxt.drawImage(disImg,0,0,width,height,10,10,width-20,height * (width-20) / width);
+
+	if(width > height){
+		alert("请竖屏进行拍照");
+		$('.upFile').show();
+		$(disImg).hide();
+		return false;
+	}
+
+	mixStart();
+};
+
+
+function mixStart(){
+	mixTop();
+};
+
+function mixTop(){
+	var topImg = document.createElement("img");
+	
+	topImg.onload = function(){
+		var w = topImg.width,
+			h = topImg.height,
+			per = canvas.width / w;
+		cxt.save();
+		cxt.drawImage(topImg,0,0,w,h,0,0,canvas.width,h * per);
+		cxt.restore();
+		mixBottom();
+	};
+
+	topImg.src = "images/top.png";
+};
+
+function mixBottom(){
+	var bottomImg = document.createElement("img");
+	
+	bottomImg.onload = function(){
+		var w = bottomImg.width,
+			h = bottomImg.height,
+			per = canvas.width / w,
+			disH = h * per;
+		cxt.save();
+		cxt.drawImage(bottomImg,0,0,w,h,0,canvas.height - disH,canvas.width,disH);
+		cxt.restore();
+		createCodeBox();
+	};
+
+	bottomImg.src = "images/bottom.png";
+};
+
+function createCodeBox(){
+	var boxImg = document.createElement("img"),
+		nCanvas = document.createElement("canvas"),
+		ncxt = nCanvas.getContext('2d');
+	
+	boxImg.onload = function(){
+		var w = boxImg.width,
+			h = boxImg.height,
+			per = 190 / w;
+
+		nCanvas.width = w * per;
+		nCanvas.height = h * per;
+
+		ncxt.drawImage(boxImg,0,0,w,h,0,0,nCanvas.width,nCanvas.height);
+		createCode(nCanvas);
+	};
+
+	boxImg.src = "images/codeBox.png";
+};
+
+function createCode(nCanvas){
+	var codeImg = document.createElement("img"),
+		ncxt = nCanvas.getContext('2d');
+	
+	codeImg.onload = function(){
+		var w = codeImg.width,
+			h = codeImg.height;
+
+		ncxt.save();
+		ncxt.drawImage(codeImg,0,0,w,h,5,5,nCanvas.width - 10,nCanvas.width - 10);
+		ncxt.restore();
+		mixCode(nCanvas);
+	};
+
+	codeImg.src = "images/code.png";
+};
+
+function mixCode(nCanvas){
+	var w = nCanvas.width,
+		h = nCanvas.height,
+		per = canvas.width / 750;
+
+	cxt.save();
+	cxt.drawImage(nCanvas,0,0,w,h,15 * per,canvas.height - (168 + h ) * per,w * per,h * per);
+	cxt.restore();
+	mixEnd();
+};
+
+function mixEnd(){
+	$('.creBtn').on('click',function(e){
+		img.src = canvas.toDataURL();
+		$('#wrapper').attr("data-step","2");
+		$('.creBtn').hide();
+		$('.saveBtn').show();
 	});
 };
+
+});
+
 </script>
 </body>
 </html>
