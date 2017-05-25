@@ -3,14 +3,18 @@ jQuery(function($){
 var startIdx = 0,
 	countNum = 15,
 	hasCreateList = false,
+	searchChanged = false,
 	scroll = new IScroll('.tableBox',{
 		mouseWheel : true
-	});
+	}),
 
 function getData(tel){
 	var strflg = 0;
 	tel = tel || "";
 	if(tel) strflg = 1;
+
+	if(searchChanged) startIdx = 0;
+
 	$.ajax({  
 		type:'get',
 	    url:'ladmin/Getusermessage.action',
@@ -22,6 +26,7 @@ function getData(tel){
     			pageNum = Math.ceil(totalNum / countNum),
     			array = data.jsonarray;
 
+    		searchChanged = false;
     		createPageList(pageNum);
     		resetHtml(array);
     	}   	    
@@ -41,7 +46,8 @@ function createPageList(pageNum){
 	    activeClass: 'activP',
 	    callBack : function(page){
 	      	startIdx = ( page - 1 ) * countNum;
-	      	getData();
+	      	var tel = $('#search').val();
+	      	getData(tel);
 	    }
 	});
 };
@@ -49,9 +55,14 @@ function createPageList(pageNum){
 $('.search-btn').on('click',function(e){
 	var tel = $('#search').val();
 
+	searchChanged = true;
 	hasCreateList = false;
 	getData(tel);
 
+});
+
+$('.refreshBtn').on('click',function(e){
+	window.location.reload();
 });
 
 document.onkeyup = function(e){

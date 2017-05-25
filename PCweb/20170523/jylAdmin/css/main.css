@@ -13,8 +13,8 @@ html,body{
 .header{
 	position: relative;
 	height: 104px;
-	background: #00A699;
-	padding-left: 26px;
+	background: #fff;
+	padding-left: 60px;
 	padding-right: 60px;
 }
 
@@ -59,7 +59,7 @@ html,body{
 	width: 100%;
 	display: block;
 	outline: none;
-	padding-left: 12px
+	text-indent:12px;
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
 	font-size: 18px;
@@ -75,25 +75,16 @@ html,body{
 	top: 0px;
 	background: #BDC2CA;
 	text-align: center;
-	line-height: 46px;
+	line-height: 60px;
 	color: #fff;
 }
 
 .search-btn:hover{
 	cursor: pointer;
+	opacity: 0.9;
 }
 
-.msg{
-	position: relative;
-	float: right;
-	height: 100%;
-	line-height: 104px;
-	font-size: 16px;
-	color: #FFFFFF;
-	letter-spacing: 0;
-}
-
-.exclBtn{
+.refreshBtn,.exclBtn{
 	position: relative;
 	float: right;
 	width: 200px;
@@ -101,12 +92,20 @@ html,body{
 	margin-top: 29px;
 	background: #91C41E;
 	border-radius: 2px;
-	margin-right: 60px;
+	margin-right: 0px;
 	font-size: 20px;
 	color: #FFFFFF;
 	letter-spacing: 0;
 	text-align: center;
 	line-height: 46px;
+}
+
+.refreshBtn{
+	margin-right: 20px;
+}
+
+.refreshBtn:hover,.exclBtn:hover{
+	cursor: pointer;
 }
 
 /**/
@@ -128,19 +127,19 @@ html,body{
 .title{
 	position: relative;
 	height: 50px;
-	background: #EDEFED;
+	background: #00A699;
 	border: 1px solid #E0E3E2;
 	padding-left: 22px;
 	line-height: 50px;
 	font-size: 16px;
-	color: #646464;
+	color: #fff;
 	letter-spacing: 0;
 }
 
 .tableTitle{
 	position: relative;
 	height: auto;
-	background: #D8D8D8;
+	background: #BBBBBB;
 }
 
 .row{
@@ -153,7 +152,7 @@ html,body{
 }
 
 .titleRow{
-	background: #D8D8D8;
+	background: #E4E4E4;
 	line-height: 50px;
 }
 
@@ -202,7 +201,7 @@ html,body{
 }
 
 .tableBody .row:nth-child(odd){
-	background: #FAFCFB;
+	background: #F4F6F5;
 }
 
 .pageListBox{
