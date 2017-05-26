@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-<title>检测预约申请表</title>
+<title>预约申请</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/wantUI-alert.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -56,7 +57,7 @@
 		</div>
 		<div class="wrapper msg-wrapper">
 			<div class="input-item tel">
-				<input type="tel" id="tel" placeholder="电话号码" />
+				<input type="tel" id="tel" placeholder="手机号码" />
 			</div>
 			<div class="input-item name">
 				<input type="text" id="name" placeholder="称呼" />
@@ -68,7 +69,7 @@
 				<input type="text" id="mail" placeholder="邮箱" />
 			</div>
 			<div class="note-msg">
-				申请表的资料仅作为上门检测的依据，不会泄露您的个人隐私，请放心填写。
+				申请表的资料仅作为上门检测的依据，不会泄露您的个人隐私。
 			</div>
 			<div class="wrapper-btn msg-btn">提交申请</div>
 			<div class="wrapper-back">返回</div>
@@ -84,8 +85,34 @@
 			<div class="dialog-content"></div>
 		</div>
 	</div>
+	<div class="layer">
+		<div class="msg">
+			<div class="spinner">
+			  <div class="rect1"></div>
+			  <div class="rect2"></div>
+			  <div class="rect3"></div>
+			  <div class="rect4"></div>
+			  <div class="rect5"></div>
+			</div>
+		</div>
+	</div>
 </section>
+<div id="wantUI-alert-box">
+	<div id="wantUI-alert-dialog-box">
+		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-title">
+			标题
+		</div>
+		<div class="wantUI-alert-baseBgColor" id="wantUI-alert-msg">
+			内容
+		</div>
+		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-btn">
+			确定
+		</div>
+	</div>
+	<div class="wantUI-alert-bglayer"></div>
+</div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/wantUI-alert.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
