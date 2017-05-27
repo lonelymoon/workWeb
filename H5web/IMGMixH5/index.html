@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 <title>1拍1赞1关怀</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/wantUI-alert.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
@@ -31,7 +32,22 @@
 		</div>
 	</div>
 </div>
+<div id="wantUI-alert-box">
+	<div id="wantUI-alert-dialog-box">
+		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-title">
+			标题
+		</div>
+		<div class="wantUI-alert-baseBgColor" id="wantUI-alert-msg">
+			内容
+		</div>
+		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-btn">
+			确定
+		</div>
+	</div>
+	<div class="wantUI-alert-bglayer"></div>
+</div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/wantUI-alert.js"></script>
 <script type="text/javascript" src="js/lrz.bundle.js"></script>
 <script type="text/javascript">
 //时间比较急，代码就随意了点,不要介意
@@ -48,6 +64,11 @@ var fe = document.querySelector("#fileGet"),
 $(disImg).on("click",function(e){
 	$('.upFile').trigger("click");
 });
+
+wantAlert.setValues({
+	title : "提示",
+	msg : "请使用竖屏图片"
+})
 
 var sx;
 
@@ -70,10 +91,13 @@ $('.page2').on('touchend',function(e){
 
 fe.onchange = function(){
 	var file = fe.files[0];
+	if(!file) return;
+
 	$('.loading').show();
 	setTimeout(function(){
 		lrz(file,{
-			width : width
+			width : width,
+			quality : 1
 		}).then(function(res){
 			disImg.onload = function(){
 				$('.upFile').hide();
@@ -86,6 +110,7 @@ fe.onchange = function(){
 			console.log(err);
 		});
 	},100);
+
 };
 
 function resetCanvas(disImg){
@@ -95,9 +120,8 @@ function resetCanvas(disImg){
 	cxt.fillStyle = '#d0d4dd';
 	cxt.fillRect(0,0,width,height);
 	cxt.drawImage(disImg,0,0,width,height,10,10,width-20,height * (width-20) / width);
-
 	if(width > height){
-		alert("请竖屏进行拍照");
+		wantAlert.showAlert();
 		$('.upFile').show();
 		$(disImg).hide();
 		return false;
@@ -152,7 +176,7 @@ function createCodeBox(){
 	boxImg.onload = function(){
 		var w = boxImg.width,
 			h = boxImg.height,
-			per = 190 / w;
+			per = 220 / w;
 
 		nCanvas.width = w * per;
 		nCanvas.height = h * per;
@@ -187,17 +211,24 @@ function mixCode(nCanvas){
 		per = canvas.width / 750;
 
 	cxt.save();
-	cxt.drawImage(nCanvas,0,0,w,h,15 * per,canvas.height - (168 + h ) * per,w * per,h * per);
+	cxt.drawImage(nCanvas,0,0,w,h,15 * per,canvas.height - (180 + h ) * per,w * per,h * per);
 	cxt.restore();
 	mixEnd();
 };
 
 function mixEnd(){
 	$('.creBtn').on('click',function(e){
-		img.src = canvas.toDataURL();
+		img.src = canvas.toDataURL("images/png");
 		$('#wrapper').attr("data-step","2");
 		$('.creBtn').hide();
 		$('.saveBtn').show();
+	});
+
+	$('.saveBtn').on('click',function(e){
+		var aLink = document.createElement("a");
+		aLink.download = "save.png";
+	    aLink.href = img.src;
+	    aLink.click();
 	});
 };
 

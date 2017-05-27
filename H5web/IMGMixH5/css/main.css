@@ -111,9 +111,15 @@ html{
 }
 
 .saveBtn:before{
-	font-family: "iconfont";
-	content: "\e61c";
-	padding-right: 0.2rem;
+	position: absolute;
+	display: block;
+	background: url("../images/up.png") no-repeat;
+	background-size: cover;
+	width: 0.4rem;
+	height: 0.4rem;
+	content: "";
+	top: 0.26rem;
+	left: 0.6rem;
 }
 
 .displayBox{
