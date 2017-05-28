@@ -93,9 +93,15 @@
 	position: relative;
 }
 
-.left-img-box img{
-	max-width: 164px;
+.img-list-box{
+	position: relative;
+	height: 164px;
 	border-radius: 50%;
+	overflow: hidden;
+}
+
+.left-img-box img{
+	max-width: 100%;
 }
 
 .right-msg-box{

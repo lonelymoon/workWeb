@@ -269,7 +269,7 @@ var utils = uxwe.utils,
 				"data-type" : list["type"]
 			});
 
-			ltImgBox.innerHTML = '<a href="'+list["imgLink"]+'" target="_blank"><img src="'+list["img"]+'" class="msg-img"></a>';
+			ltImgBox.innerHTML = '<a href="'+list["imgLink"]+'" target="_blank"><div class="img-list-box"><img src="'+list["img"]+'" class="msg-img"></div></a>';
 			rtMsgBox.innerHTML = '<div class="msg-name lec-name">'+list["name"]+'</div>'+
 									'<div class="msg-job lec-job">'+
 										list["job"]+

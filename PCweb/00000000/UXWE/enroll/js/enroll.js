@@ -28,7 +28,7 @@ jQuery(function($){
    		url:"/Enrollbefore.action",   			
     	data: {
     		"intactiveid":id,
-    		strreason:"1"
+    		"strreason":"1"
     	},
    		success:function(data){
    			var flag = data.strflg;
