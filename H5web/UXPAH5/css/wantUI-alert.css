@@ -1,0 +1,99 @@
+/*
+** 手动合并css可以直接将下面的注释内部的代码复制过去即可
+*/
+
+.wantUI-alert-baseFontColor{
+	color: #fff;
+}
+
+.wantUI-alert-commonFontColor{
+	color: #00A698;
+}
+
+.wantUI-alert-baseBgColor{
+	background-color: #fff;
+}
+
+.wantUI-alert-commonBgColor{
+	background-color: #00A698;
+}
+
+#wantUI-alert-box{
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	font-size: 12px;
+	display: none;
+	z-index: 1000;
+}
+
+.wantUI-alert-bglayer{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: #000;
+	filter:alpha(opacity=30);
+	+zoom : 1;
+}
+
+#wantUI-alert-dialog-box{
+	position: relative;
+	max-width: 300px;
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	z-index: 2;
+}
+
+#wantUI-alert-title{
+	position: relative;
+	height: auto;
+	padding: 0.6em 0em;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 800;
+}
+
+#wantUI-alert-msg{
+	position: relative;
+	min-height: 5em;
+	height: auto;
+	padding: 0.8725em 1em;
+	font-size: 1.4em;
+	color: #222;
+}
+
+#wantUI-alert-btn{
+	position: relative;
+	height: auto;
+	padding: 0.6em 0em;
+	font-size: 1.2em;
+	text-align: center;
+	font-weight: 800;
+	-webkit-tap-highlight-color : none;
+}
+
+#wantUI-alert-btn:hover{
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+#wantUI-alert-btn:before{
+	position: relative;
+	content: "√";
+	display: none;
+}
+
+@media screen and (min-width: 0px){
+	.wantUI-alert-bglayer{
+		background: rgba(0,0,0,0.3);
+		filter:alpha(opacity=100);
+	}
+}
+
+/*alert UI Css End*/
