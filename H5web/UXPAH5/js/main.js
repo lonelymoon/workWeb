@@ -39,14 +39,6 @@ function loadCheck(){
 	}
 };
 
-wantAlert.setValues({
-	title : "提示",
-	msg : "我们已经收到您的申请，将尽快联系您。",
-	callback : function(){
-		window.location.reload();
-	}
-});
-
 $('.button').on('click',function(e){
 	var $name = $('#name').val(),
 		$tel = $('#tel').val(),
@@ -70,19 +62,17 @@ $('.button').on('click',function(e){
 
 	var fd = new FormData();
 
-	fd.append("strpapername",$name);
-	fd.append("strpaperphone",$tel);
-	fd.append("strpaperemail",$mail);
+	fd.append("name",$name);
+	fd.append("tel",$tel);
+	fd.append("mail",$mail);
 
 	$.ajax({
-		"url" : "/uxpa/Register.action",
+		"url" : "",
 		"type" : "post",
 		"data" : fd,
-		"contentType":false,
-		"processData" : false,
-		"dataType" : "json",
+		"dataType" : "jsonp",
 		"success" : function(res){
-			wantAlert.showAlert();
+
 		}
 	});
 
