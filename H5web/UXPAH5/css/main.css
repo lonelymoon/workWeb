@@ -704,6 +704,46 @@ img{
 	max-width: 100%;
 }
 
+audio{
+	display: none;
+}
+
+.music{
+	position: absolute;
+	top: 0.3rem;
+	right: 0.3rem;
+	z-index: 101;
+	width: 0.5rem;
+	height: 0.5rem;
+	overflow: hidden;
+	border-radius: 50%;
+	-webkit-animation:music 10s linear infinite;
+	animation:music 10s linear infinite;
+}
+
+.music-paused{
+	-webkit-animation-play-state:paused;
+	animation-play-state:paused;
+}
+
+@-webkit-keyframes music{
+	0%{
+		-webkit-transform: rotate(0deg);
+	}
+	100%{
+		-webkit-transform: rotate(359deg);
+	}
+}
+
+@keyframes music{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(359deg);
+	}
+}
+
 @media screen and (max-height: 672px){
 	.first-row{
 		padding-top: 0.2rem;

@@ -3,14 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-<title>英国留学</title>
+<title>UXPA英国游学报名</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="css/wantUI-alert.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<script src="jquery/jquery-1.8.2.js" type="text/javascript"></script>  
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script> 
+
+<script src="jquery/share.js" type="text/javascript" charset="UTF-8"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?49b00549ad8728c88da57cd86d6ffca4";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
-
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'>
+<img src="images/logoshare.png" width='700'>
+</div>
 <section id="container">
+	<div class="music music-paused">
+		<img src="images/music.png">
+		<audio src="media/bg.mp3" loop id="bgm"></audio>
+	</div>
 	<div class="swiper-container main-container">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
@@ -30,7 +50,7 @@
 						<img src="images/2-1.png">
 						<div class="page2-text">
 							<div class="page2-title">UXPA英伦游学之旅</div>
-							<div class="page2-content">UXPA中国组织，带领各行各业对用户体验兴趣的人士，以知名公司/大学/设计机构为参访目标，深入了解用户体验行业的发展。</div>
+							<div class="page2-content">由UXPA中国（中国用户体验专业协会）组织，邀请各行各业对用户体验兴趣的人士，以知名公司/大学/设计机构为参访目标，深入了解用户体验行业的发展。</div>
 						</div>
 					</div>
 				</div>
@@ -145,10 +165,10 @@
 							<div class="page5-content">
 								<div class="page5-part part-1">
 									<div class="page5-row">
-										行程A：21，800RMB（伦敦，牛津剑桥等）
+										行程A：21,800RMB（伦敦，牛津剑桥等）
 									</div>
 									<div class="page5-row">
-										行程A+B：29，800元RMB（伦敦、爱丁堡等）
+										行程A+B：29,800元RMB（伦敦、爱丁堡等）
 									</div>
 								</div>
 								<div class="page5-part">
@@ -309,7 +329,7 @@
 							</div>
 							<div class="page7-item hasbox">
 								<div class="left-item">
-									Day 13 伦敦
+									Day 13 
 									<div class="box">
 										上午：参访七<br/>
 										下午：参访八
@@ -375,8 +395,24 @@
 <div class="layer">
 	<div class="loading">loading...<em></em></div>
 </div>
+<div id="wantUI-alert-box">
+	<div id="wantUI-alert-dialog-box">
+		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-title">
+			标题
+		</div>
+		<div class="wantUI-alert-baseBgColor" id="wantUI-alert-msg">
+			内容
+		</div>
+		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-btn">
+			确定
+		</div>
+	</div>
+	<div class="wantUI-alert-bglayer"></div>
+</div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/wantUI-alert.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

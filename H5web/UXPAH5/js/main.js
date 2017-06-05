@@ -19,6 +19,20 @@ var loadEnd = (function(){
 		}
 
 		$('.layer').hide();
+		
+		$('.music').trigger("click");
+		wx.config({
+		    debug: false,
+		    appId: '',
+		    timestamp:1,
+		    nonceStr: '',
+		    signature: '',
+		    jsApiList: []
+		});
+
+		wx.ready(function(){
+			$('.music').trigger("click");
+		});
 	};
 })();
 
@@ -38,6 +52,14 @@ function loadCheck(){
 		}
 	}
 };
+
+wantAlert.setValues({
+	title : "提示",
+	msg : "我们已经收到您的申请，将尽快联系您。",
+	callback : function(){
+		window.location.reload();
+	}
+});
 
 $('.button').on('click',function(e){
 	var $name = $('#name').val(),
@@ -62,20 +84,33 @@ $('.button').on('click',function(e){
 
 	var fd = new FormData();
 
-	fd.append("name",$name);
-	fd.append("tel",$tel);
-	fd.append("mail",$mail);
+	fd.append("strpapername",$name);
+	fd.append("strpaperphone",$tel);
+	fd.append("strpaperemail",$mail);
 
 	$.ajax({
-		"url" : "",
+		"url" : "/uxpa/Register.action",
 		"type" : "post",
 		"data" : fd,
-		"dataType" : "jsonp",
+		"contentType":false,
+		"processData" : false,
+		"dataType" : "json",
 		"success" : function(res){
-
+			wantAlert.showAlert();
 		}
 	});
 
+});
+
+$('.music').on('click',function(e){
+	var paused = $('#bgm')[0].paused;
+	if(paused){
+		$('.music').removeClass("music-paused");
+		$('#bgm')[0].play();
+	} else {
+		$('.music').addClass("music-paused");
+		$('#bgm')[0].pause();
+	}
 });
 
 loadCheck();
