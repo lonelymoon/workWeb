@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS3 弹幕</title>
+<link rel="stylesheet" type="text/css" href="css/css3DM.css">
+</head>
+<body>
+<button class="btn">go</button>
+<button class="btn2">full</button>
+<!--dom-->
+<div class="css3DM-container">
+	<div class="css3DM-wrapper">
+		<div class="css3DM-videoBox">
+			<video src="STYX_HELIX.mp4" loop="loop"></video>
+		</div>
+		<div class="css3DM-DMBox"></div>
+	</div>
+</div>
+<!--end-->
+<script type="text/javascript" src="js/css3DM.js"></script>
+<script type="text/javascript">
+var DM = new css3DM(),
+	xhr = new XMLHttpRequest(),
+	isSearching = false,
+	idx = 0;
+	xhr.responseType = "json";
+document.querySelector(".btn").onclick = function(e){
+	DM.init();
+	setInterval(function(){
+		if(isSearching) return false;
+		isSearching = true;
+
+		var fd = new FormData();
+		xhr.open("post","/getmessage.action");
+		xhr.onload = function(){
+			var res = xhr.response,
+				data = res.resultarray,
+				tempArray = [];
+
+			for( var i = 0, len = data.length; i < len; i++ ){
+				var tempObj = {};
+				tempObj.img = "1.jpg";
+				tempObj.text = data[i].strmessage;
+				tempArray.push(tempObj);
+			}
+
+			DM.addDatas(tempArray);
+			idx = res.intid;
+			isSearching = false;
+		};
+		fd.append("intid",idx);
+		xhr.send(fd);
+	},1000);
+	document.querySelector("video").play();
+};
+
+document.querySelector(".btn2").onclick = function(e){
+	var wrapper = document.querySelector(".css3DM-wrapper");
+	if(wrapper.requestFullScreen)
+	wrapper.requestFullScreen();
+	else if(wrapper.webkitRequestFullScreen)
+	wrapper.webkitRequestFullScreen();
+	else if(wrapper.mozRequestFullScreen)
+	wrapper.mozRequestFullScreen();
+	else
+	alert("本浏览器不支持全屏");
+	DM.enterFullScreen();
+};
+
+document.onkeydown = function(e){
+	e = e || event;
+	if(e.keyCode == 122){
+		e.preventDefault();
+		return false;
+	}
+};
+
+document.onkeyup = function(e){
+	e = e || event;
+	if(e.keyCode == 27 || e.keyCode == 122){
+		DM.getWrapperSize();
+	}
+}
+</script>
+</body>
+</html>

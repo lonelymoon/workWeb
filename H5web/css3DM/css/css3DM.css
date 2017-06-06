@@ -1,0 +1,130 @@
+.css3DM-container{
+	position: relative;
+	height: auto;
+	width: 800px;
+	margin: 0 auto;
+}
+
+.css3DM-wrapper{
+	position: relative;
+	height: auto;
+	width: 100%;
+	height: 100%;
+}
+
+.css3DM-videoBox{
+	position: relative;
+	height: auto;
+	width: 100%;
+	z-index: 1;
+}
+
+.css3DM-videoBox video{
+	position: relative;
+	max-width: 100%;
+	width: 100%;
+}
+
+.css3DM-DMBox{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	left: 0px;
+	top: 0px;
+	-webkit-transform-style : preserve-3d;
+	transform-style : preserve-3d;
+	overflow: hidden;
+}
+
+.css3DM-DMList{
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	left: 100%;
+}
+
+.css3DM-DMList:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.css3DM-DMList[data-type="start"]{
+	-webkit-transition:-webkit-transform 6s linear;
+	-moz-transition:-moz-transform 6s linear;
+	-o-transition:-o-transform 6s linear;
+	transition:transform 6s linear;
+}
+
+.css3DM-DMList[data-type="fastStart1"]{
+	-webkit-transition:-webkit-transform 4s linear;
+	-moz-transition:-moz-transform 4s linear;
+	-o-transition:-o-transform 4s linear;
+	transition:transform 4s linear;
+}
+
+.css3DM-DMList[data-type="fastStart2"]{
+	-webkit-transition:-webkit-transform 5s linear;
+	-moz-transition:-moz-transform 5s linear;
+	-o-transition:-o-transform 5s linear;
+	transition:transform 5s linear;
+}
+
+.css3DM-DMList[data-type="fastStart3"]{
+	-webkit-transition:-webkit-transform 4.5s linear;
+	-moz-transition:-moz-transform 4.5s linear;
+	-o-transition:-o-transform 4.5s linear;
+	transition:transform 4.5s linear;
+}
+
+.css3DM-DMList[data-type="fastStart4"]{
+	-webkit-transition:-webkit-transform 7s linear;
+	-moz-transition:-moz-transform 7s linear;
+	-o-transition:-o-transform 7s linear;
+	transition:transform 7s linear;
+}
+
+.css3DM-DMList[data-type="fastStart5"]{
+	-webkit-transition:-webkit-transform 6.5s linear;
+	-moz-transition:-moz-transform 6.5s linear;
+	-o-transition:-o-transform 6.5s linear;
+	transition:transform 6.5s linear;
+}
+
+.css3DM-DMList[data-status="running"]{
+	will-change: transform;
+	-webkit-transform:translateX(-150%) translateZ(0);;
+	-moz-transform:translateX(-150%) translateZ(0);;
+	-o-transform:translateX(-150%) translateZ(0);;
+	transform:translateX(-150%) translateZ(0);;
+}
+
+.css3DM-DMList[data-status="stop"]{
+	-webkit-transform:translateX(0%) translateZ(0);
+	-moz-transform:translateX(0%) translateZ(0);
+	-o-transform:translateX(0%) translateZ(0);
+	transform:translateX(0%) translateZ(0);
+}
+
+.css3DM-DMphoto{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	float: left;
+	overflow: hidden;
+	border-radius: 50%;
+	border: 5px #fff solid;
+}
+
+.css3DM-DMtext{
+	position: relative;
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #fff;
+	font-family: "Microsoft Yahei";
+	padding-left: 6px;
+	text-shadow: 0px 0px 5px #000;
+}
