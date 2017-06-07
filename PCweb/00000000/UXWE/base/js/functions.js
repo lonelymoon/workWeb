@@ -1,7 +1,10 @@
 (function(uxwe,undefined){
 
 var utils = uxwe.utils,
-	pathUrl = "http://uxwetest.uxwe.org/UXWE/";
+    htpurl = document.domain,
+	//pathUrl = "http://uxwetest.uxwe.org/UXWE/";
+    
+    pathUrl ="http://" + htpurl + "/UXWE/";
 	//pathUrl = "http://uxwetest.uxwe.org/UXWE/";
 
 var templete = {},
