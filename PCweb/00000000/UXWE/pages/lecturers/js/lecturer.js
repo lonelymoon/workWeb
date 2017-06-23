@@ -16,6 +16,8 @@ jQuery(function($){
 		"part" : "lecturer",
 		"wrapper" : "#lecturer",
 		"data" : {
+			rowSpace : 60,
+			listHeight : 335
 		}
 	}]);
 

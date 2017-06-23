@@ -125,9 +125,10 @@ function createIntroduction(selector){
 
 }
 
-function createLecturer(selector){
+function createLecturer(selector,isEnd){
 	var wrapper = utils.getElement(selector),
-		temp = "";
+		temp = "",
+		nlink = !isEnd ? '../../enroll/index.html?source=enroll&id='+uid : 'javascript:;';
 
 	var item = utils.crtElement('div',{
 		"class" : "lecturer-item"
@@ -179,9 +180,11 @@ function createLecturer(selector){
 	item.appendChild(speechTime);
 	item.appendChild(address);
 	item.innerHTML += '<div class="enroll-box">'+
-						'<div class="enroll-btn">'+
+						'<a href="'+nlink+'">'+
+						'<div class="enroll-btn" data-isend="'+isEnd+'">'+
 							'立即报名'+
 						'</div>'+
+						'</a>'+
 					'</div>'+
 					'<div class="enroll-tips">'+
 						'报名截止日期为活动前一周。'+
@@ -269,9 +272,11 @@ utils.ajax({
 			});
 		}
 
+		var isEnd = utils.getLeftTime(data.strenrollendtime) <= 0 ? true : false;
+
 		createSubjectsImgs('.details-imgs');
 		createIntroduction('.details-column-content');
-		createLecturer('.lecturer-box');
+		createLecturer('.lecturer-box',isEnd);
 		createSponsors('.sponsors-content');
 
 	}

@@ -118,21 +118,21 @@
 		}],
 		//sponsors
 		sponsors = [{
-			"name" : "拉钩网",
+			"name" : "",
 			"link" : "javascript:;",
-			"logo" : "images/supLogo.png"
+			"logo" : "images/zzs1.png"
 		},{
-			"name" : "拉钩网",
+			"name" : "",
 			"link" : "javascript:;",
-			"logo" : "images/supLogo.png"
+			"logo" : "images/zzs2.png"
 		},{
-			"name" : "拉钩网",
+			"name" : "",
 			"link" : "javascript:;",
-			"logo" : "images/supLogo.png"
+			"logo" : "images/zzs3.png"
 		},{
-			"name" : "拉钩网",
+			"name" : "",
 			"link" : "javascript:;",
-			"logo" : "images/supLogo.png"
+			"logo" : "images/zzs4.png"
 		}];
 
 	var createBanner = function(selector){
@@ -249,13 +249,20 @@
 							    			nowActvt["placeCn"] + " " + nowActvt["placeEn"]+
 							    		'</div>';
 
+			var a = utils.crtElement("a",{
+				"href" : "pages/details/details.html?uid="+nowActvt["id"],
+				"target" : "_blank"
+			});
+
+			a.appendChild(leftBox);
+
 	      	speecher.appendChild(speecherPhoto);
 	      	speecher.appendChild(speecherMsg);
 	      	leftBox.appendChild(speech);
 	      	leftBox.appendChild(speecher);
 	      	leftBox.appendChild(speechNoteMsg);
 	      	rightBox.appendChild(leftTimeBox);
-	      	introBox.appendChild(leftBox);
+	      	introBox.appendChild(a);
 	      	introBox.appendChild(rightBox);
 	      	slide.appendChild(introBox);
 	      	pagination.appendChild(paginationList);
@@ -510,6 +517,7 @@ utils.ajax({
 	}
 });
 //获取赞助商
+createSponsors('#sponsors');
 utils.ajax({
 	"method" : "get",
 	"url" : "/weixintest/Getsponsor.action",

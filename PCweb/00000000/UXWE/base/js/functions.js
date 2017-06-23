@@ -28,7 +28,7 @@ var templete = {},
 		"children" : {}
 	},{
 		"text" : "注册/登录",
-		"href" : "http://uxwetest.uxwe.org/UXWE/login/index.html?source=register",
+		"href" : "http://uxwe.org/UXWE/login/index.html?source=register",
 		"children" : {}
 	}],
 	//lecturers
@@ -41,150 +41,6 @@ var templete = {},
 		"job" : "现任百姓网事业部产品设计",
 		"title" : "通过『故事图谱』进行复杂设计",
 		"titleLink" : "javascript:;"
-	},{
-		"id" : "2",
-		"type" : "0",
-		"photo" : pathUrl+"pages/lecturers/images/02.png",
-		"imgLink" : "javascript:;",
-		"name" : "林长青",
-		"job" : "产品经理，搜狗壁纸产品负责人",
-		"title" : "将“用户走查”融入产品迭代",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "3",
-		"type" : "1",
-		"photo" : pathUrl+"pages/lecturers/images/03.png",
-		"imgLink" : "javascript:;",
-		"name" : "陈莹",
-		"job" : "Top Design创始人兼CEO",
-		"title" : "设计思维可视化模型",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "4",
-		"type" : "1",
-		"photo" : pathUrl+"pages/lecturers/images/04.png",
-		"imgLink" : "javascript:;",
-		"name" : "张湛",
-		"job" : "ThoughtWorks中国首席设计师",
-		"title" : "Agile UX实战",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "5",
-		"type" : "1",
-		"photo" : pathUrl+"pages/lecturers/images/05.png",
-		"imgLink" : "javascript:;",
-		"name" : "孙博文",
-		"job" : "国家数字媒体创新研究中心 研究员",
-		"title" : "五感与交互",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "6",
-		"type" : "0",
-		"photo" : pathUrl+"pages/lecturers/images/06.png",
-		"imgLink" : "javascript:;",
-		"name" : "包季真",
-		"job" : "脉可寻联合创始人",
-		"title" : "从Idea到卓越应用",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "7",
-		"type" : "1",
-		"photo" : pathUrl+"pages/lecturers/images/07.png",
-		"imgLink" : "javascript:;",
-		"name" : "印隽",
-		"job" : "广联达云计算平台UX高级经理",
-		"title" : "UX价值观反思和重构",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "8",
-		"type" : "1",
-		"photo" : pathUrl+"pages/lecturers/images/08.png",
-		"imgLink" : "javascript:;",
-		"name" : "胡甲超",
-		"job" : "现任职于淘宝UED",
-		"title" : "移动产品中的互动流设计",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "9",
-		"type" : "3",
-		"photo" : pathUrl+"pages/lecturers/images/09.png",
-		"imgLink" : "javascript:;",
-		"name" : "Terry （范志鹏）",
-		"job" : "思科中国云协作部门体验设计经理",
-		"title" : "如何设计跨设备产品的用户体验",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "10",
-		"type" : "3",
-		"photo" : pathUrl+"pages/lecturers/images/10.png",
-		"imgLink" : "javascript:;",
-		"name" : "Sky（贺鸣）",
-		"job" : "沪江网用户体验总监",
-		"title" : "信息架构与用户路径设计",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "11",
-		"type" : "3",
-		"photo" : pathUrl+"pages/lecturers/images/11.png",
-		"imgLink" : "javascript:;",
-		"name" : "刘柏丽",
-		"job" : "博士，十年用户体验领域工作经验",
-		"title" : "如何创造有说服力的设计",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "12",
-		"type" : "2",
-		"photo" : pathUrl+"pages/lecturers/images/12.png",
-		"imgLink" : "javascript:;",
-		"name" : "JJ Ying（应骏赳）",
-		"job" : "沪江网用户体验总监",
-		"title" : "信息架构与用户路径设计",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "13",
-		"type" : "1",
-		"photo" : pathUrl+"pages/lecturers/images/13.png",
-		"imgLink" : "javascript:;",
-		"name" : "Geoffrey Bell",
-		"job" : "美国查普林学院新媒体科学副教授",
-		"title" : "互动数字媒体设计工具探索",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "14",
-		"type" : "3",
-		"photo" : pathUrl+"pages/lecturers/images/14.png",
-		"imgLink" : "javascript:;",
-		"name" : "章愳",
-		"job" : "现任支付宝用户体验专家",
-		"title" : "游戏化体验的原则初探",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "15",
-		"type" : "3",
-		"photo" : pathUrl+"pages/lecturers/images/15.png",
-		"imgLink" : "javascript:;",
-		"name" : "姚昱盛",
-		"job" : "红星美凯龙商城产品体验中心负责人",
-		"title" : "全用户触点体验规划",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "16",
-		"type" : "3",
-		"photo" : pathUrl+"pages/lecturers/images/16.png",
-		"imgLink" : "javascript:;",
-		"name" : "简驾",
-		"job" : "8年体验设计经验，5年团队管理",
-		"title" : "记忆与非理性思维设计",
-		"titleLink" : "javascript:;"
-	},{
-		"id" : "17",
-		"type" : "3",
-		"photo" : pathUrl+"pages/lecturers/images/17.png",
-		"imgLink" : "javascript:;",
-		"name" : "陈沁文",
-		"job" : "用户体验设计师",
-		"title" : "设计思维实践",
-		"titleLink" : "javascript:;"
 	}],
 	//category
 	categories = [{
@@ -192,13 +48,13 @@ var templete = {},
 		"type" : "all"
 	}, {
 		"text" : "产品",
-		"type" : "0"
+		"type" : "2"
 	}, {
 		"text" : "交互",
 		"type" : "1"
 	}, {
 		"text" : "设计",
-		"type" : "2"
+		"type" : "0"
 	}, {
 		"text" : "体验",
 		"type" : "3"
@@ -528,6 +384,10 @@ utils.ajax({
 	"success" : function(res){
 		res = JSON.parse(res);
 		if(res.strflg != "1" ){
+			var btn = document.querySelector('.msg-register-btn');
+			if(btn)
+			btn.style.display = "none";
+		
 			navLists[4].text = "个人中心";
 			navLists[4].href = pathUrl+"pages/usercenter/userCenter.html";
 		}

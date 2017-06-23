@@ -39,6 +39,9 @@ jQuery(function($){
    				window.location.href = "../login/index.html?source="+url+"&id="+id;
    			} else if( flag == 2 ){
    				window.location.href = "../register/index.html?source="+url+"&id="+id;
+   			} else if( flag == 3 ){
+   				$('.status-box').hide();
+	   			$('.under-review').show();
    			} else {
    				alert("数据查询出错");
    			}
