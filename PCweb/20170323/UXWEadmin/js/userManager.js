@@ -44,7 +44,7 @@ function createData(){
 
 $('.table-content').on('tap','.row',function(e){
 	var $uid = $(this).attr("data-id");
-	window.location.href = "http://uxwetest.uxwe.org/UXWE/pages/usercenter/userCenter.html?uid="+$uid+"&type=manager";
+	window.open("http://uxwe.org/UXWE/pages/usercenter/userCenter.html?uid="+$uid+"&type=manager","_blank");
 });
 
 createData();

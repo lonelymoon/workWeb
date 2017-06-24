@@ -135,6 +135,12 @@ $('.content-msg').on('click','.looking',function(e){
 
 $('.content-msg').on('click','.preview',function(e){
 	var $id = $(this).parents(".actItem-box").attr("data-id");
-	window.open("http://uxwetest.uxwe.org/UXWE/pages/details/details.html?uid="+$id+"&type=preview","预览");
+	window.open("http://uxwe.org/UXWE/pages/details/details.html?uid="+$id+"&type=preview","预览");
 });
 
+
+$('.content-msg').on('click','.edit',function(e){
+	var $id = $(this).parents(".actItem-box").attr("data-id");
+	localStorage.actId = $id;
+	window.location.href = "publishAct-2.html?aid="+$id+"&edit=true";
+});

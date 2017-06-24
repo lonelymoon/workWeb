@@ -2,11 +2,74 @@ jQuery(function($){
 
 var save = localStorage.save;
 
+function getUrlObj(url){
+	url = url || window.location.href;
+	var reg = /([^?&=]+)=([^?&=]*)/g,
+		tempObj = {};
+	url.replace(reg,function(url,$1,$2){
+		var key = encodeURIComponent($1),
+			val = encodeURIComponent($2);
+		
+		tempObj[key] = val;
+		return url;
+	});
+
+	return tempObj;
+}
+
 if(save){
 	save = JSON.parse(save);
 	for( var selector in save ){
 		$(selector).val(save[selector]);
 	}
+}
+
+var isedit = getUrlObj().edit,
+	tid = getUrlObj().tid;
+
+if(isedit){
+	$.ajax({  
+		type:'post',
+		url:'/Getteacherfromid.action',   			
+		data:{intid:tid},   
+		dataType:'json',  
+		success:function(data)
+		{              	
+			inputData(data.resulalecturer);                                  				
+		}
+	});    	    
+}
+
+function inputData(response){
+	$('#lecNameCN').val(response.strname);
+	$('#lecNameEN').val(response.strengname);
+	$('#company').val(response.strcompany);
+	$('#job').val(response.strjob);
+	$('#workYear').val(response.intworktime);
+	$('#introduce').val(response.strmesssage);
+	var text = response.strdistinguish ? "显示":"不显示";
+	$('.doShow').find('.selectorVal').html(text);
+	var tpVal = "";
+	switch(response.inttype){
+		case 0:
+		tpVal = "视觉设计";
+		break;
+		case 1:
+		tpVal = "交互设计";
+		break;
+		case 2:
+		tpVal = "产品设计";
+		break;
+		case 3:
+		tpVal = "用户体验";
+		break;
+	}
+	$('.checkBox[data-val="'+tpVal+'"]').find('.checkIcon').addClass("checked");
+	$('.poster').find('.label-btn').addClass("hide");
+	$('.poster').find('.img-set').removeClass("hide").find("img").attr({
+		"src":response.strimgurl_origin,
+		"data-status":"loaded"
+	});
 }
 
 var click = "ontouchstart" in document ? "touchend" : "click",
@@ -51,7 +114,7 @@ $('.save-btn').on(click,function(e){
 	canUpload = true;
 
 	lecNameCN = checkNull('#lecNameCN');
-	lecNameEN = $('#lecNameEN') || "";
+	lecNameEN = $('#lecNameEN').val() || "";
 	lecCompany = checkNull('#company');
 	lecJob = checkNull('#job');
 	lecWorkYear = checkNull('#workYear');

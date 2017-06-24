@@ -15,6 +15,78 @@ function getUrlObj(url){
 	return tempObj;
 }
 
+//init
+var isedit = getUrlObj().edit;
+
+if(isedit){
+	var intid = localStorage.actId;
+
+	if(!intid && intid != 0){
+		return false;
+	}
+
+	$.ajax({  
+		type:'post',
+        url:'/GetActivityFromId.action',   			
+        data:{intid:intid},   
+        dataType:'json', //很重要!!!.预期服务器返回的数据类型 ,  
+        success:function(data)
+        {              	  
+    	 	var result = data.jsonAactivityshow;
+
+    	 	//city
+    	 	$('.cityChoose').find('.selectorVal').attr("data-id",result.intcity).html(result.strcityname);
+    	 	$('#address').val(result.straddress);
+    	 	$('#post-code').val(result.strpostcode || "");
+
+    	 	//time
+    	 	if(result.strstartime){
+    	 		var sTime = result.strstartime.split(" ");
+    	 		$('.activeDate .startDate').val(sTime[0]);
+    	 		$('.activeDate .startTime').val(sTime[1]);
+    	 	}
+    	 	if(result.strendtime){
+    	 		var eTime = result.strendtime.split(" ");
+    	 		$('.activeDate .endDate').val(eTime[0]);
+    	 		$('.activeDate .endTime').val(eTime[1]);
+    	 	}
+    	 	if(result.strenrollstarttime){
+    	 		var esTime = result.strenrollstarttime.split(" ");
+    	 		$('.enrollDate .startDate').val(esTime[0]);
+    	 		$('.enrollDate .startTime').val(esTime[1]);
+    	 	}
+    	 	if(result.strenrollendtime){
+    	 		var eeTime = result.strenrollendtime.split(" ");
+    	 		$('.enrollDate .endDate').val(eeTime[0]);
+    	 		$('.enrollDate .endTime').val(eeTime[1]);
+    	 	}
+    	 	if(result.strnoticetime){
+    	 		$('.callDate .startDate').val(result.strnoticetime);
+    	 	}
+
+    	 	//msg
+    	 	$('#describe').val(result.strmessage);
+    	 	$('#gain').val(result.strgain);
+    	 	$('#background').val(result.strbackground);
+    	 	$('#lecName').val(result.strteachername);
+    	 	$('.doShow').find(".selectorVal").html(result.strdistinguish);
+
+    	 	$('.checkBox[data-val="'+result.strlanguage+'"]').find(".checkIcon").addClass("checked");
+
+    	 	//imgs
+    	 	var isrc = result.strimgurl_origin;
+    	 	if(isrc){
+    	 		$('.poster-btn').addClass("hide");
+    	 		$('.poster .img-set').find("img").attr("src",isrc).attr("data-status","loaded");
+    	 		$('.poster .img-set').removeClass("hide");
+    	 	}
+
+        }   
+	}); 
+}
+
+//end
+
 var click = "ontouchend" in document ? "touchend" : "click",
 	sc2 = new IScroll('.content-box',{
 		mouseWheel : true
@@ -216,14 +288,10 @@ $('.checkBox').on("click",function(e){
 });
 //end
 
-var inputData = localStorage.inputData,
-	canUpload = true,
+var canUpload = true,
 	isUploading = false,
 	tempObj = {};
 
-if(inputData){
-
-}
 
 function checkNull(selector){
 	var val = $(selector).val();
@@ -287,7 +355,7 @@ if(!$city){
 	return false;
 }
 
-if(!$postImg){
+if(!$postImg && !isedit){
 	alert("请选择banner");
 	return false;
 }
@@ -338,7 +406,7 @@ formData.append("strcourse",encodeURI($describe));
 formData.append("strlanguage",encodeURI($lang));
 formData.append("strbackground",encodeURI($bg));
 formData.append("strgain",encodeURI($gain));
-formData.append("strremarkmessage","0");
+formData.append("strremarkmessage"," ");
 formData.append("strtype","0");
 
 

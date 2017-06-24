@@ -50,6 +50,10 @@ html,body{
 	margin-bottom: 41px;
 }
 
+.send,.count{
+	display: none;
+}
+
 .first-cate{
 	padding-top: 36px;
 }
@@ -175,6 +179,7 @@ html,body{
 	border-radius: 50%;
 	background: #D8D8D8;
 	overflow: hidden;
+	display: none;
 }
 
 .name{
