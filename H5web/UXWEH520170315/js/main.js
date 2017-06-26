@@ -183,6 +183,7 @@ $.ajax({
 
 			temp += tpl;
 		}
+		if(temp)
 		$('.partner-box').html(temp);
 		myScroll.refresh();
 	}
@@ -199,8 +200,13 @@ var sc1 = new Swiper(".sc-1",{
 //IScroll
 var myScroll = new Scroll('.home-wrapper', {
     mouseWheel: true,
-    scrollbar: true
+    scrollbar: true,
+    tap : true
 });
+
+setTimeout(function(){
+	myScroll.refresh();
+},100);
 
 });
 

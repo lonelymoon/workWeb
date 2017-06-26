@@ -153,6 +153,11 @@ img{
 	bottom: 0rem;
 }
 
+.page-scroll{
+	position: relative;
+	height: auto;
+}
+
 .column{
 	position: relative;
 	height: auto;
@@ -256,7 +261,7 @@ img{
 .actv-item-image{
 	position: relative;
 	height: auto;
-	background: #F7F7F7;
+	padding-right: 0.25rem;
 }
 
 .actv-item-msg{
@@ -266,6 +271,12 @@ img{
 	font-size: 0.2rem;
 	color: #000000;
 	letter-spacing: 0;
+	padding-left: 0.25rem;
+}
+
+.actv-item-msg-box{
+	position: relative;
+	height: auto;
 	padding: 0.17rem 0.17rem 0.17rem 0.42rem;
 	background: #F7F7F7;
 }
@@ -273,6 +284,10 @@ img{
 .actv-item-enTitle,.actv-item-cnTitle,.actv-item-lecName,.actv-item-lecJob{
 	position: relative;
 	height: auto;
+}
+
+.actv-item-lecJob{
+	max-width: 3.6rem;
 }
 
 .actv-item-lecName{
@@ -626,7 +641,7 @@ img{
 	-moz-box-sizing: box-sizing;
 	box-sizing: box-sizing;
 	border-bottom: 1px solid #F1F1F1;
-	opacity: 0.8;
+	opacity: 1;
 	font-size: 0.22rem;
 	color: #000000;
 	letter-spacing: 0;

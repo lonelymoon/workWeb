@@ -26,7 +26,7 @@ Page.prototype = {
 
 	eventListen : function(){
 		var _self = this,
-			transitionEnd = "transitionEnd" in document ? "transitionEnd" : "webkitTransitionEnd";
+			transitionEnd = "webkitTransitionEnd";
 
 		//hands
 		var homeHand = new myHand("#homepage");
@@ -97,11 +97,17 @@ Page.prototype = {
 			_self.loadProxyPages(linkID,pagelist,"detail");
 		}
 
-		$(".page-wrapper").on("click",this.detailLink,function(e){
-			detailPageShow.call(this,e);
+		$(".page-wrapper").on("tap",function(e){
+			e.stopPropagation();
+			e.preventDefault();
+			$('#all-wrapper').removeClass('mode-active');
 		});
 
-		$(".homepage-content").on("click",this.detailLink,function(e){
+		$(".page-wrapper").on("tap",this.detailLink,function(e){
+			if($('#all-wrapper').hasClass('mode-active')){
+				$('#all-wrapper').removeClass('mode-active');
+				return false;
+			}
 			detailPageShow.call(this,e);
 		});
 
@@ -170,9 +176,6 @@ Page.prototype = {
 				}
 
 				_self.end(page,pageDom,type);
-			},
-			"fail" : function(status){
-
 			}
 		});
 	},
@@ -202,7 +205,7 @@ Page.prototype = {
 
 	//
 	lazyloadImage : function(){
-		var imgObj = $('.lazy-img[data-status=unload]').eq(0),
+		var imgObj = $('.lazy-img[data-status="unload"]').eq(0),
 			img = document.createElement('img'),
 			_self = this;
 			
@@ -213,7 +216,7 @@ Page.prototype = {
 		
 		var src = imgObj.attr('data-origin');
 
-		img.onload = function(){
+		if(img.complete){
 			imgObj.attr({
 				"data-status" : "loaded",
 				"src" : src
@@ -221,7 +224,18 @@ Page.prototype = {
 			setTimeout(function(){
 				_self.lazyloadImage();
 			},30);
-		};
+		}
+		else{
+			img.onload = function(){
+				imgObj.attr({
+					"data-status" : "loaded",
+					"src" : src
+				});
+				setTimeout(function(){
+					_self.lazyloadImage();
+				},30);
+			};
+		}
 
 		imgObj.attr('data-status',"loading");
 		img.src = src;
@@ -279,7 +293,7 @@ Page.prototype = {
 
 	//添加内容到菜单（一级）页面上
 	menuPageLoadEnd : function(page,pageDom){
-		$('#page-menu').find(".page-wrapper").hide().html(pageDom).show();
+		$('#page-menu').find(".page-scroll").html(pageDom);
 		$('#page-menu').find(".page-title").html(page["name"]);
 		$('#page-box').addClass('page-active');
 	},
@@ -292,7 +306,7 @@ Page.prototype = {
 
 	//添加内容到详细（二级）页面上
 	detailPageLoadEnd : function(pageDom){
-		$('#page-detail').find(".page-wrapper").hide().html(pageDom).show();
+		$('#page-detail').find(".page-scroll").html(pageDom);
 		if(this.detailActive == "normal")
 		$('#page-detail').addClass('detail-active');
 		else
@@ -301,18 +315,33 @@ Page.prototype = {
 
 	//创建页面滚动
 	createScroll : function(){
+		var wrapper = this.__triggerWrap;
+
+		if(!this.tempScroll) this.tempScroll = {};
+
+		if(this.tempScroll[wrapper]){
+			var sc = this.tempScroll[wrapper];
+			sc.scrollTo(0,0,1000);
+			sc.refresh();
+			return false;
+		}
+
 		//创建iscroll
-		var tempScroll = new Scroll(this.__triggerWrap + ' .page-wrapper', {
+		this.tempScroll[wrapper] = new Scroll(wrapper + ' .page-wrapper', {
 		    mouseWheel: true,
 		    scrollBar: true,
 		    tap : true
 		});
+
+		setTimeout(function(){
+			this.tempScroll[wrapper].refresh();
+		},150);
 	},
 
 	//创建页面功能
 	createFn : function(){
-		this.createScroll();
 		this.__created = true;
+		this.createScroll();
 	}
 
 };

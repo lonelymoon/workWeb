@@ -54,6 +54,10 @@ Scroll.prototype = {
 		},300);
 	},
 
+	scrollTo : function(x,y,time){
+		this.scroll.scrollTo(x,y,time);
+	},
+
 	scrollStart : function(callback){
 		callback = callback || function(){};
 		this.scroll.off('scrollStart',callback);

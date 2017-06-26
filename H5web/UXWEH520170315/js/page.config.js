@@ -110,7 +110,7 @@ var pageConfig = {
 				"wrapper" : ".center-msg",
 				"callback" : function(data){
 					if(data.strflg != "0"){
-						window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx03f7bacd9247f9fd&redirect_uri=http%3a%2f%2fuxwetest.uxwe.org/%2fweixintest%2fUserCenterload.action&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect';
+						window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx03f7bacd9247f9fd&redirect_uri=http%3a%2f%2fuxwe.org/%2fweixintest%2fUserCenterload.action&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect';
 					}
 					var userMsg = data.jsonusermessage,
 					tpl = '<div class="center-msg-item msg-first-item">'+
