@@ -91,6 +91,7 @@ Page.prototype = {
 
 			localStorage.aid = $id;
 			_self.detailActive = "normal";
+
 			if(!hasMenu){
 				_self.detailActive = "more";
 			}
@@ -136,7 +137,6 @@ Page.prototype = {
 			this.resetPage();
 			return;
 		}
-
 		for( var i = 0, page; page = pagelist[i++]; ){
 			var id = page.id;
 			if(id == linkID){
@@ -174,7 +174,6 @@ Page.prototype = {
 					_self.loadSources(page,pageDom,type);
 					return;
 				}
-
 				_self.end(page,pageDom,type);
 			}
 		});

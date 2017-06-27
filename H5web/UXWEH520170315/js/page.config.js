@@ -211,7 +211,8 @@ var detailConfig = {
 			"sourceUrl" : "/weixintest/Getactivityfromid.action",
 			"sourceData" : function(){
 				return {
-					intid:localStorage.aid
+					intid:localStorage.aid,
+					strtype : ""
 				};
 			},
 			"sources" : [

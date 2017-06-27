@@ -116,7 +116,9 @@ $.ajax({
 		}
 
 		$('.past-workshop-box').html(temp).find('.past-item').eq(0).attr("data-type","1");
-		myScroll.refresh();
+		setTimeout(function(){
+			myScroll.refresh();
+		},10);
 	}
 });
 //获取讲师
@@ -153,7 +155,9 @@ $.ajax({
 			touchMoveStopPropagation : true,
 			slidesPerView: 3
 		});
-		myScroll.refresh();
+		setTimeout(function(){
+			myScroll.refresh();
+		},10);
 	}
 });
 //获取赞助商
@@ -185,7 +189,9 @@ $.ajax({
 		}
 		if(temp)
 		$('.partner-box').html(temp);
-		myScroll.refresh();
+		setTimeout(function(){
+			myScroll.refresh();
+		},10);
 	}
 });
 
