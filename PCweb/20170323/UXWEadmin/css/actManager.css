@@ -1,6 +1,13 @@
 .total-title{
+	position: relative;
 	background: #EDEFED;
 	border: 1px solid #E0E3E2;
+}
+
+.note{
+	position: absolute;
+	right: 30px;
+	top: 0px;
 }
 
 .content-wrapper{
@@ -13,6 +20,7 @@
 	padding-bottom: 30px;
 	margin-bottom: 30px;
 	border: 1px solid #E6E9E9;
+	background: #fff;
 	-webkit-box-sizing: border-box;
 	box-sizing : border-box;
 }
@@ -237,10 +245,11 @@
 	display: none;
 }
 
-.publish[data-isEnd="end"] .peopleHasChecked,.publish[data-isEnd="end"] .looking{
+.publish[data-isEnd="end"] .peopleHasChecked,.publish[data-isEnd="end"] .looking,.publish[data-isEnd="end"] .check{
 	display: none;
 }
 
 .content-box{
 	bottom: 30px;
+	background: none;
 }

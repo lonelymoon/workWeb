@@ -17,7 +17,7 @@ $.ajax({
 	 	
 		for( var i = 0, uplen = unposted.length; i < uplen; i++ ){
 			var up = unposted[i],
-				dateArr = up.strstartime.split(" "),
+				dateArr = up.strendtime.split(" "),
 				date = dateArr[0];
 			var tpl = '<div class="actItem-box unPublish" data-id="'+up.intid+'">'+
 						'<div class="actItem-img">'+
@@ -65,9 +65,10 @@ $.ajax({
 
 		for( var j = 0, plen = posted.length; j < plen; j++ ){
 			var p = posted[j],
-				dateArr = p.strstartime.split(" "),
+				dateArr = p.strendtime.split(" "),
 				date = dateArr[0],
-				isEnd = new Date().getTime() - new Date(date) > 0 ? "end" : "no";
+				sdate = p.strstarttime.split(" ")[0],
+				isEnd = new Date().getTime() - new Date(sdate) > 0 ? "end" : "no";
 			var tpl = '<div class="actItem-box publish" data-id="'+p.intid+'" data-isEnd="'+isEnd+'">'+
 						'<div class="actItem-img">'+
 							'<img src="'+p.strimgurl_origin+'">'+

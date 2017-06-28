@@ -32,8 +32,8 @@ if(isedit){
         dataType:'json', //很重要!!!.预期服务器返回的数据类型 ,  
         success:function(data)
         {              	  
-    	 	var result = data.jsonAactivityshow;
-
+    	 	var result = data.jsonAactivityshow,
+    	 		spons = data.resultarrayraactivitesponsor;
     	 	//city
     	 	$('.cityChoose').find('.selectorVal').attr("data-id",result.intcity).html(result.strcityname);
     	 	$('#address').val(result.straddress);
@@ -68,10 +68,11 @@ if(isedit){
     	 	$('#describe').val(result.strmessage);
     	 	$('#gain').val(result.strgain);
     	 	$('#background').val(result.strbackground);
-    	 	$('#lecName').val(result.strteachername);
-    	 	$('.doShow').find(".selectorVal").html(result.strdistinguish);
-
-    	 	$('.checkBox[data-val="'+result.strlanguage+'"]').find(".checkIcon").addClass("checked");
+    	 	$('#lecName').val(result.strteachername).attr('data-id',result.intteacher_id);
+    	 	var showLec = result.strdistinguish == 1 ? "显示" : "不显示";
+    	 	$('.doShow').find(".selectorVal").html(showLec);
+    	 	var lang = result.strlanguage == "中文" ? "cn" : result.strlanguage == "英文" ? "en" : "both";
+    	 	$('.checkBox[data-val="'+lang+'"]').find(".checkIcon").addClass("checked");
 
     	 	//imgs
     	 	var isrc = result.strimgurl_origin;
@@ -81,8 +82,17 @@ if(isedit){
     	 		$('.poster .img-set').removeClass("hide");
     	 	}
 
-        }   
+    	 	//sponsors
+    	 	var stemp = "";
+    	 	for( var i = 0, sitem; sitem = spons[i++]; ){
+    	 		stemp += '<div class="posted-sponsor-item" data-id="'+sitem.intid+'"><img src="'+
+    	 					sitem.strimgurl+'" title="'+sitem.strname+'" /><a href="javascript:;" class="posted-item-delete">点此删除</a></div>';
+    	 	}
+    	 	$('.sponsorColumn').prepend('<div class="posted-sponsors">'+stemp+'</div>');
+
+        }
 	}); 
+
 }
 
 //end
@@ -138,6 +148,10 @@ $('.cTime').on('change',function(e){
 	$(this).val($val+":00");
 });
 
+//显示弹窗
+$('.note-alert').on(click,function(e){
+	$('.noteLayer').show();
+});
 
 //下拉城市
 var hasGetSelector = false;
@@ -264,6 +278,7 @@ var tpl = '<div class="column-item inline-item">'+
 				'</label>'+
 				'<input type="file" class="hide" id="slogo-1">'+
 			'</div>'+
+			'<div class="sponsor-item-delete">删除本条</div>'+
 		'</div>';
 
 //添加赞助商
@@ -273,12 +288,50 @@ $('.addNewSponsor').on(click,function(e){
     	div = document.createElement("div");
 
     div.innerHTML = tpl;
+    div.className = "sponsor-item";
    	$(div).find(".logoPost").attr("for","slogo-"+len);
    	$(div).find("input[type='file']").attr('id','slogo-'+len);
 
-    $('.sponsorColumn').append(div.innerHTML);
+    $('.sponsorColumn').append(div);
     sc2.refresh();
     Output.registerFileReader();
+});
+
+$('.sponsorColumn').on(click,".sponsor-item-delete",function(e){
+	e.stopPropagation();
+	e.preventDefault();
+	$(this).parents('.sponsor-item').remove();
+	sc2.refresh();
+});
+
+$('.sponsorColumn').on(click,".posted-item-delete",function(e){
+	e.stopPropagation();
+	e.preventDefault();
+	var $pitem = $(this).parents('.posted-sponsor-item');
+	var id = $pitem.attr("data-id");
+	if(confirm("确定要删除指定的赞助商？"))
+	$.ajax({ 
+		type:'post',
+        url:'/Sponsordelete.action',   			
+        data:{intid:id},   
+        dataType:'json', //很重要!!!.预期服务器返回的数据类型 ,  
+        success:function(data)
+    	{        		    
+	    	if (data.strflg == "0")  
+    		{
+    			$pitem.remove();
+				sc2.refresh();
+    		} 	
+	    	else
+    		{
+    			alert("删除指定赞助商shibaile");     
+    		}                             				
+    	},
+        error:function()
+    	{   
+        	alert("删除指定赞助商失败");
+    	}      
+	}); 
 });
 
 $('.checkBox').on("click",function(e){
@@ -330,7 +383,7 @@ var formData = new FormData(),
 	$gain = checkNull("#gain"),
 	$bg = checkNull("#background"),
 	$lec = $("#lecName").attr("data-id"),
-	$doShow = $('.doShow').find('.selectorVal').text(),
+	$doShow = $('.doShow').find('.selectorVal').text() == "显示" ? "1" : "0",
 	$lang = $('.checked').parent(".checkBox").attr("data-val"),
 	$postImg = $('#poster')[0].files[0];
 
@@ -420,7 +473,11 @@ xhr.open("post","/CreateActive");
 xhr.addEventListener("load",function(e){
 	var res = xhr.responseText,
 		res1 = JSON.parse(res);
-	if(res1["strflg"] == "0"){		
+	if(res1["strflg"] == "0"){
+		if(len <= 0){
+			$('.mana').find("li[data-link='actManager']").trigger("click");
+			return;
+		}
 		var xhr1 = new XMLHttpRequest();
 		xhr1.open("post","/ActivitySponsor");
 		xhr1.addEventListener("load",function(e){

@@ -156,6 +156,47 @@ textarea{
 	bottom: -25px;
 }
 
+.posted-sponsors{
+	position: relative;
+	height: auto;
+}
+
+.posted-sponsors:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+.posted-sponsor-item{
+	position: relative;
+	float: left;
+	width: 120px;
+	margin-right: 10px;
+	text-align: center;
+	padding-bottom: 26px;
+}
+
+.posted-sponsor-item>img{
+	position: relative;
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.posted-item-delete{
+	position: relative;
+	height: auto;
+	text-decoration: underline;
+	font-size: 16px;
+	padding-top: 8px;
+	color: #ccc;
+}
+
+.posted-item-delete:hover{
+	cursor: pointer;
+	color: red;
+}
+
 .sponsorName,.sponsorWeb{
 	position: relative;
 	border: 2px solid #D9DADC;
@@ -173,6 +214,26 @@ textarea{
 
 .sponsorLogo-item{
 	padding-bottom: 40px;
+}
+
+.sponsor-item{
+	position: relative;
+	height: auto;
+	padding-bottom: 20px;
+}
+
+.sponsor-item-delete{
+	position: absolute;
+    right: 62px;
+    bottom: 0px;
+    font-size: 16px;
+    text-decoration: underline;
+    color: red;
+}
+
+.sponsor-item-delete:hover{
+	cursor: pointer;
+	opacity: 0.9;
 }
 
 .logoPost{
@@ -228,6 +289,16 @@ textarea{
 	height: 600px;
 	left: 50%;
 	margin-left: -400px;
+}
+
+.noteLayer .layer-wrapper{
+	position: relative;
+	line-height: 60px;
+	font-size: 20px;
+}
+
+.noteLayer .layer-wrapper span{
+	font-size: 24px;
 }
 
 .cityAdd{
