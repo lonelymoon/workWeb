@@ -110,7 +110,7 @@ var pageConfig = {
 				"wrapper" : ".center-msg",
 				"callback" : function(data){
 					if(data.strflg != "0"){
-						window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx03f7bacd9247f9fd&redirect_uri=http%3a%2f%2fuxwe.org/%2fweixintest%2fUserCenterload.action&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect';
+						window.location.href = 'http://uxwe.org/UXWEEregister/index.html';
 					}
 					var userMsg = data.jsonusermessage,
 					tpl = '<div class="center-msg-item msg-first-item">'+
@@ -118,7 +118,7 @@ var pageConfig = {
 									'<img src="'+userMsg.strimageurl+'">'+
 								'</div>'+
 								'<div class="user-name">'+userMsg.strnickname+'</div>'+
-								'<div class="user-edit">编辑资料</div>'+
+								'<div class="user-edit menulink" data-link="edit">编辑资料</div>'+
 							'</div>'+
 							'<div class="center-msg-item">'+
 								'<div class="center-label">工作领域</div>'+
@@ -197,6 +197,87 @@ var pageConfig = {
 					$('.center-detail-list').removeClass("detail-choose");
 					$(this).addClass('detail-choose');
 				});
+			}
+		},
+		{
+			"name" : "编辑资料",
+			"id" : "edit",
+			"pageCache" : "",
+			"sourceUrl" : "/Gettuser.action",
+			"sourceData" : function(){
+				
+			},
+			"sources" : [{
+				"wrapper" : ".edit-container",
+				"callback" : function(data){
+					
+					if(data.strflg == "1"){
+						window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx03f7bacd9247f9fd&redirect_uri=http%3a%2f%2fuxwe.org/%2fweixintest%2fUserCenterload.action&response_type=code&scope=snsapi_userinfo&state=1#wechat_redirect';
+					}
+
+					var res = data.jsonusermessage;
+
+					var tpl = '<div class="base-item base-msg">'+
+								'<div class="user-name">'+res.strnickname+'</div>'+
+								'<div class="user-photo">'+
+									'<img src="'+res.strimageurl+'" class="edit-user-head" />'+
+								'</div>'+
+							'</div>'+
+							'<div class="base-item">'+
+								'<div class="edit-label">工作领域</div>'+
+								'<div class="edit-val view-val">'+res.strjob+'</div>'+
+							'</div>'+
+							'<div class="base-item">'+
+								'<div class="edit-label">工作年限</div>'+
+								'<div class="edit-val input-val">'+
+									'<input type="tel" value="'+res.intworktime+'" id="edit-year" maxlength="2" > 年'+
+								'</div>'+
+							'</div>'+
+							'<div class="base-item">'+
+								'<div class="edit-label">公司</div>'+
+								'<div class="edit-val input-val">'+
+									'<input type="text" value="'+res.strcompany+'" id="edit-company" maxlength="20" >'+
+								'</div>'+
+							'</div>'+
+							'<button class="save">保存</button>';
+
+					return tpl;
+
+				}
+			}],
+			"callback" : function(pageDom){
+
+				$('#edit-page').find('.view-val').on("tap",function(e){
+					$('.edit-layer').removeClass("hide");
+				});
+
+				$('.edit-view-box').on('tap','.edit-view-item',function(e){
+					$('.edit-layer').addClass("hide");
+					$('#edit-page').find('.view-val').html($(this).text());
+				});
+
+				$('#edit-page').find('.save').on('tap',function(e){
+					$.ajax({
+	       				type:'post',
+	                    url:'/Updateuser.action',   			
+	                    data:{
+	                    	strcompany:$('#edit-company').val(),
+	                    	strjob:$('#edit-page').find('.view-val').html(),
+	                    	intworktime: $('#edit-year').val() * 1,
+	                    },   
+	                    dataType:'json', //很重要!!!.预期服务器返回的数据类型 ,  
+	                    success:function(data)
+                    	{              	
+                    		alert("更改成功");
+                    		window.location.reload();                   				
+                    	},
+	                    error:function()
+	                    {   
+	                        alert("更改信息失败");
+	                    }  	    
+		        	});
+				});
+
 			}
 		}
 

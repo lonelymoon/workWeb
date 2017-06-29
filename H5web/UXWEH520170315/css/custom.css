@@ -700,6 +700,7 @@ img{
 	border: 2px solid #000000;
 	font-size: 0.2rem;
 	float: right;
+	color: #000000 !important;
 }
 
 #page-menu .user-job,#page-menu .user-workyear{
@@ -1009,4 +1010,158 @@ img{
 	letter-spacing: 0;
 	line-height: 0.37rem;
 	padding-top: 0.25rem;
+}
+
+/*****************************/
+#edit-page .edit-container{
+	position: relative;
+	height: auto;
+	padding: 0rem 0.25rem;
+}
+
+#edit-page .base-item{
+	position: relative;
+	line-height: 0.82rem;
+	height: 0.82rem;
+	border-bottom: 1px solid #F6F6F6;
+	font-size: 0.22rem;
+	color: rgba(0,0,0,0.8);
+	letter-spacing: 0;
+}
+
+#edit-page .base-msg{
+	position: relative;
+	height: auto;
+	padding-top: 0.5rem;
+	padding-bottom: 1.28rem;
+}
+
+#edit-page .base-msg:after{
+	content: "";
+}
+
+#edit-page .user-name{
+	position: relative;
+	height: 1rem;
+	line-height: 1rem;
+	float: left;
+	font-size: 0.5rem;
+	color: rgba(0,0,0,0.8);
+	letter-spacing: 0;
+}
+
+#edit-page .user-photo{
+	position: relative;
+	float: right;
+	height: 1rem;
+	width: 1rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+#edit-page .user-photo>img{
+	max-width: 100%;
+	display: block;
+}
+
+#edit-page .edit-label{
+	position: relative;
+	height: auto;
+	float: left;
+}
+
+#edit-page .edit-val{
+	position: relative;
+	height: auto;
+	float: right;
+	color: rgba(0,0,0,0.5);
+	padding-right: 0.4rem;
+}
+
+#edit-page .edit-val:after{
+	position: absolute;
+	top: 0rem;
+	right: 0rem;
+	content: ">";
+	display: block;
+}
+
+#edit-page .input-val:after{
+	content: "";
+}
+
+#edit-page #edit-company,#edit-page #edit-year{
+	position: relative;
+	width: 4rem;
+	border: none;
+	outline: none;
+	text-align: right;
+	color: rgba(0,0,0,0.5);
+}
+
+#edit-page #edit-year{
+	width: 1rem;
+}
+
+#edit-page .save{
+	position: relative;
+    border: none;
+    outline: none;
+    width: 0.8rem;
+    height: 0.36rem;
+    background: #FF8314;
+    color: #fff;
+    font-size: 0.15rem;
+    margin-top: 0.3rem;
+}
+
+#edit-page .save:hover{
+	cursor: pointer;
+}
+
+#edit-page .edit-layer{
+	position: fixed;
+	top: 0rem;
+	left: 0rem;
+	width: 100%;
+	height: 100%;
+	z-index: 2000;
+	background: rgba(0,0,0,0.7);
+}
+
+#edit-page .edit-view-box{
+	position: absolute;
+	width: 2rem;
+	height: 3.5rem;
+	left: 50%;
+	top: 50%;
+	margin-left: -1rem;
+	margin-top: -1.75rem;
+	background: #fff;
+	border-bottom: 1px solid #c8c8c8;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#edit-page .edit-view-item{
+	position: relative;
+	height: 0.7rem;
+	line-height: 0.7rem;
+	border-bottom: 1px dashed #c8c8c8;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 0.14rem;
+}
+
+#edit-page .edit-view-item:hover{
+	cursor: pointer;
+}
+
+#edit-page .edit-view-item:last-child{
+	border-bottom: none;
+}
+
+#edit-page .hide{
+	display: none !important;
 }

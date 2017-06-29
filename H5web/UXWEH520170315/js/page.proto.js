@@ -104,6 +104,16 @@ Page.prototype = {
 			$('#all-wrapper').removeClass('mode-active');
 		});
 
+		$(".page-wrapper").on("tap",".user-edit",function(e){
+			e.preventDefault();
+			e.stopPropagation();
+
+			var linkID = $(this).attr('data-link'),
+				pagelist = _self.pages.pagelist;
+				
+			_self.loadProxyPages(linkID,pagelist,"menu");
+		});
+
 		$(".page-wrapper").on("tap",this.detailLink,function(e){
 			if($('#all-wrapper').hasClass('mode-active')){
 				$('#all-wrapper').removeClass('mode-active');
@@ -314,7 +324,8 @@ Page.prototype = {
 
 	//创建页面滚动
 	createScroll : function(){
-		var wrapper = this.__triggerWrap;
+		var _self = this,
+			wrapper = this.__triggerWrap;
 
 		if(!this.tempScroll) this.tempScroll = {};
 
@@ -333,7 +344,7 @@ Page.prototype = {
 		});
 
 		setTimeout(function(){
-			this.tempScroll[wrapper].refresh();
+			_self.tempScroll[wrapper].refresh();
 		},150);
 	},
 
