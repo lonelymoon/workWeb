@@ -67,7 +67,7 @@ $.ajax({
 			var p = posted[j],
 				dateArr = p.strendtime.split(" "),
 				date = dateArr[0],
-				sdate = p.strstarttime.split(" ")[0],
+				sdate = p.strstartime.split(" ")[0],
 				isEnd = new Date().getTime() - new Date(sdate) > 0 ? "end" : "no";
 			var tpl = '<div class="actItem-box publish" data-id="'+p.intid+'" data-isEnd="'+isEnd+'">'+
 						'<div class="actItem-img">'+
