@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>冶春早茶·招商加盟进行中</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript">
+if(window.screen.width > 750){
+	window.location.href = "../index.html";
+}
+</script>
+</head>
+<body>
+<div class="container">
+	<div class="item-column"><img src="images/1.jpg" alt=""></div>
+	<div class="item-column"><img src="images/2.jpg" alt=""></div>
+	<div class="item-column">
+		<img src="images/3.jpg" alt="">
+		<div class="input-box">
+			<div class="input-item">
+				<input type="text" id="name" placeholder="称呼：*" maxlength="20">
+			</div>
+			<div class="input-item">
+				<input type="tel" id="phone" placeholder="手机：*" maxlength="20">
+			</div>
+			<div class="input-item">
+				<input type="text" id="mail" placeholder="邮箱（选填）：" maxlength="40">
+			</div>
+			<button id="submit">提交</button>
+		</div>
+	</div>
+	<div class="item-column"><img src="images/4.jpg" alt=""></div>
+	<div class="item-column"><img src="images/5.jpg" alt=""></div>
+	<div class="item-column"><img src="images/6.jpg" alt=""></div>
+	<div class="item-column"><img src="images/7.jpg" alt=""></div>
+	<div class="item-column"><img src="images/8.jpg" alt=""></div>
+	<div class="item-column"><img src="images/9.jpg" alt=""></div>
+	<div class="item-column"><img src="images/10.jpg" alt=""></div>
+	<div class="item-column"><img src="images/11.jpg" alt=""></div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+jQuery(function($){
+	$('#submit').on('click',function(e){
+		var $name = $('#name').val() || "",
+			$phone = $('#phone').val() || "",
+			$mail = $('#mail').val() || "";
+
+		if(!$name){
+			alert("请填写您的称呼");
+			return false;
+		}
+
+		if(!(/^1[34578]\d{9}$/.test($phone))){
+			alert("手机填写有误，请重新填写");
+			return false;
+		}
+
+		$.ajax({  
+			type:'post',
+            url:'/Register.action',   			
+            data:{
+            	strpaperphone:$phone,
+            	strpapername:$name,
+            	strpaperemail:$mail
+        	},   
+            dataType:'json', //很重要!!!.预期服务器返回的数据类型 ,  
+            success:function(data)
+        	{              	
+        		if(data.strflg == "0"){
+        			alert("信息提交成功");
+        			window.location.reload();
+        			return false;
+        		}
+        		alert("信息提交失败，请稍候重试");	
+        	},
+            error:function()
+        	{   
+            	alert("信息提交失败，请稍候重试");
+        	}     	    
+    	}); 
+
+	});
+});
+</script>
+</body>
+</html>
