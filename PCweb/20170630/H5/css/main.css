@@ -1,3 +1,20 @@
+.phone{
+	position: fixed;
+	top: 0rem;
+	left: 0rem;
+	width: 100%;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	background: #007AFF;
+	text-align: center;
+	font-size: 0.3rem;
+	z-index: 10;
+}
+
+.phone>a{
+	color: #fff;
+}
+
 .container{
 	position: relative;
 	height: auto;
