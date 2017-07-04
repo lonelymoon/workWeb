@@ -21,18 +21,27 @@
 	background-image: url("../images/2.jpg");
 }
 
+.ct-wrapper{
+	position: relative;
+	width: 1200px;
+	margin: 0 auto;
+	height: auto;
+}
+
 .input-box{
 	position: absolute;
-	width: 722px;
-    top: 741px;
-	right: 10px;
+	width: 682px;
+    top: 710px;
+	right: -65px;
 	height: auto;
+	background: #b81c25;
+	padding: 20px;
 }
 
 .input-item{
 	position: relative;
 	height: 60px;
-	width: 90%;
+	width: 100%;
 	border: 1px solid #d1c0a5;
 	margin-bottom: 28px;
 }
@@ -54,10 +63,10 @@
 	width: 140px;
 	height: 60px;
 	font-size: 20px;
-	color: #fff;
+	color: #000;
 	border: none;
 	outline: none;
-	background: #d1c0a5;
+	background: #fbbf05;
 }
 
 #submit:hover{
