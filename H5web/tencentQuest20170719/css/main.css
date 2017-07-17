@@ -1,0 +1,97 @@
+html,body{
+	height: 100%;
+	overflow: hidden;
+	background: #ccc;
+}
+
+#container{
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	max-width: 6.25rem;
+	margin: 0 auto;
+}
+
+.swiper-container,.swiper-wrapper,.swiper-slide{
+	height: 100%;
+}
+
+.page-box{
+	position: relative;
+	height: auto;
+}
+
+.form-box{
+	position: relative;
+	height: auto;
+}
+
+.btn-box{
+	position: relative;
+	height: auto;
+}
+
+.form-box>input{
+	position: relative;
+	display: block;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #fff;
+	text-align: center;
+	margin: 0 auto;
+	background: none;
+}
+
+.next-btn{
+	position: relative;
+	color: #fff;
+	outline: none;
+	border: none;
+}
+
+.quest-box{
+	position: relative;
+	height: auto;
+}
+
+.quest-title{
+	position: relative;
+	height: auto;
+}
+
+.quest-items{
+	position: relative;
+	height: auto;
+}
+
+.quest-item{
+	position: relative;
+	height: auto;
+}
+
+.quest-status{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	width: 0.3rem;
+	height: 0.3rem;
+	text-align: center;
+	line-height: 0.3rem;
+}
+
+.quest-status:after{
+	position: relative;
+	content: "";
+	display: block;
+	color: red;
+}
+
+.quest-item[data-status="checked"] .quest-status{
+	background : #fff;
+}
+
+.quest-item[data-status="checked"] .quest-status:after{
+	content: "√";
+}
