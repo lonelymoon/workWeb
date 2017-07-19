@@ -3,39 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-<title></title>
+<title>腾讯营销平台问卷调查</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<link href='https://cdn.webfont.youziku.com/webfonts/nomal/97183/47017/596f0517f629d80e28067b18.css' rel='stylesheet' type='text/css' />
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
+<script src="jquery/share.js" type="text/javascript" charset="UTF-8"></script>
 </head>
 <body>
-
+<div class="dialog hide">
+	<div class="select-box">
+		<div class="select-title">请选择</div>
+		<div class="select-item">品牌主</div>
+		<div class="select-item">经销商</div>
+		<div class="select-item">其他</div>
+	</div>
+</div>
 <section id="container">
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="page-box">
+					<img src="images/start.png">
+				</div>
+			</div>
 			<div class="swiper-slide sl_1">
 				<div class="page-box">
-					<div class="form-box">
-						<input type="text" id="company" placeholder = "公司" />
-						<input type="text" id="name" placeholder = "姓名" />
-						<input type="text" id="job" placeholder = "职位" />
-						<input type="tel" id="tel" placeholder = "电话" />
-						<input type="text" id="email" placeholder = "邮箱" />
-						<input type="text" id="prop" placeholder = "品牌主/经销商/其他" />
+					<div class="bg-set">
+						<img src="images/bg.png">
 					</div>
-					<div class="btn-box">
+					<div class="logo">
+						<img src="images/logo.png">
+					</div>
+					<div class="form-box">
+						<div class="title">希望留下您的宝贵信息，以便我们进一步了解行业情况：</div>
+						<input type="text" id="company" placeholder = "公司(*)" />
+						<input type="text" id="name" placeholder = "姓名(*)" />
+						<input type="text" id="job" placeholder = "职位(*)" />
+						<input type="tel" id="tel" placeholder = "电话(*)" />
+						<input type="text" id="email" placeholder = "邮箱(*)" />
+						<div id="prop" data-val="品牌主">
+							品牌主
+						</div>
+					</div>
+					<div class="btn-box first-btn-box">
 						<button class="next-btn">下一页</button>
 					</div>
 				</div>
 			</div>
 			<div class="swiper-slide sl_2">
 				<div class="page-box">
+					<div class="bg-set">
+						<img src="images/bg.png">
+					</div>
+					<div class="logo">
+						<img src="images/logo.png">
+					</div>
 					<div class="quest-box" id="cost">
 						<div class="quest-title">
 							请问贵公司过去一年内数字媒体投放费用范围怎样的？（单选）
 						</div>
 						<div class="quest-items radio">
-							<div class="quest-item" data-status="checked">
+							<div class="quest-item" data-status="">
 								<div class="quest-status"></div>
 								<div class="quest-text">100万以下</div>
 							</div>
@@ -58,6 +89,9 @@
 							<div class="quest-item" data-status="">
 								<div class="quest-status"></div>
 								<div class="quest-text">没有投放</div>
+								<div class="quest-input hide">
+									<textarea class="textarea" placeholder="请填写相关原因"></textarea>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -68,12 +102,18 @@
 			</div>
 			<div class="swiper-slide sl_3">
 				<div class="page-box">
+					<div class="bg-set">
+						<img src="images/bg.png">
+					</div>
+					<div class="logo">
+						<img src="images/logo.png">
+					</div>
 					<div class="quest-box" id="usedInTencent">
 						<div class="quest-title">
 							请问您过去一年是否有在腾讯营销平台进行过营销宣传？
 						</div>
 						<div class="quest-items radio">
-							<div class="quest-item" data-status="checked">
+							<div class="quest-item" data-status="">
 								<div class="quest-status"></div>
 								<div class="quest-text">有</div>
 							</div>
@@ -90,18 +130,57 @@
 			</div>
 			<div class="swiper-slide sl_4">
 				<div class="page-box">
+					<div class="bg-set">
+						<img src="images/bg.png">
+					</div>
+					<div class="logo">
+						<img src="images/logo.png">
+					</div>
+
 					<div class="quest-box" id="knowTencent">
 						<div class="quest-title">
 							请问过去一年您都从以下哪些途径接触到腾讯营销平台的数字营销宣传？（多选）
 						</div>
 						<div class="quest-items multi">
-							<div class="quest-item" data-status="checked">
+							<div class="quest-item" data-status="">
 								<div class="quest-status"></div>
 								<div class="quest-text">微信内容（公众号发布）</div>
 							</div>
 							<div class="quest-item" data-status="">
 								<div class="quest-status"></div>
 								<div class="quest-text">微信内容（朋友圈转发内容）</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">微信内容（朋友圈）</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">大型会议（如峰会，产品推荐会等）</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">广告销售人员推荐和介绍</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">小型落地活动（如workshop等）</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">营销、广告或行业杂志上的相关介绍、广告</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">邮件发送的EDM资料</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">户外媒体（广告牌、交通工具广告等）</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">微博内容</div>
 							</div>
 						</div>
 					</div>
@@ -110,11 +189,420 @@
 					</div>
 				</div>
 			</div>
+			<div class="swiper-slide sl_5">
+				<div class="page-box">
+					<div class="bg-set">
+						<img src="images/bg.png">
+					</div>
+					<div class="logo">
+						<img src="images/logo.png">
+					</div>
+					<div class="quest-box" id="preference">
+						<div class="quest-title">
+							您最期待看到哪些和日化行业相关的营销内容？（多选）
+						</div>
+						<div class="quest-items multi">
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">行业热点资讯</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">行业洞察报告</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">行业优秀案例</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">行业营销解决方案</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">其他，请注明：</div>
+								<div class="quest-input hide">
+									<textarea class="textarea" placeholder="请填写相关内容"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-box">
+						<button class="next-btn">下一页</button>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide sl_6">
+				<div class="page-box">
+					<div class="bg-set">
+						<img src="images/bg.png">
+					</div>
+					<div class="logo">
+						<img src="images/logo.png">
+					</div>
+					<div class="quest-box" id="standard">
+						<div class="quest-title">
+							请问您选择数字媒体平台的标准有哪些？（多选）
+						</div>
+						<div class="new-quest-title">
+							用户
+						</div>
+						<div class="quest-items multi">
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									全面的用户覆盖
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									覆盖用户生活全场景
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									良好的用户互动
+								</div>
+							</div>
+						</div>
+						<div class="new-quest-title">
+							内容
+						</div>
+						<div class="quest-items multi">
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									拥有优质、专业、独占的内容
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									媒体平台具有公信力
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									可以做专业的内容定制、与产品关联度高
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									媒体平台内容多元化
+								</div>
+							</div>
+						</div>
+						<div class="new-quest-title">
+							数据
+						</div>
+						<div class="quest-items multi">
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									丰富的用户数据及标签体系
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									可精准投放，转化率高
+								</div>
+							</div>
+						</div>
+						<div class="new-quest-title">
+							技术
+						</div>
+						<div class="quest-items multi">
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									前沿的技术
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									创新的产品
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									更优的效果评估体系
+								</div>
+							</div>
+						</div>
+						<div class="new-quest-title">
+							其他
+						</div>
+						<div class="quest-items multi">
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									服务
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									竞品
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									长期合作
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									性价比
+								</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">
+									其他，请注明：
+								</div>
+								<div class="quest-input hide">
+									<textarea class="textarea" placeholder="请填写相关原因"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-box">
+						<button class="next-btn">下一页</button>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide sl_7">
+				<div class="page-box">
+					<div class="bg-set">
+						<img src="images/bg.png">
+					</div>
+					<div class="logo">
+						<img src="images/logo.png">
+					</div>
+					<div class="quest-box" id="problem">
+						<div class="quest-title">
+							在投放数字媒体广告时，您曾经遇到过以下哪些问题？【多选】
+						</div>
+						<div class="quest-items multi">
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">数字营销效果难以评估</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">还是优先考虑传统媒体</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">制定整体媒介预算分配方案</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">缺少对平台数字营销能力的了解</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">其他，请注明：</div>
+								<div class="quest-input hide">
+									<textarea class="textarea" placeholder="请填写相关内容"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-box">
+						<button class="next-btn">下一页</button>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide sl_8">
+				<div class="page-box">
+					<div class="bg-set">
+						<img src="images/bg.png">
+					</div>
+					<div class="logo">
+						<img src="images/logo.png">
+					</div>
+					<div class="quest-box" id="targets">
+						<div class="quest-title">
+							请问贵公司在媒体投放广告的目的是什么？【多选】
+						</div>
+						<div class="quest-items multi">
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">新品上市</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">（新）品牌知名度</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">拓展/吸引新用户线上线下联合推广，如促销</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">激发用户购买，提升销售</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">效果转化，如互动/点击/分享/下载</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">其他，请注明：</div>
+								<div class="quest-input hide">
+									<textarea class="textarea" placeholder="请填写相关内容"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-box">
+						<button class="next-btn">下一页</button>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide sl_9">
+				<div class="page-box">
+					<div class="bg-set">
+						<img src="images/bg.png">
+					</div>
+					<div class="logo">
+						<img src="images/logo.png">
+					</div>
+					<div class="quest-box" id="send">
+						<div class="quest-title">
+							您最愿意向客户/同行朋友推荐以下哪几家新闻客户端投放广告？（多选）
+						</div>
+						<div class="quest-items multi">
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">腾讯新闻客户端</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">今日头条</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">微信里的“腾讯新闻”插件</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">网易新闻客户端</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">天天快报</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">一点资讯</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">百度新闻客户端</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">UC新闻客户端</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">搜狐新闻</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">新浪新闻（非新浪微博）</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">凤凰新闻</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-box">
+						<button class="next-btn">下一页</button>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide sl_10 swiper-no-swiping">
+				<div class="page-box">
+					<div class="bg-set">
+						<img src="images/bg.png">
+					</div>
+					<div class="logo">
+						<img src="images/logo.png">
+					</div>
+					<div class="quest-box" id="sendInVideoSite">
+						<div class="quest-title">
+							您最愿意向客户/同行朋友推荐以下哪几家移动视频客户端广告投放？（多选）
+						</div>
+						<div class="quest-items multi">
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">腾讯视频</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">优酷/土豆</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">爱奇异/PPS</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">芒果TV</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">乐视</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">PPTV</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">搜狐视频</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">百度视频</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">哔哩哔哩</div>
+							</div>
+							<div class="quest-item" data-status="">
+								<div class="quest-status"></div>
+								<div class="quest-text">迅雷看看</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-box">
+						<button class="save-btn">确认并提交</button>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide swiper-no-swiping">
+				<div class="page-box">
+					<img src="images/end.png">
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
 
-<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript" src="js/iscroll.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
