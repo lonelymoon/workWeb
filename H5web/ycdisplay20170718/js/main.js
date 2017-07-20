@@ -3,16 +3,9 @@ jQuery(function($){
 var swiper = new Swiper(".swiper-container",{
 	direction : "vertical",
 	onTransitionEnd : function(swiper){
-		$(".blur-img").removeClass("blur");
-		if(swiper.activeIndex == 6){
-			setTimeout(function(e){
-				$(".blur-img").addClass("blur");
-			},100);
-		}
-
-		if(swiper.activeIndex >= 7){
+		/*if(swiper.activeIndex >= 8){
 			swiper.destroy();
-		}
+		}*/
 	}
 });
 
@@ -35,7 +28,7 @@ function checkNull(){
 		return false;
 	}
 
-	if( !(/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test($email)) ){
+	if( !(/^(\-*\w)+(\.\w+)*(\-\w+)*@(\w)+((\.\w+)+)$/.test($email)) ){
 		alert("请填写正确的邮箱");
 		return false;
 	}

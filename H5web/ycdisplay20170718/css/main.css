@@ -19,7 +19,8 @@ html,body{
 
 .page-box{
 	position: relative;
-	height: auto;
+	height: 100%;
+	overflow: hidden;
 }
 
 .page-box>img{
@@ -40,14 +41,23 @@ html,body{
 .text-box-1{
 	position: relative;
 	padding-top: 2.6rem;
-	width: 3.9rem;
+	width: 4.4rem;
 	margin: 0 auto;
 	font-size: 0.53rem;
 	color: #FFFFFF;
 	letter-spacing: 1px;
 	height: auto;
 	line-height: 1.08rem;
-	text-shadow: 0 2px 1px #000000;
+}
+
+.colorBlack{
+	color: #000000 !important;
+	text-shadow: 0 0px 0px #000000 !important;
+}
+
+.text-box-0{
+	padding-top: 3.6rem;
+	width: 4.6rem;
 }
 
 .text-item{
@@ -58,7 +68,7 @@ html,body{
 
 .bottom-box{
 	position: absolute;
-	bottom: 0rem;
+	bottom: 0.2rem;
 	left: 0rem;
 	width: 100%;
 	height: auto;
@@ -67,18 +77,17 @@ html,body{
 	color: #FFFFFF;
 	letter-spacing: 2.18px;
 	line-height: 0.33rem;
-	padding-bottom: 0.2rem;
+	z-index: 10;
 }
 
 .bottom-box>img{
-	max-width: 0.68rem;
+	max-width: 0.483rem;
 }
 
 .bottom-text{
 	position: relative;
 	height: auto;
 	padding-bottom: 0.1rem;
-	text-shadow: 0 1px 10px #333333;
 }
 
 .text-box-2{
@@ -91,27 +100,34 @@ html,body{
 	letter-spacing: 0;
 	height: auto;
 	line-height: 0.75rem;
-	text-shadow: 0 2px 1px #000000;
+}
+
+.ti2Big{
+	font-size: 0.5rem;
+	font-family: "Microsoft Yahei";
 }
 
 .text-box-3{
 	position: relative;
-	padding-top: 0.9rem;
-	width: 5.59rem;
+	padding-top: 1.3rem;
+	width: 4.9rem;
 	margin: 0 auto;
-	color: #FFFFFF;
+	color: #000000;
 	letter-spacing: 0;
 	height: auto;
-	text-align: right;
+	text-align: left;
 }
 
 .travel-title{
 	position: relative;
-	font-size: 0.25rem;
-	color: #FFFFFF;
+	font-size: 0.4rem;
+	color: #000000;
 	letter-spacing: 0;
-	text-shadow: 0 1px 1px rgba(0,0,0,0.50);
 	font-weight: 700;
+}
+
+.text-box-3 .travel-title{
+	padding-bottom: 0.16rem;
 }
 
 .travel-box{
@@ -128,16 +144,31 @@ html,body{
 	font-size: 0.2rem;
 	color: #FFFFFF;
 	letter-spacing: 0;
-	text-shadow: 0 1px 1px rgba(0,0,0,0.50);
+	
+}
+
+.text-box-3 .travel-item{
+	font-size: 0.18rem;
+	margin-bottom: 0.42rem;
+}
+
+.text-box-3 .travel-item:before{
+	position: absolute;
+    display: block;
+    content: "";
+    width: 0.46rem;
+    height: 0.04rem;
+    left: 0rem;
+    top: -0.2rem;
+    z-index: 2;
+    background: #000;
 }
 
 .item-title{
 	position: relative;
-	font-size: 0.22rem;
-	font-weight: bolder;
+	font-size: 0.25rem;
 	color: #FFFFFF;
 	letter-spacing: 0;
-	text-shadow: 0 1px 1px rgba(0,0,0,0.50);
 }
 
 .en{
@@ -145,23 +176,75 @@ html,body{
 	font-family: "enFont";
 	font-style: italic;
 	letter-spacing: 0.5px;
+	font-size: 0.22rem;
+}
+
+.text-box-3 .item-title{
+	padding-bottom: 0.12rem;
 }
 
 .text-box-4{
 	position: relative;
-	padding-top: 6.18rem;
+	padding-top: 2.68rem;
 	width: 5.59rem;
 	margin: 0 auto;
 	color: #FFFFFF;
 	letter-spacing: 0;
 	height: auto;
-	text-align: left;
+	text-align: center;
+}
+
+.text-box-4 .travel-item{
+	margin-bottom: 0.8rem;
+}
+
+.text-box-4 .travel-title{
+	color: #BE9567;
+	padding-bottom: 0.68rem;
+}
+
+.text-box-4 .travel-item:after{
+	position: absolute;
+    display: block;
+    content: "";
+    width: 0.46rem;
+    height: 0.04rem;
+    left: 50%;
+    margin-left: -0.23rem;
+    top: -0.2rem;
+    z-index: 2;
+    background: #fff;
+}
+
+.text-box-4 .item-title{
+	padding-bottom: 0.2rem;
 }
 
 .text-box-5{
-	width: 5.59rem;
-	padding-top: 0.98rem;
-	word-break : break-all;
+	width: 3.59rem;
+    padding-top: 0.4rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+    word-break: break-all;
+    position: absolute;
+    left: 0rem;
+    top: 2rem;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+}
+
+.text-box-5 .travel-title{
+	color: #fff;
+	font-size: 0.6rem;
+	padding-bottom: 0.2rem;
+}
+
+.text-box-5 .travel-item{
+	font-size: 0.22rem;
+}
+
+.text-box-5 .travel-item:before{
+	background: #fff;
 }
 
 .last-note{
@@ -170,7 +253,7 @@ html,body{
 	color: #FFFFFF;
 	letter-spacing: 0;
 	line-height: 0.35rem;
-	text-shadow: 0 1px 1px rgba(0,0,0,0.50);
+	
 }
 
 .last-box{
@@ -180,21 +263,31 @@ html,body{
 	z-index: 1;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0,0.3);
+	background: rgba(0,0,0,0.4);
 }
 
 .blur{
-	-webkit-filter: blur(1px);
-       -moz-filter: blur(1px);
-        -ms-filter: blur(1px);    
-            filter: blur(1px);
+	-webkit-filter: blur(0px);
+       -moz-filter: blur(0px);
+        -ms-filter: blur(0px);    
+            filter: blur(0px);
+}
+
+.text-box-7-title{
+	position: relative;
+	height: auto;
+	padding-top: 0.42rem;
+	font-size: 0.5rem;
+	color: #fff;
+	text-align: center;
+	z-index: 2;
 }
 
 .step-box{
 	position: relative;
 	z-index: 2;
 	height: auto;
-	padding-top: 0.28rem;
+	padding-top: 0.22rem;
 	text-align: center;
 }
 
@@ -205,7 +298,7 @@ html,body{
 	color: #ffffff;
 	letter-spacing: 0;
 	line-height: 0.33rem;
-	margin-bottom: 0.18rem;
+	margin-bottom: 0.14rem;
 }
 
 .row-title{
@@ -216,17 +309,45 @@ html,body{
 
 .last-arrow{
 	position: relative;
-	padding-top: 0.22rem;
+	padding-top: 0.14rem;
 }
 
 .last-arrow>img{
 	max-width: 0.68rem;
 }
 
+.text-box-6{
+	padding-top: 1.88rem;
+}
+
+.text-box-6 .travel-title{
+	color: #fff;
+	padding-bottom: 0.42rem;
+}
+
+.text-box-6 .travel-item{
+	margin-bottom: 0.68rem;
+}
+
+.last-note:before{
+	position: absolute;
+    display: block;
+    content: "";
+    width: 0.46rem;
+    height: 0.04rem;
+    left: 50%;
+    margin-left: -0.23rem;
+    top: -0.2rem;
+    z-index: 2;
+    background: #fff;
+}
+
 .last-content-box{
 	position: relative;
 	height: auto;
-	background : #25211E;
+	/* background : #25211E; */
+	background: url("../images/8.png") no-repeat top center;
+	background-size: cover;
 }
 
 .form-box{
@@ -252,12 +373,14 @@ html,body{
 .text-box{
 	position: relative;
 	height: auto;
-	padding-top: 0.83rem;
-	font-size: 0.2rem;
+	padding-top: 0.33rem;
+	font-size: 0.3rem;
 	color: #FFFFFF;
 	letter-spacing: 0;
-	line-height: 0.42rem;
+	line-height: 0.5rem;
 	text-align: center;
+	width: 5rem;
+	margin: 0 auto;
 }
 
 .last-arrow-2{
@@ -276,7 +399,7 @@ html,body{
 .form-content{
 	position: relative;
 	height: auto;
-	padding-top: 3.22rem;
+	padding-top: 0.2rem;
 }
 
 .form-title{
@@ -357,18 +480,20 @@ input{
 }
 
 .ib2{
-	padding-top: 3.2rem;
+	padding: 0.6rem 0rem;
 }
 
 .tb2{
-	padding-top: 1.36rem;
-	padding-bottom: 1.26rem;
+	padding-top: 0.36rem;
+	padding-bottom: 0.26rem;
+	font-size: 0.22rem;
+	width: 5.4rem;
 }
 
 /*font*/
 @font-face{
 	font-family: "enFont";
-	src: url('../font/futuralt.woff') format('woff');
+	src: url('../font/en.ttf') format('truetype');
 }
 
 input:-ms-input-placeholder{
@@ -381,7 +506,7 @@ input::-webkit-input-placeholder{
 
 
 /*animate*/
-.ani2-1{
+/* .ani2-1{
 	-webkit-transition : -webkit-transform 1s linear 0.5s,opacity 1s linear 0.5s;
 	transition : transform 1s linear 0.5s,opacity 1s linear 0.5s;
 	-webkit-transform : translate(0rem,-0.4rem);
@@ -411,7 +536,7 @@ input::-webkit-input-placeholder{
 	-webkit-transform : translate(0rem,-0.4rem);
 	transform : translate(0rem,-0.4rem);
 	opacity: 0;
-}
+} */
 
 .ani-item-1{
 	-webkit-transition : -webkit-transform 1s linear 0.5s,opacity 1s linear 0.5s;
@@ -499,7 +624,7 @@ input::-webkit-input-placeholder{
 	opacity: 0;
 }
 
-.ani-ti-1{
+/* .ani-ti-1{
 	-webkit-transition : -webkit-transform 1s linear 1s,opacity 1s linear 1s;
 	transition : transform 1s linear 1s,opacity 1s linear 1s;
 	-webkit-transform : translate(0rem,-0.4rem);
@@ -529,21 +654,35 @@ input::-webkit-input-placeholder{
 	-webkit-transform : translate(0rem,-0.4rem);
 	transform : translate(0rem,-0.4rem);
 	opacity: 0;
-}
+} */
 
-.swiper-slide-active .ani-ti-4,
+/* .swiper-slide-active .ani-ti-4,
 .swiper-slide-active .ani-ti-3,
 .swiper-slide-active .ani-ti-2,
 .swiper-slide-active .ani-ti-1{
 	opacity: 1;
 	-webkit-transform : translate(0rem,0rem);
 	transform : translate(0rem,0rem);
-}
+} */
 
-.swiper-slide-active .ani2-1,
+/* .swiper-slide-active .ani2-1,
 .swiper-slide-active .ani2-2,
 .swiper-slide-active .ani2-3,
 .swiper-slide-active .ani2-4{
+	opacity: 1;
+	-webkit-transform : translate(0rem,0rem);
+	transform : translate(0rem,0rem);
+} */
+
+.text-box-1,.text-box-2{
+	-webkit-transition : -webkit-transform 1s linear 0.5s,opacity 1s linear 0.5s;
+	transition : transform 1s linear 0.5s,opacity 1s linear 0.5s;
+	-webkit-transform : translate(0rem,-0.4rem);
+	transform : translate(0rem,-0.4rem);
+	opacity: 0;
+}
+
+.swiper-slide-active .text-box-1,.swiper-slide-active .text-box-2{
 	opacity: 1;
 	-webkit-transform : translate(0rem,0rem);
 	transform : translate(0rem,0rem);
