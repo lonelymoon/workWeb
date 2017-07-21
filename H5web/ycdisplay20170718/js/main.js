@@ -3,9 +3,7 @@ jQuery(function($){
 var swiper = new Swiper(".swiper-container",{
 	direction : "vertical",
 	onTransitionEnd : function(swiper){
-		/*if(swiper.activeIndex >= 8){
-			swiper.destroy();
-		}*/
+		
 	}
 });
 
@@ -19,17 +17,29 @@ function checkNull(){
 		$email = $("#email").val();
 
 	if( !$name ) {
-		alert("请填写姓名");
+		wantAlert.setValues({
+			title : "提示",
+			msg : "请填写姓名"
+		});
+		wantAlert.showAlert();	
 		return false;
 	}
 
 	if( !(/^1[34578]\d{9}$/.test($phone)) ){
-		alert("请填写正确的手机号");
+		wantAlert.setValues({
+			title : "提示",
+			msg : "请填写正确的手机号"
+		});
+		wantAlert.showAlert();
 		return false;
 	}
 
 	if( !(/^(\-*\w)+(\.\w+)*(\-\w+)*@(\w)+((\.\w+)+)$/.test($email)) ){
-		alert("请填写正确的邮箱");
+		wantAlert.setValues({
+			title : "提示",
+			msg : "请填写正确的邮箱"
+		});
+		wantAlert.showAlert();
 		return false;
 	}
 
@@ -53,8 +63,14 @@ $(".form-btn").on("tap",function(e){
 		"data" : result,
 		"success" : function(res){
 			if(res == 1){
-				alert("信息提交成功，感谢您的支持");
-				window.location.href = "./index.html";
+				wantAlert.setValues({
+					title : "提示",
+					msg : "信息提交成功，感谢您的支持",
+					callback : function(){
+						window.location.href = "./index.html";
+					}
+				});
+				wantAlert.showAlert();		
 			} else {
 				alert("信息上传失败,请刷新页面重试");
 			}
@@ -78,17 +94,45 @@ $('.music').on('click',function(e){
 	}
 });
 
-setTimeout(function(){
-	
-	if($('#bgm')[0].paused)
-	$('.music').trigger("click");
+var $imgs = $('img'),
+	$len = $imgs.length,
+	count = 0;
 
-	wx.ready(function(){
-		if($('#bgm')[0].paused){
-			$('.music').trigger("click");
+function init(){
+	for( var i = 0; i < $len; i++ ){
+		var $img = $imgs.eq(i);
+		if($img[0].complete){
+			count++;
+		} else {
+			$img[0].onload = function(e){
+				count++;
+				if( count == $len ){
+					reset();
+				}
+			};
 		}
-	});
 
-},200)
+		if(count == $len) reset();
+
+	}
+
+}
+
+function reset(){
+	setTimeout(function(){
+		
+		if($('#bgm')[0].paused)
+		$('.music').trigger("click");
+
+		wx.ready(function(){
+			if($('#bgm')[0].paused){
+				$('.music').trigger("click");
+			}
+		});
+
+	},200)
+}
+
+init();
 
 });
