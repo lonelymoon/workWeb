@@ -47,8 +47,8 @@ function goReady(){
         // 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
         wx.onMenuShareTimeline({
             title: '腾讯营销平台问卷调查',
-            link: 'https://web.aochey.com/txyx/index.html',
-            imgUrl: 'https://web.aochey.com/txyx/share.png',
+            link: 'https://web.aochey.com/tencent/index.html',
+            imgUrl: 'https://web.aochey.com/tencent/share.png',
             trigger: function (res) {         
             },
             success: function (res) {
@@ -63,8 +63,8 @@ function goReady(){
         wx.onMenuShareAppMessage({
             title: '腾讯营销平台问卷调查', // 分享标题
             desc: '腾讯营销平台问卷调查', // 分享描述
-            link: 'https://web.aochey.com/txyx/index.html',
-            imgUrl: 'https://web.aochey.com/txyx/share.png',
+            link: 'https://web.aochey.com/tencent/index.html',
+            imgUrl: 'https://web.aochey.com/tencent/share.png',
             type: '', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () { 

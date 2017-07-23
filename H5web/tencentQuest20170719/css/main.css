@@ -23,6 +23,11 @@ html,body{
 	font-family:'PingFangSCbfed52d2e17b9f';
 }
 
+.full-img-box{
+	height: 100%;
+	overflow: hidden;
+}
+
 .bg-set{
 	position: absolute;
 	left: 0rem;
@@ -93,7 +98,7 @@ html,body{
 .quest-item{
 	position: relative;
 	height: auto;
-	margin-bottom: 0.417rem;
+	padding-bottom: 0.417rem;
 }
 
 .quest-items .quest-item:last-child{
@@ -103,15 +108,19 @@ html,body{
 .quest-status{
 	position: absolute;
 	left: 0.02rem;
-	top: 0.02rem;
+	top: 0.005rem;
 	border-radius: 50%;
 	border: 2px solid #fff;
-	width: 0.3rem;
-	height: 0.3rem;
+	width: 0.32rem;
+	height: 0.32rem;
 	text-align: center;
-	line-height: 0.3rem;
+	line-height: 0.32rem;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+.multi .quest-status{
+	border-radius: 4px;
 }
 
 .quest-status:after{
@@ -121,14 +130,24 @@ html,body{
 }
 
 .quest-item[data-status="checked"] .quest-status:after{
-	width: 0.08rem;
-	height: 0.08rem;
+	width: 0.12rem;
+	height: 0.12rem;
 	left: 50%;
 	top: 50%;
-	margin-left: -0.04rem;
-	margin-top: -0.04rem;
+	margin-left: -0.06rem;
+	margin-top: -0.06rem;
 	background: #fff;
 	border-radius: 50%;
+}
+
+.multi .quest-item[data-status="checked"] .quest-status:after{
+	width: 0.16rem;
+	height: 0.16rem;
+	left: 50%;
+	top: 50%;
+	margin-left: -0.08rem;
+	margin-top: -0.08rem;
+	border-radius: 2px;
 }
 
 img{
@@ -308,7 +327,7 @@ input::-webkit-input-placeholder{
 	color: #FFFFFF;
 	letter-spacing: 0;
 	text-align: center;
-	padding-top: 0.667rem;
+	padding-top: 0.527rem;
 }
 
 .new-quest-title:before{
@@ -331,4 +350,37 @@ input::-webkit-input-placeholder{
 	background: url("../images/right.png") no-repeat top center;
 	-webkit-transform : -webkit-translate(0rem,-0.1rem);
 	transform : translate(0rem,-0.1rem);
+}
+
+.ani-arrow{
+	position: fixed;
+	z-index: 200;
+	top: 50%;
+	right: 0.4rem;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin-top: -0.25rem;
+	-webkit-animation : arrowAni 1.5s linear infinite;
+	animation : arrowAni 1.5s linear infinite;
+}
+
+/**/
+@-webkit-keyframes arrowAni{
+	0%{
+		transform : translateX(0rem);
+	}
+
+	100%{
+		transform : translateX(0.4rem);
+	}
+}
+
+@keyframes arrowAni{
+	0%{
+		transform : translateX(0rem);
+	}
+
+	100%{
+		transform : translateX(0.4rem);
+	}
 }

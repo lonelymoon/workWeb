@@ -4,12 +4,17 @@ $h = $(window).height();
 
 $("html").css("height",$h+"px");
 
-var swiper = new Swiper('.swiper-container',{
+var hasChanged = false,
+swiper = new Swiper('.swiper-container',{
 	effect : 'coverflow',
 	onTransitionStart : function(e){
-		if(swiper.activeIndex == 1){
-			swiper.lockSwipeToNext();
+		if(swiper.activeIndex == 1 && !hasChanged){
+			hasChanged = true;
+			setTimeout(function(){
+				swiper.lockSwipeToNext();
+			},150);
 		} else if(swiper.activeIndex == 0){
+			hasChanged = false;
 			swiper.unlockSwipeToNext();
 		}
 	}
@@ -54,11 +59,13 @@ function getText(id){
 	var $target = $(id).find(".quest-item[data-status='checked']"),
 		$qinput = $target.find(".quest-input");
 
+	var $idx = $target.attr("data-idx");
+
 	if($qinput.length > 0){
-		return $qinput.find(".textarea").val();
+		return ($idx + "-" + $qinput.find(".textarea").val());
 	}
 
-	return $target.find(".quest-text").text();
+	return ( $idx + "-" + $target.find(".quest-text").text() );
 }
 
 function getMultiText(id){
@@ -72,11 +79,13 @@ function getMultiText(id){
 			$qinput = $item.find(".quest-input"),
 			str = "";
 
+		var $idx = $item.attr("data-idx");
+
 		if($qinput.length > 0){
 			str = $qinput.find(".textarea").val();
 		}
 
-		var result = $item.find(".quest-text").text() + str;
+		var result = $idx + "-" + $item.find(".quest-text").text() + str;
 
 		temp.push($.trim(result));
 	}
@@ -165,7 +174,7 @@ function checkData(obj,point){
 		return false;
 	}
 
-	if( !(/^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/.test(obj.email)) ){
+	if( !(/^(\-*\w)+(\.\w+)*(\-\w+)*@(\w)+((\.\w+)+)$/.test(obj.email)) ){
 		alert("请填写正确的邮箱");
 		return false;
 	}
