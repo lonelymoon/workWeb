@@ -1,0 +1,163 @@
+.container{
+	position: relative;
+	max-width: 1920px;
+	min-height: 1200px;
+	height: 1630px;
+	margin: 0 auto;
+	background: url("../images/bj.png") no-repeat top center;
+}
+
+.topic{
+	position: relative;
+	height: auto;
+	padding-top: 402px;
+}
+
+.topic-wrapper{
+	position: relative;
+	height: 290px;
+	width: 748px;
+	+width: 673.2px;
+	+height: 232.7px;
+	margin: 0 auto;
+	background: #fff;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 57.3px 37.4px 0px 37.4px;
+}
+
+.topic-left{
+	position: relative;
+	height: auto;
+	float: left;
+	width: 291px;
+}
+
+.topic-title{
+	position: relative;
+	height: auto;
+	font-family: "FZZZHUNHJW--GB1-0","Microsoft Yahei";
+	font-size: 18px;
+	color: #1D1310;
+	letter-spacing: 0;
+	font-weight: 800;
+}
+
+.topic-content{
+	position: relative;
+	height: auto;
+	font-family: "PingFang-TC-Medium";
+	font-size: 12px;
+	color: #595758;
+	letter-spacing: 0;
+	line-height: 21px;
+	padding-top: 12px;
+}
+
+.topic-right{
+	position: relative;
+	height: auto;
+	float: right;
+	width: 343.2px;
+}
+
+/*********/
+.video{
+	position: relative;
+	height: auto;
+	padding-top: 109px;
+}
+
+.video-wrapper{
+	position: relative;
+	width: 748px;
+	height: 244px;
+	+width: 696.2px;
+	+height: 205px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 39px 25.9px 0px 25.9px;
+	background: #fff;
+	margin: 0 auto;
+}
+
+.video-item{
+	position: relative;
+	width: 221.4px;
+	height: auto;
+	float: left;
+	margin-right: 16px;
+}
+
+.video-subtitle{
+	position: relative;
+	height: auto;
+	padding-top: 7px;
+	text-align: center;
+}
+
+.icon{
+	position: absolute;
+	z-index: 2;
+	width: 206.6px;
+	height: 48px;
+	left: -37px;
+	top: -37px;
+}
+
+/*****************/
+.picture{
+	position: relative;
+	height: auto;
+	padding-top: 70px;
+}
+
+.picture-wrapper{
+	position: relative;
+	width: 748px;
+	height: 336px;
+	+width: 688px;
+	+height: 301px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 35px 30px 0px 30px;
+	background: #fff;
+	margin: 0 auto;
+}
+
+.picture-item{
+	position: relative;
+	height: auto;
+	float: left;
+	width: 158px;
+	margin-right: 18px;
+	font-family: "FZLTHK--GBK1-0","Microsoft Yahei";
+	font-size: 10px;
+	color: #595757;
+	letter-spacing: 0;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.picture-item:hover{
+	cursor: pointer;
+}
+
+.picture-item>img{
+	margin-bottom: 7px;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+.clear{
+	position: relative;
+	float: none;
+	clear: both;
+}
+
+.last-item{
+	margin-right: 0px;
+}
