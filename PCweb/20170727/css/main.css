@@ -2,7 +2,7 @@
 	position: relative;
 	max-width: 1920px;
 	min-height: 1200px;
-	height: 1630px;
+	height: 2208px;
 	margin: 0 auto;
 	background: url("../images/bj.png") no-repeat top center;
 }
@@ -10,34 +10,34 @@
 .topic{
 	position: relative;
 	height: auto;
-	padding-top: 402px;
+	padding-top: 528px;
 }
 
 .topic-wrapper{
 	position: relative;
-	height: 290px;
-	width: 748px;
-	+width: 673.2px;
-	+height: 232.7px;
+	height: 400px;
+	width: 1000px;
+	+width: 900px;
+	+height: 321px;
 	margin: 0 auto;
 	background: #fff;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 57.3px 37.4px 0px 37.4px;
+	padding: 79px 50px 0px 50px;
 }
 
 .topic-left{
 	position: relative;
 	height: auto;
 	float: left;
-	width: 291px;
+	width: 375px;
 }
 
 .topic-title{
 	position: relative;
 	height: auto;
 	font-family: "FZZZHUNHJW--GB1-0","Microsoft Yahei";
-	font-size: 18px;
+	font-size: 24px;
 	color: #1D1310;
 	letter-spacing: 0;
 	font-weight: 800;
@@ -47,10 +47,10 @@
 	position: relative;
 	height: auto;
 	font-family: "PingFang-TC-Medium";
-	font-size: 12px;
+	font-size: 18px;
 	color: #595758;
 	letter-spacing: 0;
-	line-height: 21px;
+	line-height: 28px;
 	padding-top: 12px;
 }
 
@@ -58,69 +58,73 @@
 	position: relative;
 	height: auto;
 	float: right;
-	width: 343.2px;
+	width: 457px;
 }
 
 /*********/
 .video{
 	position: relative;
 	height: auto;
-	padding-top: 109px;
+	padding-top: 149.4px;
 }
 
 .video-wrapper{
 	position: relative;
-	width: 748px;
-	height: 244px;
-	+width: 696.2px;
-	+height: 205px;
+	width: 1000px;
+	height: 335px;
+	+width: 932px;
+	+height: 282px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 39px 25.9px 0px 25.9px;
+	padding: 53px 34px 0px 34px;
 	background: #fff;
 	margin: 0 auto;
 }
 
 .video-item{
 	position: relative;
-	width: 221.4px;
+	width: 294px;
 	height: auto;
 	float: left;
-	margin-right: 16px;
+	margin-right: 25px;
 }
 
 .video-subtitle{
 	position: relative;
 	height: auto;
-	padding-top: 7px;
+	padding-top: 8px;
 	text-align: center;
+	font-family: "FZLTHK--GBK1-0","Microsoft Yahei";
+	font-size: 14px;
+	color: #595757;
+	letter-spacing: 0;
 }
 
 .icon{
 	position: absolute;
 	z-index: 2;
-	width: 206.6px;
-	height: 48px;
-	left: -37px;
-	top: -37px;
+	width: 276px;
+	height: 66px;
+	left: -50px;
+	top: -50px;
 }
 
 /*****************/
 .picture{
 	position: relative;
 	height: auto;
-	padding-top: 70px;
+	padding-top: 96px;
 }
 
 .picture-wrapper{
 	position: relative;
-	width: 748px;
-	height: 336px;
-	+width: 688px;
-	+height: 301px;
+	width: 1000px;
+	height: 461px;
+	+width: 912px;
+	+height: 414px;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 35px 30px 0px 30px;
+	padding: 47px 41px 0px 41px;
 	background: #fff;
 	margin: 0 auto;
 }
@@ -129,14 +133,14 @@
 	position: relative;
 	height: auto;
 	float: left;
-	width: 158px;
-	margin-right: 18px;
+	width: 211px;
+	margin-right: 24px;
 	font-family: "FZLTHK--GBK1-0","Microsoft Yahei";
-	font-size: 10px;
+	font-size: 14px;
 	color: #595757;
 	letter-spacing: 0;
 	text-align: center;
-	margin-bottom: 30px;
+	margin-bottom: 43px;
 }
 
 .picture-item:hover{
@@ -144,8 +148,25 @@
 }
 
 .picture-item>img{
-	margin-bottom: 7px;
+	margin-bottom: 8px;
 }
+
+div {
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	user-select:none;    
+}
+
+/* .bottom-msg{
+	position: relative;
+	font-family: "FZLTHK--GBK1-0","Microsoft Yahei";
+	font-size: 14px;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	line-height: 17px;
+	padding-top: 123px;
+	text-align: center;
+} */
 
 img{
 	display: block;
@@ -158,6 +179,14 @@ img{
 	clear: both;
 }
 
+.hide{
+	display: none;
+}
+
 .last-item{
 	margin-right: 0px;
+}
+
+.wantUI-fn-box{
+	font-size: 1.7em;
 }
