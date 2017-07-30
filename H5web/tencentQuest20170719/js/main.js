@@ -290,6 +290,8 @@ function getData(){
 	};
 }
 
+var uploading = false;
+
 $('.save-btn').on("tap",function(e){
 
 	var data = getData();
@@ -298,21 +300,29 @@ $('.save-btn').on("tap",function(e){
 		return false;
 	}
 
+	if(uploading){
+		return false;
+	}
+
+	uploading = true;
+
 	$.ajax({
 		"url" : "php/save.php",
 		"type" : "post",
 		"data" : data,
 		"success" : function(res){
-			console.log(res);
+			uploading = false;
 			if(res == 1){
 				$('.sl_10').removeClass("swiper-no-swiping");
 				swiper.unlockSwipeToNext();
 				swiper.slideNext();
 			} else {
+				uploading = false;
 				alert("信息提交失败，请稍候重试");
 			}
 		},
 		"fail" : function(res){
+			uploading = false;
 			alert("信息提交失败，请稍候重试");
 		}
 	});
