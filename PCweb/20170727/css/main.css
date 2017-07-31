@@ -4,7 +4,7 @@
 	min-height: 1200px;
 	height: 2208px;
 	margin: 0 auto;
-	background: url("../images/bj.png") no-repeat top center;
+	background: url("http://appmedia.qq.com/media/641012524/bj.png") no-repeat top center;
 }
 
 .topic{
@@ -129,18 +129,28 @@
 	margin: 0 auto;
 }
 
+.pic-row{
+	position: relative;
+	height: auto;
+	zoom:1;
+}
+
+.pic-row-1{
+	padding-bottom: 43px;
+}
+
 .picture-item{
 	position: relative;
 	height: auto;
 	float: left;
 	width: 211px;
 	margin-right: 24px;
+	+margin-right: 20px;
 	font-family: "FZLTHK--GBK1-0","Microsoft Yahei";
 	font-size: 14px;
 	color: #595757;
 	letter-spacing: 0;
 	text-align: center;
-	margin-bottom: 43px;
 }
 
 .picture-item:hover{
@@ -157,16 +167,6 @@ div {
 	user-select:none;    
 }
 
-/* .bottom-msg{
-	position: relative;
-	font-family: "FZLTHK--GBK1-0","Microsoft Yahei";
-	font-size: 14px;
-	color: #FFFFFF;
-	letter-spacing: 0;
-	line-height: 17px;
-	padding-top: 123px;
-	text-align: center;
-} */
 
 img{
 	display: block;
