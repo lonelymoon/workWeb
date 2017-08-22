@@ -303,6 +303,7 @@ $('.tec-link-btn').on(click,function(e){
 
 $(".QRcode").on(click,function(e){
 	$(this).fadeOut(300);
+	$('.close').trigger("click");
 });
 
 //滑动
@@ -466,6 +467,15 @@ $('.selector-btn').on(click,function(e){
 
 $('#map-bg').on(click,function(e){
 	e.stopPropagation();
+});
+
+$("#video").on(click,function(e){
+	$(this)[0].paused ? $(this)[0].play() : $(this)[0].pause();
+});
+
+$('.playImg').on(click,function(e){
+	$(this).hide();
+	$('#video').trigger(click);
 });
 
 loading();

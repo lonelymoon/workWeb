@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>ZE SPEED</title>
+<script type="text/javascript">
+if(screen.width <= 800){
+	window.location.href = "H5/index.html";
+}
+</script>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/97183/47565/5995449df629d8056cf4cb65.css' rel='stylesheet' type='text/css' />
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/97183/46865/59954b20f629d8056cf4cb6c.css' rel='stylesheet' type='text/css' />
@@ -132,7 +137,8 @@
 				</div>
 			</div>
 			<div class="right-media">
-				<img src="images/play.jpg">
+				<video id="video" src="video.mp4" width="419" height="236"></video>
+				<img src="images/play.jpg" class="img-set playImg">
 			</div>
 			<div class="bottom-msgs">
 				<div class="bottom-msg msg-1" data-idx="1">
@@ -288,7 +294,9 @@
 			</div>
 			<div class="tec-msg">
 				<img src="images/tec-msg.png" class="img-set">
-				<div class="close">X</div>
+				<div class="close">
+					<img src="images/close.png" class="img-set">
+				</div>
 				<div class="tec-link-btn">
 					课程预约
 				</div>
@@ -304,26 +312,26 @@
 				<div class="example-content">
 					<div class="example-column e-type-1">
 						<div class="example-item">
-							<img src="images/ex1.png">
+							<img src="images/ex1.jpg">
 						</div>
 					</div>
 					<div class="example-column e-type-4">
 						<div class="example-item">
-							<img src="images/ex2.png">
+							<img src="images/ex2.jpg">
 						</div>
 						<div class="example-item">
-							<img src="images/ex3.png">
+							<img src="images/ex3.jpg">
 						</div>
 						<div class="example-item">
-							<img src="images/ex4.png">
+							<img src="images/ex4.jpg">
 						</div>
 						<div class="example-item">
-							<img src="images/ex5.png">
+							<img src="images/ex5.jpg">
 						</div>
 					</div>
 					<div class="example-column e-type-2">
 						<div class="example-item">
-							<img src="images/ex6.png">
+							<img src="images/ex6.jpg">
 						</div>
 					</div>
 				</div>
@@ -536,6 +544,12 @@
 <div class="QRcode">
 	<div class="QRwrapper">
 		<img src="images/QRcode.jpg">
+		<div class="QRtext">
+			扫码预约
+		</div>
+		<div class="Iknow">
+			我知道了
+		</div>
 	</div>
 </div>
 
