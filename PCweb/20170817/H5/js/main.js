@@ -4,6 +4,10 @@ var $imgs = $('img[data-link]'),
 	len = $imgs.length,
 	count = 0;
 
+if(len == 0){
+	progress();
+}
+
 $imgs.each(function(){
 
 	var link = $(this).attr("data-link");
@@ -49,8 +53,8 @@ function loadEnd(){
 	$("#content").show();
 	$('.loading-container').fadeOut(300);
 
-	createSwiper();
-	createScroll();
+	//createSwiper();
+	//createScroll();
 }
 
 function progress(){

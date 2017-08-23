@@ -133,7 +133,7 @@ function loading(){
 		$loadContainer.delay(1500).fadeOut(500,function(e){
 			$('.mouser-container').addClass('page-end');
 			setTimeout(function(){
-				shicha();
+				//shicha();
 				changeSlide();
 				init();
 			},800);
