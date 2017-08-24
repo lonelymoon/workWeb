@@ -13,21 +13,256 @@ if(window.innerWidth > 800){
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/97183/47565/5995449df629d8056cf4cb65.css' rel='stylesheet' type='text/css' />
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/97183/46865/59954b20f629d8056cf4cb6c.css' rel='stylesheet' type='text/css' />
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/97183/46861/599562fff629db056cea0579.css' rel='stylesheet' type='text/css' />
 <link rel="stylesheet" type="text/css" href="css/main.css">
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xsw2Oo0dBUOjAiMi1q0XOv3n"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
 </head>
 <body>
 
-<section id="content">
+<header>
+	<div class="left-logo">
+		<img src="" data-link="images/logo.png">
+	</div>
+	<div class="menu">
+		<li>-</li>
+		<li>-</li>
+		<li>-</li>
+	</div>
+	<div class="nav-box">
+		<div class="nav-wrapper">
+			<a href="#column-3">
+				<li class="nav-item ni-1">关于ZE</li>
+			</a>
+			<a href="#column-4">
+				<li class="nav-item ni-2">ZE课程</li>
+			</a>
+			<a href="#column-5">
+				<li class="nav-item ni-3">ZE黑科技教授</li>
+			</a>
+			<a href="#column-7">
+				<li class="nav-item ni-4">媒体中心</li>
+			</a>
+			<a href="#column-8">
+				<li class="nav-item ni-5">加入ZE</li>
+			</a>
+			<a href="#column-9">
+				<li class="nav-item ni-6">发现ZE</li>
+			</a>
+			<a href="javascript:;">
+				<li class="nav-item ni-7">返回</li>
+			</a>
+		</div>
+	</div>
+</header>
 
+<section id="content">
+	<div class="column column-1">
+		<img src="" data-link="images/1.jpg">
+	</div>
+	<div class="column column-2">
+		<img src="" data-link="images/2.jpg" class="playImg">
+		<div class="video">
+			<iframe frameborder="0" src="https://v.qq.com/iframe/player.html?vid=h0540uz7fbk&tiny=0&auto=0" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="column column-3" id="column-3">
+		<div class="swiper-box">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="" data-link="images/3-1.jpg">
+					</div>
+					<div class="swiper-slide">
+						<img src="" data-link="images/3-2.jpg">
+					</div>
+					<div class="swiper-slide">
+						<img src="" data-link="images/3-3.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="swiper-button-prev swiper-button-white"></div>
+			<div class="swiper-button-next swiper-button-white"></div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<div class="column column-4" id="column-4">
+		<div class="course course-1">
+			<div class="course-wrapper">
+				<img src="" data-link="images/4-1.jpg">
+				<div class="course-btn-items">
+					<div class="items-wrapper">
+						<div class="course-btn-item">
+							APPLY
+						</div>
+						<div class="course-btn-item">
+							APPLY
+						</div>
+						<div class="course-btn-item">
+							APPLY
+						</div>
+						<div class="course-btn-item">
+							APPLY
+						</div>
+					</div>
+					<div class="course-btn-back">
+						RETURN
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="course course-2">
+			<img src="" data-link="images/4.jpg">
+			<div class="course2-wrapper">
+				<div class="course2-btn-item c2-btn-1">
+					VIEW DETAIL
+				</div>
+				<div class="course2-btn-item c2-btn-2">
+					COMING SOON
+				</div>
+				<div class="course2-btn-item c2-btn-3">
+					COMING SOON
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="column column-5" id="column-5">
+		<img src="" data-link="images/5.jpg">
+		<div class="detail-btn">
+			VIEW DETAIL &gt;
+		</div>
+		<div class="detail-box">
+			<div class="detail-scroll">
+				<img src="" data-link="images/5-2.png">
+				<div class="detail-btn-box">
+					<!-- <div class="date">立即预约</div> -->
+					<div class="QR">
+						<img src="../images/QRcode.jpg">
+					</div>
+					<div class="back">RETURN</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="column column-6" id="column-6">
+		<img src="" data-link="images/6.jpg">
+	</div>
+	<div class="column column-7" id="column-7">
+		<img src="" data-link="images/7.jpg">
+		<div class="media-box">
+			<div class="media-wrapper">
+				<a href="https://mp.weixin.qq.com/s?__biz=MjM5NDExNzczNg==&mid=2656180597&idx=1&sn=24fb0e7bb2d2d81b2417e7fe606cfab8&chksm=bd2a18728a5d9164a6b3465689cdb1ec11a46a57ce4820886f6a5054d5fc7c5c225dfcaf61bd&mpshare=1&scene=1&srcid=0426h0UE888GEGWJVqN6WLbp&key=c5a673ba6130fcd9eca92db6a0cdaf8eb549147889e7abe93c03792e82d46aa928305d4b0fe510bab49123b7f8a381deffe70293e9db389688c32e74451d122c5f257690059ed1b9053d9d188f80c921&ascene=0&uin=MjgxNDU5ODI0Mw%3D%3D&devicetype=iMac+MacBookPro10%2C1+OSX+OSX+10.12.5+build(16F73)&version=12020810&nettype=WIFI&fontScale=100&pass_ticket=UVezC%2BFJ8zlKPx7nxbvCNiAZkdvH5AjCbaTGma6ROx7rvBGj0AO0LOBGrQrViLRE">
+					<div class="media-item">
+						<img src="" data-link="images/m1.png">
+					</div>
+				</a>
+				<a href="https://mp.weixin.qq.com/s?__biz=MzA4MTQwNDEwMA==&mid=2652755990&idx=1&sn=821eea7156459dccaec024db368ee415&chksm=847cf1bdb30b78abc7af014959fb2322e077f79e349a54857a0602cc3dca91fd7f5d537c3e68&mpshare=1&scene=1&srcid=0327EpeKr1pV41zgxGgIaorK&key=dd608d91fd702d648c0552a23ca7a0295b345c3b7ac46915ff6bcdfa75f9f535bab8f576478b42f6f6b622c2dd1b3b5b96b0e07fa3fdd6de81a229fb9a3572280f93227eaf124baf95a5ff02be247866&ascene=0&uin=MjgxNDU5ODI0Mw%3D%3D&devicetype=iMac+MacBookPro10%2C1+OSX+OSX+10.12.5+build(16F73)&version=12020810&nettype=WIFI&fontScale=100&pass_ticket=UVezC%2BFJ8zlKPx7nxbvCNiAZkdvH5AjCbaTGma6ROx7rvBGj0AO0LOBGrQrViLRE">
+					<div class="media-item">
+						<img src="" data-link="images/m2.png">
+					</div>
+				</a>
+				<a href="https://mp.weixin.qq.com/s?__biz=MTU1OTI4NDM4MQ==&mid=2651838357&idx=1&sn=38b1b539068274712569bb046ce16ff0&chksm=6f344a675843c3714e8ac8298c6eba1aafef602c09495330e2c05a8d9fa534d7443c65aa9019&mpshare=1&scene=1&srcid=0318bfjVk76BPa0QoYi5kby7&key=f57fc7001c9b61faf32786b6fe86bb53ebe5738cc22e0490f18930b8593716b3fc8e9a945474f309e3b25c9b3b38cabd5f6c60752c756659d5ad9dfb50bcbe0ab997923415c62c625b9aff66713ba1fc&ascene=0&uin=MjgxNDU5ODI0Mw%3D%3D&devicetype=iMac+MacBookPro10%2C1+OSX+OSX+10.12.5+build(16F73)&version=12020810&nettype=WIFI&fontScale=100&pass_ticket=UVezC%2BFJ8zlKPx7nxbvCNiAZkdvH5AjCbaTGma6ROx7rvBGj0AO0LOBGrQrViLRE">
+					<div class="media-item">
+						<img src="" data-link="images/m3.png">
+					</div>
+				</a>
+				<a href="https://36kr.com/p/5074364.html?from=timeline&isappinstalled=0">
+					<div class="media-item">
+						<img src="" data-link="images/m4.png">
+					</div>
+				</a>
+				<a href="http://www.iqiyi.com/w_19rtq1890x.html?dummy=&wx_uid1=wxidoG0a9jtHPnG1f7lLF7DCr8GcMB7s&wx_uid2=wxidoG0a9jo1mEOscfW88o6bm-TowX4Q">
+					<div class="media-item">
+						<img src="" data-link="images/m5.png">
+					</div>
+				</a>
+				<a href="http://sh.people.com.cn/n2/2017/0607/c134819-30294562.html?from=timeline&isappinstalled=0">
+					<div class="media-item">
+						<img src="" data-link="images/m6.png">
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="column column-8" id="column-8">
+		<img src="" data-link="images/8.jpg">
+		<a href="">
+			<div class="job-btn">
+				更多职位
+			</div>
+		</a>
+	</div>
+	<div class="column column-9" id="column-9">
+		<img src="" data-link="images/9.jpg">
+		<div class="map-box">
+			<div class="map-bg" id="map-bg">
+				<div class="map-set" id="map-set"></div>
+				<div class="map-back">返回</div>
+			</div>
+			<div class="selector-box">
+				<div class="selector sel-item-1 area">
+					<div class="selector-val">
+						选择您所在的地区
+					</div>
+					<div class="selector-wrapper">
+						<div class="selector-item">上海</div>
+					</div>
+					<div class="selector-icon">
+						<img src="images/arrow.png">
+					</div>
+				</div>
+				<div class="selector sel-item-2 md">
+					<div class="selector-val">
+						选择门店
+					</div>
+					<div class="selector-wrapper mendian" id="mendian">
+						<div>
+							<div class="selector-item" title="店名:静安寺店;电话(tel):021-52380063;地址:静安区南京西路1788号1F-17;Address:1F-17,West Nanjing Rd.,Jing'an District" data-map="南京西路1788号1788国际中心1层">
+								静安寺店
+							</div>
+							<div class="selector-item" title="店名:幸福里店;电话(tel):021-52398066;地址:长宁区番禺路381号5号楼107室;Address:Rm. 107, Bldg. 5, No. 381, Panyu Rd., Chang Ning District" data-map="番禺路381号5号楼107(幸福里)">
+								幸福里店
+							</div>
+							<div class="selector-item" title="店名:新天地店;电话(tel):021-63295570;地址:黄浦区湖滨路168号B1-W02;Address:B1-W02, No. 168, Hubin Rd., Huang Pu Distict" data-map="黄浦区湖滨路168号b1楼">
+								新天地店
+							</div>
+							<div class="selector-item" title="店名:世纪大都会店;电话(tel):021-50388262;地址:浦东新区福山路312号B1-02;Address:B1-02, No. 312, Fushan Rd., Pu Dong District" data-map="福山路312号世纪大都会b1楼">
+								世纪大都会店
+							</div>
+							<div class="selector-item" title="店名:正大广场店;电话(tel):4008210159;地址:浦东新区陆家嘴西路168号B1F-18B2;Address:B1-18B2, No. 168, West Lujiazui Rd., Pu Dong District" data-map="浦东新区陆家嘴西路168号正大广场">
+								正大广场店
+							</div>
+							<div class="selector-item" title="店名:歌斐中心店;电话(tel):4008210159;地址:黄浦区蒙自路757号3层301C;Address:301C, 3F, No. 757, Mengzi Rd., Huang Pu District" data-map="黄浦区蒙自路757号3层301C">
+								歌斐中心店
+							</div>
+							<div class="selector-item" title="店名:尚嘉中心店;电话(tel):4008210159;地址:长宁区仙霞路99号尚嘉中心LG125;Address:LG125, L'Avenue, No. 99, Xianxia Rd., Chang Ning District" data-map="长宁区仙霞路99号尚嘉中心">
+								尚嘉中心店
+							</div>
+							<div class="selector-item" title="店名:徐家汇店;电话(tel):4008210159;地址:徐汇区漕溪北路18号35E1;Address:35E1, No.18, North CaoXi Rd., Xu Hui Distict" data-map="徐汇区漕溪北路18号">
+								徐家汇店
+							</div>
+						</div>
+					</div>
+					<div class="selector-icon">
+						<img src="images/arrow.png">
+					</div>
+				</div>
+			</div>
+			<button class="selector-btn">
+				获取地址
+			</button>
+		</div>
+	</div>
 </section>
 
 <div class="loading-container">
 	<div class="loading-wrapper">
 		<div class="loading-logo">
-			<img src="../images/icon-logo.png" class="abs-img">
+			<span class="num">0</span>
+			<img src="images/loading_icon.png" class="icon_po">
 		</div>
 		<div class="loading-box">
-			<div class="loading-bar"></div>
+			<img src="images/progress.png">
 		</div>
 	</div>
 </div>
