@@ -7,6 +7,11 @@
 if(screen.width <= 800){
 	window.location.href = "H5/index.html";
 }
+var cv = document.createElement('canvas');
+if(!cv.getContext){
+	window.location.href = "IE/index.html";
+}
+
 </script>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link href='http://cdn.webfont.youziku.com/webfonts/nomal/97183/47565/5995449df629d8056cf4cb65.css' rel='stylesheet' type='text/css' />
@@ -101,7 +106,7 @@ if(screen.width <= 800){
 				<div class="video-border vb-2">
 					<img src="images/border.png" class="img-set">
 				</div>
-				<video id="video" src="video.mp4" width="882" height="497"></video>
+				<video id="video" src="video.mp4" width="882" height="497" loop="true"></video>
 				<img src="images/play.jpg" class="img-set playImg">
 				<div class="right-video-img">
 					<img src="images/vright.jpg" class="img-set">
@@ -162,76 +167,111 @@ if(screen.width <= 800){
 				ZE<br/>
 				COURSE
 			</div>
-			<div class="course-item ci-1">
-				<div class="course-item-bg">
-					<img src="images/price-1.jpg" class="img-set">
-				</div>
-				<div class="course-item-title">单次训练课</div>
-				<div class="course-item-price">
-					<em>RMB</em>
-					<div class="price">
-						<img src="images/600.png">
+			<div class="course-columns">
+				<div class="course-column cc-1">
+					<div class="course-item ci-1">
+						<div class="course-item-bg">
+							<img src="images/price-1.jpg" class="img-set">
+						</div>
+						<div class="course-item-title">单次训练课</div>
+						<div class="course-item-price">
+							<em>RMB</em>
+							<div class="price">
+								<img src="images/600.png">
+							</div>
+							<div class="price-btn">
+								APPLY
+							</div>
+						</div>
+						<div class="price-bottom">
+							1 CLASS(600RMB per)
+						</div>
 					</div>
-					<div class="price-btn">
-						APPLY
+					<div class="course-item ci-2">
+						<div class="course-item-bg">
+							<img src="images/price-2.jpg" class="img-set">
+						</div>
+						<div class="course-item-title">季度训练课</div>
+						<div class="course-item-price">
+							<em>RMB</em>
+							<div class="price">
+								<img src="images/4800.png">
+							</div>
+							<div class="price-btn">
+								APPLY
+							</div>
+						</div>
+						<div class="price-bottom">
+							12 CLASS(400RMB per)
+						</div>
+					</div>
+					<div class="course-item ci-3">
+						<div class="course-item-bg">
+							<img src="images/price-3.jpg" class="img-set">
+						</div>
+						<div class="course-item-title">半年训练课</div>
+						<div class="course-item-price">
+							<em>RMB</em>
+							<div class="price">
+								<img src="images/9000.png">
+							</div>
+							<div class="price-btn">
+								APPLY
+							</div>
+						</div>
+						<div class="price-bottom">
+							25 CLASS(360RMB per)
+						</div>
+					</div>
+					<div class="course-item ci-4">
+						<div class="course-item-bg">
+							<img src="images/price-4.jpg" class="img-set">
+						</div>
+						<div class="course-item-title">年度训练课</div>
+						<div class="course-item-price">
+							<em>RMB</em>
+							<div class="price">
+								<img src="images/15000.png">
+							</div>
+							<div class="price-btn">
+								APPLY
+							</div>
+						</div>
+						<div class="price-bottom">
+							50 CLASS(300RMB per)
+						</div>
 					</div>
 				</div>
-				<div class="price-bottom">
-					1 CLASS(600RMB per)
+				<div class="course-close">
+					<img src="images/close.png">
 				</div>
 			</div>
-			<div class="course-item ci-2">
-				<div class="course-item-bg">
-					<img src="images/price-2.jpg" class="img-set">
-				</div>
-				<div class="course-item-title">季度训练课</div>
-				<div class="course-item-price">
-					<em>RMB</em>
-					<div class="price">
-						<img src="images/4800.png">
+			<div class="course-kinds">
+				<div class="course-kinds-wrapper">
+					<div class="course-list cl-1">
+						<div class="c-list-msg">
+							<img src="images/standc.png">
+						</div>
+						<div class="c-list-btn clb-1">
+							VIEW DETAIL
+						</div>
 					</div>
-					<div class="price-btn">
-						APPLY
+					<div class="course-list cl-2">
+						<div class="c-list-msg">
+							<img src="images/spec.png">
+						</div>
+						<div class="c-list-btn clb-2">
+							COMING SOON
+						</div>
 					</div>
-				</div>
-				<div class="price-bottom">
-					12 CLASS(400RMB per)
-				</div>
-			</div>
-			<div class="course-item ci-3">
-				<div class="course-item-bg">
-					<img src="images/price-3.jpg" class="img-set">
-				</div>
-				<div class="course-item-title">半年训练课</div>
-				<div class="course-item-price">
-					<em>RMB</em>
-					<div class="price">
-						<img src="images/9000.png">
+					<div class="course-list cl-3">
+						<div class="c-list-msg">
+							<img src="images/customc.png">
+						</div>
+						<div class="c-list-btn clb-3">
+							COMING SOON
+						</div>
 					</div>
-					<div class="price-btn">
-						APPLY
-					</div>
-				</div>
-				<div class="price-bottom">
-					25 CLASS(360RMB per)
-				</div>
-			</div>
-			<div class="course-item ci-4">
-				<div class="course-item-bg">
-					<img src="images/price-4.jpg" class="img-set">
-				</div>
-				<div class="course-item-title">年度训练课</div>
-				<div class="course-item-price">
-					<em>RMB</em>
-					<div class="price">
-						<img src="images/15000.png">
-					</div>
-					<div class="price-btn">
-						APPLY
-					</div>
-				</div>
-				<div class="price-bottom">
-					50 CLASS(300RMB per)
 				</div>
 			</div>
 		</div>
@@ -248,6 +288,9 @@ if(screen.width <= 800){
 				</div>
 				<div class="shark">
 					<img src="images/shark.gif">
+				</div>
+				<div class="wheel">
+					<img src="images/wheel.png" class="img-set" >
 				</div>
 			</div>
 			<div class="tec-msg">
@@ -536,10 +579,11 @@ if(screen.width <= 800){
 <div class="loading-container">
 	<div class="loading-wrapper">
 		<div class="loading-logo">
-			<img src="images/icon-logo.png" class="abs-img">
+			<img src="images/icon.png" class="abs-img">
+			<div class="num">0</div>
 		</div>
 		<div class="loading-box">
-			<div class="loading-bar"></div>
+			<img src="images/progress.png">
 		</div>
 	</div>
 </div>

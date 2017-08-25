@@ -89,7 +89,7 @@ function loading(){
 	var $imgs = $('.img-set'),
 		count = 0,
 		len = $imgs.length,
-		$barEl = $('.loading-bar'),
+		$barEl = $('.loading-logo'),
 		$loadContainer = $('.loading-container');
 
 	if( len == 0 ){
@@ -118,8 +118,14 @@ function loading(){
 	});
 
 	function process(count){
-		var per = count / len * 100;
-		$barEl.css('width',per.toFixed(0)+"%");
+		var per = ( count / len * 100 ) >> 0;
+		$barEl.css({
+			"-webkit-transform" : "translate3d("+per * 5.83+"px,0px,1px)",
+			"-moz-transform" : "translate3d("+per * 5.83+"px,0px,1px)",
+			"-o-transform" : "translate3d("+per * 5.83+"px,0px,1px)",
+			"transform" : "translate3d("+per * 5.83+"px,0px,1px)"
+		});
+		$barEl.find(".num").html(per);
 		if(per == 100){
 			setTimeout(function(){
 				loadEnd();
@@ -133,7 +139,7 @@ function loading(){
 	}
 
 	function loadHide(){
-		$loadContainer.delay(1500).fadeOut(500,function(e){
+		$loadContainer.delay(1000).fadeOut(500,function(e){
 			$('.mouser-container').addClass('page-end');
 			setTimeout(function(){
 				shicha();
@@ -260,6 +266,17 @@ $('.loading-container').on("mousewheel",function(e){
 //intro
 
 
+//course
+$('.clb-1').on(click,function(e){
+
+	$('.course-wrapper').addClass("course-active");
+
+});
+
+$('.course-close').on(click,function(e){
+	$('.course-wrapper').removeClass("course-active");
+});
+
 //
 $('.tec-btn').on(click,function(e){
 	e.preventDefault();
@@ -364,12 +381,12 @@ $(window).on('mousewheel DOMMouseScroll',function(e){
 
 	setTimeout(function(){
 		timer = 1001;
-	},1500);
+	},1000);
 
 	e.preventDefault();
 	e.stopPropagation();
 
-	var direc = e.originalEvent.deltaY || e.originalEvent.detail;
+	var direc = -e.originalEvent.wheelDelta || e.originalEvent.deltaY || e.originalEvent.detail;
 
 	direc > 0 ? idx++ : idx--;
 
