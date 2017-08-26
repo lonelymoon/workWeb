@@ -1,0 +1,54 @@
+#content{
+	position: relative;
+	height: auto;
+	max-width: 6.25rem;
+	margin: 0 auto;
+}
+
+.column{
+	position: relative;
+	height: auto;
+}
+
+.link{
+	position: absolute;
+	width: 100%;
+}
+
+.link2,.link3,.link4{
+	width: 2.5rem;
+	height: 0.76rem;
+	right: 0rem;
+	bottom: 0rem;
+}
+
+.link3{
+	width: 1.8rem;
+}
+
+.link5{
+	left: 0rem;
+	bottom: 0rem;
+	height: 0.72rem;
+}
+
+.link6{
+	top: 2.67rem;
+	height: 0.72rem;
+}
+
+.link7{
+	width: 0.6rem;
+    height: 0.5rem;
+    right: 0.2rem;
+    top: 0.6rem;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+a{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
