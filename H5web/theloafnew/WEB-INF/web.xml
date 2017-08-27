@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>theloaf</display-name>
+  
+   <!--  微信用户登陆口 -->
+   <servlet>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/servlet/LoginServlet</url-pattern>
+  </servlet-mapping>
+  
+   <!--  右上角分享控制 -->
+   <servlet>
+    <servlet-name>Share</servlet-name>
+    <servlet-class>servlet.ShareServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Share</servlet-name>
+    <url-pattern>/servlet/ShareServlet</url-pattern>
+  </servlet-mapping>
+ 
+  <!--  获取当前用户的头像，昵称-->
+   <servlet>
+    <servlet-name>Getmessage</servlet-name>
+    <servlet-class>servlet.GetauserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Getmessage</servlet-name>
+    <url-pattern>/servlet/GetauserServlet</url-pattern>
+  </servlet-mapping>
+ 
+    <!--  获取用户自己的照片信息 -->
+   <servlet>
+    <servlet-name>Getpictrue</servlet-name>
+    <servlet-class>servlet.GetpictrueServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Getpictrue</servlet-name>
+    <url-pattern>/servlet/GetpictrueServlet</url-pattern>
+  </servlet-mapping>
+
+    <!--  点赞变更并连带图片表赞的数量变更-->
+   <servlet>
+    <servlet-name>Praisepictrue</servlet-name>
+    <servlet-class>servlet.PraisepictrueServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Praisepictrue</servlet-name>
+    <url-pattern>/servlet/PraisepictrueServlet</url-pattern>
+  </servlet-mapping>
+  
+    <!--  当前用户对当前照片的评论-->
+   <servlet>
+    <servlet-name>Acommentpictrue</servlet-name>
+    <servlet-class>servlet.AcommentpictrueServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Acommentpictrue</servlet-name>
+    <url-pattern>/servlet/AcommentpictrueServlet</url-pattern>
+  </servlet-mapping>
+ 
+     <!--  获取当前用户的所有评论-->
+   <servlet>
+    <servlet-name>Getacomment</servlet-name>
+    <servlet-class>servlet.GetacommentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Getacomment</servlet-name>
+    <url-pattern>/servlet/GetacommentServlet</url-pattern>
+  </servlet-mapping>
+  
+<!--  获取当前照片和当前用户的所有信息-->
+   <servlet>
+    <servlet-name>Getonepictrue</servlet-name>
+    <servlet-class>servlet.GetonepictrueServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Getonepictrue</servlet-name>
+    <url-pattern>/servlet/GetonepictrueServlet</url-pattern>
+  </servlet-mapping>
+ 
+     <!--  当前所有用户的照片信息-->
+   <servlet>
+    <servlet-name>Getallpictrue</servlet-name>
+    <servlet-class>servlet.GetallpictrueServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Getallpictrue</servlet-name>
+    <url-pattern>/servlet/GetallpictrueServlet</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>WeixinGet</servlet-name>
+    <servlet-class>weixin.WeixinGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WeixinGet</servlet-name>
+    <url-pattern>/weixin/WeixinGet</url-pattern>
+  </servlet-mapping>
+  
+  	 <!--  上传照片-->
+  <servlet>
+	<servlet-name>uploadProcessorServlet</servlet-name>
+	<servlet-class>upload.UploadProcessorServlet</servlet-class>
+  </servlet> 
+  <servlet-mapping>
+	<servlet-name>uploadProcessorServlet</servlet-name>
+	<url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+  
+   	 <!--  上传照片new-->
+   <servlet>
+    <servlet-name>EntityServlet1</servlet-name>
+    <servlet-class>servlet.EntityServlet1Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EntityServlet1</servlet-name>
+    <url-pattern>/servlet/EntityServlet1Servlet</url-pattern>
+  </servlet-mapping>
+  
+     	 <!--  通用分享记录-->
+   <servlet>
+    <servlet-name>ShareLogCurrencyServlet</servlet-name>
+    <servlet-class>servlet.ShareLogCurrencyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShareLogCurrencyServlet</servlet-name>
+    <url-pattern>/servlet/ShareLogCurrencyServlet</url-pattern>
+  </servlet-mapping>
+  
+       	 <!--  特殊分享记录-->
+   <servlet>
+    <servlet-name>ShareLogSpecialServlet</servlet-name>
+    <servlet-class>servlet.ShareLogSpecialServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ShareLogSpecialServlet</servlet-name>
+    <url-pattern>/servlet/ShareLogSpecialServlet</url-pattern>
+  </servlet-mapping>  
+  
+<listener>
+ <listener-class>
+  timer.NFDFlightDataTaskListener
+ </listener-class>
+</listener>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

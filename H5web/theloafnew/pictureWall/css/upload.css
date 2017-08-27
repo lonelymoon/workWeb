@@ -1,0 +1,246 @@
+html,body{
+	height: 100%;
+	font-size: 50px;
+}
+
+.page{
+	position: relative;
+	max-width: 750px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	background:url("../images/uploadPage/print_bg.jpg") no-repeat;
+	background-size:cover;
+}
+
+
+header{
+	-webkit-box-flex: 280;
+	-webkit-flex: 196;
+	flex: 196;
+	padding-top: 3.16rem;
+	font-size: 0.64rem;
+	color: #333;
+	text-align: center;
+}
+
+#content{
+	-webkit-box-flex: 904;
+	-webkit-flex: 904;
+	flex:904;
+}
+
+.content{
+	margin: 0 auto;
+	max-width: 10.6rem;
+	height: 10.6rem;
+	position: relative;
+	display: webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-webkit-justify-content: center;
+	-webkit-align-items: center;
+	justify-content: center;
+	align-items: center;
+	background: url("../images/uploadPage/frame.png") no-repeat center;
+	background-size: contain;
+	background-color:#fff;
+}
+
+.img-box{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.selectImg{
+	display: block;
+	color: #fff;
+	background:url("../images/uploadPage/img_upload.png") no-repeat center;
+	width: 9.76rem;
+	height: 9.76rem;
+	border-radius: 0.2rem;
+	outline: none;
+}
+
+.img-show{
+	max-width: 9.76rem;
+	max-height: 9.76rem;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+footer{
+	-webkit-box-flex: 5;
+	-webkit-flex: 106;
+	flex: 106;
+	width: 100%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	background: rgba(26,26,26,0.9);
+	min-height: 2.12rem;
+}
+
+.introduce,.upload-box{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-box-align: center;
+	-webkit-justify-content: center;
+	-webkit-align-items:center;
+	justify-content: center;
+	font-size: 0.64rem;
+	align-items:center;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.introduce{
+	-webkit-box-flex: 11;
+	-webkit-flex:11;
+	flex:11;
+}
+
+.upload-box{
+	-webkit-box-flex: 5;
+	-webkit-flex:5;
+	flex:5;
+	background: rgba(245,167,14,0.9);
+}
+
+.icon-img-box{
+	max-width: 0.88rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.icon-img{
+	max-width: 0.88rem;
+}
+
+.text-bt{
+	color: #fff;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	margin-left: 0.4rem;
+}
+
+.comment-add{
+	position: fixed;
+	left: 0rem;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	display: none;
+}
+
+.comment-add-box{
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	max-height: 9.68rem;
+	height: 100%;
+	background: #fff;
+	border-left: 1px solid #d9d9d9;
+	border-right: 1px solid #d9d9d9;
+}
+
+.comment-fn-box{
+	-webkit-box-flex: 290;
+	-webkit-flex: 105;
+	flex: 105;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-box-pack: center;
+	-wekit-align-items: center;
+	align-items: center;
+	text-align: center;
+	font-size: 0.6rem;
+}
+
+.exit{
+	-webkit-box-flex: 120;
+	-webkit-flex: 120;
+	flex: 120;
+	color: #909090;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.comfirm{
+	-webkit-box-flex: 120;
+	-webkit-flex: 120;
+	flex: 120;
+	color: #f6b026;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.comment-title{
+	-webkit-box-flex: 510;
+	-webkit-flex: 510;
+	flex: 510;
+	font-size: 0.64rem;
+	color: #333333;
+}
+
+.comment-text-box{
+	-webkit-box-flex: 398;
+	-webkit-flex: 398;
+	flex: 398;
+	padding: 0 0.6rem;
+}
+
+.comment-text-box-inner{
+	padding:0 0.2rem;
+}
+
+#comment-text{
+	display: block;
+	height: 6.64rem;
+	width: 100%;
+	overflow: auto;
+	background: #eeeeee;
+	font-size: 0.56rem;
+	outline: none;
+	padding: 0.2rem 0rem;
+	color: #333;
+	text-indent : 0.5rem;
+	line-height: 0.8rem;
+	border: none;
+	box-shadow: none;	
+}
+
+.display{
+	display: none;
+}
+
+.uploading{
+	opacity : 0.8;
+}

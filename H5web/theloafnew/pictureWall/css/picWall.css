@@ -1,0 +1,155 @@
+html,body{
+	font-size: 50px;
+}
+
+.page{
+	max-width: 750px;
+	width: 100%;
+	height: auto;
+	margin:0 auto;
+}
+
+#content{
+	height: auto;
+}
+
+#wrapper{
+	height: 100%;
+	overflow: hidden;
+}
+
+.content{
+	height: auto;
+	position: relative;
+	padding-bottom: 0.8rem;
+	-webkit-transform: translate3d(0,0,0);
+}
+
+.wall-items{
+	position: relative;
+	font-size: 0.56rem;
+}
+
+.wall-title{
+	padding: 0.64rem 0rem;
+}
+
+.wall-title>em{
+	font-weight: bolder;
+	color: #f8b430;
+}
+
+.wall-icon{
+	color: #ffac60;
+	
+}
+
+.month-cn{
+	color: #595959;
+	margin: 0 0.3rem;
+}
+
+.wall-pic-lists{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient:vertical;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+
+.row{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	margin-top: 0.08rem;
+}
+
+.first-row{
+	margin-top: 0rem;
+}
+
+.pic-items{
+	-webkit-box-flex:1;
+	-webkit-flex:1;
+	flex:1;
+	background-size: cover !important;
+}
+
+.icon-box{
+	position: relative;
+}
+
+.like{
+	position: relative;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	color: #fff;
+	font-size: 0.48rem;
+	font-weight: 800;
+	padding:0.2rem;
+}
+
+.likeImage{
+	max-width: 0.72rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align:center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.likeImage img{
+	max-width: 0.72rem;
+}
+
+.likeNum{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	padding-left: 0.2rem;
+	color: #fff;
+}
+
+.rank{
+	position: absolute;
+	right: 0.2rem;
+	top: 0.14rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.rank-icon img{
+	max-width: 0.8rem;
+	margin-left: 0.2rem;
+}
+
+.pic-center{
+	margin: 0 0.08rem;
+}
+
+.pic-items:hover{
+	cursor: pointer;
+}
+
+.display{
+	display: none;
+}
+
+#pullUp{
+	position: relative;
+	font-size: 0.48rem;
+	font-weight: 800;
+	text-align: center;
+	margin: 0 auto;
+	color: #c9cdc9;
+}
