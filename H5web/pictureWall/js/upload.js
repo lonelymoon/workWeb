@@ -86,7 +86,7 @@ upl.addEventListener(ev,function(e){
 	return;
 	
 	if(!temp.text)
-	temp.text = "我向你们推荐这个菜品";
+	temp.text = "我向你们推荐这个课程";
 
 	formData.append("file",temp.file);
 	formData.append("text",decodeURL(temp.text));
