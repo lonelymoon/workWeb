@@ -503,6 +503,78 @@ header:after{
 	font-size: 0.22rem;
 }
 
+.footer-link-box{
+	position: absolute;
+	left: 0rem;
+	bottom: 0rem;
+	width: 100%;
+	height: 3.5rem;
+	z-index: 2;
+}
+
+.text-links{
+	position: relative;
+	height: auto;
+}
+
+.text-links:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.text-items{
+	position: relative;
+	height: 0.96rem;
+	float: left;
+	width: 50%;
+}
+
+.text-item{
+	position: relative;
+	height: 0.2rem;
+	width: 1.5rem;
+	margin: 0 auto;
+	margin-top: 0.32rem;
+}
+
+.text-item-right{
+	-webkit-transform:translate(-0.32rem,0rem);
+	transform:translate(-0.32rem,0rem);
+}
+
+.text-item-btm{
+	margin-top: 0.12rem;
+}
+
+.icon-links{
+	position: absolute;
+	left: 50%;
+	bottom: 0.4rem;
+	height: 1rem;
+	-webkit-transform: translate(-50%,0%);
+	transform: translate(-50%,0%);
+	width: 3rem;
+}
+
+.icon-links:after{
+	clear: both;
+	content: "";
+	display: block;
+}
+
+.icon-item{
+	position: relative;
+	width: 0.67rem;
+	height: 100%;
+	float: left;
+	margin-right: 0.1rem;
+}
+
+.last-item{
+	margin-right: 0rem;
+}
+
 /*loading*/
 .loading-container{
 	position: fixed;

@@ -125,7 +125,7 @@ function loading(){
 			"-o-transform" : "translate3d("+per * 5.83+"px,0px,1px)",
 			"transform" : "translate3d("+per * 5.83+"px,0px,1px)"
 		});
-		$barEl.find(".num").html(per);
+		$barEl.find(".num").html(per * 0.2 >> 0);
 		if(per == 100){
 			setTimeout(function(){
 				loadEnd();
@@ -291,13 +291,18 @@ $('.close').on(click,function(e){
 });
 
 //qrcode
-$('.tec-link-btn').on(click,function(e){
+$('.login').on(click,function(e){
+	e.preventDefault();
+	e.stopPropagation();
 	$(".QRcode").fadeIn(300);
 });
 
 $(".QRcode").on(click,function(e){
 	$(this).fadeOut(300);
-	$('.close').trigger("click");
+});
+
+$('.Iknow').on(click,function(e){
+	$(".QRcode").trigger(click);
 });
 
 //滑动

@@ -55,9 +55,9 @@ $('.back').on('tap',function(e){
 	$('.column-5').removeClass("detail-active");
 });
 
-/*$('.date').on('tap',function(e){
+$('.code').on('click',function(e){
 	$('.QRcode').show();
-});*/
+});
 
 $('.Iknow').on("click",function(e){
 	$('.QRcode').hide();
@@ -77,7 +77,7 @@ function progress(){
 
 	var p = ( count / len * 100 ) >> 0;
 
-	$('.num').html( p );
+	$('.num').html( p * 0.2 >> 0 );
 	$('.loading-logo').css({
 		'left' : p + "%"
 	});
