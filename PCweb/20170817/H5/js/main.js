@@ -40,6 +40,7 @@ $('.nav-wrapper').on('click','.nav-item',function(e){
 });
 
 $('.c2-btn-1').on('click',function(e){
+	scroll2.refresh();
 	$('#column-4').addClass("course-active");
 });
 
@@ -111,7 +112,8 @@ function createScroll(){
 	});
 
 	scroll2 = new IScroll(".course-1",{
-		tap : true
+		tap : true,
+		click : true
 	});
 
 	myscroll = new IScroll('#mendian',{
