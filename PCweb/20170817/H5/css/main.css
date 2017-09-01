@@ -235,6 +235,7 @@ header:after{
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	font-weight: 700;
+	overflow: hidden;
 }
 
 .c2-btn-2,.c2-btn-3{
@@ -346,21 +347,24 @@ header:after{
 	padding-top: 3.042rem;
 }
 
+.media-wrapper:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
 .media-item{
 	position: relative;
 	height: auto;
-	float: left;
-	width: 2.317rem;
+	max-width: 2.317rem;
+	margin: 0 auto;
 }
 
 .media-wrapper>a{
 	display: inline-block;
-	margin-right: 0.44rem;
 	margin-bottom: 0.8rem;
-}
-
-.media-wrapper>a:nth-child(2n){
-	margin-right: 0rem;
+	width: 50%;
+	float: left;
 }
 
 .job-btn{
