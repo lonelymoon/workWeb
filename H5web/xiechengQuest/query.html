@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>统计结果</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+	<a href="count.html" target="_blank">数据统计</a>
+	<div class="table-responsive">
+	  <table class="table table-striped table-bordered table-hover">
+	  	<thead>
+	  		
+	  	</thead>
+	  	<tbody></tbody>
+	  </table>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+jQuery(function($){
+
+$.ajax({
+	"type" : "get",
+	"url" : "php/query.php",
+	"data" : {},
+	"dataType" : "json",
+	"success" : function(data){
+		if( !data || data.length == 0){
+			alert("目前没有数据");
+			return false;
+		}
+		localStorage.strData = JSON.stringify(data);
+		createTableTh(data[0]);
+		createTableTd(data);
+	},
+	"fail" : function(status){
+
+	}
+});
+
+function createTableTh(obj){
+	var str = '<tr class="info"><th>问卷ID</th>',
+		i = 1;
+	for( var key in obj ){
+		var o = obj[key],
+			tpl = '<th title="'+o.title+'">第'+i+'题</th>';
+		str+=tpl;
+		i++;
+	}
+	str += "</tr>";
+	$("thead").html(str);
+}
+
+function createTableTd(data){
+	var temp = "";
+	for( var i = 0, wj; wj = data[i++]; ){
+		var str = '<tr><td>'+i+'</td>';
+		for( var key in wj ){
+			var quest = wj[key],
+				tpl = '<td>'+quest.value+'</td>';
+			str+=tpl;
+		}
+		str+="</tr>";
+		temp += str;
+	}
+	$("tbody").html(temp);
+}
+
+function getQuestNum(obj){
+	var i = 0;
+	for( var key in obj ){
+		i++;
+	}
+	return i;
+}
+
+});
+</script>
+</body>
+</html>

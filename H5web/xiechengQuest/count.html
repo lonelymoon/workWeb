@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>统计结果</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+	<div class="total"></div>
+	<div class="table-responsive">
+	  <table class="table table-striped table-bordered table-hover">
+	  	<thead>
+	  		
+	  	</thead>
+	  	<tbody></tbody>
+	  </table>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+jQuery(function($){
+
+var data = JSON.parse(localStorage.strData);
+var saveData = {};
+
+createTableTh(data[0]);
+countTableTd(data);
+createTableTd(saveData);
+
+function createTableTh(obj){
+	var str = '<tr class="info">',
+		i = 1;
+	for( var key in obj ){
+		var o = obj[key],
+			tpl = '<th title="'+o.title+'">第'+i+'题</th>';
+		str+=tpl;
+		i++;
+	}
+	str += "</tr>";
+	$("thead").html(str);
+}
+
+function countTableTd(data){
+	for( var i = 0, wj; wj = data[i++]; ){
+		saveData.total = i;
+		for( var key in wj ){
+			saveData[key] = saveData[key] || {};
+			var scolumn = saveData[key];
+			var column = wj[key];
+			var answer = column.value;
+			var arr = answer.split(",");
+			for( var idx = arr.length - 1; idx >= 0; idx-- ){
+				var val = arr[idx];
+				if(!val) continue;
+				if(!scolumn[val]) scolumn[val] = 0;
+				scolumn[val]++;
+			}
+		}
+	}
+}
+
+function createTableTd(data){
+	var total = data.total,
+		temp = '<tr class="info">';
+	for( var key in data ){
+		if( !data[key] || typeof data[key] != "object" ) continue;
+		var quest = data[key];
+		var str = '<td>';
+		for( var k in quest ){
+			var tpl = k+': '+quest[k]+'</br>';
+			str += tpl;
+		}
+		str += '</td>';
+		temp += str;
+	}
+	temp += '</tr>';
+	$("tbody").html(temp);
+	$(".total").html("总计"+total+"条结果");
+}
+
+});
+</script>
+</body>
+</html>
