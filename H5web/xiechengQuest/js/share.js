@@ -4,7 +4,7 @@ var signurl = window.location.href;
 
 var TITLE = "携程旅游特价问卷调查", //微信标题
     DESC = "携程旅游特价问卷调查",  //微信描叙
-    IMGURL = "https://web.aochey.com/xiechengQuest/share.png", //分享图片地址
+    IMGURL = "https://web.aochey.com/xiechengQuest/share.jpg", //分享图片地址
     LINK = "https://web.aochey.com/xiechengQuest"; //分享来源链接
 
 $.ajax({
