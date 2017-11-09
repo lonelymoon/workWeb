@@ -7,8 +7,6 @@ body{
 	position: relative;
 	height: auto;
 	background: #FFC21C;
-	border-bottom: 0.5rem solid #FF321E;
-	box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
 	padding: 0px;
 }
 
@@ -33,7 +31,6 @@ body{
 	height: auto;
 	background: url("../images/bg.jpg") repeat-y;
 	background-size: cover;
-	box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
 	font-size: 1rem;
 	color: #602e06;
 }
