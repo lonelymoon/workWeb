@@ -1,0 +1,23 @@
+.topbar{
+	display: none;
+}
+
+.contact-btn{
+	display: none;
+}
+
+.header .header-right .header-contact{
+	padding: 0px 0px 0px 0px;
+}
+
+.newlogo{
+	padding-left: 50px;
+}
+
+.last-mini{
+	padding-right: 30px !important;
+}
+
+.section{
+	padding-top: 50px;
+}
