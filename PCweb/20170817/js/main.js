@@ -269,7 +269,19 @@ $('.loading-container').on("mousewheel",function(e){
 //course
 $('.clb-1').on(click,function(e){
 
-	$('.course-wrapper').addClass("course-active");
+	$('.course-wrapper').addClass("course-active").attr("data-id","1");
+
+});
+
+$('.clb-2').on(click,function(e){
+
+	$('.course-wrapper').addClass("course-active").attr("data-id","2");
+
+});
+
+$('.clb-3').on(click,function(e){
+
+	$('.course-wrapper').addClass("course-active").attr("data-id","3");
 
 });
 

@@ -154,6 +154,28 @@ header:after{
 .course-wrapper{
 	position: relative;
 	height: auto;
+	display: none;
+}
+
+.course-w-2,.course-w-3{
+	position: absolute;
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: auto;
+	z-index: 2;
+}
+
+.course-active[data-id="1"] .course-w-1{
+	display: block;
+}
+
+.course-active[data-id="2"] .course-w-2{
+	display: block;
+}
+
+.course-active[data-id="3"] .course-w-3{
+	display: block;
 }
 
 .course-btn-items{
@@ -238,10 +260,10 @@ header:after{
 	overflow: hidden;
 }
 
-.c2-btn-2,.c2-btn-3{
+/* .c2-btn-2,.c2-btn-3{
 	color: #797979;
 	border: 1px solid #797979;
-}
+} */
 
 .detail-box{
 	position: fixed;

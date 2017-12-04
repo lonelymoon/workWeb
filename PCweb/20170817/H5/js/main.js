@@ -41,11 +41,21 @@ $('.nav-wrapper').on('click','.nav-item',function(e){
 
 $('.c2-btn-1').on('click',function(e){
 	scroll2.refresh();
-	$('#column-4').addClass("course-active");
+	$('#column-4').addClass("course-active").attr("data-id","1");
+});
+
+$('.c2-btn-2').on('click',function(e){
+	scroll2.refresh();
+	$('#column-4').addClass("course-active").attr("data-id","2");
+});
+
+$('.c2-btn-3').on('click',function(e){
+	scroll2.refresh();
+	$('#column-4').addClass("course-active").attr("data-id","3");
 });
 
 $('.course-btn-back').on('tap',function(e){
-	$('#column-4').removeClass("course-active");
+	$('#column-4').removeClass("course-active").attr("data-id","1");
 });
 
 $('.detail-btn').on('click',function(e){
