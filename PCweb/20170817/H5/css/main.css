@@ -260,10 +260,10 @@ header:after{
 	overflow: hidden;
 }
 
- .c2-btn-2,.c2-btn-3{
+/*  .c2-btn-2,.c2-btn-3{
 	color: #797979;
 	border: 1px solid #797979;
-} 
+}  */
 
 .detail-box{
 	position: fixed;
