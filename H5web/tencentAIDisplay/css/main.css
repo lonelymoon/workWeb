@@ -1,0 +1,59 @@
+html,body{
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+
+#container{
+	position: relative;
+	height: 100%;
+}
+
+.swiper-container,.swiper-wrapper,.swiper-slide{
+	height: 100%;
+}
+
+.page{
+	position: relative;
+	height: 100%;
+	max-width: 6.25rem;
+	margin: 0 auto;
+	background: #eee;
+	overflow: hidden;
+}
+
+.page-bg{
+	position: absolute;
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+.page-content{
+	position: relative;
+	height: auto;
+}
+
+
+/*************************Animate***************************/
+@-webkit-keyframes arrow-loop{
+	0%{
+		-webkit-transform: translateY(0rem);
+	}
+
+	100%{
+		-webkit-transform: translateY(1rem);
+	}
+}
+
+@keyframes arrow-loop{
+	0%{
+		transform: translateY(0rem);
+	}
+
+	100%{
+		transform: translateY(1rem);
+	}
+}
