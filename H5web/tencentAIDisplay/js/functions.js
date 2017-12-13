@@ -80,7 +80,7 @@ fn.createFrameImg = function(canvas,imgUrl){
 		newCanvas.height = h;
 		canvas.width = w;
 		canvas.height = h;
-
+		console.log(canvas);
 		drawFrameImg(canvas,newCanvas,img);
 
 	};
