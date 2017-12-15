@@ -2,6 +2,8 @@
 
 var fn = {};
 
+window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame;
+
 /********************逐字显示********************/
 function showfont(arr,i,timespace,callback){
 
@@ -39,16 +41,17 @@ fn.showfonts = function(str,timespace,callback){
 
 /*********************滚动背景**************************/
 function loopDrawImg(tcxt,scv,w,h,i){
-	tcxt.clearRect(0,0,w,h);
-	tcxt.save();
-	tcxt.drawImage(scv,0,0,w,h-i,0,i,w,h-i);
-	tcxt.drawImage(scv,0,h-i,w,i,0,0,w,i);
-	tcxt.restore();
-
 	requestAnimationFrame(function(){
 		i >= h ? i = 0 : i++;
 		loopDrawImg(tcxt,scv,w,h,i);
 	});
+
+	tcxt.clearRect(0,0,w,h);
+	tcxt.save();
+	tcxt.drawImage(scv,0,0,w,h-i,0,i,w,h-i);
+	if(i!=0) 
+	tcxt.drawImage(scv,0,h-i,w,i,0,0,w,i);
+	tcxt.restore();
 }
 
 
@@ -80,7 +83,7 @@ fn.createFrameImg = function(canvas,imgUrl){
 		newCanvas.height = h;
 		canvas.width = w;
 		canvas.height = h;
-		console.log(canvas);
+
 		drawFrameImg(canvas,newCanvas,img);
 
 	};
