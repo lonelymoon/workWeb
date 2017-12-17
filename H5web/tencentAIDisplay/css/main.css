@@ -155,6 +155,136 @@ img{
 	transform: translateX(-50%) translateY(0rem);
 }
 
+/**/
+.page2-center{
+	position: absolute;
+	top: 3.8rem;
+	left: 50%;
+	-webkit-transform: translate(-46%,0%);
+	transform: translate(-46%,0%);
+	width: 3.5rem;
+	height: 3rem;
+}
+
+.page2-text-box{
+	position: absolute;
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	font-family: "tencentFont";
+	font-size: 0.3rem;
+	color: #fff;
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+.dian-loop{
+	position: absolute;
+	z-index: 2;
+	width: 0.075rem;
+	height: auto; /*0.283rem*/
+	right: -0.526rem;
+	bottom: -0.28rem;
+}
+
+.dian-item{
+	position: relative;
+	padding-bottom: 1px;
+	display: none;
+}
+
+.dian-loop>.dian-item:last-child{
+	padding-bottom: 0px;
+}
+
+.dian-loop[data-id="1"] .di-1{
+	display: block;
+}
+
+.dian-loop[data-id="2"] .di-1,.dian-loop[data-id="2"] .di-2{
+	display: block;
+}
+
+.dian-loop[data-id="3"] .di-1,.dian-loop[data-id="3"] .di-2,.dian-loop[data-id="3"] .di-3{
+	display: block;
+}
+
+.dian-loop[data-id="4"] .di-1,.dian-loop[data-id="4"] .di-2,.dian-loop[data-id="4"] .di-3,.dian-loop[data-id="4"] .di-4{
+	display: block;
+}
+
+.dian-loop[data-id="5"] .dian-item{
+	display: block;
+}
+
+.icon-box{
+	position: absolute;
+	width: 100%;
+	height: 0.617rem;
+	left: 0rem;
+	bottom: -2.09rem;
+}
+
+.icon-item{
+	position: absolute;
+	width: 0.617rem;
+	height: 0.617rem;
+	left: 0rem;
+	top: 0rem;
+}
+
+.icon-chilun{
+	left: -0.24rem;
+	-webkit-animation: rotate-loop 5s linear infinite;
+	animation: rotate-loop 5s linear infinite;
+}
+
+.icon-zhiwen{
+	left: 1.28rem;
+	-webkit-animation: icon-fade 3s linear infinite;
+	animation: icon-fade 3s linear infinite;
+}
+
+.icon-home{
+	left: 2.83rem;
+}
+
+/****/
+.page3-center{
+	position: absolute;
+    left: 50%;
+    top: 1.39rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-left: 0.06rem;
+    -webkit-transform: translate(-50%,0%);
+    transform: translate(-50%,0%);
+}
+
+.page3-rotate-loop{
+	position: absolute;
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	-webkit-animation: rotate-loop 4s linear infinite;
+    animation: rotate-loop 4s linear infinite;
+}
+
+.page3-earth-loop{
+	position: absolute;
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	-webkit-animation: earth-loop2 4s linear infinite;
+    animation: earth-loop2 4s linear infinite;
+}
+
 .loading{
 	position: fixed;
 	left: 0rem;
@@ -228,4 +358,60 @@ img{
 	100%{
 		transform: translate(-50%,0%) rotate(1deg);
 	}
+}
+
+@-webkit-keyframes icon-fade{
+	0%{
+		opacity: 0;
+	}
+
+	50%{
+		opacity: 1;
+	}
+
+	100%{
+		opacity: 0;
+	}
+}
+
+@keyframes icon-fade{
+	0%{
+		opacity: 0;
+	}
+
+	50%{
+		opacity: 1;
+	}
+
+	100%{
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes earth-loop2{
+	0%{
+		-webkit-transform: rotate(360deg);
+	}
+
+	100%{
+		-webkit-transform: rotate(1deg);
+	}
+}
+
+@keyframes earth-loop2{
+	0%{
+		transform: rotate(360deg);
+	}
+
+	100%{
+		transform: rotate(1deg);
+	}
+}
+
+/***********************************************************/
+@font-face
+{
+	font-family: "tencentFont";
+	src: url('../font/tencent.ttf') format('truetype'),
+	     url('../font/tencent.oft') format('opentype');
 }
