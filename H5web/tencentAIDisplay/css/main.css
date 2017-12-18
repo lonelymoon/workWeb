@@ -1,3 +1,7 @@
+*{
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 html,body{
 	position: relative;
 	height: 100%;
@@ -12,6 +16,7 @@ img{
 #container{
 	position: relative;
 	height: 100%;
+	display: none;
 }
 
 .swiper-container,.swiper-wrapper,.swiper-slide{
@@ -129,7 +134,7 @@ img{
 	position: absolute;
 	width: 0.842rem;
 	left: 50%;
-	bottom: -0.5rem;
+	bottom: -0.4rem;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	-webkit-animation: arrow-loop 2s linear infinite;
@@ -142,7 +147,7 @@ img{
 	left: 50%;
 	-webkit-transform: translateX(-50%) translateY(0.3rem);
 	transform: translateX(-50%) translateY(0.3rem);
-	bottom: -2.38rem;
+	bottom: -2.1rem;
 	-webkit-transition: all 1s linear 2s;
 	transition: all 1s linear 2s;
 	opacity: 0;
@@ -173,11 +178,15 @@ img{
 	width: 100%;
 	height: 100%;
 	z-index: 1;
+}
+
+.page2-text-box>pre{
+	padding-top: 0.3rem;
 	font-family: "tencentFont";
 	font-size: 0.3rem;
-	color: #fff;
-	line-height: 1.5;
-	font-weight: bold;
+	color: #ddf7ff;
+	text-shadow: 0rem 0rem 0.1rem rgba(6,9,27,0.5);
+	line-height: 1.4;
 }
 
 .dian-loop{
@@ -249,18 +258,37 @@ img{
 
 .icon-home{
 	left: 2.83rem;
+	-webkit-animation: icon-fade 3s linear infinite;
+	animation: icon-fade 3s linear infinite;
 }
 
 /****/
 .page3-center{
 	position: absolute;
     left: 50%;
-    top: 1.39rem;
+    top: 0.94rem;
     width: 2.3rem;
     height: 2.3rem;
     margin-left: 0.06rem;
     -webkit-transform: translate(-50%,0%);
     transform: translate(-50%,0%);
+}
+
+.page3-title{
+	position: absolute;
+	width: 65%;
+	height: auto;
+	z-index: 3;
+	font-family: "tencentFont";
+	font-size: 0.6rem;
+	color: #ddf7ff;
+	text-shadow: 0rem 0rem 0.14rem rgba(84,176,255,1);
+	left: 50%;
+	top: 50%;
+	text-align: center;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	line-height: 1.1;
 }
 
 .page3-rotate-loop{
@@ -283,6 +311,142 @@ img{
 	z-index: 0;
 	-webkit-animation: earth-loop2 4s linear infinite;
     animation: earth-loop2 4s linear infinite;
+}
+
+.page3-circle-box{
+	position: absolute;
+	left: 0rem;
+	top: 2.92rem;
+	width: 100%;
+	height: 5.8rem;
+}
+
+.page3-circle-item{
+	position: relative;
+	height: 1.933rem;
+}
+
+.page3-circle-loop{
+	position: absolute;
+	z-index: 1;
+	width: 0.9rem;
+	left: -0.3rem;
+	top: -0.32rem;
+	-webkit-animation: circle-loop2 10s linear infinite;
+	animation: circle-loop2 10s linear infinite;
+}
+
+.p3cl-2{
+	-webkit-animation: circle-loop2 12s linear 2s infinite;
+	animation: circle-loop2 12s linear 2s infinite;
+}
+
+.p3cl-3{
+	top: -0.18rem;
+	-webkit-animation: circle-loop2 8s linear 4s infinite;
+	animation: circle-loop2 8s linear 4s infinite;
+}
+
+.page3-text{
+	position: absolute;
+	left: -0.4rem;
+	top: 0.3rem;
+	text-align: center;
+	width: 3rem;
+	font-family: "tencentFont";
+	font-size: 0.6rem;
+	color: #ddf7ff;
+	text-shadow: 0rem 0rem 0.14rem rgba(84,176,255,1);
+	z-index: 3;
+}
+
+.p3t-2{
+	top: 0.36rem;
+}
+
+.p3t-3{
+	top: 0.5rem;
+}
+
+/******/
+
+.page4-center,.page8-center,.page12-center{
+	position: absolute;
+	width: 3.7rem;
+	height: 2.8rem;
+	left: 50%;
+	top: 3.7rem;
+	-webkit-transform:translate(-50%,0%);
+	transform:translate(-50%,0%);
+}
+
+.page-nav-lists{
+	position: absolute;
+	width: 4.5rem;
+    height: 0.62rem;
+    top: -3.32rem;
+    left: -0.4rem;
+}
+
+.page-nav-lists:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.page-nav-list{
+	position: relative;
+	height: 100%;
+	width: 1.5rem;
+	float: left;
+}
+
+.page4-text,.page8-text,.page12-text{
+	position: relative;
+	height: 100%;
+	padding: 0.21rem;
+	font-family: "tencentFont";
+	font-size: 0.265rem;
+	color: #ddf7ff;
+	text-shadow: 0rem 0rem 0.1rem rgba(6,9,27,0.5);
+	line-height: 1.75;
+	box-sizing: border-box;
+}
+
+.page12-text{
+	padding: 0.7rem 0.35rem;
+}
+
+.page4-text2,.page8-text2,.page12-text2{
+	position: absolute;
+	left: -1rem;
+	top: 4rem;
+	width: 5.8rem;
+	text-align: center;
+	height: auto;
+	font-family: "tencentFont";
+	font-size: 0.32rem;
+	color: #ddf7ff;
+	text-shadow: 0rem 0rem 0.1rem rgba(6,9,27,0.5);
+	opacity: 0;
+	-webkit-transition: all 0.6s ease-out;
+	transition: all 0.6s ease-out;
+	-webkit-transform: translate(-0.2rem,0rem);
+	transform: translate(-0.2rem,0rem);
+}
+
+.page8-text2{
+	font-size: 0.3rem;
+}
+
+.page-active .page4-text2,.page-active .page8-text2,.page-active .page12-text2{
+	-webkit-transform: translate(0rem,0rem);
+	transform: translate(0rem,0rem);
+	opacity: 1;
+}
+
+.page-4 .ui-arrow-loop,.page-8 .ui-arrow-loop,.page-12 .ui-arrow-loop{
+	bottom: -3.4rem;
 }
 
 .loading{
@@ -408,10 +572,46 @@ img{
 	}
 }
 
+
+@-webkit-keyframes circle-loop2{
+	0%{
+		-webkit-transform: translate(0rem,0rem) rotate(0deg);
+	}
+
+	33%{
+		-webkit-transform: translate(2rem,0rem) rotate(1800deg);
+	}
+
+	66%{
+		-webkit-transform: translate(1rem,1.54rem) rotate(3600deg);
+	}
+
+	100%{
+		-webkit-transform: translate(0rem,0rem) rotate(5399deg);
+	}
+}
+
+@keyframes circle-loop2{
+	0%{
+		transform: translate(0rem,0rem) rotate(0deg);
+	}
+
+	33%{
+		transform: translate(2rem,0rem) rotate(1800deg);
+	}
+
+	66%{
+		transform: translate(1rem,1.54rem) rotate(3600deg);
+	}
+
+	100%{
+		transform: translate(0rem,0rem) rotate(5399deg);
+	}
+}
+
 /***********************************************************/
 @font-face
 {
 	font-family: "tencentFont";
-	src: url('../font/tencent.ttf') format('truetype'),
-	     url('../font/tencent.oft') format('opentype');
+	src: url('../font/tencent.otf') format('opentype');
 }
