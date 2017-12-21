@@ -7,7 +7,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="css/wantUI-alert.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/main.css?v=1.1">
 </head>
 <body>
 
@@ -36,67 +36,427 @@
 		<div class="quest-content">
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="age" id="age1" value="<20">&lt;20
+			    <input type="radio" name="age" id="age1" value="18-23">18-23岁
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="age" id="age2" value="21-25">21-25
+			    <input type="radio" name="age" id="age2" value="24-30">24-30岁
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="age" id="age3" value="26-30">26-30
+			    <input type="radio" name="age" id="age3" value="31-40">31-40岁
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="age" id="age4" value="31-35">31-35
+			    <input type="radio" name="age" id="age4" value="41-50">41-50岁
 			  </label>
 			</div>
 			<div class="radio">
 			  <label>
-			    <input type="radio" name="age" id="age5" value=">35">&gt;35
+			    <input type="radio" name="age" id="age5" value=">50">50岁以上
 			  </label>
 			</div>
 		</div>
 	</div>
-	<div class="quest-column" data-type="checkbox" data-idx="3" data-val="" data-require="false">
-		<div class="quest-title">3. 跟您一起去旅游的人一般是？</div>
+	<div class="quest-column" data-type="radio" data-idx="3" data-val="" data-require="true">
+		<div class="quest-title">3．您的月收入大约是？</div>
+		<div class="quest-content">
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="income" id="income1" value="3000元以下">3000元以下
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="income" id="income2" value="3000元-5000元">3000元-5000元
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="income" id="income3" value="5000元-10000元">5000元-10000元
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="income" id="income4" value="10000元-30000元">10000元-30000元
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="income" id="income5" value="30000元以上">30000元以上
+			  </label>
+			</div>
+		</div>
+	</div>
+	<div class="quest-column" data-type="radio" data-idx="4" data-val="" data-require="true">
+		<div class="quest-title">4. 从什么渠道关注到携程旅游特价号的？</div>
+		<div class="quest-content">
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="follow" id="follow1" value="公众号搜索">公众号搜索
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="follow" id="follow2" value="扫描二维码">扫描二维码
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="follow" id="follow3" value="名片分享">名片分享
+			  </label>
+			</div>
+		</div>
+	</div>
+	<div class="quest-column" data-type="radio" data-idx="5" data-val="" data-require="true">
+		<div class="quest-title">5. 您喜欢的内容形式是什么样的？</div>
+		<div class="quest-content">
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="interest" id="interest1" value="大量图片配合少量文字">大量图片配合少量文字
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="interest" id="interest2" value="介绍文字为主配合相关图片">介绍文字为主配合相关图片
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="interest" id="interest3" value="短小精悍只推重要内容">短小精悍只推重要内容
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="interest" id="interest4" value="仅推产品特价信息">仅推产品特价信息
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="interest" id="interest5" value="视频内容">视频内容
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="interest" id="interest6" value="音频内容">音频内容
+			  </label>
+			</div>
+		</div>
+	</div>
+	<div class="quest-column" data-type="checkbox" data-idx="6" data-val="" data-require="true" max-num="3">
+		<div class="quest-title">6. 【可选3项】您更希望我们公众号推送哪种内容？</div>
 		<div class="quest-content">
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="父母" class="quest-check">父母
+			    <input type="checkbox" value="旅行故事" class="quest-check">旅行故事
 			  </label>
 			</div>
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="子女" class="quest-check">子女
+			    <input type="checkbox" value="玩法路线" class="quest-check">玩法路线
 			  </label>
 			</div>
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="闺蜜死党" class="quest-check">闺蜜死党
+			    <input type="checkbox" value="景点推荐" class="quest-check">景点推荐
 			  </label>
 			</div>
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="恋人" class="quest-check">恋人
+			    <input type="checkbox" value="特价信息" class="quest-check">特价信息
 			  </label>
 			</div>
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="同事" class="quest-check">同事
+			    <input type="checkbox" value="餐饮信息" class="quest-check">餐饮信息
 			  </label>
 			</div>
 			<div class="checkbox">
 			  <label>
-			    <input type="checkbox" value="一人行" class="quest-check">一人行
+			    <input type="checkbox" value="当地特色购物指南" class="quest-check">当地特色购物指南
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="签证攻略" class="quest-check">签证攻略
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="摄影位置及技巧" class="quest-check">摄影位置及技巧
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="其他" class="quest-check">其他
 			  </label>
 			</div>
 		</div>
 	</div>
-	<div class="quest-column" data-type="checkbox" data-idx="4" data-val="" data-require="true">
+	<div class="quest-column" data-type="checkbox" data-idx="7" data-val="" data-require="true" max-num="3">
+		<div class="quest-title">7. 【可选3项】您更倾向于参加哪种类型的活动？</div>
+		<div class="quest-content">
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="HTML5游戏" class="quest-check">HTML5游戏
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="微信红包" class="quest-check">微信红包
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="团购低价" class="quest-check">团购低价
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="心情漫画" class="quest-check">心情漫画
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="互动答题" class="quest-check">互动答题
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="免费送礼" class="quest-check">免费送礼
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="其他" class="quest-check">其他
+			  </label>
+			</div>
+		</div>
+	</div>
+	<div class="quest-column" data-type="radio" data-idx="8" data-val="" data-require="true">
+		<div class="quest-title">8. 您最近一年的旅游频率是？</div>
+		<div class="quest-content">
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="rate" id="rate1" value="无">无
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="rate" id="rate2" value="1到2次">1到2次
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="rate" id="rate3" value="3到5次">3到5次
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="rate" id="rate4" value="5次以上">5次以上
+			  </label>
+			</div>
+		</div>
+	</div>
+	<div class="quest-column" data-type="radio" data-idx="9" data-val="" data-require="true">
+		<div class="quest-title">9. 请问您最常用的旅游出行方式是？</div>
+		<div class="quest-content">
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="way" id="way1" value="跟团游">跟团游
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="way" id="way2" value="自由行">自由行
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="way" id="way3" value="自驾游">自驾游
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="way" id="way4" value="其他">其他
+			  </label>
+			</div>
+		</div>
+	</div>
+	<div class="quest-column" data-type="radio" data-idx="10" data-val="" data-require="true">
+		<div class="quest-title">10. 一般你会和谁一起旅游？</div>
+		<div class="quest-content">
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="partner" id="partner1" value="好友">好友
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="partner" id="partner2" value="伴侣">伴侣
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="partner" id="partner3" value="家人">家人
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="partner" id="partner4" value="同事">同事
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="partner" id="partner5" value="单独">单独
+			  </label>
+			</div>
+		</div>
+	</div>
+	<div class="quest-column" data-type="radio" data-idx="11" data-val="" data-require="true">
+		<div class="quest-title">11. 请问您出游的最主要目的是什么？</div>
+		<div class="quest-content">
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="target" id="target1" value="休闲放松">休闲放松
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="target" id="target2" value="增长见识">增长见识
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="target" id="target3" value="消磨时间">消磨时间
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="target" id="target4" value="陪伴家人、朋友">陪伴家人、朋友
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="target" id="target5" value="其他">其他
+			  </label>
+			</div>
+		</div>
+	</div>
+	<div class="quest-column" data-type="text" data-idx="12" data-val="" data-require="true">
+		<div class="quest-title">12. 您目前最想去的旅游目的地是____？</div>
+		<div class="quest-content">
+			<div class="form-group">
+			    <input type="text" class="form-control" id="others-input" placeholder="长度不超过50个字符" maxlength="50">
+			</div>
+		</div>
+	</div>
+	<div class="quest-column" data-type="checkbox" data-idx="13" data-val="" data-require="true" max-num="3">
+		<div class="quest-title">13.【可选三项】对于上一题的答案，目前最想去这里的原因是？</div>
+		<div class="quest-content">
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="景色优美" class="quest-check">景色优美
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="领略异国风情" class="quest-check">领略异国风情
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="机酒硬件较好" class="quest-check">机酒硬件较好
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="价格经济划算" class="quest-check">价格经济划算
+			  </label>
+			</div>
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" value="其他" class="quest-check">其他
+			  </label>
+			</div>
+		</div>
+	</div>
+	<div class="quest-column" data-type="radio" data-idx="14" data-val="" data-require="true">
+		<div class="quest-title">14. 你是如何决定旅游目的地的？</div>
+		<div class="quest-content">
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="plan" id="plan1" value="关注旅游类公众号">关注旅游类公众号
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="plan" id="plan2" value="优惠政策的发布">优惠政策的发布
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="plan" id="plan3" value="好友亲测后安利">好友亲测后安利
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="plan" id="plan4" value="旅游官网的当季热门产品">旅游官网的当季热门产品
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="plan" id="plan5" value="综艺/影视剧的拍摄地">综艺/影视剧的拍摄地
+			  </label>
+			</div>
+			<div class="radio">
+			  <label>
+			    <input type="radio" name="plan" id="plan6" value="根据廉价机票，随机出行">根据廉价机票，随机出行
+			  </label>
+			</div>
+		</div>
+	</div>
+	<div class="quest-column" data-type="text" data-idx="15" data-val="" data-require="true" with-area="true">
+		<div class="quest-title">15. 你每天都看的公众号是____？</div>
+		<div class="quest-content">
+			<div class="form-group">
+			    <input type="text" class="form-control" id="gzh-input" placeholder="长度不超过50个字符" maxlength="50">
+			</div>
+		</div>
+		<div class="quest-title">请告诉我们原因___</div>
+		<div class="quest-content">
+			<div class="form-group">
+				<textarea class="form-control" rows="3"></textarea>
+			</div>
+		</div>
+	</div>
+	<div class="submit-column">
+		<button type="button" class="btn btn-primary" id="quest-submit">提交</button>
+	</div>
+</section>
+<!--alert-->
+
+<div id="wantUI-alert-box">
+	<div id="wantUI-alert-dialog-box">
+		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-title">
+			标题
+		</div>
+		<div class="wantUI-alert-baseBgColor" id="wantUI-alert-msg">
+			内容
+		</div>
+		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-btn">
+			确定
+		</div>
+	</div>
+	<div class="wantUI-alert-bglayer"></div>
+</div>
+
+<!--
+图片多选
+<div class="quest-column" data-type="checkbox" data-idx="4" data-val="" data-require="true">
 		<div class="quest-title">4. 您最喜欢的旅游景点是？</div>
 		<div class="quest-content">
 			<div class="checkbox row">  
@@ -165,215 +525,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="quest-column" data-type="checkbox" data-idx="5" data-val="" data-require="true">
-		<div class="quest-title">5. 您喜欢的旅游线路是？</div>
-		<div class="quest-content">
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="国内长途" class="quest-check">国内长途
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="周边游" class="quest-check">周边游
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="港澳台" class="quest-check">港澳台
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="东南亚" class="quest-check">东南亚
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="欧美" class="quest-check">欧美
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="澳新中东非" class="quest-check">澳新中东非
-			  </label>
-			</div>
-		</div>
-	</div>
-	<div class="quest-column" data-type="checkbox" data-idx="6" data-val="" data-require="false">
-		<div class="quest-title">6. 您能接受的旅游花费（每人）</div>
-		<div class="quest-content">
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="500元以下" class="quest-check">500元以下
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="501-3000元" class="quest-check">501-3000元
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="3001-6000元" class="quest-check">3001-6000元
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="6001-10000元" class="quest-check">6001-10000元
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="10000元以上" class="quest-check">10000元以上
-			  </label>
-			</div>
-		</div>
-	</div>
-	<div class="quest-column" data-type="checkbox" data-idx="7" data-val="" data-require="false">
-		<div class="quest-title">7. 旅游您最看中的是？</div>
-		<div class="quest-content">
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="性价比" class="quest-check">性价比
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="线路安排" class="quest-check">线路安排
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="风景" class="quest-check">风景
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="民俗体验" class="quest-check">民俗体验
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="是否免签" class="quest-check">是否免签
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="是否有免税店" class="quest-check">是否有免税店
-			  </label>
-			</div>
-		</div>
-	</div>
-	<div class="quest-column" data-type="checkbox" data-idx="8" data-val="" data-require="false">
-		<div class="quest-title">8. 您会选择何种出行方式？</div>
-		<div class="quest-content">
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="跟团游" class="quest-check">跟团游
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="自助游" class="quest-check">自助游
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="驾车游" class="quest-check">驾车游
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="其他" class="quest-check">其他
-			  </label>
-			</div>
-		</div>
-	</div>
-	<div class="quest-column" data-type="checkbox" data-idx="9" data-val="" data-require="true">
-		<div class="quest-title">9. 您希望看到更多哪方面内容？</div>
-		<div class="quest-content">
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="游记攻略" class="quest-check">游记攻略
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="签证政策信息" class="quest-check">签证政策信息
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="特价产品推荐" class="quest-check">特价产品推荐
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="当地值得买的好物" class="quest-check">当地值得买的好物
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="旅游摄影技巧" class="quest-check">旅游摄影技巧
-			  </label>
-			</div>
-		</div>
-	</div>
-	<div class="quest-column" data-type="checkbox" data-idx="10" data-val="" data-require="false">
-		<div class="quest-title">10. 您喜欢的活动形式</div>
-		<div class="quest-content">
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="有奖问答" class="quest-check">有奖问答
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="猜谜互动" class="quest-check">猜谜互动
-			  </label>
-			</div>
-			<div class="checkbox">
-			  <label>
-			    <input type="checkbox" value="话题参与" class="quest-check">话题参与
-			  </label>
-			</div>
-		</div>
-	</div>
-	<div class="quest-column" data-type="text" data-idx="11" data-val="" data-require="false">
-		<div class="quest-title">11. 您还想了解哪些旅游信息？</div>
-		<div class="quest-content">
-			<div class="form-group">
-			    <input type="text" class="form-control" id="others-input" placeholder="长度不超过50个字符" maxlength="50">
-			</div>
-		</div>
-	</div>
-	<div class="submit-column">
-		<button type="button" class="btn btn-primary" id="quest-submit">提交</button>
-	</div>
-</section>
-<!--alert-->
 
-<div id="wantUI-alert-box">
-	<div id="wantUI-alert-dialog-box">
-		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-title">
-			标题
-		</div>
-		<div class="wantUI-alert-baseBgColor" id="wantUI-alert-msg">
-			内容
-		</div>
-		<div class="wantUI-alert-baseFontColor wantUI-alert-commonBgColor" id="wantUI-alert-btn">
-			确定
-		</div>
-	</div>
-	<div class="wantUI-alert-bglayer"></div>
-</div>
+-->
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/wantUI-alert.js"></script>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/share.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/main.js?v=1.3"></script>
 </body>
 </html>

@@ -3,6 +3,24 @@ jQuery(function($){
 	var data = {},
 		uploading = false;
 
+	$(".quest-column[max-num]").find("input").on("change",function(e){
+		var max = $(this).parents(".quest-column").attr("max-num"),
+			len = $(this).parents(".quest-column").find(":checked").length;
+
+		var checked = $(this)[0].checked;
+
+		if(!checked){
+			return false;
+		}
+
+		if(len>max){
+			$(this)[0].checked = false;
+		} else {
+			$(this)[0].checked = true;
+		}
+
+	});
+
 	$('#quest-submit').on("click",function(e){
 
 		initData();
@@ -119,6 +137,14 @@ jQuery(function($){
 
 		text : function(target){
 			var $val = $(target).find(":text").eq(0).val() || "";
+			if( $(target).attr("with-area") ){
+				var $tval = $(target).find("textarea").eq(0).val() || "";
+				if( !$val || !$tval ){
+					console.log("答案未填写");
+					return "";
+				}
+				return $val + ":" + $tval;
+			}
 			return $val;
 		}
 

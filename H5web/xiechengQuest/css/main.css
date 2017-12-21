@@ -41,6 +41,10 @@ body{
 	padding: 10px 0px;
 }
 
+.quest-title{
+	padding-bottom: 6px;
+}
+
 .quest-column[data-require="true"] .quest-title:after{
 	position: relative;
 	content: "*";
