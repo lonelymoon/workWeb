@@ -138,16 +138,34 @@ jQuery(function($){
 		text : function(target){
 			var $val = $(target).find(":text").eq(0).val() || "";
 			if( $(target).attr("with-area") ){
-				var $tval = $(target).find("textarea").eq(0).val() || "";
-				if( !$val || !$tval ){
-					console.log("答案未填写");
-					return "";
-				}
-				return $val + ":" + $tval;
+				return checkArea(target,$val);
+			}
+			if( $(target).attr("messages") ){
+				return checkMessage(target);
 			}
 			return $val;
 		}
 
 	};
+
+	function checkArea(target,$val){
+		var $tval = $(target).find("textarea").eq(0).val() || "";
+		if( !$val || !$tval ){
+			console.log("答案未填写");
+			return "";
+		}
+		return $val + ":" + $tval;
+	}
+
+	function checkMessage(target){
+		var $eles = $(target).find("input"),
+			$val = "";
+
+		$eles.each(function(){
+			$val += $(this).val()+"-";
+		});
+
+		return $val;
+	}
 
 });

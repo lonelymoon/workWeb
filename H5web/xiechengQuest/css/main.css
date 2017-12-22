@@ -6,7 +6,7 @@ body{
 #quest-header{
 	position: relative;
 	height: auto;
-	background: #FFC21C;
+	background: #2577e3;
 	padding: 0px;
 }
 
@@ -29,10 +29,10 @@ body{
 #quest-body{
 	position: relative;
 	height: auto;
-	background: url("../images/bg.jpg") repeat-y;
-	background-size: cover;
+	background: url("../images/bg.jpg?ver=1.01") repeat-y;
+	background-size: contain;
 	font-size: 1rem;
-	color: #602e06;
+	color: #fff;
 }
 
 .quest-column{
