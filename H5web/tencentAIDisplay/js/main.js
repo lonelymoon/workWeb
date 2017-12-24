@@ -6,15 +6,15 @@ $(".ui-page1-btn").on("click",function(){
 	swiper.slideNext();
 });
 
-$('.p-list-1').on("click",function(){
+$('.p-list-1,.p3t-1').on("click",function(){
 	swiper.slideTo(3,1000);
 });
 
-$('.p-list-2').on("click",function(){
+$('.p-list-2,.p3t-2').on("click",function(){
 	swiper.slideTo(7,1000);
 });
 
-$('.p-list-3').on("click",function(){
+$('.p-list-3,.p3t-3').on("click",function(){
 	swiper.slideTo(11,1000);
 });
 
@@ -43,13 +43,23 @@ function loadEnd(){
 			}
 
 		});
-		$(".loading").fadeOut(300);
-		$(".page-1").addClass("page-active");
-		utils.createFrameImg($("#canvas-loop")[0],"images/code.png");
+		$(".loading-text").html("正在加载字体，请稍等");
+		setTimeout(function(){
+			$(".loading").fadeOut(300);
+			$(".page-1").addClass("page-active");
+			utils.createFrameImg($("#canvas-loop")[0],"images/code.png");
+			setTimeout(function(){
+				if(swiper.activeIndex == 0)
+				swiper.slideNext();
+			},3000);
+		},2000);
 		return false;
 	}
 
-	$(".loading-content").html( ( $i * 100 / $len ) >> 0 );
+	var gress = ( $i * 100 / $len ) >> 0;
+
+	$(".loading-text").html("loading...");
+	$(".loading-progress").css("width",gress+"%");
 }
 
 var $len = $("img[data-src]").length,
@@ -61,13 +71,17 @@ $("img[data-src]").each(function(){
 		src = $(this).attr("data-src");
 
 	img.onload = function(){
-		$i++;
-		loadEnd();
+		setTimeout(function(){
+			$i++;
+			loadEnd();
+		},10);
 	};
 
 	img.onerror = function(){
-		$i++;
-		loadEnd();
+		setTimeout(function(){
+			$i++;
+			loadEnd();
+		},10);
 	};
 
 	img.src = src+"?ver="+new Date().getTime();
@@ -85,6 +99,8 @@ function enterPage2(){
 	utils.showfonts(str,150,function(data){
 		$(".page2-text-box>pre").append(data.value);
 	});
+
+	$(".page-2").addClass("page-active");
 
 	var i = 0,
 		timer = null;
@@ -115,9 +131,9 @@ function enterPage4(){
 
 	$(".page-4").addClass("page-active");
 
-	utils.showfonts(str,150,function(data){
+	/*utils.showfonts(str,150,function(data){
 		$(".page4-text").append(data.value);
-	});
+	});*/
 
 	isPage4Showed = true;
 

@@ -73,6 +73,12 @@ span,a,p{
 	}
 }
 
+@media screen and (max-width:384px){
+	html{
+		font-size: 61.44px;
+	}
+}
+
 @media screen and (max-width:375px){
 	html{
 		font-size: 60px;

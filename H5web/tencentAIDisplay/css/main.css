@@ -28,8 +28,9 @@ img{
 	height: 100%;
 	max-width: 6.25rem;
 	margin: 0 auto;
-	background: #eee;
+	background: #222;
 	overflow: hidden;
+	color: #fff;
 }
 
 .page-bg{
@@ -134,7 +135,7 @@ img{
 	position: absolute;
 	width: 0.842rem;
 	left: 50%;
-	bottom: -0.4rem;
+	bottom: -1.2rem;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	-webkit-animation: arrow-loop 2s linear infinite;
@@ -144,10 +145,10 @@ img{
 .ui-page1-btn{
 	position: absolute;
 	width: 2.908rem;
-	left: 50%;
+	left: 45%;
 	-webkit-transform: translateX(-50%) translateY(0.3rem);
 	transform: translateX(-50%) translateY(0.3rem);
-	bottom: -2.1rem;
+	bottom: -3.13rem;
 	-webkit-transition: all 1s linear 2s;
 	transition: all 1s linear 2s;
 	opacity: 0;
@@ -171,10 +172,14 @@ img{
 	height: 3rem;
 }
 
+.page-2 .ui-arrow-loop{
+	left: 47%;
+}
+
 .page2-text-box{
 	position: absolute;
 	left: 0rem;
-	top: 0rem;
+	top: -0.5rem;
 	width: 100%;
 	height: 100%;
 	z-index: 1;
@@ -232,8 +237,8 @@ img{
 	position: absolute;
 	width: 100%;
 	height: 0.617rem;
-	left: 0rem;
-	bottom: -2.09rem;
+	left: 0.82rem;
+	bottom: -1.41rem;
 }
 
 .icon-item{
@@ -251,13 +256,13 @@ img{
 }
 
 .icon-zhiwen{
-	left: 1.28rem;
+	left: 1.1rem;
 	-webkit-animation: icon-fade 3s linear infinite;
 	animation: icon-fade 3s linear infinite;
 }
 
 .icon-home{
-	left: 2.83rem;
+	left: 2.4rem;
 	-webkit-animation: icon-fade 3s linear infinite;
 	animation: icon-fade 3s linear infinite;
 }
@@ -413,6 +418,22 @@ img{
 	box-sizing: border-box;
 }
 
+.page4-text{
+	width: 92%;
+    margin: 0 auto;
+    margin-top: -0.57rem;
+    height: 3.3rem;
+}
+
+.page4-bar{
+	position: relative;
+	height: 1px;
+	background: #45b893;
+	box-shadow: 0px -1px 20px 2px #45b893;
+	-webkit-animation: scan 5s linear infinite;
+    animation: scan 5s linear infinite;
+}
+
 .page12-text{
 	padding: 0.7rem 0.35rem;
 }
@@ -433,6 +454,10 @@ img{
 	transition: all 0.6s ease-out;
 	-webkit-transform: translate(-0.2rem,0rem);
 	transform: translate(-0.2rem,0rem);
+}
+
+.page4-text2{
+	top: 3.7rem;
 }
 
 .page8-text2{
@@ -457,6 +482,52 @@ img{
 	height: 100%;
 	z-index: 1000;
 	background: #222;
+	text-align: center;
+	color: #fff;
+	font-size: 0.3rem;
+}
+
+.loading-content{
+	position: absolute;
+	left: 0rem;
+	top: 50%;
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	padding: 0rem 0.2rem;
+	-webkit-transform: translate(0%,-50%);
+	transform: translate(0%,-50%);
+}
+
+.loading-text{
+	position: relative;
+	height: auto;
+	padding: 0.1rem 0rem;
+	text-align: center;
+	font-size: 0.25rem;
+	color: #ddf7ff;
+}
+
+.loading-progress{
+	position: relative;
+	width: 0%;
+	height: 0.06rem;
+	background: #65da90;
+	margin-top: 0.2rem;
+	border-radius: 0.03rem;
+	-webkit-transition: width 0.7s linear;
+	transition: width 0.7s linear;
+}
+
+.music-icon{
+	position: fixed;
+	z-index: 800;
+	right: 0.25rem;
+    top: 0.44rem;
+    width: 0.5rem;
+    height: 0.5rem;
+	-webkit-animation: rotate-loop 5s linear infinite;
+	animation: rotate-loop 5s linear infinite;
 }
 
 /*************************Animate***************************/
@@ -606,6 +677,26 @@ img{
 
 	100%{
 		transform: translate(0rem,0rem) rotate(5399deg);
+	}
+}
+
+@-webkit-keyframes scan{
+	0%{
+		-webkit-transform: translate(0rem,0rem);
+	}
+
+	100%{
+		-webkit-transform: translate(0rem,2.9rem);
+	}
+}
+
+@keyframes scan{
+	0%{
+		transform: translate(0rem,0rem);
+	}
+
+	100%{
+		transform: translate(0rem,2.9rem);
 	}
 }
 
