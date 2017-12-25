@@ -145,10 +145,10 @@ img{
 .ui-page1-btn{
 	position: absolute;
 	width: 2.908rem;
-	left: 45%;
+	left: 42%;
 	-webkit-transform: translateX(-50%) translateY(0.3rem);
 	transform: translateX(-50%) translateY(0.3rem);
-	bottom: -3.13rem;
+	bottom: -2.74rem;
 	-webkit-transition: all 1s linear 2s;
 	transition: all 1s linear 2s;
 	opacity: 0;
@@ -314,8 +314,8 @@ img{
 	width: 100%;
 	height: 100%;
 	z-index: 0;
-	-webkit-animation: earth-loop2 4s linear infinite;
-    animation: earth-loop2 4s linear infinite;
+	/* -webkit-animation: earth-loop2 4s linear infinite;
+	    animation: earth-loop2 4s linear infinite; */
 }
 
 .page3-circle-box{
@@ -375,7 +375,7 @@ img{
 
 /******/
 
-.page4-center,.page8-center,.page12-center{
+.page4-center,.page8-center,.page13-center{
 	position: absolute;
 	width: 3.7rem;
 	height: 2.8rem;
@@ -383,6 +383,10 @@ img{
 	top: 3.7rem;
 	-webkit-transform:translate(-50%,0%);
 	transform:translate(-50%,0%);
+}
+
+.page8-center, .page13-center{
+	top: 3.46rem;
 }
 
 .page-nav-lists{
@@ -406,7 +410,7 @@ img{
 	float: left;
 }
 
-.page4-text,.page8-text,.page12-text{
+.page4-text,.page8-text,.page13-text{
 	position: relative;
 	height: 100%;
 	padding: 0.21rem;
@@ -419,10 +423,10 @@ img{
 }
 
 .page4-text{
-	width: 92%;
+	width: 82%;
     margin: 0 auto;
-    margin-top: -0.57rem;
-    height: 3.3rem;
+    margin-top: -0.37rem;
+    height: 3rem;
 }
 
 .page4-bar{
@@ -434,11 +438,11 @@ img{
     animation: scan 5s linear infinite;
 }
 
-.page12-text{
-	padding: 0.7rem 0.35rem;
+.page13-text{
+	padding: 0.3rem 0.3rem 0.3rem 0.4rem;
 }
 
-.page4-text2,.page8-text2,.page12-text2{
+.page4-text2,.page8-text2,.page13-text2{
 	position: absolute;
 	left: -1rem;
 	top: 4rem;
@@ -464,14 +468,53 @@ img{
 	font-size: 0.3rem;
 }
 
-.page-active .page4-text2,.page-active .page8-text2,.page-active .page12-text2{
+.page-active .page4-text2,.page-active .page8-text2,.page-active .page13-text2{
 	-webkit-transform: translate(0rem,0rem);
 	transform: translate(0rem,0rem);
 	opacity: 1;
 }
 
-.page-4 .ui-arrow-loop,.page-8 .ui-arrow-loop,.page-12 .ui-arrow-loop{
+.page-4 .ui-arrow-loop,.page-8 .ui-arrow-loop,.page-13 .ui-arrow-loop{
 	bottom: -3.4rem;
+}
+
+/********/
+.page5-like-center{
+	position: absolute;
+	left: 50%;
+	top: 3.33rem;
+    width: 3.88rem;
+    margin-left: -0.09rem;
+    height: 5.18rem;
+	-webkit-transform: translate(-50%,0%);
+	transform: translate(-50%,0%);
+}
+
+.page5-like-title{
+	position: absolute;
+	z-index: 2;
+	width: 3.4rem;
+    top: -1.4rem;
+    left: 50%;
+    margin-left: 0.16rem;
+    -webkit-transition: all 0.6s ease-out;
+    transition: all 0.6s ease-out;
+    opacity: 0;
+	-webkit-transform:translate( -50%, -100% );
+	transform:translate( -50%, -100% );
+}
+
+.page-active .page5-like-title{
+	opacity: 1;
+	-webkit-transform:translate( -50%, 0% );
+	transform:translate( -50%, 0% );
+}
+
+.page5-like-box{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
 }
 
 .loading{
@@ -528,6 +571,91 @@ img{
     height: 0.5rem;
 	-webkit-animation: rotate-loop 5s linear infinite;
 	animation: rotate-loop 5s linear infinite;
+}
+
+.layer-box{
+	position: fixed;
+	z-index: 1001;
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: none;
+}
+
+.layer-wrapper{
+	position: relative;
+	height: 100%;
+}
+
+.layer-scroll{
+	position: relative;
+}
+
+.layer-scroll>img{
+	display: none;
+}
+
+.layer-box[data-id="5"] img[data-id="5"]{
+	display: block;
+}
+
+.layer-box[data-id="6"] img[data-id="6"]{
+	display: block;
+}
+
+.layer-box[data-id="7"] img[data-id="7"]{
+	display: block;
+}
+
+.layer-box[data-id="9"] img[data-id="9"]{
+	display: block;
+}
+
+.layer-box[data-id="10"] img[data-id="10"]{
+	display: block;
+}
+
+.layer-box[data-id="11"] img[data-id="11"]{
+	display: block;
+}
+
+.layer-box[data-id="12"] img[data-id="12"]{
+	display: block;
+}
+
+.layer-box[data-id="14"] img[data-id="14"]{
+	display: block;
+}
+
+.layer-box[data-id="15"] img[data-id="15"]{
+	display: block;
+}
+
+.close{
+	position: absolute;
+    z-index: 2;
+    right: 0.2rem;
+    top: 0.35rem;
+    width: 0.6rem;
+    height: 0.6rem;
+}
+
+.layer-btn{
+	position: absolute;
+	font-family: "tencentFont";
+	font-size: 0.4rem;
+	width: 3rem;
+	padding: 0.15rem 0rem;
+	text-align: center;
+	color: #65da90;
+	bottom: 0.2rem;
+	left: 50%;
+	-webkit-transform: translate(-50%,0%);
+	transform: translate(-50%,0%);
+	border: 1px solid #65da90;
+	border-radius: 5px;
 }
 
 /*************************Animate***************************/
@@ -686,7 +814,7 @@ img{
 	}
 
 	100%{
-		-webkit-transform: translate(0rem,2.9rem);
+		-webkit-transform: translate(0rem,2.57rem);
 	}
 }
 
@@ -696,7 +824,7 @@ img{
 	}
 
 	100%{
-		transform: translate(0rem,2.9rem);
+		transform: translate(0rem,2.57rem);
 	}
 }
 

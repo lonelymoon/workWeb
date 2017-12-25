@@ -1,6 +1,9 @@
 jQuery(function($){
 
-var swiper;
+var swiper,
+	iscroll = new IScroll('.layer-wrapper',{
+		tap : true
+	});
 
 $(".ui-page1-btn").on("click",function(){
 	swiper.slideNext();
@@ -15,8 +18,29 @@ $('.p-list-2,.p3t-2').on("click",function(){
 });
 
 $('.p-list-3,.p3t-3').on("click",function(){
-	swiper.slideTo(11,1000);
+	swiper.slideTo(12,1000);
 });
+
+$(".page5-like-box").on("click",function(e){
+	var $id = $(this).attr("data-id");
+	$(".layer-box").attr("data-id",$id).show();
+	iscroll.refresh();
+	iscroll.scrollTo(0,0,10);
+});
+
+$(".close,.layer-btn").on("tap",function(e){
+	$(".layer-box").attr("data-id","0").hide();
+});
+
+function loadOthers(){
+	var $imgs = $("img[data-later]");
+	$imgs.each(function(){
+		var img = $(this)[0],
+			src = $(this).attr("data-src");
+
+		img.src = src+"?ver="+new Date().getTime();
+	});
+}
 
 function loadEnd(){
 	if( $i == $len ){
@@ -25,6 +49,7 @@ function loadEnd(){
 			direction : 'vertical',
 			onSlideChangeEnd : function(swiper){
 				var idx = swiper.activeIndex;
+				$(".page-"+(idx+1)).addClass("page-active");
 
 				switch(idx){
 					case 1:
@@ -36,8 +61,8 @@ function loadEnd(){
 					case 7:
 						enterPage8();
 					break;
-					case 11:
-						enterPage12();
+					case 12:
+						enterPage13();
 					break;
 				}
 			}
@@ -51,14 +76,16 @@ function loadEnd(){
 			setTimeout(function(){
 				if(swiper.activeIndex == 0)
 				swiper.slideNext();
-			},3000);
+
+				loadOthers();
+			},4000);
 		},2000);
 		return false;
 	}
 
 	var gress = ( $i * 100 / $len ) >> 0;
 
-	$(".loading-text").html("loading...");
+	//$(".loading-text").html("loading...");
 	$(".loading-progress").css("width",gress+"%");
 }
 
@@ -67,31 +94,36 @@ var $len = $("img[data-src]").length,
 
 $("img[data-src]").each(function(){
 
-	var img = $(this)[0],
-		src = $(this).attr("data-src");
+	if($(this).attr("data-later")=="true"){
+		$i++;
+		loadEnd();
+	} else {
+		var img = $(this)[0],
+			src = $(this).attr("data-src");
 
-	img.onload = function(){
-		setTimeout(function(){
-			$i++;
-			loadEnd();
-		},10);
-	};
+		img.onload = function(){
+			setTimeout(function(){
+				$i++;
+				loadEnd();
+			},10);
+		};
 
-	img.onerror = function(){
-		setTimeout(function(){
-			$i++;
-			loadEnd();
-		},10);
-	};
+		img.onerror = function(){
+			setTimeout(function(){
+				$i++;
+				loadEnd();
+			},10);
+		};
 
-	img.src = src+"?ver="+new Date().getTime();
+		img.src = src+"?ver="+new Date().getTime();
+	}
 
 });
 
 var textHasShowed = false;
 
 function enterPage2(){
-	var str='腾讯优图AI实验室成立于\n201X年。实验室集结了国\n内外人工智能领域最优秀\n的科学家。\n拥有：人脸识别、图像识\n别、声音识别';
+	var str='腾讯优图成立于2012年，\n集结了国内外人工智能领\n域最优秀的科学家。在人\n脸分析、图像识别、音频\n分析等领域均拥有业界领\n先技术能力。';
 
 	if(textHasShowed)
 	return false;
@@ -99,8 +131,6 @@ function enterPage2(){
 	utils.showfonts(str,150,function(data){
 		$(".page2-text-box>pre").append(data.value);
 	});
-
-	$(".page-2").addClass("page-active");
 
 	var i = 0,
 		timer = null;
@@ -129,8 +159,6 @@ function enterPage4(){
 
 	if(isPage4Showed) return false;
 
-	$(".page-4").addClass("page-active");
-
 	/*utils.showfonts(str,150,function(data){
 		$(".page4-text").append(data.value);
 	});*/
@@ -146,8 +174,6 @@ function enterPage8(){
 
 	if(isPage8Showed) return false;
 
-	$(".page-8").addClass("page-active");
-
 	utils.showfonts(str,150,function(data){
 		$(".page8-text").append(data.value);
 	});
@@ -156,20 +182,18 @@ function enterPage8(){
 
 }
 
-var isPage12Showed = false;
+var isPage13Showed = false;
 
-function enterPage12(){
-	var str="声音识别技术可以将任意文本转化为语音，让机器和应用开口说话。";
+function enterPage13(){
+	var str="腾讯优图的音频分析能力，可高精度TtoV或VtoT，通过智能学习，还能让机器模仿任意人声“说”出任意文字。";
 
-	if(isPage12Showed) return false;
-
-	$(".page-12").addClass("page-active");
+	if(isPage13Showed) return false;
 
 	utils.showfonts(str,150,function(data){
-		$(".page12-text").append(data.value);
+		$(".page13-text").append(data.value);
 	});
 
-	isPage8Showed = true;
+	isPage13Showed = true;
 
 }
 
