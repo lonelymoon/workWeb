@@ -517,6 +517,25 @@ img{
 	height: 100%;
 }
 
+.cd-loop{
+	position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    left: 0.76rem;
+    top: 1.74rem;
+    -webkit-animation: rotate-loop 15s linear infinite;
+    animation: rotate-loop 15s linear infinite;
+}
+
+.zhen{
+	position: absolute;
+    z-index: 2;
+    width: 0.7rem;
+    right: 0.43rem;
+    top: 1.74rem;
+    height: auto;
+}
+
 .loading{
 	position: fixed;
 	left: 0rem;
