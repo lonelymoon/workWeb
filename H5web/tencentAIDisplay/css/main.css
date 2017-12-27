@@ -89,14 +89,14 @@ img{
 	-webkit-transition: all 1s ease-out;
 	transition: all 1s ease-out;
 	opacity: 0;
-	-webkit-transform : translate(-0.4rem,0rem);
-	transform : translate(-0.4rem,0rem);
+	-webkit-transform : translate3d(-0.4rem,0rem,1px);
+	transform : translate3d(-0.4rem,0rem,1px);
 }
 
 .page-active .ui-left-text{
 	opacity: 1;
-	-webkit-transform : translate(0rem,0rem);
-	transform : translate(0rem,0rem);
+	-webkit-transform : translate3d(0rem,0rem,1px);
+	transform : translate3d(0rem,0rem,1px);
 }
 
 .ui-right-text{
@@ -108,14 +108,14 @@ img{
 	-webkit-transition: all 1s ease-out 1s;
 	transition: all 1s ease-out 1s;
 	opacity: 0;
-	-webkit-transform : translate(0.4rem,0rem);
-	transform : translate(0.4rem,0rem);
+	-webkit-transform : translate3d(0.4rem,0rem,1px);
+	transform : translate3d(0.4rem,0rem,1px);
 }
 
 .page-active .ui-right-text{
 	opacity: 1;
-	-webkit-transform : translate(0rem,0rem);
-	transform : translate(0rem,0rem);
+	-webkit-transform : translate3d(0rem,0rem,1px);
+	transform : translate3d(0rem,0rem,1px);
 }
 
 .ui-canvas-loop{
@@ -363,6 +363,8 @@ img{
 	color: #ddf7ff;
 	text-shadow: 0rem 0rem 0.14rem rgba(84,176,255,1);
 	z-index: 3;
+	-webkit-transform: translateZ(1px);
+	transform: translateZ(1px);
 }
 
 .p3t-2{
@@ -534,6 +536,8 @@ img{
     right: 0.43rem;
     top: 1.74rem;
     height: auto;
+    -webkit-transform: translateZ(1px);
+    transform: translateZ(1px);
 }
 
 .loading{
@@ -573,12 +577,30 @@ img{
 .loading-progress{
 	position: relative;
 	width: 0%;
-	height: 0.06rem;
+	height: 0.2rem;
 	background: #65da90;
 	margin-top: 0.2rem;
-	border-radius: 0.03rem;
-	-webkit-transition: width 0.7s linear;
-	transition: width 0.7s linear;
+	border: 1px solid #c0c0c0;
+	padding: 1px;
+	border-radius: 0.1rem;
+	-webkit-transition: width 1s linear;
+	transition: width 1s linear;
+	box-sizing: border-box;
+}
+
+.loading-bar{
+	position: absolute;
+	width: 0.4rem;
+	height: 0.4rem;
+	right: -0.1rem;
+	top: -0.1rem;
+	border-radius: 50%;
+	z-index: 2;
+	transform: translateZ(1px);
+	background: #65da90;
+	border: 1px solid #c0c0c0;
+	box-sizing: border-box;
+	box-shadow: 0px 0px 10px #65da90;
 }
 
 .music-icon{

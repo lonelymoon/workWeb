@@ -43,6 +43,9 @@ function loadOthers(){
 }
 
 function loadEnd(){
+	var gress = ( $i * 100 / $len ) >> 0;
+	$(".loading-progress").css("width",gress+"%");
+
 	if( $i == $len ){
 		$("#container").show();
 		swiper = new Swiper('.swiper-container',{
@@ -78,22 +81,17 @@ function loadEnd(){
 				swiper.slideNext();
 
 				loadOthers();
-			},4000);
+			},2800);
 		},2000);
 		return false;
 	}
 
-	var gress = ( $i * 100 / $len ) >> 0;
-
-	//$(".loading-text").html("loading...");
-	$(".loading-progress").css("width",gress+"%");
 }
 
 var $len = $("img[data-src]").length,
 	$i = 0;
 
-$("img[data-src]").each(function(){
-
+function loadimg(){
 	if($(this).attr("data-later")=="true"){
 		$i++;
 		loadEnd();
@@ -102,22 +100,21 @@ $("img[data-src]").each(function(){
 			src = $(this).attr("data-src");
 
 		img.onload = function(){
-			setTimeout(function(){
-				$i++;
-				loadEnd();
-			},10);
+			$i++;
+			loadEnd();
 		};
 
 		img.onerror = function(){
-			setTimeout(function(){
-				$i++;
-				loadEnd();
-			},10);
+			$i++;
+			loadEnd();
 		};
 
 		img.src = src+"?ver="+new Date().getTime();
 	}
+}
 
+$("img[data-src]").each(function(){
+	setTimeout(loadimg.bind(this),50);
 });
 
 var textHasShowed = false;
@@ -128,7 +125,7 @@ function enterPage2(){
 	if(textHasShowed)
 	return false;
 
-	utils.showfonts(str,150,function(data){
+	utils.showfonts(str,100,function(data){
 		$(".page2-text-box>pre").append(data.value);
 	});
 
@@ -174,7 +171,7 @@ function enterPage8(){
 
 	if(isPage8Showed) return false;
 
-	utils.showfonts(str,150,function(data){
+	utils.showfonts(str,100,function(data){
 		$(".page8-text").append(data.value);
 	});
 
@@ -189,7 +186,7 @@ function enterPage13(){
 
 	if(isPage13Showed) return false;
 
-	utils.showfonts(str,150,function(data){
+	utils.showfonts(str,100,function(data){
 		$(".page13-text").append(data.value);
 	});
 
