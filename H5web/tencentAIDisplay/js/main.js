@@ -25,10 +25,14 @@ $(".page5-like-box").on("click",function(e){
 	var $id = $(this).attr("data-id");
 	$(".layer-box").attr("data-id",$id).show();
 	iscroll.refresh();
-	iscroll.scrollTo(0,0,10);
+	iscroll.scrollTo(0,0,0);
 });
 
-$(".close,.layer-btn").on("tap",function(e){
+$('.close').on("click",function(e){
+	$(".layer-box").attr("data-id","0").hide();
+});
+
+$(".layer-btn").on("tap",function(e){
 	$(".layer-box").attr("data-id","0").hide();
 });
 
