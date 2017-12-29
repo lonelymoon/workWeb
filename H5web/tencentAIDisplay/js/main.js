@@ -1,9 +1,25 @@
 jQuery(function($){
 
 var swiper,
+	u = navigator.userAgent,
+	isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
 	iscroll = new IScroll('.layer-wrapper',{
 		tap : true
 	});
+
+wx.config({
+    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId: '', // 必填，企业号的唯一标识，此处填写企业号corpid
+    timestamp: '', // 必填，生成签名的时间戳
+    nonceStr: '', // 必填，生成签名的随机串
+    signature: '',// 必填，签名，见附录1
+    jsApiList: [] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+});
+
+wx.ready(function(){
+	$("#bgm")[0].play();
+	$("#bgm")[0].pause();
+});
 
 $(".ui-page1-btn").on("click",function(){
 	swiper.slideNext();
@@ -36,6 +52,48 @@ $(".layer-btn").on("tap",function(e){
 	$(".layer-box").attr("data-id","0").hide();
 });
 
+$(".music-icon").on("click",function(){
+	var bgm = $("#bgm")[0];
+	if(bgm.paused){
+		bgm.play();
+		changeIcon(true);
+	} else {
+		bgm.pause();
+		changeIcon(false);
+	}
+});
+
+var changeIcon = (function(){
+	var container = $(".music-icon")[0],
+		image = $(".music-icon>img")[0];
+
+	if(isIOS){
+		$(".music-icon").removeClass("pause");
+		return function(type){
+			if(type){
+				container.classList.add('music-animate')
+				return false;
+			}
+
+			var iTransform = getComputedStyle(image).transform;
+			var cTransform = getComputedStyle(container).transform;
+			  	image.style.transform = iTransform === 'none'
+			    ? cTransform
+			    : cTransform.concat(' ', iTransform);
+			container.classList.remove('music-animate');
+		};
+	}
+	
+	return function(type){
+		if(type){
+			$(".music-icon").removeClass("pause");
+			return false;
+		}
+		$(".music-icon").addClass("pause");
+	};
+
+})();
+
 function loadOthers(){
 	var $imgs = $("img[data-later]");
 	$imgs.each(function(){
@@ -46,47 +104,66 @@ function loadOthers(){
 	});
 }
 
+function pageStart(){
+
+	setTimeout(function(){
+
+		$(".loading-text").html("点击屏幕开始预览");
+		
+		$('.loading').one("click",function(){
+			$(".loading").fadeOut(300);
+			$(".page-1").addClass("page-active");
+			utils.createFrameImg($("#canvas-loop")[0],"images/code.png");
+			$(".music-icon").trigger("click");
+			setTimeout(function(){
+				if(swiper.activeIndex == 0)
+				swiper.slideNext();
+				loadOthers();
+			},2800);
+		});
+
+	},2000);
+}
+
+function createSwiper(){
+	swiper = new Swiper('.swiper-container',{
+		direction : 'vertical',
+		onSlideChangeEnd : function(swiper){
+			var idx = swiper.activeIndex;
+			$(".page-"+(idx+1)).addClass("page-active");
+
+			switch(idx){
+				case 1:
+					enterPage2();
+				break;
+				case 3:
+					enterPage4();
+				break;
+				case 7:
+					enterPage8();
+				break;
+				case 12:
+					enterPage13();
+				break;
+			}
+		}
+
+	});
+}
+
 function loadEnd(){
 	var gress = ( $i * 100 / $len ) >> 0;
 	$(".loading-progress").css("width",gress+"%");
 
 	if( $i == $len ){
 		$("#container").show();
-		swiper = new Swiper('.swiper-container',{
-			direction : 'vertical',
-			onSlideChangeEnd : function(swiper){
-				var idx = swiper.activeIndex;
-				$(".page-"+(idx+1)).addClass("page-active");
 
-				switch(idx){
-					case 1:
-						enterPage2();
-					break;
-					case 3:
-						enterPage4();
-					break;
-					case 7:
-						enterPage8();
-					break;
-					case 12:
-						enterPage13();
-					break;
-				}
-			}
+		createSwiper();
 
-		});
-		$(".loading-text").html("正在加载字体，请稍等");
-		setTimeout(function(){
-			$(".loading").fadeOut(300);
-			$(".page-1").addClass("page-active");
-			utils.createFrameImg($("#canvas-loop")[0],"images/code.png");
-			setTimeout(function(){
-				if(swiper.activeIndex == 0)
-				swiper.slideNext();
+		//$(".loading-text").html("正在加载字体和其他多媒体文件，请稍等");
 
-				loadOthers();
-			},2800);
-		},2000);
+		pageStart();
+
 		return false;
 	}
 

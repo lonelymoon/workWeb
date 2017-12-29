@@ -596,27 +596,36 @@ img{
 
 .loading-bar{
 	position: absolute;
-	width: 0.16rem;
-	height: 0.16rem;
-	right: -0.03rem;
-	top: -0.03rem;
+	width: 0.05rem;
+    height: 0.05rem;
+    right: 0.02rem;
+    top: 0.02rem;
 	border-radius: 50%;
 	z-index: 2;
 	transform: translateZ(1px);
 	background: #9bffbf;
 	box-sizing: border-box;
-	box-shadow: 0px 0px 10px 5px #65da90;
+	box-shadow: 0px 0px 10px 10px #65da90;
 }
 
 .music-icon{
 	position: fixed;
+	display: block;
 	z-index: 800;
 	right: 0.25rem;
     top: 0.44rem;
     width: 0.5rem;
     height: 0.5rem;
+}
+
+.music-animate{
 	-webkit-animation: rotate-loop 5s linear infinite;
 	animation: rotate-loop 5s linear infinite;
+}
+
+.pause{
+	-webkit-animation-play-state:paused;
+	animation-play-state:paused;
 }
 
 .layer-box{
@@ -630,16 +639,23 @@ img{
 	transform:translateZ(4px);
 	overflow: hidden;
 	display: none;
+	background: rgba(0,0,0,0.3);
 }
 
 .layer-wrapper{
-	position: relative;
-	height: 100%;
-	background: rgba(0,0,0,0.8);
+	position: absolute;
+	z-index: 10;
+	left: 0.7rem;
+	top: 0.8rem;
+	right: 0.7rem;
+	bottom: 1rem;
+	overflow: hidden;
+	box-shadow: 0px 0px 25px 9px rgba(255,255,255,0.2);
 }
 
 .layer-scroll{
 	position: relative;
+	height: auto;
 }
 
 .layer-content>img{
@@ -648,10 +664,9 @@ img{
 
 .layer-content{
 	position: relative;
-	max-width: 5rem;
+	height: auto;
 	margin: 0 auto;
 	box-sizing: border-box;
-	padding: 0.1rem 0rem;
 }
 
 .layer-box[data-id="5"] img[data-id="5"]{
@@ -692,27 +707,21 @@ img{
 
 .close{
 	position: fixed;
-    z-index: 4;
-    right: 0.2rem;
-    top: 0.35rem;
-    width: 0.6rem;
-    height: 0.6rem;
+    z-index: 20;
+    right: 1rem;
+    top: 1.45rem;
+    width: 0.48rem;
+    height: auto;
 }
 
 .layer-btn{
 	position: absolute;
-	font-family: "tencentFont";
-	font-size: 0.4rem;
-	width: 3rem;
-	padding: 0.15rem 0rem;
-	text-align: center;
-	color: #65da90;
-	bottom: 0.2rem;
+	width: 1.267rem;
+	height: auto;
+	bottom: 0.32rem;
 	left: 50%;
 	-webkit-transform: translate(-50%,0%);
 	transform: translate(-50%,0%);
-	border: 1px solid #65da90;
-	border-radius: 5px;
 }
 
 /*************************Animate***************************/
