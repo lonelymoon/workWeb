@@ -85,7 +85,7 @@ video{
 	text-align: center;
 	color: #ddf7ff;
 	text-decoration: underline;
-	font-size: 0.2rem;
+	font-size: 0.18rem;
 	-webkit-transform: translate(0rem,-0.2rem);
 	transform: translate(0rem,-0.2rem);
 }
@@ -95,7 +95,7 @@ video{
 <div class="layer">
 	<div class="layer-msg">
 		<img src="images/post.png">
-		<a href="another.html">Click Here!</a>
+		<a href="another.html">or click here</a>
 	</div>
 </div>
 <div class="swiper-container">
@@ -119,14 +119,19 @@ video{
 var video = document.querySelector("video"),
 	u = navigator.userAgent,
 	isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+	w = window.innerWidth,
 	h = window.innerHeight;
+
+if( w > h ){
+	$('.layer').show();
+}
 
 if(isiOS){
 	window.addEventListener("orientationchange", function() {
 		var ori = window.orientation;
 		if(ori == 90 || ori == -90){
-			video.webkitExitFullScreen();
 			video.pause();
+			video.webkitExitFullScreen();
 			$('.layer').show();
 		} else {
 			video.webkitEnterFullScreen();
