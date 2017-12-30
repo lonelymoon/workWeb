@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+<title>视频播放</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+<style type="text/css">
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+.swiper-slide{
+	overflow: hidden;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+video{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+.center-content{
+	position: absolute;
+	z-index: 2;
+	left: 50%;
+	top: 3rem;
+	width: 4rem;
+	height: 4rem;
+	-webkit-transform:translate(-50%,0%);
+	transform:translate(-50%,0%);
+}
+.page2 .center-content{
+	top: 2.2rem;
+}
+.page1-text1{
+	position: absolute;
+	width: 5.617rem;
+    height: auto;
+    left: -0.64rem;
+    top: 1.05rem;
+    opacity: 0;
+    -webkit-transform: translate(-1rem,0rem);
+    transform: translate(-1rem,0rem);
+    -webkit-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+}
+.page1-text2{
+	position: absolute;
+	width: 3.733rem;
+    height: auto;
+    right: -0.8rem;
+    top: 1.8rem;
+    opacity: 0;
+    -webkit-transform: translate(1rem,0rem);
+    transform: translate(1rem,0rem);
+    -webkit-transition: all 0.8s ease-out 0.4s;
+    transition: all 0.8s ease-out 0.4s;
+}
+.swiper-slide-active .page1-text1,.swiper-slide-active .page1-text2{
+	opacity: 1;
+	-webkit-transform: translate(0rem,0rem);
+    transform: translate(0rem,0rem);
+}
+.page2-item1{
+	position: absolute;
+	width: 3.867rem;
+    height: auto;
+    left: 0.06rem;
+    top: 1.21rem;
+    opacity: 0;
+    -webkit-transform: translate(-1rem,0rem);
+    transform: translate(-1rem,0rem);
+    -webkit-transition: all 0.8s ease-out;
+    transition: all 0.8s ease-out;
+}
+
+.page2-item2{
+	position: absolute;
+	width: 3.867rem;
+    height: auto;
+    left: 0.06rem;
+    top: 3.17rem;
+    opacity: 0;
+    -webkit-transform: translate(-1rem,0rem);
+    transform: translate(-1rem,0rem);
+    -webkit-transition: all 0.8s ease-out 0.5s;
+    transition: all 0.8s ease-out 0.5s;
+}
+.page2-item3{
+	position: absolute;
+	width: 3.867rem;
+    height: auto;
+    left: 0.06rem;
+    top: 5.13rem;
+    opacity: 0;
+    -webkit-transform: translate(-1rem,0rem);
+    transform: translate(-1rem,0rem);
+    -webkit-transition: all 0.8s ease-out 1s;
+    transition: all 0.8s ease-out 1s;
+}
+.swiper-slide-active .page2-item1,.swiper-slide-active .page2-item2,.swiper-slide-active .page2-item3{
+	opacity: 1;
+	-webkit-transform: translate(0rem,0rem);
+    transform: translate(0rem,0rem);
+}
+.layer{
+	position: fixed;
+	z-index: 1000;
+	background: rgba(0,0,0,0.7);
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+.layer-msg{
+	position: absolute;
+	width: 3rem;
+	height: auto;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+</style>
+</head>
+<body>
+<div class="layer">
+	<div class="layer-msg">
+		<img src="images/msg.png">
+	</div>
+</div>
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+		<div class="swiper-slide newslide">
+			<img src="images/1.jpg?ver=2123">
+			<div class="center-content">
+				<div class="page1-text1">
+					<img src="images/p1-1.png">
+				</div>
+				<div class="page1-text2">
+					<img src="images/p1-2.png">
+				</div>
+			</div>
+		</div>
+		<div class="swiper-slide">
+			<video src="2.mp4" x5-video-player-type='h5' x5-video-player-fullscreen='true' x5-video-orientation="portraint" poster="" preload="auto" x-webkit-airplay="allow" -webkit-playsinline playsinline></video>
+			<div class="img-set"></div>
+		</div>
+		<div class="swiper-slide page2">
+			<img src="images/2.jpg?ver=2123">
+			<div class="center-content">
+				<div class="page2-item1">
+					<img src="images/p2-1.png">
+				</div>
+				<div class="page2-item2">
+					<img src="images/p2-2.png">
+				</div>
+				<div class="page2-item3">
+					<img src="images/p2-3.png">
+				</div>
+			</div>
+		</div>
+		<div class="swiper-slide">
+			<img src="images/3.jpg?ver=2123">
+			<div class="center-content"></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript">
+var video = document.querySelector("video"),
+	u = navigator.userAgent,
+	isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+	h = window.innerHeight;
+
+if(isiOS){
+	var hasclicked = false;
+	document.body.ontouchstart = function(){
+		if(hasclicked) return false;
+		video.play();
+		video.pause();
+		hasclicked = true;
+	};
+	window.addEventListener("orientationchange", function() {
+		var ori = window.orientation;
+		if(ori == 90 || ori == -90){
+			video.pause();
+			$('.layer').show();
+		} else {
+			video.play();
+			$('.layer').hide();
+		}
+	}, false);
+}else{
+	$('.newslide').one("touchend",function(){
+		setTimeout(function(){
+			video.play();
+		},400);
+	});
+}
+
+video.onended = function(){
+	video.pause();
+	swiper.slideNext();
+};
+
+var swiper = new Swiper(".swiper-container",{
+	direction : 'vertical',
+	height : h,
+	onSlideChangeEnd: function(swiper){
+		video.pause();
+		if( swiper.activeIndex == 1 ){
+			video.play();
+		}    
+	}
+});
+
+</script>
+</body>
+</html>
