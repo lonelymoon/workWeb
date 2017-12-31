@@ -108,8 +108,8 @@ function pageStart(){
 
 	setTimeout(function(){
 
-		$(".loading-text").html("点击屏幕开始预览");
-		
+		//$(".loading-text").html("点击屏幕开始预览");
+		$(".notice-img").show();
 		$('.loading').one("click",function(){
 			$(".loading").fadeOut(300);
 			$(".page-1").addClass("page-active");
