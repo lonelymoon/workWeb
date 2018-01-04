@@ -206,9 +206,9 @@ function enterPage2(){
 	if(textHasShowed)
 	return false;
 
-	utils.showfonts(str,100,function(data){
+	/*utils.showfonts(str,100,function(data){
 		$(".page2-text-box>pre").append(data.value);
-	});
+	});*/
 
 	var i = 0,
 		timer = null;
@@ -252,9 +252,9 @@ function enterPage8(){
 
 	if(isPage8Showed) return false;
 
-	utils.showfonts(str,100,function(data){
+	/*utils.showfonts(str,100,function(data){
 		$(".page8-text").append(data.value);
-	});
+	});*/
 
 	isPage8Showed = true;
 
@@ -267,9 +267,9 @@ function enterPage13(){
 
 	if(isPage13Showed) return false;
 
-	utils.showfonts(str,100,function(data){
+	/*utils.showfonts(str,100,function(data){
 		$(".page13-text").append(data.value);
-	});
+	});*/
 
 	isPage13Showed = true;
 

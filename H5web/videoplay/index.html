@@ -5,26 +5,55 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 <title>视频播放</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 <style type="text/css">
 html,body{
 	height: 100%;
 	overflow: hidden;
+}
+body{
 	background: #000;
 }
-.swiper-slide{
-	overflow: hidden;
+video{
+	max-width: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	display: block;
+	left: 0rem;
+	top: 50%;
+	-webkit-transform: translate(0%,-50%);
+	transform: translate(0%,-50%);
 }
 img{
 	display: block;
 	max-width: 100%;
 }
-video{
-	position: relative;
-	display: block;
+.notice{
+	position: absolute;
+	left: 0rem;
+	top: 0rem;
+	z-index: 10;
 	width: 100%;
 	height: 100%;
-	object-fit: fill;
+	background: rgba(0,0,0,1);
+}
+.notice-content{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 6.3rem;
+	height: auto;
+	-webkit-transform: translate(-50%,-70%);
+	transform: translate(-50%,-70%);
+}
+.notice-btn{
+	position: absolute;
+	left: 50%;
+	width: 4.5rem;
+	height: auto;
+	bottom: 2rem;
+	-webkit-transform: translate(-50%,0%);
+	transform: translate(-50%,0%);
 }
 .layer{
 	position: fixed;
@@ -45,116 +74,67 @@ video{
 	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 }
-.iknow{
-	position: absolute;
-	width: 2rem;
-	height: 0.8rem;
-	text-align: center;
-	line-height: 0.8rem;
-	color: #fff;
-}
-.notice{
-	position: absolute;
-	left: 0rem;
-	top: 0rem;
-	z-index: 10;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.9);
-}
-.notice-content{
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: 5rem;
-	height: auto;
-	-webkit-transform: translate(-50%,-50%);
-	transform: translate(-50%,-50%);
-}
-.notice-btn{
-	position: absolute;
-	left: 50%;
-	width: 4rem;
-	height: auto;
-	bottom: 0.3rem;
-	-webkit-transform: translate(-50%,0%);
-	transform: translate(-50%,0%);
-}
-.layer-msg a{
-	display: block;
-	text-align: center;
-	color: #ddf7ff;
-	text-decoration: underline;
-	font-size: 0.18rem;
-	-webkit-transform: translate(0rem,-0.2rem);
-	transform: translate(0rem,-0.2rem);
-}
 </style>
 </head>
 <body>
 <div class="layer">
 	<div class="layer-msg">
-		<img src="images/post.png">
-		<a href="another.html">or click here</a>
+		<img src="images/btn2.png">
 	</div>
 </div>
-<div class="swiper-container">
-	<div class="swiper-wrapper">
-		<div class="swiper-slide">
-			<video src="1.mp4" x5-video-player-type='h5' x5-video-player-fullscreen='true' x5-video-orientation="portraint" poster="" preload="auto" x-webkit-airplay="allow"></video>
-			<div class="notice">
-				<div class="notice-content">
-					<img src="images/post.png">
-				</div>
-				<div class="notice-btn">
-					<img src="images/btn.png">
-				</div>
-			</div>
-		</div>
+<video src="2.mp4" x5-video-player-type='h5' x5-video-player-fullscreen='true' x5-video-orientation="portraint" poster="" preload="auto" x-webkit-airplay="allow"></video>
+<div class="notice">
+	<div class="notice-content">
+		<img src="images/post.png">
+	</div>
+	<div class="notice-btn">
+		<img src="images/btn.png">
 	</div>
 </div>
 <script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript">
-var video = document.querySelector("video"),
+jQuery(function($){
+
+var video = $("video")[0],
 	u = navigator.userAgent,
 	isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
-	w = window.innerWidth,
-	h = window.innerHeight;
-
-if( w > h ){
-	$('.layer').show();
-}
-
-if(isiOS){
-	window.addEventListener("orientationchange", function() {
-		var ori = window.orientation;
-		if(ori == 90 || ori == -90){
-			video.pause();
-			video.webkitExitFullScreen();
-			$('.layer').show();
-		} else {
-			video.webkitEnterFullScreen();
-			video.play();
-			$('.layer').hide();
-		}
-	}, false);
-}
+	hasClicked = false,
+	w = $(window).width(),
+	h = $(window).height();
 
 $('.notice').on("click",function(e){
 	$(this).hide();
+	hasClicked = true;
 	video.play();
 });
 
-video.onended = function(){
-	video.pause();
-};
-
-var swiper = new Swiper(".swiper-container",{
-	direction : 'vertical',
-	height : h
+$(".layer-msg").on("click",function(e){
+	$(".layer").hide();
+	hasClicked = true;
+	video.play();
 });
 
+if(w > h){
+	$(".layer").show();
+	$('.notice').hide();
+}
+
+window.addEventListener("orientationchange", function() {
+	if(hasClicked){
+		return false;
+	}
+	var ori = window.orientation;
+	if(ori == 90 || ori == -90){
+		$('.layer').show();
+		$('.notice').hide();
+	} else {
+		$('.notice').show();
+		$('.layer').hide();
+	}
+}, false);
+
+
+});
 </script>
 </body>
 </html>

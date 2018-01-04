@@ -2,7 +2,7 @@
 
 var signurl = window.location.href;
 
-var TITLE = "", //微信标题
+var TITLE = "万宝龙·新男人法则", //微信标题
     DESC = "",  //微信描叙
     IMGURL = "", //分享图片地址
     LINK = ""; //分享来源链接

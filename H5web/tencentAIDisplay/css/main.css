@@ -118,6 +118,26 @@ img{
 	transform : translate3d(0rem,0rem,1px);
 }
 
+.ui-center-text{
+	position: absolute;
+	width: 3.733rem;
+	height: auto;
+	top: 2.34rem;
+    left: 0.5rem;
+	z-index: 3;
+	-webkit-transition: all 1s ease-out 1.6s;
+	transition: all 1s ease-out 1.6s;
+	opacity: 0;
+	-webkit-transform : translate3d(0rem,0.2rem,1px);
+	transform : translate3d(0rem,0.2rem,1px);
+}
+
+.page-active .ui-center-text{
+	opacity: 1;
+	-webkit-transform : translate3d(0rem,0rem,1px);
+	transform : translate3d(0rem,0rem,1px);
+}
+
 .ui-canvas-loop{
 	position: absolute;
 	width: 0.867rem;
@@ -183,15 +203,80 @@ img{
 	width: 100%;
 	height: 100%;
 	z-index: 1;
+	line-height: 1.8;
 }
 
-.page2-text-box>pre{
+/* .page2-text-box>pre{
 	padding-top: 0.3rem;
 	font-family: "tencentFont";
 	font-size: 0.3rem;
 	color: #ddf7ff;
 	text-shadow: 0rem 0rem 0.1rem rgba(6,9,27,0.5);
 	line-height: 1.4;
+} */
+
+.page2-line,.page8-line,.page13-line{
+	position: relative;
+	height: auto;
+	font-family: "tencentFont";
+	font-size: 0.3rem;
+	color: #ddf7ff;
+	text-shadow: 0rem 0rem 0.1rem rgba(6,9,27,0.5);
+	opacity: 0;
+	-webkit-transform: translate(0rem,-0.1rem);
+	transform: translate(0rem,-0.1rem);
+}
+
+.page8-line,.page13-line{
+	font-size: 0.265rem;
+}
+
+.page-active .page2-line-1{
+	-webkit-transition: all 1s ease-out;
+	transition: all 1s ease-out;
+	-webkit-transform: translate(0rem,0rem);
+	transform: translate(0rem,0rem);
+	opacity: 1;
+}
+
+.page-active .page2-line-2{
+	-webkit-transition: all 1s ease-out 0.4s;
+	transition: all 1s ease-out 0.4s;
+	-webkit-transform: translate(0rem,0rem);
+	transform: translate(0rem,0rem);
+	opacity: 1;
+}
+
+.page-active .page2-line-3{
+	-webkit-transition: all 1s ease-out 0.8s;
+	transition: all 1s ease-out 0.8s;
+	-webkit-transform: translate(0rem,0rem);
+	transform: translate(0rem,0rem);
+	opacity: 1;
+}
+
+.page-active .page2-line-4{
+	-webkit-transition: all 1s ease-out 1.2s;
+	transition: all 1s ease-out 1.2s;
+	-webkit-transform: translate(0rem,0rem);
+	transform: translate(0rem,0rem);
+	opacity: 1;
+}
+
+.page-active .page2-line-5{
+	-webkit-transition: all 1s ease-out 1.6s;
+	transition: all 1s ease-out 1.6s;
+	-webkit-transform: translate(0rem,0rem);
+	transform: translate(0rem,0rem);
+	opacity: 1;
+}
+
+.page-active .page2-line-6{
+	-webkit-transition: all 1s ease-out 2s;
+	transition: all 1s ease-out 2s;
+	-webkit-transform: translate(0rem,0rem);
+	transform: translate(0rem,0rem);
+	opacity: 1;
 }
 
 .dian-loop{

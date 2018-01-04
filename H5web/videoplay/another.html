@@ -4,14 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 <title>视频播放</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <style type="text/css">
-body{
-	background: #000;
-}
 video{
 	max-width: 100%;
 	width: 100%;
 	position: absolute;
+	z-index: 1;
 	display: block;
 	left: 0rem;
 	top: 50%;
@@ -21,6 +20,6 @@ video{
 </style>
 </head>
 <body>
-<video src="2.mp4" x5-video-player-type='h5' x5-video-player-fullscreen='true' x5-video-orientation="portraint" poster="" preload="auto" x-webkit-airplay="allow" controls="controls"></video>
+<video src="2.mp4" x5-video-player-type='h5' x5-video-player-fullscreen='true' x5-video-orientation="portraint" poster="" preload="auto" x-webkit-airplay="allow"></video>
 </body>
 </html>
