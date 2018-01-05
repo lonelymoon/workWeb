@@ -109,7 +109,7 @@ function pageStart(){
 	setTimeout(function(){
 
 		//$(".loading-text").html("点击屏幕开始预览");
-		$(".notice-img").show();
+		$(".notice-img").fadeIn(500);
 		$('.loading').one("click",function(){
 			$(".loading").fadeOut(300);
 			$(".page-1").addClass("page-active");
@@ -153,8 +153,8 @@ function createSwiper(){
 
 function loadEnd(){
 	var gress = ( $i * 100 / $len ) >> 0;
-	$(".loading-progress").css("width",gress+"%");
-
+	//$(".loading-progress").css("width",gress+"%");
+	$(".loading-box").html(gress+"%");
 	if( $i == $len ){
 		$("#container").show();
 
