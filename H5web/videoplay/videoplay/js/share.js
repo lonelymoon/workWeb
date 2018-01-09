@@ -2,10 +2,10 @@
 
 var signurl = window.location.href;
 
-var TITLE = "腾讯新闻品牌故事编辑室出品", //微信标题
-    DESC = "万宝龙“新男人法则”是如何打造的",  //微信描叙
-    IMGURL = "https://web.aochey.com/videoplay/share.jpg", //分享图片地址
-    LINK = "https://web.aochey.com/videoplay/"; //分享来源链接
+var TITLE = "", //微信标题
+    DESC = "",  //微信描叙
+    IMGURL = "", //分享图片地址
+    LINK = ""; //分享来源链接
 
 $.ajax({
     type:'post',

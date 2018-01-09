@@ -1,8 +1,8 @@
 <?php
 
 require("jssdk.php");
-$appid = "wx1b2c4b4df592c45f";
-$appsecret = "1da29715a87fedd52894335a444359fa";
+$appid = "wx35951132f79b4782";
+$appsecret = "0324bfaa7fde377a73c2170f80252937";
 $url = $_POST["signurl"];
 
 $jssdk = new JSSDK($appid,$appsecret,$url);//这里填写自己的appid 和secret  
