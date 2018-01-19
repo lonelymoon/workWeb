@@ -8,9 +8,10 @@
 <meta http-equiv="Pragma" content="no-cache">
 <link rel="stylesheet" type="text/css" href="css/style.css?ver=1.01">
 <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
-<link rel="stylesheet" type="text/css" href="css/main.css?ver=1.082">
-<title>腾讯优图AI实验室</title>
-<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<link rel="stylesheet" type="text/css" href="css/main.css?ver=1.084">
+<title>优图实验室助力品牌新营销</title>
+<script src="//qzs.qzone.qq.com/qzone/qzact/common.m/qzact.lib/index.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
 </head>
 <body>
 <div class="loading">
@@ -27,7 +28,7 @@
 			</div> -->
 		</div>
 		<div class="loading-text">
-			<img src="images/text2.png?v=1.1" class="notice-img">
+			<img src="images/text2.png?v=1.2" class="notice-img">
 		</div>
 	</div>
 </div>
@@ -43,11 +44,11 @@
 				<img src="" data-src="images/6-1.jpg" data-id="6" data-later="true">
 				<img src="" data-src="images/7-1.jpg" data-id="7" data-later="true">
 				<img src="" data-src="images/9-1.jpg" data-id="9" data-later="true">
-				<img src="" data-src="images/10-1.jpg" data-id="10" data-later="true">
+				<!--<img src="" data-src="images/10-1.jpg" data-id="10" data-later="true">-->
 				<img src="" data-src="images/11-1.jpg" data-id="11" data-later="true">
 				<img src="" data-src="images/12-1.jpg" data-id="12" data-later="true">
 				<img src="" data-src="images/14-1.jpg" data-id="14" data-later="true">
-				<img src="" data-src="images/15-1.jpg" data-id="15" data-later="true">
+				<!--<img src="" data-src="images/15-1.jpg" data-id="15" data-later="true">-->
 			</div>
 			<div class="layer-btn">
 				<img src="" data-src="images/close-btn.png" data-later="true">
@@ -356,7 +357,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="swiper-slide">
+			<!--<div class="swiper-slide">
 				<div class="page page-10">
 					<div class="page-bg">
 						<img src="" data-src="images/bg10.jpg">
@@ -385,9 +386,9 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 			<div class="swiper-slide">
-				<div class="page page-11">
+				<div class="page page-10">
 					<div class="page-bg">
 						<img src="" data-src="images/bg11.jpg">
 					</div>
@@ -410,7 +411,7 @@
 				</div>
 			</div>
 			<div class="swiper-slide">
-				<div class="page page-12">
+				<div class="page page-11">
 					<div class="page-bg">
 						<img src="" data-src="images/bg12.jpg">
 					</div>
@@ -433,7 +434,7 @@
 				</div>
 			</div>
 			<div class="swiper-slide">
-				<div class="page page-13">
+				<div class="page page-12">
 					<div class="page-bg">
 						<img src="" data-src="images/bg13.jpg">
 					</div>
@@ -472,7 +473,7 @@
 				</div>
 			</div>
 			<div class="swiper-slide">
-				<div class="page page-14">
+				<div class="page page-13">
 					<div class="page-bg">
 						<img src="" data-src="images/bg14.jpg" data-later="true">
 					</div>
@@ -494,7 +495,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="swiper-slide">
+			<!--<div class="swiper-slide">
 				<div class="page page-15">
 					<div class="page-bg">
 						<img src="" data-src="images/bg15.jpg" data-later="true">
@@ -512,11 +513,11 @@
 							<div class="ui-arrow-loop">
 								<img src="" data-src="images/arrow.png" data-later="true">
 							</div>
-							<div class="page5-like-box" data-id="15"></div>
+							&lt;!&ndash;<div class="page5-like-box" data-id="15"></div>&ndash;&gt;
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 			<div class="swiper-slide">
 				<div class="page page-16">
 					<div class="page-bg">
@@ -543,6 +544,21 @@
 <script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript" src="js/iscroll.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
-<script type="text/javascript" src="js/main.js?ver=1.059"></script>
+<script type="text/javascript" src="js/main.js?ver=1.061"></script>
+<script type="text/javascript">
+function getAbsoluteURL(relativePath) {
+    var loc = window.location;
+    var arr = loc.pathname.split('/');
+    arr.pop();
+    return loc.protocol + '//' + loc.hostname + arr.join('/') + relativePath;
+}
+qzlib.share.initShare({
+    title: '腾讯优图助力品牌新营销',
+    summary: '腾讯优图AI黑科技，助力社交新营销！',
+    url: window.location.href,   //请替换，这是空间产品提供的短地址
+    pic: getAbsoluteURL('/images/share.png'),
+    swapTitleInWX: true
+});
+</script>
 </body>
 </html>

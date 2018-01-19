@@ -122,7 +122,7 @@ img{
 	position: absolute;
 	width: 3.733rem;
 	height: auto;
-	top: 2.34rem;
+	top: 2.38rem;
     left: 0.5rem;
 	z-index: 3;
 	-webkit-transition: all 1s ease-out 1.6s;
@@ -561,7 +561,7 @@ img{
 	opacity: 1;
 }
 
-.page-4 .ui-arrow-loop,.page-8 .ui-arrow-loop,.page-13 .ui-arrow-loop{
+.page-4 .ui-arrow-loop,.page-8 .ui-arrow-loop,.page-12 .ui-arrow-loop{
 	bottom: -3.4rem;
 }
 

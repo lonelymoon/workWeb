@@ -34,7 +34,7 @@ $('.p-list-2,.p3t-2').on("click",function(){
 });
 
 $('.p-list-3,.p3t-3').on("click",function(){
-	swiper.slideTo(12,1000);
+	swiper.slideTo(11,1000);
 });
 
 $(".page5-like-box").on("click",function(e){
@@ -100,7 +100,7 @@ function loadOthers(){
 		var img = $(this)[0],
 			src = $(this).attr("data-src");
 
-		img.src = src+"?ver="+new Date().getTime();
+		img.src = src;
 	});
 }
 
@@ -142,7 +142,7 @@ function createSwiper(){
 				case 7:
 					enterPage8();
 				break;
-				case 12:
+				case 11:
 					enterPage13();
 				break;
 			}
@@ -190,7 +190,7 @@ function loadimg(){
 			loadEnd();
 		};
 
-		img.src = src+"?ver="+new Date().getTime();
+		img.src = src;
 	}
 }
 
