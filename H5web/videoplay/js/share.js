@@ -83,7 +83,7 @@ function goReady(){
     });
     
     wx.error(function(res){
-        alert(res);
+        //alert(res);
     });
 
 }
