@@ -1,0 +1,25 @@
+html,body{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.swiper-container{
+    position: relative;
+    max-width: 6.25rem;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.loading-wrapper{
+    position: fixed;
+    left: 0rem;
+    top: 0rem;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background: #000;
+    color: #fff;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
