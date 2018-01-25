@@ -8,51 +8,299 @@
 <link href="css/style.css" type="text/css" rel="stylesheet" />
 <link href="css/swiper.min.css" type="text/css" rel="stylesheet" />
 <link href="css/animate.min.css" type="text/css" rel="stylesheet" />
-<link href="css/main.css" type="text/css" rel="stylesheet" />
+<link href="css/shake.css" type="text/css" rel="stylesheet" />
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/97183/47017/5a697c53f629d806e0c9a3f3.css' rel='stylesheet' type='text/css' />
+<link href="css/main.css?v=1.00" type="text/css" rel="stylesheet" />
 </head>
 <body>
 <div class="loading-wrapper">
-    <div class="loading"></div>
+    <div class="loading">
+        <div class="loading-box">
+            <div class="loading-over">
+                <div class="loading-progress">
+                    <div class="loading-icon">
+                        <img src="images/loading-icon.png">
+                    </div>
+                </div>
+            </div>
+            <img src="images/loading.png">
+        </div>
+    </div>
+</div>
+
+<div class="music music-animate">
+    <img src="" data-src="images/music.png?v=1">
+    <audio src="bgm.mp3" style="display: none;" loop="loop" id="bgm"></audio>
+</div>
+
+<div class="all-bg">
+    <canvas id="canvas"></canvas>
 </div>
 
 <div class="swiper-container page-wrapper">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
-            <div class="page page1">
+            <div class="page page1" data-page="page1">
                 <div class="page-bg">
-                    <img src="" data-src="" data-later="yes" >
+                    <img src="" data-src="images/bg1.jpg">
                 </div>
-                <div class="page-wrapper"></div>
+                <div class="page-wrapper">
+                    <div class="face opa0" data-useAnime="true">
+                        <img src="" data-src="images/face.png">
+                    </div>
+                    <div class="btn opa0" data-useAnime="true">
+                        <img src="" data-src="images/btn.png">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="swiper-slide">
-            <div class="page page2"></div>
+            <div class="page page2" data-page="page2">
+                <div class="page-bg">
+                    <img src="" data-src="images/bg2.jpg">
+                </div>
+                <div class="page-wrapper">
+                    <div class="icon1 shake-slow shake-constant">
+                        <img src="" data-src="images/icon1.png">
+                    </div>
+                    <div class="icon2 shake-slow shake-constant">
+                        <img src="" data-src="images/icon2.png">
+                    </div>
+                    <div class="icon3 shake-slow shake-constant">
+                        <img src="" data-src="images/icon3.png">
+                    </div>
+                    <div class="icon4 shake-slow shake-constant">
+                        <img src="" data-src="images/icon4.png">
+                    </div>
+                    <div class="text-box">
+                        <div class="text text1 opa0" data-useAnime="true">
+                            2018年1月30日
+                        </div>
+                        <div class="text text2 opa0" data-useAnime="true">
+                            在这个神秘的宇宙星系中的
+                        </div>
+                        <div class="text text3 opa0" data-useAnime="true">
+                            某个时空
+                        </div>
+                        <div class="text text4 opa0" data-useAnime="true">
+                            将要举行一场
+                        </div>
+                        <div class="text text5 opa0" data-useAnime="true">
+                            前所未有的盛世狂欢
+                        </div>
+                    </div>
+                    <div class="page-arrow">
+                        <img src="" data-src="images/arrow.png">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="swiper-slide">
-            <div class="page page3"></div>
+            <div class="page page3" data-page="page3">
+                <div class="page-bg">
+                    <img src="" data-src="images/bg1.jpg" data-later="yes">
+                </div>
+                <div class="page-wrapper">
+                    <div class="page-header">
+                        <img src="" data-src="images/header1.png">
+                    </div>
+                    <div class="page-body">
+                        <div class="page3-body-box opa0" data-useAnime="true">
+                            <div class="item-box">
+                                <img src="" data-src="images/item1.png">
+                            </div>
+                            <div class="item-title item-title1 opa0" data-useAnime="true">
+                                <img src="" data-src="images/title1.png">
+                            </div>
+                            <div class="item-icon1" data-useAnime="true">
+                                <img src="" data-src="images/item-icon1.png">
+                            </div>
+                            <div class="item-icon2" data-useAnime="true">
+                                <img src="" data-src="images/item-icon2.png">
+                            </div>
+                            <div class="item-icon3" data-useAnime="true">
+                                <img src="" data-src="images/item-icon3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-arrow">
+                        <img src="" data-src="images/arrow.png">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="swiper-slide">
-            <div class="page page4"></div>
+            <div class="page page4" data-page="page4">
+                <div class="page-bg">
+                    <img src="" data-src="images/bg1.jpg" data-later="yes">
+                </div>
+                <div class="page-wrapper">
+                    <div class="page-header">
+                        <img src="" data-src="images/header2.png">
+                    </div>
+                    <div class="page-body">
+                        <div class="page4-body-box opa0" data-useAnime="true">
+                            <div class="item-box">
+                                <img src="" data-src="images/item2.png">
+                            </div>
+                            <div class="item2-shake shake-rotate shake-constant">
+                                <img src="" data-src="images/shake.png">
+                            </div>
+                            <div class="item2-icon shake shake-constant">
+                                <img src="" data-src="images/item2-icon.png">
+                            </div>
+                            <div class="item2-shou opa0" data-useAnime="true">
+                                <img src="" data-src="images/shou.png">
+                            </div>
+                            <div class="item2-titleBg opa0" data-useAnime="true">
+                                <img src="" data-src="images/title2-bg.png">
+                            </div>
+                            <div class="item2-title opa0" data-useAnime="true">
+                                <img src="" data-src="images/title2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-arrow">
+                        <img src="" data-src="images/arrow.png">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="swiper-slide">
-            <div class="page page5"></div>
+            <div class="page page5" data-page="page5">
+                <div class="page-bg">
+                    <img src="" data-src="images/bg1.jpg" data-later="yes">
+                </div>
+                <div class="page-wrapper">
+                    <div class="page-header">
+                        <img src="" data-src="images/header3.png">
+                    </div>
+                    <div class="page-body">
+                        <div class="page5-body-box">
+                            <div class="item3-icon1 opa0" data-useAnime="true">
+                                <img src="" data-src="images/item3-icon1.png">
+                            </div>
+                            <div class="item3-icon2 opa0" data-useAnime="true">
+                                <img src="" data-src="images/item3-icon2.png">
+                            </div>
+                            <div class="item3-icon3">
+                                <img src="" data-src="images/item3-icon3.png">
+                            </div>
+                            <div class="item3-icon4 shake-slow shake-constant">
+                                <img src="" data-src="images/item3-icon4.png">
+                            </div>
+                            <div class="item3-icon5 opa0" data-useAnime="true">
+                                <img src="" data-src="images/item3-icon5.png">
+                            </div>
+                            <div class="item3-title opa0">
+                                <img src="" data-src="images/title3.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-arrow">
+                        <img src="" data-src="images/arrow.png">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="swiper-slide">
-            <div class="page page6"></div>
+            <div class="page page6" data-page="page6">
+                <div class="page-bg">
+                    <img src="" data-src="images/bg1.jpg" data-later="yes">
+                </div>
+                <div class="page-wrapper">
+                    <div class="page-header">
+                        <img src="" data-src="images/header4.png">
+                    </div>
+                    <div class="page-body">
+                        <div class="page6-body-box">
+                            <div class="item4-icon1 opa0" data-useAnime="true">
+                                <img src="" data-src="images/item4-icon1.png">
+                            </div>
+                            <div class="item4-title opa0" data-useAnime="true">
+                                <img src="" data-src="images/title4.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-arrow">
+                        <img src="" data-src="images/arrow.png">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="swiper-slide">
-            <div class="page page7"></div>
+            <div class="page page7" data-page="page7">
+                <div class="page-bg">
+                    <img src="" data-src="images/bg1.jpg" data-later="yes">
+                </div>
+                <div class="page-wrapper">
+                    <div class="page-header">
+                        <img src="" data-src="images/header5.png">
+                    </div>
+                    <div class="page-body">
+                        <div class="page7-body-box">
+                            <div class="item5-icon1 opa0" data-useAnime="true">
+                                <img src="" data-src="images/item5-icon1.png">
+                            </div>
+                            <div class="item5-icon2 opa0" data-useAnime="true">
+                                <img src="" data-src="images/item5-icon2.png">
+                            </div>
+                            <div class="item5-title opa0" data-useAnime="true">
+                                <img src="" data-src="images/title5.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-arrow">
+                        <img src="" data-src="images/arrow.png">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="swiper-slide">
-            <div class="page page8"></div>
+            <div class="page page8" data-page="page8">
+                <div class="page-bg">
+                    <img src="" data-src="images/bg1.jpg" data-later="yes">
+                </div>
+                <div class="page-wrapper">
+                    <div class="page-header page8-header opa0" data-useAnime="true">
+                        <img src="" data-src="images/header6.png" data-later="yes">
+                    </div>
+                    <div class="page-body">
+
+                    </div>
+                    <div class="page-arrow">
+                        <img src="" data-src="images/arrow.png">
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="swiper-slide">
-            <div class="page page9"></div>
+            <div class="page page9" data-page="page9">
+                <div class="page-bg">
+                    <img src="" data-src="images/bg3.jpg" data-later="yes">
+                </div>
+                <div class="page-wrapper">
+                    <div class="page-body">
+                        <div class="last-title opa0" data-useAnime="true">
+                            <img src="" data-src="images/lastTitle.png" data-later="yes">
+                        </div>
+                        <div class="last-icon1 opa0" data-useAnime="true">
+                            <img src="" data-src="images/last-icon1.png" data-later="yes">
+                        </div>
+                        <div class="last-icon2 opa0" data-useAnime="true">
+                            <img src="" data-src="images/last-icon2.png" data-later="yes">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 <script src="js/jquery.min.js" type="text/javascript"></script>
 <script src="js/swiper.min.js" type="text/javascript"></script>
-<script src="js/main.js" type="text/javascript"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
+<script src="js/share.js" type="text/javascript"></script>
+<script src="js/stars3.js" type="text/javascript"></script>
+<script src="js/main.js?v=1" type="text/javascript"></script>
 </body>
 </html>
