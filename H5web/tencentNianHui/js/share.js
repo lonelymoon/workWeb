@@ -2,7 +2,7 @@
 
 var signurl = window.location.href;
 
-var TITLE = "融合，迸发", //微信标题
+var TITLE = "熔合，迸发", //微信标题
     DESC = "你有一份来自宇宙的邀请函请打开......",  //微信描叙
     IMGURL = signurl + "share.jpg", //分享图片地址
     LINK = signurl; //分享来源链接

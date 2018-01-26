@@ -32,7 +32,7 @@ var loadObj = {
                 loadObj.loadEnd();
             };
 
-            el.src = src;
+            el.src = src+"?v="+new Date().getTime();
         },30);
     },
     "loadEnd" : function(){
@@ -51,7 +51,7 @@ var loadObj = {
             var el = $(this)[0],
                 src = $(this).attr("data-src");
 
-            el.src = src;
+            el.src = src+"?v="+new Date().getTime();
         });
     },
     "allEnd" : function(){
@@ -92,6 +92,10 @@ var enterPage = {
         $(".text1,.text2,.text3,.text4").animateCss("fadeInUp");
         $(".text5").animateCss("rollIn");
     },
+    "page10" : function(){
+        $(".btn,.item-title1").addClass("opa0");
+        $('.page10-header').animateCss("rollIn");
+    },
     "page3" : function(){
         $(".page3-body-box").animateCss("fadeInUp",function(){
             $(".item-icon1,.item-icon2,.item-icon3").animateCss("pulse infinite");
@@ -120,13 +124,14 @@ var enterPage = {
     },
     "page7" : function(){
         $(".item4-title,.page8-header").addClass("opa0");
-        $(".item5-icon1").animateCss('fadeInLeft');
+        $(".item5-icon1").animateCss('fadeInRight');
+        $(".item5-icon3").animateCss('fadeInLeft');
         $(".item5-icon2").animateCss('lightSpeedIn').removeClass('opa0');
         $(".item5-title").animateCss('zoomInUp').removeClass('opa0');
     },
     "page8" : function(){
         $(".item5-icon2,.item5-title,.last-title,.last-icon1,.last-icon2").addClass("opa0");
-        $('.page8-header').animateCss("rollIn").remove;
+        $('.page8-header').animateCss("rollIn").removeClass('opa0');
     },
     "page9" : function(){
         $('.page8-header').addClass("opa0");

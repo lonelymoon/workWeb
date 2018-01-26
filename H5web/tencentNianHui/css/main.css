@@ -65,7 +65,7 @@ img{
 
 .loading-icon{
     position: absolute;
-    width: 1rem;
+    width: 0.8rem;
     -webkit-transform: translate(-50%,0%);
     transform: translate(-50%,0%);
     right: 0rem;
@@ -287,7 +287,7 @@ img{
     width: 1.467rem;
     height: auto;
     right: -1.14rem;
-    top: -2.18rem;
+    top: -2.58rem;
     z-index: 2;
 }
 
@@ -391,9 +391,9 @@ img{
 .item3-icon3{
     position: absolute;
     z-index: 1;
-    width: 0.583rem;
-    right: -0.1rem;
-    top: -0.8rem;
+    width: 2.1rem;
+    right: -1.64rem;
+    top: -3.26rem;
     height: auto;
 }
 
@@ -444,7 +444,7 @@ img{
     z-index: 1;
     height: auto;
     left: -1.3rem;
-    top: 1.84rem;
+    top: 1.64rem;
 }
 
 /********page7************/
@@ -452,8 +452,8 @@ img{
     position: absolute;
     width: 6.25rem;
     height: auto;
-    left: -2.2rem;
-    top: -0.7rem;
+    left: -2.1rem;
+    top: -0.36rem;
     z-index: 1;
 }
 
@@ -463,20 +463,29 @@ img{
     width: 3.4rem;
     height: auto;
     right: -1.5rem;
-    top: -2.1rem;
+    top: -2.8rem;
+}
+
+.item5-icon3{
+    position: absolute;
+    z-index: 1;
+    width: 2.5rem;
+    height: auto;
+    right: -1.6rem;
+    top: 2.24rem;
 }
 
 .item5-title{
     position: absolute;
     z-index: 2;
-    width: 4.617rem;
+    width: 3.33rem;
     height: auto;
-    left: -1.5rem;
-    top: 1.4rem;
+    left: -1.68rem;
+    top: 1.5rem;
 }
 
 /*******page8-9******/
-.page8-header{
+.page8-header,.page10-header{
     position: absolute;
     width: 5.25rem;
     height: auto;
@@ -511,7 +520,7 @@ img{
     width: 2.6rem;
     height: auto;
     left: -0.3rem;
-    top: 1.9rem;
+    top: 1.5rem;
     z-index: 3;
 }
 
