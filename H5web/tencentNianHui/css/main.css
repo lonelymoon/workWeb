@@ -17,7 +17,7 @@ img{
     position: fixed;
     width: 0.5rem;
     height: 0.5rem;
-    left: 0.3rem;
+    right: 0.3rem;
     top: 0.3rem;
     z-index: 10;
 }
@@ -102,6 +102,15 @@ img{
     overflow: hidden;
     z-index: 0;
     background: #000;
+}
+
+.logo{
+    position: absolute;
+    width: 1.825rem;
+    height: auto;
+    left: 0.2rem;
+    top: 0.4rem;
+    z-index: 1;
 }
 
 .page{
@@ -287,7 +296,7 @@ img{
     width: 1.467rem;
     height: auto;
     right: -1.14rem;
-    top: -2.58rem;
+    top: -2.28rem;
     z-index: 2;
 }
 
@@ -338,7 +347,7 @@ img{
     height: auto;
     width: 2.125rem;
     left: -1rem;
-    top: 0.4rem;
+    top: -0.8rem;
     -webkit-animation-duration: 6s !important;
     animation-duration: 6s !important;
 }
@@ -381,11 +390,11 @@ img{
     position: absolute;
     z-index: 1;
     height: auto;
-    width: 1.517rem;
-    right: -1.9rem;
-    top: 1.36rem;
-    -webkit-animation-delay: 0.6s;
-    animation-delay: 0.6s;
+    width: 2.017rem;
+    right: -1.74rem;
+    top: 0.8rem;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
 }
 
 .item3-icon3{
@@ -393,7 +402,7 @@ img{
     z-index: 1;
     width: 2.1rem;
     right: -1.64rem;
-    top: -3.26rem;
+    top: -2.15rem;
     height: auto;
 }
 
@@ -420,12 +429,12 @@ img{
 .item3-title{
     position: absolute;
     z-index: 3;
-    width: 5.25rem;
+    width: 3.567rem;
     height: auto;
     left: -1.56rem;
-    top: 0.4rem;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    top: 0.8rem;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 
 /*******page6*******/
@@ -460,19 +469,19 @@ img{
 .item5-icon2{
     position: absolute;
     z-index: 1;
-    width: 3.4rem;
+    width: 5.142rem;
     height: auto;
     right: -1.5rem;
-    top: -2.8rem;
+    top: -1.4rem;
 }
 
 .item5-icon3{
     position: absolute;
     z-index: 1;
-    width: 2.5rem;
+    width: 3.45rem;
     height: auto;
-    right: -1.6rem;
-    top: 2.24rem;
+    right: -1.8rem;
+    top: 2rem;
 }
 
 .item5-title{
@@ -517,11 +526,15 @@ img{
 
 .last-icon2{
     position: absolute;
-    width: 2.6rem;
+    width: 3.725rem;
     height: auto;
-    left: -0.3rem;
+    left: -0.9rem;
     top: 1.5rem;
     z-index: 3;
+}
+
+.page9 .page-body{
+    top: 3.86rem;
 }
 
 /*********************/

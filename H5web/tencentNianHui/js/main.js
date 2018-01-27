@@ -32,7 +32,7 @@ var loadObj = {
                 loadObj.loadEnd();
             };
 
-            el.src = src+"?v="+new Date().getTime();
+            el.src = src;
         },30);
     },
     "loadEnd" : function(){
@@ -51,7 +51,7 @@ var loadObj = {
             var el = $(this)[0],
                 src = $(this).attr("data-src");
 
-            el.src = src+"?v="+new Date().getTime();
+            el.src = src;
         });
     },
     "allEnd" : function(){
@@ -111,10 +111,10 @@ var enterPage = {
     },
     "page5" : function(){
         $(".item4-title").addClass("opa0");
-        $('.item3-icon1').animateCss('fadeInUp');
+        //$('.item3-icon1').animateCss('fadeInUp');
         $('.item3-icon2').animateCss('fadeInRight');
         $(".item3-icon3").animateCss('infinite pulse');
-        $(".item3-icon5").animateCss('infinite flash');
+        //$(".item3-icon5").animateCss('infinite flash');
         $(".item3-title").animateCss('rotateInUpRight').removeClass("opa0");
     },
     "page6" : function(){
