@@ -2,7 +2,7 @@
 
 var signurl = window.location.href;
 
-var TITLE = "熔合，迸发", //微信标题
+var TITLE = "宇宙之约，不见不散！", //微信标题
     DESC = "你有一份来自宇宙的邀请函请打开......",  //微信描叙
     IMGURL = "https://web.aochey.com/tencentNianHui/share.jpg", //分享图片地址
     LINK = "https://web.aochey.com/tencentNianHui/"; //分享来源链接
