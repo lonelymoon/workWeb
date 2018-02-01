@@ -2,7 +2,7 @@
 
 var signurl = window.location.href;
 
-var TITLE = "谁是鹅厂最佳带货王？", //微信标题
+var TITLE = "谁是鹅厂最强带货王？", //微信标题
     DESC = "十八般武艺亮出来",  //微信描叙
     IMGURL = "https://web.aochey.com/tencentNianHuiEnd/share.jpg", //分享图片地址
     LINK = "https://web.aochey.com/tencentNianHuiEnd/"; //分享来源链接
@@ -57,7 +57,6 @@ function goReady(){
             trigger: function (res) {
             },
             success: function (res) {
-               alert("d");
             },
             cancel: function (res) {
             },
@@ -72,8 +71,7 @@ function goReady(){
             imgUrl: IMGURL, // 分享图标
             type: '', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-            success: function () { 
-               alert("c");
+            success: function () {
             },
             cancel: function () { 
                 // 用户取消分享后执行的回调函数

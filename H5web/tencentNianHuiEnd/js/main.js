@@ -33,7 +33,7 @@ var loadObj = {
                     loadObj.loadEnd();
                 };
 
-                el.src = src + "?ver="+new Date().getTime();
+                el.src = src;
             },30);
         },
         "loadEnd" : function(){
@@ -52,7 +52,7 @@ var loadObj = {
                 var el = $(this)[0],
                     src = $(this).attr("data-src");
 
-                el.src = src + "?ver="+new Date().getTime();
+                el.src = src;
             });
         },
         "allEnd" : function(){
@@ -60,9 +60,15 @@ var loadObj = {
                 $('.loading-wrapper').animateCss("rollOut",function(){
                     $(this).hide();
                     $(".start-title").animateCss("rollIn",function () {
-                        $(this).css("opacity",1);
+                        $(this).css({
+                            "opacity":1,
+                            "transform" : "translateZ(5px)"
+                        });
                         $(".start-face").animateCss("fadeInLeft",function(){
-                            $(this).css("opacity",1);
+                            $(this).css({
+                                "opacity":1,
+                                "transform" : "translateZ(1px)"
+                            });
                         });
                     });
                     swiper = new Swiper(".swiper-container",{
@@ -190,7 +196,7 @@ var eventBind = {
                         "rotateOutUpRight","rotateOutUpLeft","rotateOutDownRight","rotateOutDownRight"],
             ani = animeArray[(Math.random() * animeArray.length >> 0)] || "hinge";
 
-        var way = type == "prev" ? "fadeOutLeft" : "fadeOutRight";
+        var way = type == "next" ? "fadeOutLeft" : "fadeOutRight";
 
         $el.animateCss(way,function(){
             $el.attr("data-show","false");
@@ -205,7 +211,7 @@ var eventBind = {
                 "rotateInUpRight","rotateInUpLeft","fadeInRightBig","fadeInLeftBig"],
             ani = animeArray[(Math.random() * animeArray.length >> 0)] || "hinge";
 
-        var way = type == "prev" ? "fadeInRight" : "fadeInLeft";
+        var way = type == "next" ? "fadeInRight" : "fadeInLeft";
 
         $el.show();
         $el.animateCss(way,function(){
@@ -245,6 +251,7 @@ function flip() {
             turned : function () {
                 if(count == 1){
                     $('.page9-icon4').addClass("plane");
+                    $(".page9-icon5").hide();
                     return false;
                 }
 
@@ -279,6 +286,7 @@ var changeIcon = (function(){
         return function(type){
             if(type){
                 container.classList.add('music-animate')
+                container.setAttribute("data-type","play");
                 return false;
             }
 
@@ -288,15 +296,18 @@ var changeIcon = (function(){
                 ? cTransform
                 : cTransform.concat(' ', iTransform);
             container.classList.remove('music-animate');
+            container.setAttribute("data-type","pause");
         };
     }
 
     return function(type){
         if(type){
             $(".music").removeClass("pause");
+            $(".music").attr("data-type","play");
             return false;
         }
         $(".music").addClass("pause");
+        $(".music").attr("data-type","pause")
     };
 
 })();
