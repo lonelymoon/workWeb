@@ -35,6 +35,9 @@ var questTemplate = "<div class='quest-box'>\
             <div class='quest-end-wrapper'>\
                 <div class='quest-item-end' v-show='results.show1'>\
                     <img src='images/show1.jpg'>\
+                    <div class='quest-code'>\
+                        {{code}}\
+                    </div>\
                 </div>\
                 <div class='quest-item-end' v-show='results.show2'>\
                     <img src='images/show2.jpg'>\
@@ -74,6 +77,7 @@ window.vm = new Vue({
         idx : 1,
         timer : null,
         cando : false,
+        code : "",
         onAnimating : false
     },
     computed : {
@@ -136,7 +140,7 @@ window.vm = new Vue({
             fd.append("code",code);
             var xhr = new XMLHttpRequest();
             xhr.onload = function(result){
-                alert(result.target.response);
+                console.log(result.target.response);
             };
             xhr.open("post","php/save.php");
             xhr.send(fd);
@@ -146,6 +150,7 @@ window.vm = new Vue({
             if( num == 0 ){
                 this.results.show1 = true;
                 var code = Math.random().toString(36).substr(2).substring(0,8);
+                this.code = code;
                 this.ajax(code);
             } else if( num <= 2 ){
                 this.results.show2 = true;

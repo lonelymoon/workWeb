@@ -207,6 +207,18 @@ img{
     height: auto;
 }
 
+.quest-code{
+    position: absolute;
+    right: 1.8rem;
+    top: 8rem;
+    width: 1.8rem;
+    height: 0.4rem;
+    text-align: center;
+    line-height: 0.4rem;
+    font-size: 0.25rem;
+    font-weight: 800;
+}
+
 .item-hide{
     display: none;
 }
