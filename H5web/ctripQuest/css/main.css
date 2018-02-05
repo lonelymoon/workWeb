@@ -171,10 +171,18 @@ img{
 
 .quest-item-answer{
     position: relative;
-    width: 5.3rem;
+    width: 5.43rem;
     height: 0.84rem;
     margin: 0 auto;
     margin-bottom: 0.2rem;
+    box-sizing: border-box;
+    -webkit-transform: translateX(0.05rem);
+    transform: translateX(0.05rem);
+}
+
+.quest-item-answer[data-selected="true"]{
+    border: 0.1rem solid #ff0000;
+    border-radius: 18px 15px 15px 18px;
 }
 
 .quest-item-answer:after{
@@ -185,13 +193,13 @@ img{
     height: 0.4rem;
     right: 0.2rem;
     top: 0.24rem;
-    background: url("../images/cor.png") no-repeat;
-    background-size: cover;
 }
 
-.quest-item-answer[data-selected="true"]:after{
+/*.quest-item-answer[data-selected="true"]:after{
+    background: url("../images/cor.png") no-repeat;
+    background-size: cover;
     display : block;
-}
+}*/
 
 .quest-end-wrapper{
     position: absolute;
@@ -205,6 +213,27 @@ img{
 .quest-item-end{
     position: relative;
     height: auto;
+}
+
+.quest-end-results{
+    position: absolute;
+    width: 0.8rem;
+    height: auto;
+    left: 2.38rem;
+    top: 1.64rem;
+    font-size: 0.6rem;
+    font-style: italic;
+    font-weight: bolder;
+    text-align: center;
+    color: #fad31d;
+    text-shadow: 1px 1px #000000;
+    z-index: 10;
+}
+
+.quest-end-result4{
+    width: 0.7rem;
+    left: 3.28rem;
+    top: 1.85rem;
 }
 
 .quest-code{
@@ -262,6 +291,22 @@ img{
 .pause{
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
+}
+
+img[data-type="pause"]{
+    display: none;
+}
+
+img[data-type="play"]{
+    display: block;
+}
+
+.music[data-type="pause"] img[data-type="pause"]{
+    display: block;
+}
+
+.music[data-type="pause"] img[data-type="play"]{
+    display: none;
 }
 
 @-webkit-keyframes rotate{

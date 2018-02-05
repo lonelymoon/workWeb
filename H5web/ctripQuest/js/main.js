@@ -35,18 +35,22 @@ var questTemplate = "<div class='quest-box'>\
             <div class='quest-end-wrapper'>\
                 <div class='quest-item-end' v-show='results.show1'>\
                     <img src='images/show1.jpg'>\
+                    <div class='quest-end-results'>{{correctCount}}</div>\
                     <div class='quest-code'>\
                         {{code}}\
                     </div>\
                 </div>\
                 <div class='quest-item-end' v-show='results.show2'>\
                     <img src='images/show2.jpg'>\
+                    <div class='quest-end-results'>{{correctCount}}</div>\
                 </div>\
                 <div class='quest-item-end' v-show='results.show3'>\
                     <img src='images/show3.jpg'>\
+                    <div class='quest-end-results'>{{correctCount}}</div>\
                 </div>\
                 <div class='quest-item-end' v-show='results.show4'>\
                     <img src='images/show4.jpg'>\
+                    <div class='quest-end-results quest-end-result4'>{{correctCount}}</div>\
                 </div>\
             </div>\
         </div>\
@@ -120,8 +124,8 @@ window.vm = new Vue({
             this.wrongCount++;
         },
         start : function(){
-            if( localStorage.count == 1 ){
-                localStorage.count = 0;
+            if( localStorage.count > 0 ){
+                localStorage.count--;
                 this.cando = true;
             }
 
@@ -151,13 +155,17 @@ window.vm = new Vue({
                 this.results.show1 = true;
                 var code = Math.random().toString(36).substr(2).substring(0,8);
                 this.code = code;
+                changeDESC("我是旅游重度患者，我的病情严重程度超过了98.8%人");
                 this.ajax(code);
             } else if( num <= 2 ){
                 this.results.show2 = true;
+                changeDESC("我是旅游中度患者，我的病情严重程度超过了88.7%人");
             } else if( num <= 5 ){
                 this.results.show3 = true;
+                changeDESC("我是旅游轻度患者，我的病情严重程度超过了68.5%人");
             } else {
                 this.results.show4 = true;
+                changeDESC("我不是旅游成瘾患者，我的病情严重程度超过了48.3%人");
             }
         },
         next : function(index){
@@ -194,6 +202,7 @@ window.vm = new Vue({
 
             if( today != date){
                 localStorage.count = 1;
+                localStorage.hasShared = false;
                 localStorage.date = today;
             }
         },
@@ -261,6 +270,7 @@ var changeIcon = (function(){
         return function(type){
             if(type){
                 container.classList.add('music-animate')
+                container.setAttribute("data-type","play");
                 return false;
             }
 
@@ -270,15 +280,18 @@ var changeIcon = (function(){
                 ? cTransform
                 : cTransform.concat(' ', iTransform);
             container.classList.remove('music-animate');
+            container.setAttribute("data-type","pause");
         };
     }
 
     return function(type){
         if(type){
             $(".music").removeClass("pause");
+            $(".music").attr("data-type","play");
             return false;
         }
         $(".music").addClass("pause");
+        $(".music").attr("data-type","pause")
     };
 
 })();

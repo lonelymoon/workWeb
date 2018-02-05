@@ -3,9 +3,15 @@
 var signurl = window.location.href;
 
 var TITLE = "旅游义诊大会", //微信标题
-    DESC = "关爱生命，靓丽出游"  //微信描叙
+    DESC = "关爱生命，量力出游", //微信描叙
     IMGURL = "https://web.aochey.com/ctripQuest/share.jpg", //分享图片地址
     LINK = "https://web.aochey.com/ctripQuest/"; //分享来源链接
+
+window.changeDESC = function(value){
+    value = value || "关爱生命，量力出游";
+    DESC = value;
+    goReady();
+};
 
 $.ajax({
     type:'post',
@@ -59,7 +65,7 @@ function goReady(){
             success: function (res) {
                 if(!localStorage.hasShared){
                     localStorage.hasShared = true;
-                    localStorage.count = 1;
+                    localStorage.count++;
                 }
             },
             cancel: function (res) {
@@ -78,7 +84,7 @@ function goReady(){
             success: function () {
                 if(!localStorage.hasShared){
                     localStorage.hasShared = true;
-                    localStorage.count = 1;
+                    localStorage.count++;
                 }
             },
             cancel: function () { 
