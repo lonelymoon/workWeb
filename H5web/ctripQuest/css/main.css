@@ -35,7 +35,7 @@ img{
 .quest-start-btn{
     position: absolute;
     left: 50%;
-    top: 8.16rem;
+    top: 8.41rem;
     width: 3rem;
     height: 1rem;
     margin-left: -1.5rem;
@@ -77,7 +77,7 @@ img{
 
 .quest-item-leftTime{
     position: absolute;
-    right: 0.45rem;
+    right: 0.46rem;
     top: 1.55rem;
     width: 0.667rem;
     height: 0.667rem;
@@ -90,7 +90,7 @@ img{
     left: 0rem;
     top: 0rem;
     height: auto;
-    width: 6rem;
+    width: 7.417rem;
 }
 
 .quest-item-leftTime-img[data-time="0"]{
@@ -136,6 +136,16 @@ img{
 .quest-item-leftTime-img[data-time="8"]{
     -webkit-transform: translate(-5.333rem,0rem);
     transform: translate(-5.333rem,0rem);
+}
+
+.quest-item-leftTime-img[data-time="9"]{
+    -webkit-transform: translate(-6rem,0rem);
+    transform: translate(-6rem,0rem);
+}
+
+.quest-item-leftTime-img[data-time="10"]{
+    -webkit-transform: translate(-6.767rem,0rem);
+    transform: translate(-6.767rem,0rem);
 }
 
 .quest-item{
@@ -200,6 +210,26 @@ img{
     background-size: cover;
     display : block;
 }*/
+.quest-alert-item{
+    position: fixed;
+    left: 0rem;
+    top: 0rem;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1001;
+}
+
+.quest-alert-btn{
+    position: absolute;
+    left: 50%;
+    width: 2.2rem;
+    height: 0.8rem;
+    top: 8.1rem;
+    -webkit-transform: translate(-50%,0%);
+    transform: translate(-50%,0%);
+    z-index: 2;
+}
 
 .quest-end-wrapper{
     position: absolute;
@@ -230,7 +260,7 @@ img{
     z-index: 10;
 }
 
-.quest-end-result4{
+.quest-end-result5{
     width: 0.7rem;
     left: 3.28rem;
     top: 1.85rem;
@@ -239,7 +269,7 @@ img{
 .quest-code{
     position: absolute;
     right: 1.8rem;
-    top: 8rem;
+    top: 8.24rem;
     width: 1.8rem;
     height: 0.4rem;
     text-align: center;

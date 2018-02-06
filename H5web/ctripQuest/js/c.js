@@ -20,7 +20,7 @@ var knowledge = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -44,7 +44,7 @@ var knowledge = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -68,7 +68,7 @@ var knowledge = [
             selected : false,
             status : "pass"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -92,7 +92,7 @@ var knowledge = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -116,7 +116,7 @@ var knowledge = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -140,7 +140,7 @@ var knowledge = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -164,7 +164,7 @@ var knowledge = [
             selected : false,
             status : "pass"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -188,7 +188,7 @@ var knowledge = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -212,7 +212,7 @@ var knowledge = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -236,7 +236,7 @@ var knowledge = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -260,7 +260,7 @@ var knowledge = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -284,7 +284,7 @@ var knowledge = [
             selected : false,
             status : "pass"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -308,7 +308,7 @@ var knowledge = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -332,7 +332,7 @@ var knowledge = [
             selected : false,
             status : "pass"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -359,7 +359,7 @@ var must = [
             selected : false,
             status : "pass"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -386,7 +386,7 @@ var point = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -410,7 +410,7 @@ var point = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -434,7 +434,7 @@ var point = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -458,7 +458,7 @@ var point = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -482,7 +482,7 @@ var point = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -506,7 +506,7 @@ var point = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -530,7 +530,7 @@ var point = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -554,7 +554,7 @@ var point = [
             selected : false,
             status : "pass"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -578,7 +578,7 @@ var point = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -602,7 +602,7 @@ var point = [
             selected : false,
             status : "pass"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -626,7 +626,7 @@ var point = [
             selected : false,
             status : "pass"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -650,7 +650,7 @@ var point = [
             selected : false,
             status : "pass"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -674,7 +674,7 @@ var point = [
             selected : false,
             status : "pass"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -698,7 +698,7 @@ var point = [
             selected : false,
             status : "pass"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }
@@ -722,7 +722,7 @@ var point = [
             selected : false,
             status : "fail"
         }],
-        leftTime : 8,
+        leftTime : 10,
         leftClass : {
             "timeAnime" : false
         }

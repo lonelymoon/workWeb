@@ -4,8 +4,10 @@ var signurl = window.location.href;
 
 var TITLE = "旅游义诊大会", //微信标题
     DESC = "关爱生命，量力出游", //微信描叙
-    IMGURL = "https://web.aochey.com/ctripQuest/share.jpg", //分享图片地址
+    IMGURL = "https://web.aochey.com/ctripQuest/share.jpg?ver="+new Date().getTime(), //分享图片地址
     LINK = "https://web.aochey.com/ctripQuest/"; //分享来源链接
+
+var onTest = false;
 
 window.changeDESC = function(value){
     value = value || "关爱生命，量力出游";
@@ -57,15 +59,16 @@ function goReady(){
         });
         // 2.2 监听“分享到朋友圈”按钮点击、自定义分享内容及分享结果接口
         wx.onMenuShareTimeline({
-            title: TITLE,
+            title: DESC,
             link: LINK,
             imgUrl: IMGURL,
             trigger: function (res) {
             },
             success: function (res) {
-                if(!localStorage.hasShared){
+                if(!localStorage.hasShared || onTest){
                     localStorage.hasShared = true;
                     localStorage.count++;
+                    vm.alert = true;
                 }
             },
             cancel: function (res) {
@@ -82,9 +85,10 @@ function goReady(){
             type: '', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () {
-                if(!localStorage.hasShared){
+                if(!localStorage.hasShared || onTest){
                     localStorage.hasShared = true;
                     localStorage.count++;
+                    vm.alert = true;
                 }
             },
             cancel: function () { 

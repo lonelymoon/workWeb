@@ -32,6 +32,10 @@ var questTemplate = "<div class='quest-box'>\
                     </div>\
                 </div>\
             </div>\
+            <div class='quest-alert-item' v-show='alert'>\
+                <img src='images/alert.png'>\
+                <div class='quest-alert-btn' @click='refresh'></div>\
+            </div>\
             <div class='quest-end-wrapper'>\
                 <div class='quest-item-end' v-show='results.show1'>\
                     <img src='images/show1.jpg'>\
@@ -51,6 +55,10 @@ var questTemplate = "<div class='quest-box'>\
                 <div class='quest-item-end' v-show='results.show4'>\
                     <img src='images/show4.jpg'>\
                     <div class='quest-end-results quest-end-result4'>{{correctCount}}</div>\
+                </div>\
+                <div class='quest-item-end' v-show='results.show5'>\
+                    <img src='images/show5.jpg'>\
+                    <div class='quest-end-results quest-end-result5'>{{correctCount}}</div>\
                 </div>\
             </div>\
         </div>\
@@ -72,7 +80,8 @@ window.vm = new Vue({
             show1 : false,
             show2 : false,
             show3 : false,
-            show4 : false
+            show4 : false,
+            show5 : false
         },
         correctCount : 0,
         wrongCount : 0,
@@ -82,6 +91,7 @@ window.vm = new Vue({
         timer : null,
         cando : false,
         code : "",
+        alert : false,
         onAnimating : false
     },
     computed : {
@@ -94,6 +104,9 @@ window.vm = new Vue({
         }
     },
     methods : {
+        refresh : function () {
+            window.location.reload();
+        },
         countTime : function(){
             var _self = this,
                 ltime = this.items[this.activeId].leftTime;
@@ -163,9 +176,12 @@ window.vm = new Vue({
             } else if( num <= 5 ){
                 this.results.show3 = true;
                 changeDESC("我是旅游轻度患者，我的病情严重程度超过了68.5%人");
-            } else {
+            } else if( num <= 8 ){
                 this.results.show4 = true;
-                changeDESC("我不是旅游成瘾患者，我的病情严重程度超过了48.3%人");
+                changeDESC("我疑似旅游成瘾患者，我的病情严重程度超过了38.5%人");
+            } else {
+                this.results.show5 = true;
+                changeDESC("我疑似旅游成瘾患者，我的病情严重程度超过了18.6%人");
             }
         },
         next : function(index){
@@ -231,7 +247,6 @@ window.vm = new Vue({
         this.createQuest();
     },
     mounted : function(){
-        localStorage.count = 1;
         this.saveLocal();
         window.onload = function(){
            setTimeout(function () {
@@ -247,6 +262,7 @@ var u = navigator.userAgent,
 
 wx.ready(function(){
     $("#bgm")[0].play();
+    if(isIOS)
     $("#bgm")[0].pause();
 });
 
