@@ -34,7 +34,7 @@ var questTemplate = "<div class='quest-box'>\
             </div>\
             <div class='quest-alert-item' v-show='alert'>\
                 <img src='images/alert.png'>\
-                <div class='quest-alert-btn' @click='refresh'></div>\
+                <div class='quest-alert-btn' @click='refresh()'></div>\
             </div>\
             <div class='quest-end-wrapper'>\
                 <div class='quest-item-end' v-show='results.show1'>\
@@ -105,7 +105,7 @@ window.vm = new Vue({
     },
     methods : {
         refresh : function () {
-            window.location.reload();
+            window.location.href = "./index.html";
         },
         countTime : function(){
             var _self = this,
@@ -137,8 +137,9 @@ window.vm = new Vue({
             this.wrongCount++;
         },
         start : function(){
-            if( localStorage.count > 0 ){
-                localStorage.count--;
+            var count = Number(localStorage.count);
+            if( count > 0 ){
+                localStorage.count = count - 1;
                 this.cando = true;
             }
 
@@ -168,20 +169,20 @@ window.vm = new Vue({
                 this.results.show1 = true;
                 var code = Math.random().toString(36).substr(2).substring(0,8);
                 this.code = code;
-                changeDESC("我是旅游重度患者，我的病情严重程度超过了98.8%人");
+                changeDESC("我是重度旅游成瘾患者，我的病情严重程度超过了98.8%人");
                 this.ajax(code);
             } else if( num <= 2 ){
                 this.results.show2 = true;
-                changeDESC("我是旅游中度患者，我的病情严重程度超过了88.7%人");
+                changeDESC("我是中度旅游成瘾患者，我的病情严重程度超过了88.7%人");
             } else if( num <= 5 ){
                 this.results.show3 = true;
-                changeDESC("我是旅游轻度患者，我的病情严重程度超过了68.5%人");
+                changeDESC("我是轻度旅游成瘾患者，我的病情严重程度超过了68.5%人");
             } else if( num <= 8 ){
                 this.results.show4 = true;
                 changeDESC("我疑似旅游成瘾患者，我的病情严重程度超过了38.5%人");
             } else {
                 this.results.show5 = true;
-                changeDESC("我疑似旅游成瘾患者，我的病情严重程度超过了18.6%人");
+                changeDESC("我不是旅游成瘾患者，我的病情严重程度超过了18.6%人");
             }
         },
         next : function(index){
@@ -218,7 +219,7 @@ window.vm = new Vue({
 
             if( today != date){
                 localStorage.count = 1;
-                localStorage.hasShared = false;
+                localStorage.hasShared = "no";
                 localStorage.date = today;
             }
         },

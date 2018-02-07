@@ -429,10 +429,10 @@ var point = [
             status : "fail"
         },{
             selected : false,
-            status : "pass"
+            status : "fail"
         },{
             selected : false,
-            status : "fail"
+            status : "pass"
         }],
         leftTime : 10,
         leftClass : {

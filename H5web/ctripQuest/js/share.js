@@ -64,10 +64,11 @@ function goReady(){
             imgUrl: IMGURL,
             trigger: function (res) {
             },
-            success: function (res) {
-                if(!localStorage.hasShared || onTest){
-                    localStorage.hasShared = true;
-                    localStorage.count++;
+            success: function () {
+                if(localStorage.hasShared == "no"){
+                    localStorage.hasShared = "yes";
+                    var count = Number(localStorage.count);
+                    localStorage.count = count + 1;
                     vm.alert = true;
                 }
             },
@@ -82,12 +83,13 @@ function goReady(){
             desc: DESC, // 分享描述
             link: LINK, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
             imgUrl: IMGURL, // 分享图标
-            type: '', // 分享类型,music、video或link，不填默认为link
+            type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () {
-                if(!localStorage.hasShared || onTest){
-                    localStorage.hasShared = true;
-                    localStorage.count++;
+                if(localStorage.hasShared == "no"){
+                    localStorage.hasShared = "yes";
+                    var count = Number(localStorage.count);
+                    localStorage.count = count + 1;
                     vm.alert = true;
                 }
             },
