@@ -249,6 +249,11 @@ window.vm = new Vue({
     },
     mounted : function(){
         this.saveLocal();
+        var w = window.innerWidth;
+        if( w >= 1000 && !isIOS ){
+            window.location.href = "http://www.ctrip.com";
+            return false;
+        }
         window.onload = function(){
            setTimeout(function () {
                document.querySelector(".loading").style.display = "none";
