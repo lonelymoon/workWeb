@@ -2,10 +2,10 @@
 
 var signurl = window.location.href;
 
-var TITLE = "", //微信标题
-    DESC = "",  //微信描叙
-    IMGURL = "", //分享图片地址
-    LINK = ""; //分享来源链接
+var TITLE = "腾讯唤新计划宣讲会", //微信标题
+    DESC = "腾讯唤新计划宣讲会",  //微信描叙
+    IMGURL = signurl+"/share.png", //分享图片地址
+    LINK = signurl+""; //分享来源链接
 
 $.ajax({
     type:'post',
