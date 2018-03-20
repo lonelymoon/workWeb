@@ -22,6 +22,10 @@
 #page{
     position: relative;
     height: auto;
+    max-width: 6.25rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .container{
@@ -62,7 +66,99 @@ img{
     height: auto;
     width: 4.925rem;
     margin: 0 auto;
-    margin-top: 2.525rem;
+    margin-top: 2.267rem;
+    opacity: 0;
+}
+
+.header-title-sub{
+    position: absolute;
+    width: 5.208rem;
+    top: 3.2rem;
+    left: 50%;
+    margin-left: -2.604rem;
+}
+
+.line-wrapper-1{
+    position: absolute;
+    height: 1px;
+    width: 90%;
+    top: 0rem;
+    right: 5%;
+    -webkit-transition: width 1s ease-in-out 1s;
+    transition: width 1s ease-in-out 1s;
+}
+
+.header-line-active .line-wrapper-1{
+    width: 0%;
+}
+
+.line-wrapper-2{
+    position: absolute;
+    height: 1px;
+    width: 40%;
+    top: 1rem;
+    left: 30%;
+    -webkit-transition: width 0.6s ease-in-out 1.6s;
+    transition: width 0.6s ease-in-out 1.6s;
+}
+
+.header-line-active .line-wrapper-2{
+    width: 0%;
+}
+
+.header-line{
+    position: absolute;
+    height: 1px;
+    background: -webkit-linear-gradient(left,rgba(183,174,174,0.5),rgba(255,255,255,0.8));
+    background: linear-gradient(left,rgba(183,174,174,0.5),rgba(255,255,255,0.8));
+    top: 0rem;
+}
+
+.header-line:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0.1rem;
+    height: 0.1rem;
+    border-radius: 50%;
+    top: -0.04rem;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(255,255,255,0.8);
+}
+
+.header-line1{
+    width: 0%;
+    left: 0%;
+}
+
+.header-line1:after{
+    right: -0.05rem;
+}
+
+.header-line2{
+    right: 0%;
+    width: 0%;
+}
+
+.header-line2:after{
+    left: -0.05rem;
+}
+
+.header-line-active .header-line1{
+    -webkit-animation: line 1s ease-in-out forwards;
+    animation: line 1s ease-in-out forwards;
+}
+
+.header-line-active .header-line2{
+    -webkit-animation: line 0.6s ease-in-out 1s forwards;
+    animation: line 0.6s ease-in-out 1s forwards;
+}
+
+.header-text{
+    position: relative;
+    margin: 0 auto;
+    width: 4.392rem;
+    margin-top: 0.7rem;
     opacity: 0;
 }
 
@@ -71,20 +167,50 @@ img{
     height: auto;
     width: 3.383rem;
     margin: 0 auto;
-    margin-top: 0.417rem;
+    margin-top: 0.8rem;
     opacity: 0;
+}
+
+.header-qq{
+    position: absolute;
+    right: -3.433rem;
+    top: 6.667rem;
+    width: 3.433rem;
+    height: auto;
+    -webkit-transition: right 0.6s ease-out;
+    transition: right 0.6s ease-out;
+}
+
+.qq-slideIn{
+    right: -0.687rem;
+    -webkit-animation: qqloop 2s ease-in-out infinite;
+    animation: qqloop 2s ease-in-out infinite;
 }
 
 .main-content{
     position: relative;
     height: auto;
-    margin-top: 6.48rem;
+    margin-top: 4.52rem;
     opacity: 1;
+}
+
+.qiqiu{
+    position: absolute;
+    left: 0.858rem;
+    width: 0.608rem;
+    height: auto;
+    top: 1.96rem;
+    -webkit-animation: qqloop 2.3s ease-in-out infinite;
+    animation: qqloop 2.3s ease-in-out infinite;
+}
+
+.qiqiu2{
+    top: 1.8rem;
 }
 
 .content-text{
     position: relative;
-    width: 4.925rem;
+    width: 4.617rem;
     height: auto;
     margin: 0 auto;
     opacity: 0;
@@ -94,14 +220,14 @@ img{
     position: relative;
     height: auto;
     margin: 0 auto;
-    margin-top: 1.88rem;
+    margin-top: 2.03rem;
     width: 5rem;
 }
 
 .pg-1{
     position: absolute;
     height: auto;
-    width: 1.117rem;
+    width: 1.958rem;
     top: 0.16rem;
     left: 0.3rem;
 }
@@ -109,7 +235,7 @@ img{
 .pg-2{
     position: absolute;
     height: auto;
-    width: 1.075rem;
+    width: 1.775rem;
     top: 0.9rem;
     right: 0.3rem;
 }
@@ -117,24 +243,24 @@ img{
 .pg-3{
     position: absolute;
     height: auto;
-    width: 1.975rem;
-    top: 1.586rem;
+    width: 1.958rem;
+    top: 1.64rem;
     left: 0.28rem;
 }
 
 .pg-4{
     position: absolute;
     height: auto;
-    width: 1.4rem;
-    top: 2.35rem;
+    width: 1.775rem;
+    top: 2.38rem;
     right: 0.33rem;
 }
 
 .pg-5{
     position: absolute;
     height: auto;
-    width: 1.875rem;
-    top: 3.1rem;
+    width: 1.617rem;
+    top: 3.12rem;
     left: 0.27rem;
 }
 
@@ -192,7 +318,7 @@ img{
 }
 
 .pg-1 .pg-line{
-    right: -0.836rem;
+    right: 0rem;
     -webkit-transition:width 0.8s linear 0.1s;
     transition:width 0.8s linear 0.1s;
 }
@@ -204,19 +330,19 @@ img{
 }
 
 .pg-5 .pg-line{
-    right: -0.1rem;
+    right: -0.34rem;
     -webkit-transition:width 0.8s linear 0.5s;
     transition:width 0.8s linear 0.5s;
 }
 
 .pg-2 .pg-line{
-    left: -0.88rem;
+    left: -0.2rem;
     -webkit-transition:width 0.8s linear 0.2s;
     transition:width 0.8s linear 0.2s;
 }
 
 .pg-4 .pg-line{
-    left: -0.53rem;
+    left: -0.14rem;
     -webkit-transition:width 0.8s linear 0.4s;
     transition:width 0.8s linear 0.4s;
 }
@@ -224,7 +350,17 @@ img{
 .content-contact{
     position: relative;
     height: auto;
-    margin-top: 11rem;
+    margin-top: 10.654rem;
+}
+
+.wechat{
+    position: absolute;
+    right: 0.88rem;
+    top: -1.7rem;
+    width: 0.8rem;
+    height: auto;
+    -webkit-animation: wechatloop 2s linear infinite;
+    animation: wechatloop 2s linear infinite;
 }
 
 .ct1{
@@ -245,7 +381,7 @@ img{
     height: auto;
     width: 2.158rem;
     margin: 0 auto;
-    margin-top: 0.98rem;
+    margin-top: 0.99rem;
     -webkit-transition: all 0.6s ease-in 0.3s;
     transition: all 0.6s ease-in 0.3s;
     opacity: 0;
@@ -258,7 +394,7 @@ img{
     height: auto;
     width: 2.233rem;
     margin: 0 auto;
-    margin-top: 0.99rem;
+    margin-top: 1.04rem;
     -webkit-transition: all 0.6s ease-in 0.6s;
     transition: all 0.6s ease-in 0.6s;
     opacity: 0;
@@ -275,13 +411,13 @@ img{
 .enroll-btn-wrapper{
     position: absolute;
     left: 50%;
-    top: 4.86rem;
+    top: 5rem;
     width: 5rem;
     margin-left: -2.5rem;
 }
 
 .ebw2{
-    top: 5.2rem;
+    top: 5.7rem;
 }
 
 .wave-box{
@@ -330,7 +466,28 @@ img{
     height: auto;
     width: 1.4rem;
     margin: 0 auto;
-    margin-top: 3.19rem;
+    margin-top: 4.14rem;
+}
+
+.code{
+    position: relative;
+    z-index: 2;
+}
+
+.qqhide{
+    position: absolute;
+    z-index: 1;
+    width: 1.083rem;
+    height: auto;
+    left: 0rem;
+    bottom: 0.1rem;
+    -webkit-transition: -webkit-transform 0.8s ease-out 0.2s;
+    transition: transform 0.8s ease-out 0.2s;
+}
+
+.qqhide-active{
+    -webkit-transform: translate(-0.56rem,0rem);
+    transform: translate(-0.56rem,0rem);
 }
 
 @-webkit-keyframes loop{
@@ -370,5 +527,85 @@ img{
 
     100%{
         transform: translate(-50%,0%);
+    }
+}
+
+
+/*******/
+@-webkit-keyframes qqloop{
+    0%{
+        -webkit-transform : translate(0rem,0rem);
+    }
+
+    50%{
+        -webkit-transform : translate(0rem,0.3rem);
+    }
+
+    100%{
+        -webkit-transform : translate(0rem,0rem);
+    }
+}
+
+@keyframes qqloop{
+    0%{
+        transform : translate(0rem,0rem);
+    }
+
+    50%{
+        transform : translate(0rem,0.3rem);
+    }
+
+    100%{
+        transform : translate(0rem,0rem);
+    }
+}
+
+/*******************/
+@-webkit-keyframes line{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes line{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+
+/*******************/
+@-webkit-keyframes wechatloop{
+    0%{
+        -webkit-transform: scale(1,1);
+    }
+
+    50%{
+        -webkit-transform: scale(1.1,1.1);
+    }
+
+    100%{
+        -webkit-transform: scale(1,1);
+    }
+}
+
+@keyframes wechatloop{
+    0%{
+        transform: scale(1,1);
+    }
+
+    50%{
+        transform: scale(1.1,1.1);
+    }
+
+    100%{
+        transform: scale(1,1);
     }
 }

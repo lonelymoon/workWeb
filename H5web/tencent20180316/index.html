@@ -7,7 +7,8 @@
 <title>腾讯唤新计划宣讲会</title>
 <link href="css/style.css?ver=1.01" type="text/css" rel="stylesheet">
 <link href="css/animate.min.css" type="text/css" rel="stylesheet">
-<link href="css/main.css?ver=1.01" type="text/css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/iosSelect.css">
+<link href="css/main.css?ver=1.012" type="text/css" rel="stylesheet">
 </head>
 <body>
 <div class="loading-box">
@@ -22,15 +23,32 @@
             <img src="" data-src="images/bg3.jpg">
         </div>
         <div class="content">
-            <header>
+            <header class="content-header">
                 <div class="header-title">
                     <img data-src="images/title1.png" src="">
+                </div>
+                <div class="header-title-sub">
+                    <div class="line-wrapper-1">
+                        <div class="header-line header-line1"></div>
+                    </div>
+                    <div class="line-wrapper-2">
+                        <div class="header-line header-line2"></div>
+                    </div>
+                </div>
+                <div class="header-text">
+                    <img src="" data-src="images/text.png">
                 </div>
                 <div class="header-subtitle">
                     <img src="" data-src="images/title2.png">
                 </div>
+                <!-- <div class="header-qq">
+                    <img src="" data-src="images/qq1.png">
+                </div> -->
             </header>
             <div class="main-content">
+                <div class="qiqiu">
+                    <img src="" data-src="images/qiqiu.png">
+                </div>
                 <div class="content-text" data-scrollIn="yes" data-ani="bounceInRight" data-way="animateCss">
                     <img src="" data-src="images/text01.png">
                 </div>
@@ -82,20 +100,26 @@
                     </div>
                 </div>
                 <div class="content-contact" data-scrollIn="yes" data-ani="contact-active" data-way="addClass">
+                    <div class="qiqiu qiqiu2">
+                        <img src="" data-src="images/qiqiu.png">
+                    </div>
+                    <div class="wechat">
+                        <img src="" data-src="images/wechat.png">
+                    </div>
                     <div style="height: 1px;"></div>
                     <div class="ct1">
                         <a href="tel:13466662889">
-                            <img src="" data-src="images/lx1.png">
+                            <img src="" data-src="images/lx1.png" data-later="yes">
                         </a>
                     </div>
                     <div class="ct2">
                         <a href="tel:13916895955">
-                            <img src="" data-src="images/lx2.png">
+                            <img src="" data-src="images/lx2.png" data-later="yes">
                         </a>
                     </div>
                     <div class="ct3">
                         <a href="tel:18666290012">
-                            <img src="" data-src="images/lx3.png">
+                            <img src="" data-src="images/lx3.png" data-later="yes">
                         </a>
                     </div>
                     <div class="enroll-btn-wrapper ebw2">
@@ -114,7 +138,10 @@
                         </div>
                     </div>
                     <div class="qrcode-box">
-                        <img src="" data-src="images/qrcode.png">
+                        <img src="" data-src="images/qrcode.png" data-later="yes" class='code'>
+                        <div class="qqhide" data-scrollIn="yes" data-ani="qqhide-active" data-way="addClass">
+                            <img src="" data-src="images/qq2.png" data-later="yes">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -125,6 +152,7 @@
 <script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js" type="text/javascript"></script>
 <script src="js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="js/share.js"></script>
-<script src="js/main.js?ver=1.01" type="text/javascript"></script>
+<script type="text/javascript" src="js/iosSelect.js"></script>
+<script src="js/main.js?ver=1.023" type="text/javascript"></script>
 </body>
 </html>
