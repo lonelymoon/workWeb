@@ -2,10 +2,10 @@
 
 var signurl = window.location.href;
 
-var TITLE = "腾讯唤新计划宣讲会", //微信标题
-    DESC = "腾讯唤新计划宣讲会",  //微信描叙
-    IMGURL = signurl+"/share.jpg", //分享图片地址
-    LINK = signurl+""; //分享来源链接
+var TITLE = "腾讯唤新计划宣讲会邀请", //微信标题
+    DESC = "诚邀您开启2018唤新旅程，挖掘互联网新商机！",  //微信描叙
+    IMGURL = "https://web.aochey.com/tencentHuanxin/share.jpg?ver="+new Date().getTime(), //分享图片地址
+    LINK = "https://web.aochey.com/tencentHuanxin/"; //分享来源链接
 
 $.ajax({
     type:'post',
