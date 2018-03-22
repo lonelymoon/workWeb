@@ -1,5 +1,4 @@
 ﻿jQuery(function($){
-
 var signurl = window.location.href;
 
 var TITLE = "腾讯唤新计划宣讲会邀请", //微信标题
