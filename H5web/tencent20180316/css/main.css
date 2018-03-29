@@ -398,14 +398,14 @@ img{
     position: relative;
     height: auto;
     margin: 0 auto;
-    margin-top: 2.03rem;
+    margin-top: 1.88rem;
     width: 5rem;
 }
 
 .pg-1{
     position: absolute;
     height: auto;
-    width: 1.958rem;
+    width: 1.942rem;
     top: 0.16rem;
     left: 0.3rem;
 }
@@ -413,15 +413,15 @@ img{
 .pg-2{
     position: absolute;
     height: auto;
-    width: 1.775rem;
+    width: 1.975rem;
     top: 0.9rem;
-    right: 0.3rem;
+    right: 0.1rem;
 }
 
 .pg-3{
     position: absolute;
     height: auto;
-    width: 1.958rem;
+    width: 1.942rem;
     top: 1.64rem;
     left: 0.28rem;
 }
@@ -429,16 +429,32 @@ img{
 .pg-4{
     position: absolute;
     height: auto;
-    width: 1.775rem;
+    width: 1.975rem;
     top: 2.38rem;
-    right: 0.33rem;
+    right: 0.1rem;
 }
 
 .pg-5{
     position: absolute;
     height: auto;
-    width: 1.617rem;
+    width: 1.942rem;
     top: 3.12rem;
+    left: 0.3rem;
+}
+
+.pg-6{
+    position: absolute;
+    height: auto;
+    width: 1.975rem;
+    top: 3.86rem;
+    right: 0.1rem;
+}
+
+.pg-7{
+    position: absolute;
+    height: auto;
+    width: 1.942rem;
+    top: 4.62rem;
     left: 0.27rem;
 }
 
@@ -470,6 +486,18 @@ img{
     opacity: 0;
     -webkit-transition: opacity 0.6s linear 1.8s;
     transition: opacity 0.6s linear 1.8s;
+}
+
+.pg-6 .huiyi-img{
+    opacity: 0;
+    -webkit-transition: opacity 0.6s linear 2s;
+    transition: opacity 0.6s linear 2s;
+}
+
+.pg-7 .huiyi-img{
+    opacity: 0;
+    -webkit-transition: opacity 0.6s linear 2.2s;
+    transition: opacity 0.6s linear 2.2s;
 }
 
 .huiyi-active .huiyi-img{
@@ -508,9 +536,15 @@ img{
 }
 
 .pg-5 .pg-line{
-    right: -0.34rem;
+    right: 0rem;
     -webkit-transition:width 0.8s linear 0.5s;
     transition:width 0.8s linear 0.5s;
+}
+
+.pg-7 .pg-line{
+    right: 0rem;
+    -webkit-transition:width 0.8s linear 0.7s;
+    transition:width 0.8s linear 0.7s;
 }
 
 .pg-2 .pg-line{
@@ -525,10 +559,16 @@ img{
     transition:width 0.8s linear 0.4s;
 }
 
+.pg-6 .pg-line{
+    left: -0.2rem;
+    -webkit-transition:width 0.8s linear 0.6s;
+    transition:width 0.8s linear 0.6s;
+}
+
 .content-contact{
     position: relative;
     height: auto;
-    margin-top: 10.654rem;
+    margin-top: 12.28rem;
 }
 
 .wechat{
@@ -589,7 +629,7 @@ img{
 .enroll-btn-wrapper{
     position: absolute;
     left: 50%;
-    top: 5rem;
+    top: 6.7rem;
     width: 5rem;
     margin-left: -2.5rem;
 }
