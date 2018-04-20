@@ -5,19 +5,71 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 <title>GUCCI</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/main.css?ver=1.2">
 </head>
 <body>
 <section id="container">
-  <img src="images/bananer3.png">
-  <div class="follow-btn"></div>
-  <div class="follow-complete">
-  	<img src="images/complete.png">
-  </div>
+  <img src="images/bananer5.jpg?ver=1.1">
+  <div class="wrapper">
+  		<img src="images/bananer5-2.jpg?ver=1.1">
+  		<div class="toggle-btn">
+	  		<div class="t1">
+	  			<img src="images/text1.png">
+	  		</div>
+	  		<div class="t2">
+	  			<img src="images/text2.png">
+	  		</div>
+	  	</div>
+	  <div class="layer-btn"></div>
+	  <div class="layer-box">
+	  	<img src="images/51.jpg?ver=1.1">
+	  </div>
+	  <div class="select-btn"></div>
+	  <div class="select-box">
+	  	<img src="images/select.jpg">
+	  </div>
+	  <div class="size-btn"></div>
+	  <div class="follow-btn"></div>
+	  <div class="follow-complete">
+	  	<img src="images/complete.png">
+	  </div>
+	</div>
 </section>
 <script type="text/javascript">
 document.querySelector(".follow-btn").onclick = function(e){
 	document.querySelector(".follow-complete").style.display = "block";
+};
+
+document.querySelector(".layer-btn").onclick = function(e){
+	document.querySelector(".layer-box").style.display = "block";
+};
+
+document.querySelector(".layer-box").onclick = function(e){
+	document.querySelector(".layer-box").style.display = "none";
+};
+
+document.querySelector(".select-btn").onclick = function(e){
+	document.querySelector(".select-box").style.display = "block";
+};
+
+document.querySelector(".select-box").onclick = function(e){
+	document.querySelector(".select-box").style.display = "none";
+};
+
+document.querySelector(".size-btn").onclick = function(e){
+	window.location.href = "./index3-3.html";
+};
+
+var wrapper = document.querySelector(".wrapper"),
+	open = false;
+
+document.querySelector(".toggle-btn").onclick = function(e){
+	if(!open)
+	wrapper.classList.add("wrapper-act");
+	else
+	wrapper.classList.remove("wrapper-act");
+
+	open = !open;
 };
 </script>
 </body>
