@@ -1,4 +1,4 @@
-(function(){
+(function(window,Math){
 	var windowWidth = window.innerWidth,
 	trueWidth = windowWidth >= 750? 750 : windowWidth;
 
@@ -10,4 +10,4 @@
 		style.innerHTML = "html{font-size:"+trueWidth / 6.25 +"px;}";
 		document.querySelector('head').appendChild(style);
 	}
-})();
+})(window,Math);
