@@ -1,0 +1,58 @@
+#container{
+	position: relative;
+	height: auto;
+}
+
+.column{
+	position: relative;
+	height: auto;
+	overflow: hidden;
+}
+
+.column-bg{
+	position: relative;
+	height: auto;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+.column-content{
+	position: absolute;
+	width: 1000px;
+	height: auto;
+	z-index: 2;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+
+.cl2-title{
+	position: relative;
+	height: auto;
+	max-width: 799px;
+	margin: 0 auto;
+}
+
+.cl2-items{
+	position: relative;
+	height: auto;
+	text-align: center;
+	margin-top: 55px;
+	letter-spacing: -8px;
+}
+
+.cl2-item{
+	position: relative;
+	display: inline-block;
+	width: 192px;
+	margin-right: 24px;
+	letter-spacing: 0px;
+}
+
+.cl2-items .cl2-item:last-child{
+	margin-right: 0px;
+}
