@@ -11,7 +11,52 @@
 
 .column-bg{
 	position: relative;
-	height: auto;
+	height: 100%;
+}
+
+.bg1{
+	background: url("../images/bg1.jpg") no-repeat top center;
+	background-size: cover;
+}
+
+.bg2{
+	background: url("../images/bg2.jpg") no-repeat top center;
+	background-size: cover;
+}
+
+.bg3{
+	background: url("../images/bg3.jpg") no-repeat top center;
+	background-size: cover;
+}
+
+.bg4{
+	background: url("../images/bg4.jpg?ver=1.12") no-repeat top center;
+	background-size: cover;
+}
+
+.bg5{
+	background: url("../images/bg5.jpg?ver=1.11") no-repeat top center;
+	background-size: cover;
+}
+
+.bg6{
+	background: url("../images/bg6.jpg") no-repeat top center;
+	background-size: cover;
+}
+
+.bg7{
+	background: url("../images/bg7.jpg?ver=1.11") no-repeat top center;
+	background-size: cover;
+}
+
+.bg8{
+	background: url("../images/bg8.jpg?ver=1.11") no-repeat top center;
+	background-size: cover;
+}
+
+.bg9{
+	background: url("../images/bg9.jpg?ver=1.11") no-repeat top center;
+	background-size: cover;
 }
 
 img{
@@ -50,9 +95,112 @@ img{
 	display: inline-block;
 	width: 192px;
 	margin-right: 24px;
-	letter-spacing: 0px;
-}
+	letter-spacing: 0px;}
 
 .cl2-items .cl2-item:last-child{
 	margin-right: 0px;
+}
+
+.cl3-header,.cl4-header,.cl5-header,.cl8-header{
+	position: relative;
+	height: auto;
+	width: 900px;
+	margin: 0 auto;
+}
+
+.cl3-header:after,.cl4-header:after,.cl5-header:after,.cl8-header:after{
+	clear: both;
+	display: block;
+	content: "";
+}
+
+.left-icon{
+	position: relative;
+	float: left;
+	width: 101px;
+	height: auto;
+}
+
+.cl8-header .left-icon{
+	width: 170px;
+}
+
+.right-icon{
+	position: relative;
+	height: auto;
+	float: right;
+	width: 62px;
+}
+
+.cl3-lists{
+	position: relative;
+	margin: 0 auto;
+	width: 839px;
+	height: auto;
+	margin-top: 60px;
+}
+
+.cl4-lists{
+	position: relative;
+	margin: 0 auto;
+	width: 921px;
+	height: auto;
+	margin-top: 40px;
+}
+
+.cl5-lists{
+	position: relative;
+	margin: 0 auto;
+	width: 921px;
+	height: auto;
+	margin-top: 40px;
+}
+
+.cl7-lists{
+	position: absolute;
+	left: 130px;
+	top: 50%;
+	-webkit-transform: translate(0%,-50%);
+	transform: translate(0%,-50%);
+}
+
+.cl7-list{
+	position: relative;
+	margin-bottom: 53px;
+	width: 218px;
+	height: auto;
+}
+
+.cl7-lists .cl7-list:last-child{
+	margin-bottom: 0px;
+}
+
+.cl7-left{
+	position: absolute;
+	left: 30px;
+	top: -50px;
+	width: 186px;
+	height: auto;
+	z-index: 2;
+}
+
+.cl7-right{
+	position: relative;
+	float: right;
+	width: 480px;
+	height: auto;
+}
+
+.clear{
+	position: relative;
+	display: block;
+	clear: both;
+}
+
+.cl8-lists{
+	position: relative;
+	margin: 0 auto;
+	width: 839px;
+	height: auto;
+	margin-top: 40px;
 }
