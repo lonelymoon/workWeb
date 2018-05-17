@@ -1,0 +1,163 @@
+html,body{
+	height: 100%;
+}
+
+.container{
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	max-width: 6.25rem;
+	margin: 0 auto;
+}
+
+.p-bg{
+	position: relative;
+	height: 100%;
+	background: url("../images/bg.jpg") repeat-y;
+	z-index: 0;
+}
+
+.wrapper{
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	width: 400%;
+	height: 100%;
+	z-index: 1;
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	transition: transform 0.3s ease-out;
+}
+
+.wrapper[data-id="2"]{
+	-webkit-transform: translate(-25%,0%);
+	transform: translate(-25%,0%);
+}
+
+.wrapper[data-id="3"]{
+	-webkit-transform: translate(-50%,0%);
+	transform: translate(-50%,0%);
+}
+
+.wrapper:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.column{
+	position: relative;
+	float: left;
+	width: 25%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.content{
+	position: relative;
+	height: 100%;
+}
+
+.content3{
+	overflow: auto;
+}
+
+.choose-img{
+	position: absolute;
+	width: 100%;
+	height: auto;
+}
+
+.box-show{
+	position: absolute;
+	width: 6.25rem;
+	height: auto;
+	z-index: 2;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%,-46%);
+	transform: translate(-50%,-46%);
+}
+
+.logo{
+	position: absolute;
+	z-index: 3;
+	right: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: auto;
+}
+
+.choose{
+	position: absolute;
+	width: 1.25rem;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	z-index: 4;
+	-webkit-transform: translate(-50%,-200%);
+	transform: translate(-50%,-200%);
+}
+
+.choose-img{
+	position: relative;
+	height: auto;
+}
+
+#file{
+	display: none;
+}
+
+.img-show{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: auto;
+	left: 0rem;
+	top: 50%;
+	-webkit-transform: translate(0%,-50%);
+	transform: translate(0%,-50%);
+}
+
+.fn{
+	position: absolute;
+	left: 50%;
+	width: 4.342rem;
+	margin-left: -2.171rem;
+	bottom: 0.65rem;
+	z-index: 5;
+}
+
+.next{
+	position: absolute;
+	height: 100%;
+	width: 0.8rem;
+	right: 0rem;
+	top: 0rem;
+}
+
+.prev{
+	position: absolute;
+	height: 100%;
+	width: 0.8rem;
+	left: 0rem;
+	top: 0rem;
+}
+
+#canvas{
+	position: relative;
+	max-width: 100%;
+}
+
+.notice{
+	position: absolute;
+	width: 3.192rem;
+	left: 50%;
+	bottom: 0.2rem;
+	z-index: 2;
+	margin-left: -1.596rem;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
