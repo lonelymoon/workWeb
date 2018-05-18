@@ -13,7 +13,7 @@ html,body{
 .p-bg{
 	position: relative;
 	height: 100%;
-	background: url("../images/bg.jpg") repeat-y;
+	background: url("../images/bg.jpg?ver=1.01") repeat-y;
 	z-index: 0;
 }
 
@@ -73,33 +73,67 @@ html,body{
 	height: auto;
 	z-index: 2;
 	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%,-46%);
-	transform: translate(-50%,-46%);
+	top: 0rem;
+	-webkit-transform: translate(-50%,0%);
+	transform: translate(-50%,0%);
 }
 
-.logo{
+.border{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 0.233rem solid #fff;
+	box-sizing: border-box;
+	z-index: 3;
+}
+
+.outer{
+	position: relative;
+	height: 100%;
+	display: block;
+}
+
+#control-logo{
 	position: absolute;
 	z-index: 3;
 	right: 0rem;
 	top: 0rem;
 	width: 100%;
-	height: auto;
+	height: 100%;
 }
 
 .choose{
 	position: absolute;
-	width: 1.25rem;
+	width: 6.25rem;
 	height: auto;
-	top: 50%;
 	left: 50%;
+	bottom: 0rem;
 	z-index: 4;
-	-webkit-transform: translate(-50%,-200%);
-	transform: translate(-50%,-200%);
+	-webkit-transform: translate(-50%,0%);
+	transform: translate(-50%,0%);
+}
+
+.bg-bt{
+	position: absolute;
+	z-index: 0;
+	background: rgba(255,255,255,0.5);
+	left: 0rem;
+	bottom: 0rem;
+	width: 100%;
+	height: 1.4rem;
 }
 
 .choose-img{
 	position: relative;
+	height: auto;
+	z-index: 1;
+	padding-bottom: 0.2rem;
+}
+
+.choose-wrapper{
+	position: relative;
+	width: 5rem;
+	margin: 0 auto;
 	height: auto;
 }
 
@@ -113,17 +147,28 @@ html,body{
 	width: 100%;
 	height: auto;
 	left: 0rem;
-	top: 50%;
-	-webkit-transform: translate(0%,-50%);
-	transform: translate(0%,-50%);
+	top: 1.976rem;
+}
+
+.handle-wrapper{
+	position: relative;
+	width: 5.261rem;
+	margin: 0 auto;
+	height: auto;
+}
+
+#canvas{
+	position: relative;
+	max-width: 100%;
+	height: auto;
 }
 
 .fn{
 	position: absolute;
 	left: 50%;
-	width: 4.342rem;
-	margin-left: -2.171rem;
-	bottom: 0.65rem;
+	width: 6.25rem;
+	margin-left: -3.125rem;
+	bottom: 0.3rem;
 	z-index: 5;
 }
 
@@ -131,7 +176,7 @@ html,body{
 	position: absolute;
 	height: 100%;
 	width: 0.8rem;
-	right: 0rem;
+	right: 1.15rem;
 	top: 0rem;
 }
 
@@ -139,25 +184,30 @@ html,body{
 	position: absolute;
 	height: 100%;
 	width: 0.8rem;
-	left: 0rem;
+	left: 1.2rem;
 	top: 0rem;
-}
-
-#canvas{
-	position: relative;
-	max-width: 100%;
 }
 
 .notice{
 	position: absolute;
-	width: 3.192rem;
+	width: 6.25rem;
 	left: 50%;
-	bottom: 0.2rem;
+	bottom: 0rem;
 	z-index: 2;
-	margin-left: -1.596rem;
+	margin-left: -3.125rem;
+	background: rgba(255,255,255,0.5);
+}
+
+.notice-wrapper{
+	position: relative;
+	height: auto;
+	width: 5rem;
+	margin: 0 auto;
+	padding-bottom: 0.2rem;
 }
 
 img{
 	display: block;
 	max-width: 100%;
+	z-index: 1;
 }

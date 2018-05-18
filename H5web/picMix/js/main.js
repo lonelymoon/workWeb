@@ -21,16 +21,11 @@ file.onchange = function(e){
     });
 };
 
-var img = new Image();
-
 function showImage(url){
 
-	img.onload = function(){
+	addImg(url,function(){
 		$(".wrapper").attr("data-id","2");
-		$(".img-show").html(img);
-	};
-
-	img.src = url;
+	});
 }
 
 $(".next").on("click",function(){
@@ -47,43 +42,35 @@ function mixImg(){
 		cxt = cv.getContext("2d");
 
 	cv.width = 750;
-	cv.height = 1334;
+	cv.height = 1150;
 
 	var box = $("#box")[0],
 		logo = $("#logo")[0],
 		bg = $("#bg")[0];
+	
 
-	var iw = img.naturalWidth,
-		ih = img.naturalHeight;
+	clip(function(img){
+		var iw = img.naturalWidth,
+			ih = img.naturalHeight;
 
-	var trueHeight = ( ih * 750 / iw >= 1334 ) ? ( ih * 750 / iw ) : 1334;
+		//背景
+		var bgw = bg.naturalWidth,
+			bgh = bg.naturalHeight;
 
-	cv.height = trueHeight;
+		cxt.drawImage(bg,0,0,bgw,bgh,0,0,cv.width,1334);
 
-	//背景
-	var bgw = bg.naturalWidth,
-		bgh = bg.naturalHeight;
+		//人物
 
-	cxt.drawImage(bg,0,0,bgw,bgh,0,(trueHeight - 1334) / 2,cv.width,bgh * 750 / bgw);
+		cxt.drawImage(img,0,0,iw,ih, ( 750 - iw ) / 2, 237.1, iw, ih );
 
-	//人物
-	var py =  ( trueHeight - ( ih * 750 / iw ) ) / 2;
+		//框
+		var bw = box.naturalWidth,
+			bh = box.naturalHeight;
 
-	cxt.drawImage(img,0,0,iw,ih, 0, py, 750, ih * 750 / iw );
+		cxt.drawImage(box,0,0,bw,bh,0,0,cv.width,1334);
 
-	//框
-	var bw = box.naturalWidth,
-		bh = box.naturalHeight;
-
-	cxt.drawImage(box,0,0,bw,bh,0,(trueHeight - 1334) / 2,cv.width,bh * 750 / bw);
-
-	//logo
-	var lw = logo.naturalWidth,
-		lh = logo.naturalHeight;
-
-	cxt.drawImage(logo,0,0,lw,lh,0,(trueHeight - 1334) / 2,cv.width,lh * 750 / lw);
-
-	$("#result-img").attr("src",cv.toDataURL());
+		$("#result-img").attr("src",cv.toDataURL());
+	});
 }
 
 });

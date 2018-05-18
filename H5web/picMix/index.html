@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 <title>联合利华</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/main.css?ver=1.02">
+<link rel="stylesheet" type="text/css" href="css/main.css?ver=1.04">
 </head>
 <body>
 
@@ -15,33 +15,36 @@
 		<div class="column">
 			<div class="content">
 				<label class="choose">
+					<div class="bg-bt"></div>
 					<div class="choose-img">
-						<img src="images/upload.png">
+						<div class="choose-wrapper"><img src="images/button.png"></div>
 					</div>
 					<input type="file" id="file" name="file" accept="image/*">
 				</label>
 				<div class="box-show">
-					<img src="images/box.png?ver=1.01">
+					<img src="images/box.png?ver=1.02">
 				</div>
-				<div class="logo">
-					<img src="images/logo.png">
+				<div class="border">
+					<label for="file" class="outer"></label>
 				</div>
 			</div>
 		</div>
 		<div class="column">
 			<div class="content">
-				<div class="img-show"></div>
+				<div class="img-show">
+					<div class="handle-wrapper">
+						<canvas id="canvas" width="632" height="809"></canvas>
+					</div>
+				</div>
 				<div class="box-show">
 					<img src="images/box.png" id="box">
 				</div>
-				<div class="logo">
-					<img src="images/logo.png" id="logo">
-				</div>
 				<div class="fn">
-					<img src="images/fn.png">
+					<img src="images/fn.png?ver=1.01">
 					<div class="next"></div>
 					<div class="prev"></div>
 				</div>
+				<div id="control-logo"></div>
 			</div>
 		</div>
 		<div class="column">
@@ -49,17 +52,21 @@
 				<img src="" id="result-img">
 			</div>
 			<div class="notice">
-				<img src="images/notice.png">
+				<div class="notice-wrapper">
+					<img src="images/notice.png?ver=1.01">
+				</div>
 			</div>
 		</div>
 		<div class="column">
-			<img src="images/bg.jpg" id="bg">
+			<img src="images/bg.jpg?ver=1.01" id="bg">
 		</div>
 	</div>
 </div>
 
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/lrz.bundle.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/hammer.min.js"></script>
+<script type="text/javascript" src="js/clip.js?ver=1.03"></script>
+<script type="text/javascript" src="js/main.js?ver=1.01"></script>
 </body>
 </html>
