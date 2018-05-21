@@ -73,6 +73,7 @@ window.addImg = function(src,callback){
 		var scale = getMaxScale(img,canvas.width,canvas.height);
 		nw = img.naturalWidth/scale;
 		nh = img.naturalHeight/scale;
+		cxt.clearRect(0,0,cw,ch);
 		cxt.drawImage(img,-nw/2 + cw/2,-nh/2 + ch/2,nw,nh);
 		callback();
 	};

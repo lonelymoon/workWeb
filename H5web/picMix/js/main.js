@@ -70,6 +70,8 @@ function mixImg(){
 		cxt.drawImage(box,0,0,bw,bh,0,0,cv.width,1334);
 
 		$("#result-img").attr("src",cv.toDataURL());
+
+		$(".p-bg").hide();
 	});
 }
 
