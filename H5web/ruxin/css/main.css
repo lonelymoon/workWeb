@@ -1,0 +1,175 @@
+html,body{
+	height: 100%;
+}
+
+.container{
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	max-width: 6.25rem;
+	margin: 0 auto;
+}
+
+.wrapper{
+	position: relative;
+	width: 400%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.lists{
+	position: relative;
+	height: auto;
+	-webkit-transition:-webkit-transform 0.2s ease-out;
+	transition: transform 0.2s ease-out;
+}
+
+.lists:after{
+	clear: both;
+	display: block;
+	content: "";
+}
+
+.list{
+	position: relative;
+	height: auto;
+	width: 25%;
+	float: left;
+}
+
+.list-bg{
+	position: relative;
+	height: auto;
+}
+
+.list-button{
+	position: absolute;
+	left: 0rem;
+	top: 8.85rem;
+	width: 6.25rem;
+	height: auto;
+}
+
+.fn-box{
+	position: absolute;
+	height: auto;
+	width: 5.266rem;
+    margin-left: 0.022rem;
+	left: 50%;
+	top: 1.44rem;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.notice{
+	position: absolute;
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: auto;
+	z-index: 3;
+}
+
+.btn-hide{
+	position: absolute;
+	width: 4rem;
+	height: 1rem;
+	left: 50%;
+	margin-left: -2rem;
+	top: 7rem;
+}
+
+.box-label{
+	position: relative;
+	display: block;
+	height: 100%;
+}
+
+#canvas{
+	position: relative;
+	z-index: 1;
+}
+
+.float-icon{
+	position: absolute;
+	width: 2.267rem;
+	height: auto;
+	left: 0.2rem;
+	top: 0.2rem;
+	display: none;
+	z-index: 2;
+}
+
+.float-icon2{
+	position: absolute;
+	width: 1.983rem;
+	height: auto;
+	right: 0rem;
+	bottom: 0.417rem;
+	display: none;
+	z-index: 2;
+}
+
+.box2{
+	position: relative;
+	margin-top: 0.248rem;
+}
+
+.list-layer{
+	position: absolute;
+	left: 0rem;
+	top: 0rem;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.list-result{
+	position: absolute;
+	height: auto;
+	width: 5.442rem;
+	padding: 0.15rem;
+	border: 2px solid #fff;
+	left: 50%;
+	top: 0.5rem;
+	z-index: 2;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.btn-result{
+	position: absolute;
+	left: 50%;
+	width: 6.25rem;
+	height: 1.692rem;
+	top: 8.2rem;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background: url("../images/3-5.png?ver=1.02") no-repeat;
+	background-size: cover;
+	z-index: 2;
+}
+
+/**************************/
+#file,#file2{
+	display: none;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+	z-index: 1;
+}
+
+canvas{
+	position: relative;
+	display: block;
+	max-width: 100%;
+	border: none;
+	outline: none;
+	border-radius: 0.1rem;
+}
+
+.hide{
+	display: none;
+}
