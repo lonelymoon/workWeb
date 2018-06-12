@@ -42,12 +42,29 @@ html,body{
 	height: auto;
 }
 
+.text-show{
+	position: absolute;
+	width: 4.558rem;
+	height: 3.333rem;
+	top : 5.317rem;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	overflow: hidden;
+}
+
+.text{
+	position: relative;
+	height: auto;
+}
+
 .list-button{
 	position: absolute;
 	left: 0rem;
 	top: 8.85rem;
 	width: 6.25rem;
 	height: auto;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 
 .fn-box{
@@ -141,11 +158,11 @@ html,body{
 	position: absolute;
 	left: 50%;
 	width: 6.25rem;
-	height: 1.692rem;
+	height: 1.583rem;
 	top: 8.2rem;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
-	background: url("../images/3-5.png?ver=1.02") no-repeat;
+	background: url("../images/3-5.png?ver=1.03") no-repeat;
 	background-size: cover;
 	z-index: 2;
 }

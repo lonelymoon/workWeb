@@ -33,6 +33,8 @@ $(".btn-hide").on("click",function(e){
 	$(".notice").hide();
 });
 
+var myScroll = new IScroll('.text-show');
+
 function mixImg(img,img2){
 
 	var bg = $("#bg")[0],
