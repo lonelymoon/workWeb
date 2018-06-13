@@ -51,6 +51,7 @@ html,body{
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 	overflow: hidden;
+	border-radius: 10px;
 }
 
 .text{
@@ -61,10 +62,13 @@ html,body{
 .list-button{
 	position: absolute;
 	left: 0rem;
-	top: 8.85rem;
+	top: 8.9rem;
 	width: 6.25rem;
 	height: auto;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	z-index: 2;
+	-webkit-transform: translateZ(1px);
+	transform: translateZ(1px);
 }
 
 .fn-box{
@@ -189,4 +193,8 @@ canvas{
 
 .hide{
 	display: none;
+}
+
+.iScrollVerticalScrollbar{
+	width: 4px !important;
 }

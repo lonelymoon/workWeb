@@ -33,7 +33,13 @@ $(".btn-hide").on("click",function(e){
 	$(".notice").hide();
 });
 
-var myScroll = new IScroll('.text-show');
+var myScroll;
+
+window.onload = function(){
+	myScroll = new IScroll('.text-show',{
+		scrollbars: true
+	});
+};
 
 function mixImg(img,img2){
 
