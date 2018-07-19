@@ -11,7 +11,7 @@ include("mysql.php");
 
 $con = new mysql("devweilufei.mysql.rds.aliyuncs.com","aochey_zz","W13142gy","ruxin_dahui","conn","UTF8");
 
-$con->select("data_save", "*", "kinds = '$kind' ");
+$con->select("data_save", "*", "kinds = '$kind' AND hide = 0 ORDER BY idx");
 
 $i = 0;
 $data = array();

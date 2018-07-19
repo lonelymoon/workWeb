@@ -39,7 +39,7 @@ if(!empty($file["tmp_name"])){
 	}
 }
 
-if($con->insert("data_save", "name,descri,imgSrc,date,kinds,idx","'$name','$desc','$img','$time','$kind',$len")){
+if($con->insert("data_save", "name,descri,imgSrc,date,kinds,idx,hide","'$name','$desc','$img','$time','$kind',$len,0")){
 	echo 1;
 } else {
 	echo 0;
